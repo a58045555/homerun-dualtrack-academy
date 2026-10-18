@@ -48,3 +48,14 @@ jobs:
               for match in list(re.finditer(re.escape(pattern),s,re.I))[:3]:
                   print(repr(s[max(0,match.start()-180):min(len(s),match.end()+180)]))
           PY
+
+          echo '=== SOUND BUTTON INSPECTION ==='
+          python3 - <<'PY'
+          import re
+          s=open('/tmp/moe.html',encoding='utf-8').read()
+          for pattern in ['onclick','getElementById','a1','a22','a35','a37','sound','play(']:
+              matches=list(re.finditer(re.escape(pattern),s,re.I))
+              print('SEARCH',pattern,len(matches))
+              for m in matches[:5]:
+                  print(repr(s[max(0,m.start()-120):min(len(s),m.end()+120)]))
+          PY
