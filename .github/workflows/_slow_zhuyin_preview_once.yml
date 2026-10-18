@@ -1,0 +1,87 @@
+name: Slow official MOE Zhuyin to child-friendly 0.85x
+on:
+  push:
+    branches:
+      - test/moe-zhuyin-standard-audio
+permissions:
+  contents: write
+jobs:
+  slow-official-samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout only the audio-preview branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: test/moe-zhuyin-standard-audio
+          persist-credentials: true
+      - name: Install audio tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Slow natural Ministry of Education recordings to 85 percent tempo
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import subprocess
+          import tempfile
+
+          names='b p m f d t n l g k h j q x zh ch sh r z c s i u yu a o e eh ai ei ao ou an en ang eng er'.split()
+          assert len(names)==37 and len(set(names))==37
+          folder=Path('audio/zhuyin')
+          actual={p.name for p in folder.glob('*.mp3')}
+          expected={n+'.mp3' for n in names}
+          assert actual==expected, f'Unexpected audio set: {actual ^ expected}'
+
+          def stats(path):
+              result=json.loads(subprocess.check_output([
+                  'ffprobe','-v','error',
+                  '-show_entries','format=duration:stream=codec_name',
+                  '-of','json',str(path)]))
+              assert {s['codec_name'] for s in result['streams']}=={'mp3'}
+              return float(result['format']['duration'])
+
+          for name in names:
+              path=folder/(name+'.mp3')
+              before=stats(path)
+              assert 0.55 <= before <= 1.15, (name,before)
+              with tempfile.TemporaryDirectory() as tmp:
+                  new=Path(tmp)/(name+'.mp3')
+                  # atempo keeps perceived pitch stable; do not resample to fake lower pitch
+                  subprocess.check_call([
+                      'ffmpeg','-hide_banner','-nostdin','-loglevel','error','-y',
+                      '-i',str(path),'-vn','-af','atempo=0.85',
+                      '-ac','1','-ar','24000','-b:a','96k',
+                      '-id3v2_version','3',str(new)])
+                  after=stats(new)
+                  assert 0.70 <= after <= 1.40, (name,after)
+                  ratio=after/before
+                  assert 1.08 <= ratio <= 1.35, (name,before,after,ratio)
+                  assert new.stat().st_size>1000
+                  path.write_bytes(new.read_bytes())
+                  print(f'{name}: {before:.3f}s -> {after:.3f}s (x{ratio:.2f} length)',flush=True)
+          PY
+      - name: Commit the 37 MP3 updates only and erase this temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -u -- audio/zhuyin/
+          git rm -- .github/workflows/_slow_zhuyin_preview_once.yml
+          python3 - <<'PY'
+          import subprocess
+          changes=subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines()
+          wanted={'audio/zhuyin/'+n+'.mp3' for n in
+                  'b p m f d t n l g k h j q x zh ch sh r z c s i u yu a o e eh ai ei ao ou an en ang eng er'.split()}
+          wanted.add('.github/workflows/_slow_zhuyin_preview_once.yml')
+          assert set(changes)==wanted,(wanted ^ set(changes))
+          print('Verified only official voice assets modified; test workflow removed.')
+          PY
+          git commit -m "Audio preview: slow 37 official Zhuyin voices to 85% tempo without pitch shift"
+          git push origin HEAD:test/moe-zhuyin-standard-audio
