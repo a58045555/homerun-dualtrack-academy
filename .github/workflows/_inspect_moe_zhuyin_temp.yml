@@ -1,0 +1,28 @@
+name: Inspect official MOE Zhuyin archive
+on:
+  push:
+    branches:
+      - test/moe-zhuyin-standard-audio
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch and inventory only (never upload)
+        run: |
+          set -euo pipefail
+          URL="https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/bopomofo_materials_20170213.zip"
+          curl --fail --location --show-error --retry 2 --max-time 60 -A 'Mozilla/5.0' "$URL" -o /tmp/moe-zhuyin.zip
+          file /tmp/moe-zhuyin.zip
+          du -h /tmp/moe-zhuyin.zip
+          python3 - <<'PY'
+          import zipfile
+          p="/tmp/moe-zhuyin.zip"
+          with zipfile.ZipFile(p) as z:
+              print("Total archive entries:",len(z.namelist()))
+              for f in z.infolist():
+                  if 'audio' in f.filename.lower() or f.filename.lower().endswith((".mp3",".wav",".ogg",".m4a")):
+                      print(repr(f.filename),f.file_size)
+          PY
