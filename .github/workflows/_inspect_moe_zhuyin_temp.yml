@@ -26,6 +26,18 @@ jobs:
                   if 'audio' in f.filename.lower() or f.filename.lower().endswith((".mp3",".wav",".ogg",".m4a")):
                       print(repr(f.filename),f.file_size)
           PY
+          echo '=== HTML AUDIO ID CALLERS ==='
+          python3 - <<'PY'
+          import re
+          s=open('/tmp/moe.html',encoding='utf-8').read() if __import__('os').path.isfile('/tmp/moe.html') else ''
+          for key in ['a1','a21','a22','a23','a34','a35','a36','a37','play(1)','play(22)','play(35)','onclick']:
+              patterns=[r'(?<![0-9a-z])'+re.escape(key)+r'(?![0-9a-z])']
+              matches=list(re.finditer(patterns[0],s,re.I))
+              print('CALLER',key,'count',len(matches))
+              for m in matches[:6]:
+                  piece=s[max(0,m.start()-160):min(len(s),m.end()+160)]
+                  print(repr(piece)[:420])
+          PY
           echo '=== HTML F-number references ==='
           curl --fail --silent --show-error --location --max-time 30 'https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/html_ch/index.html' -o /tmp/moe.html
           python3 - <<'PY'
