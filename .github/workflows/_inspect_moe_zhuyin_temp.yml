@@ -1,61 +1,134 @@
-name: Inspect official MOE Zhuyin archive
+name: Prepare official MOE Zhuyin pronunciation previews
 on:
   push:
     branches:
       - test/moe-zhuyin-standard-audio
 permissions:
-  contents: read
+  contents: write
 jobs:
-  inspect:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
-      - name: Fetch and inventory only (never upload)
+      - name: Check out only the isolated test branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 2
+          ref: test/moe-zhuyin-standard-audio
+          persist-credentials: true
+      - name: Install MP3 conversion tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python3 -m pip install --user --disable-pip-version-check pydub==0.25.1
+      - name: Download and convert the Ministry of Education originals
+        shell: bash
         run: |
           set -euo pipefail
-          URL="https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/bopomofo_materials_20170213.zip"
-          curl --fail --location --show-error --retry 2 --max-time 60 -A 'Mozilla/5.0' "$URL" -o /tmp/moe-zhuyin.zip
-          file /tmp/moe-zhuyin.zip
-          du -h /tmp/moe-zhuyin.zip
+          curl --fail --location --show-error --retry 2 --max-time 65 \
+            'https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/bopomofo_materials_20170213.zip' \
+            -o /tmp/official-zhuyin.zip
+          curl --fail --location --show-error --retry 2 --max-time 45 \
+            'https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/html_ch/index.html' \
+            -o /tmp/official-index.html
           python3 - <<'PY'
-          import zipfile
-          p="/tmp/moe-zhuyin.zip"
-          with zipfile.ZipFile(p) as z:
-              print("Total archive entries:",len(z.namelist()))
-              for f in z.infolist():
-                  if 'audio' in f.filename.lower() or f.filename.lower().endswith((".mp3",".wav",".ogg",".m4a")):
-                      print(repr(f.filename),f.file_size)
-          PY
-          echo '=== HTML AUDIO ID CALLERS ==='
-          python3 - <<'PY'
-          import re
-          s=open('/tmp/moe.html',encoding='utf-8').read() if __import__('os').path.isfile('/tmp/moe.html') else ''
-          for key in ['a1','a21','a22','a23','a34','a35','a36','a37','play(1)','play(22)','play(35)','onclick']:
-              patterns=[r'(?<![0-9a-z])'+re.escape(key)+r'(?![0-9a-z])']
-              matches=list(re.finditer(patterns[0],s,re.I))
-              print('CALLER',key,'count',len(matches))
-              for m in matches[:6]:
-                  piece=s[max(0,m.start()-160):min(len(s),m.end()+160)]
-                  print(repr(piece)[:420])
-          PY
-          echo '=== HTML F-number references ==='
-          curl --fail --silent --show-error --location --max-time 30 'https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/html_ch/index.html' -o /tmp/moe.html
-          python3 - <<'PY'
-          import re
-          s=open('/tmp/moe.html',encoding='utf-8').read()
-          for pattern in ['F1.WAV','F2.WAV','F21.WAV','F22.WAV','F37.WAV','f1.wav','audio/']:
-              print('PATTERN',pattern,'count',s.lower().count(pattern.lower()))
-              for match in list(re.finditer(re.escape(pattern),s,re.I))[:3]:
-                  print(repr(s[max(0,match.start()-180):min(len(s),match.end()+180)]))
-          PY
+          from pathlib import Path
+          from pydub import AudioSegment
+          from pydub.silence import detect_nonsilent
+          import re, zipfile, tempfile
 
-          echo '=== SOUND BUTTON INSPECTION ==='
-          python3 - <<'PY'
-          import re
-          s=open('/tmp/moe.html',encoding='utf-8').read()
-          for pattern in ['onclick','getElementById','a1','a22','a35','a37','sound','play(']:
-              matches=list(re.finditer(re.escape(pattern),s,re.I))
-              print('SEARCH',pattern,len(matches))
-              for m in matches[:5]:
-                  print(repr(s[max(0,m.start()-120):min(len(s),m.end()+120)]))
+          mapping = {
+            'ㄅ':'b','ㄆ':'p','ㄇ':'m','ㄈ':'f','ㄉ':'d','ㄊ':'t','ㄋ':'n','ㄌ':'l',
+            'ㄍ':'g','ㄎ':'k','ㄏ':'h','ㄐ':'j','ㄑ':'q','ㄒ':'x','ㄓ':'zh','ㄔ':'ch',
+            'ㄕ':'sh','ㄖ':'r','ㄗ':'z','ㄘ':'c','ㄙ':'s','ㄧ':'i','ㄨ':'u','ㄩ':'yu',
+            'ㄚ':'a','ㄛ':'o','ㄜ':'e','ㄝ':'eh','ㄞ':'ai','ㄟ':'ei','ㄠ':'ao',
+            'ㄡ':'ou','ㄢ':'an','ㄣ':'en','ㄤ':'ang','ㄥ':'eng','ㄦ':'er'
+          }
+          assert len(mapping)==37
+
+          html=Path('/tmp/official-index.html').read_text(encoding='utf-8')
+          rows=re.findall(r'<tr>\s*<td class="yellow" id="s\d+"[\s\S]*?</tr>',html,re.I)
+          sound_map={}
+          for row in rows:
+              key=re.search(r"play\('a(\d+)'\)",row)
+              mark=re.search(r"zhStroker\('app',\s*'([\u3105-\u3129])'\)",row)
+              if key and mark:
+                  number=int(key.group(1))
+                  char=mark.group(1)
+                  if number in sound_map and sound_map[number]!=char:
+                      raise ValueError(f"ambiguous official sound {number}")
+                  sound_map[number]=char
+          if len(sound_map)!=37 or set(sound_map.values())!=set(mapping):
+              raise ValueError(f"Official page mappings incomplete ({len(sound_map)}): {sound_map}")
+          print("Authoritative mappings verified from MOE HTML:",sorted(sound_map.items()))
+
+          output_dir=Path('audio/zhuyin')
+          output_dir.mkdir(parents=True,exist_ok=True)
+          lengths=[]
+          with zipfile.ZipFile('/tmp/official-zhuyin.zip') as archive:
+              official={p:archive.read(p) for p in archive.namelist() if re.fullmatch(r'audio/F\d+\.WAV',p)}
+              if len(official)!=37: raise ValueError('Wrong number of official WAV files')
+              with tempfile.TemporaryDirectory() as temp:
+                  for number, glyph in sorted(sound_map.items()):
+                      filename='audio/F'+str(number)+'.WAV'
+                      wav=official[filename]
+                      p=Path(temp)/'input.wav'
+                      p.write_bytes(wav)
+                      seg=AudioSegment.from_wav(p).set_channels(1)
+                      if seg.dBFS==float("-inf"):
+                          raise ValueError(f"{glyph}: completely silent")
+                      threshold=max(-49,seg.dBFS-28)
+                      spans=detect_nonsilent(seg,min_silence_len=75,silence_thresh=threshold,seek_step=4)
+                      if not spans: raise ValueError(f"{glyph}: no recognizable sound")
+                      beg=max(0,spans[0][0]-65)
+                      end=min(len(seg),spans[-1][1]+95)
+                      voice=seg[beg:end]
+                      # IMPORTANT: do not time-stretch synthetic syllables or change their pitch.
+                      if not 200 <= len(voice) <= 1900:
+                          raise ValueError(f"{glyph}: unusual official vocal duration {len(voice)}ms")
+                      dst=output_dir/(mapping[glyph]+'.mp3')
+                      tags={
+                        'title': '注音符號 '+glyph,
+                        'artist': '教育部（中華民國臺灣）',
+                        'comment': '資料來源：教育部《國語注音符號手冊》2017；CC BY 4.0。此MP3由官方WAV轉檔並剪除首尾靜音。https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/'
+                      }
+                      voice.export(dst,format='mp3',bitrate='96k',tags=tags,parameters=['-ar','24000','-ac','1'])
+                      lengths.append((str(dst),len(voice),len(seg)))
+          files=list(output_dir.glob('*.mp3'))
+          assert len(files)==37, f"Expected 37; found {len(files)}"
+          for filename,short_ms,total_ms in lengths:
+              print(f"{filename} natural length {short_ms}ms (official source {total_ms}ms)")
+          print("37 OFFICIAL MOE CLIPS PREPARED. NO MACHINE-VOICE STRETCHING.")
           PY
+      - name: Verify that only 37 MP3 replacements will remain in the preview branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,subprocess
+          files=sorted(Path('audio/zhuyin').glob('*.mp3'))
+          assert len(files)==37
+          for f in files:
+              meta=json.loads(subprocess.check_output([
+                  'ffprobe','-v','error','-show_entries','format=duration:stream=codec_name',
+                  '-of','json',str(f)]))
+              duration=float(meta['format']['duration'])
+              assert 0.22<=duration<=2.1,(f,duration)
+              assert all(s['codec_name']=='mp3' for s in meta['streams']),(f,meta)
+          print('All 37 valid MP3 with checked playback durations.')
+          PY
+          git add -u -- audio/zhuyin/
+          git rm -- .github/workflows/_inspect_moe_zhuyin_temp.yml
+          python3 - <<'PY'
+          import subprocess
+          changes=subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines()
+          assert set(changes)==set(['audio/zhuyin/'+x+'.mp3' for x in
+            'b p m f d t n l g k h j q x zh ch sh r z c s i u yu a o e eh ai ei ao ou an en ang eng er'.split()]+
+            ['.github/workflows/_inspect_moe_zhuyin_temp.yml']),changes
+          print('Staged exactly 37 audio changes and removal of temporary workflow.')
+          PY
+          git commit -m 'Preview: replace synthetic Zhuyin audio with official MOE recordings'
+          git push origin HEAD:test/moe-zhuyin-standard-audio
