@@ -26,3 +26,13 @@ jobs:
                   if 'audio' in f.filename.lower() or f.filename.lower().endswith((".mp3",".wav",".ogg",".m4a")):
                       print(repr(f.filename),f.file_size)
           PY
+          echo '=== HTML F-number references ==='
+          curl --fail --silent --show-error --location --max-time 30 'https://language.moe.gov.tw/001/Upload/files/site_content/M0001/juyin/html_ch/index.html' -o /tmp/moe.html
+          python3 - <<'PY'
+          import re
+          s=open('/tmp/moe.html',encoding='utf-8').read()
+          for pattern in ['F1.WAV','F2.WAV','F21.WAV','F22.WAV','F37.WAV','f1.wav','audio/']:
+              print('PATTERN',pattern,'count',s.lower().count(pattern.lower()))
+              for match in list(re.finditer(re.escape(pattern),s,re.I))[:3]:
+                  print(repr(s[max(0,match.start()-180):min(len(s),match.end()+180)]))
+          PY
