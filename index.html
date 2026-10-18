@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#112b42">
+<meta name="description" content="棒球主題兒童英數練習：A～Z 聽讀、美式英文音檔、深度閱讀、數學推理與個人化錯題複習；學習紀錄只存在本機。">
+<title>全壘打雙軌學院｜英文 × 數學 v22</title>
+<style>
+:root{--ink:#142a3e;--muted:#687783;--paper:#f5f6f0;--surface:#fff;--line:#e3e9e9;--navy:#112b42;--sky:#4c7be8;--lime:#dfff8b;--yellow:#ffd66a;--red:#e76556;--green:#1b9277;--shadow:0 18px 42px rgba(19,48,63,.09);--radius:23px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}button,select,textarea,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}a{color:inherit}.hidden{display:none!important}:focus-visible{outline:3px solid #e59728!important;outline-offset:4px}#app{min-height:100dvh}.shell{max-width:1120px;margin:auto;padding:24px 24px 44px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}.brand-ball{width:45px;height:45px;border-radius:15px;background:var(--navy);display:grid;place-items:center;box-shadow:0 6px 0 #d9e6e8;font-size:25px;transform:rotate(-8deg)}.brand-name{display:block;font-size:18px;font-weight:900;line-height:1.2;letter-spacing:.3px}.brand-sub{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:2px;white-space:nowrap}.nav{display:flex;flex-shrink:0;align-items:center;background:#e8eeec;border-radius:40px;padding:5px;gap:4px}.nav button{border:0;background:transparent;color:#526570;padding:10px 16px;border-radius:40px;font-weight:800;font-size:14px}.nav button.active{background:#fff;color:var(--navy);box-shadow:0 3px 12px #1e364315}.eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:900;color:#1b8974;text-transform:uppercase}.hero{min-height:315px;background:var(--navy);border-radius:32px;padding:38px 40px;color:#fff;position:relative;display:flex;justify-content:space-between;align-items:center;overflow:hidden;isolation:isolate;box-shadow:var(--shadow)}.hero:before{content:"";position:absolute;width:470px;height:470px;border:2px solid #ffffff12;border-radius:50%;right:-155px;top:-170px;box-shadow:0 0 0 54px #ffffff06,0 0 0 110px #ffffff05;z-index:-1}.hero .eyebrow{color:var(--lime)}.hero h1{font-size:clamp(28px,4vw,47px);margin:12px 0 15px;line-height:1.26;letter-spacing:1px;font-weight:950}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:15px;color:#d8e2e8;margin:0 0 23px;max-width:420px}.hero-visual{position:relative;flex:0 0 300px;height:225px;display:grid;place-items:center}.baseball-illustration{width:206px;height:206px;background:#fff8ec;border:8px solid #f5eee0;border-radius:50%;position:relative;box-shadow:0 12px 0 #0a1c30,0 18px 60px #091e31;transform:rotate(-13deg)}.baseball-illustration:before,.baseball-illustration:after{content:"";position:absolute;top:16px;height:149px;width:45px;border:3px dashed #ed7063;border-top:0;border-bottom:0}.baseball-illustration:before{left:10px;border-radius:0 75% 75% 0}.baseball-illustration:after{right:10px;border-radius:75% 0 0 75%}.eyes{display:flex;position:absolute;left:65px;top:75px;gap:27px}.eyes span{width:11px;height:17px;background:var(--ink);border-radius:50%}.smile{position:absolute;left:77px;top:102px;width:30px;height:17px;border-bottom:5px solid var(--ink);border-radius:0 0 50% 50%}.spark{position:absolute;font-size:30px}.spark.one{left:5px;top:8px}.spark.two{right:0;bottom:10px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:16px;padding:13px 22px;font-weight:900;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;transition:transform .12s,box-shadow .12s}.btn:active,.tile:active,.option:active{transform:scale(.98)}.btn-primary{background:var(--lime);color:var(--navy)}.btn-light{background:#ffffff18;color:#fff;border:1px solid #ffffff44}.btn-dark{background:var(--navy);color:white}.btn-outline{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn-danger{background:#fff2f0;color:#9a3026;border:1px solid #f6bfb9}.section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:31px 0 15px}.section-title h2{font-size:23px;font-weight:900;margin:0}.section-title p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#e9f2e3;color:#377059;border-radius:25px;font-size:12px;font-weight:800;white-space:nowrap}.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.tile{position:relative;overflow:hidden;background:var(--surface);border:1px solid #e6e9e8;border-radius:var(--radius);padding:25px 25px 23px;box-shadow:0 4px 20px #233c4906;text-align:left;transition:transform .15s,box-shadow .15s;min-height:208px}.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.tile:after{position:absolute;right:-27px;top:-44px;width:175px;height:175px;border-radius:50%;content:"";background:#eef2ff}.tile.math:after{background:#fff5d8}.tile.english:after{background:#e8eeff}.tile-icon{font-size:44px;position:relative;z-index:1;display:block}.tile h3{font-size:23px;line-height:1.2;margin:10px 0 4px;position:relative;z-index:1}.tile p{color:var(--muted);font-size:13px;margin:0;position:relative;z-index:1}.tile-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:13px;font-weight:900}.arrow{display:grid;place-items:center;height:31px;width:31px;border-radius:100%;background:#f2f5f2;font-size:18px}.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:17px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 4px 15px #152b3b07}.card h3{font-size:18px;margin:0 0 14px}.checkrow{display:flex;gap:13px;padding:12px 0;border-bottom:1px solid #eff1f0;align-items:center}.checkrow:last-child{border-bottom:0}.checkicon{background:#eaf3f3;border-radius:12px;width:40px;height:40px;display:grid;place-items:center;font-size:19px;flex:0 0 auto}.checkrow strong{display:block;font-size:14px}.checkrow small{display:block;color:var(--muted);font-size:12px}.statrow{display:flex;gap:12px}.stat{flex:1;padding:14px;border-radius:15px;background:#f4f7f6}.stat strong{display:block;font-size:26px}.stat small{color:var(--muted);font-size:12px;font-weight:700}.tipline{padding:11px 14px;background:#f0f8eb;color:#366d4b;border-radius:12px;font-size:12px;margin-top:15px}.pageheading{margin:7px 0 18px}.pageheading h1{font-size:clamp(26px,4vw,36px);margin:4px 0 7px}.pageheading p{color:var(--muted);margin:0;font-size:14px}.back{display:inline-flex;align-items:center;gap:5px;background:none;border:0;padding:4px 0;color:var(--muted);font-weight:800;margin-bottom:15px}.modegrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.mode{border:1px solid var(--line);background:#fff;border-radius:19px;padding:21px;text-align:left;min-height:188px}.mode:focus-visible,.mode:hover{border-color:#76a6ad;box-shadow:0 4px 18px #173b4814}.mode .badge{background:#f3f6f5;border-radius:30px;padding:5px 9px;font-size:11px;font-weight:850}.mode-icon{font-size:37px;margin:10px 0}.mode h3{font-size:18px;margin:0 0 7px}.mode p{font-size:12px;color:var(--muted);margin:0}.levelstrip{margin-top:20px;background:#fff;border:1px dashed #c6d4d1;border-radius:16px;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px}.levelstrip span{font-size:13px;color:var(--muted)}.levelstrip button{border:none;color:#147a68;background:none;font-weight:900;text-decoration:underline}.quiz-wrap{max-width:760px;margin:10px auto 0}.quiz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px;gap:10px}.quit{background:#eff2f0;border:0;border-radius:12px;padding:9px 13px;color:#4d646c;font-weight:800}.quiz-progress{font-size:13px;font-weight:900;color:#365464}.track{height:10px;background:#e1e7e5;border-radius:30px;overflow:hidden;margin-bottom:24px}.fill{background:#78b99d;height:100%;border-radius:30px;transition:width .25s}.quiz-card{background:#fff;padding:27px;border-radius:27px;border:1px solid #e1e9e7;box-shadow:var(--shadow);min-height:475px}.topiccap{display:inline-flex;background:#e6f5ed;color:#26745d;border-radius:25px;padding:5px 13px;font-size:12px;font-weight:850}.question-prompt{margin:18px 0 9px;color:#546a77;font-size:14px;font-weight:700}.question-main{font-size:clamp(24px,4vw,37px);font-weight:950;margin:8px 0 16px;line-height:1.4}.question-en{font-family:Arial,sans-serif;letter-spacing:.2px}.speaker{display:flex;align-items:center;gap:8px;margin:15px 0 18px;padding:10px 14px;border:1px dashed #aac8ce;background:#f4f9fc;border-radius:14px;color:#1d6b83;font-weight:900}.speaker small{font-weight:500;font-size:12px}.optiongrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:24px}.option{padding:15px 15px;min-height:71px;border:2px solid #e2e9e8;border-radius:15px;background:#fbfcfb;font-size:18px;font-weight:850;color:var(--ink);text-align:left;display:flex;align-items:center;gap:12px}.option .letter{flex:0 0 29px;width:29px;height:29px;border-radius:10px;display:grid;place-items:center;background:#edf1f0;font-size:13px;color:#6e7b86}.option:hover:not(:disabled){border-color:#a6bfc2;background:#f5fafa}.option.correct{border-color:#28a57e;background:#e5f7ed}.option.incorrect{border-color:#e76c64;background:#fff0ed}.feedback{padding:15px 17px;border-radius:16px;margin-top:18px;background:#eaf7ed;color:#207453}.feedback.bad{background:#fff4e6;color:#905626}.feedback strong{display:block;margin-bottom:4px}.feedback p{font-size:13px;margin:0;line-height:1.7}.quiz-next{margin-top:15px;width:100%}.result{max-width:740px;margin:10px auto;text-align:center}.result-hero{background:var(--navy);padding:37px 27px;color:#fff;border-radius:26px}.result-emoji{font-size:64px}.result h1{font-size:30px;margin:9px 0}.result p{color:#d8e8e8}.result-score{font-size:50px;font-weight:950;color:var(--lime)}.review{margin-top:18px;text-align:left}.review li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}.review li:last-child{border:0}.review strong{color:#c2643c}.reflection{text-align:left;margin-top:18px}.reflection label{display:block;font-weight:900;margin-bottom:8px}.reflection textarea{width:100%;border:1px solid #ccd9d8;border-radius:12px;padding:12px;resize:vertical;min-height:75px}.result-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}.result-buttons .btn{flex:1}.parent-banner{background:#fff3dc;border:1px solid #f7dfaa;border-radius:14px;padding:14px 17px;margin-bottom:18px;font-size:13px;color:#85601d}.parent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.meter{margin:12px 0}.meter-label{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:800;margin-bottom:6px}.meter-label small{color:var(--muted)}.meter-bar{background:#edf1ee;height:11px;border-radius:30px;overflow:hidden}.meter-bar div{height:100%;background:#87bfc2;border-radius:30px}.settings-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.settings-row:last-child{border-bottom:0}.settings-row label{font-weight:800;font-size:14px}.settings-row small{display:block;color:var(--muted);font-weight:400;font-size:12px}.settings-row select{border:1px solid #cdd8d8;border-radius:11px;padding:9px;background:#fff;color:var(--ink);font-size:13px;max-width:140px}.history-table{width:100%;border-collapse:collapse;font-size:13px}.history-table th,.history-table td{padding:9px 7px;border-bottom:1px solid #ecf0ef;text-align:left}.history-table th{color:#667988;font-size:11px}.note{color:var(--muted);font-size:12px;line-height:1.8}.empty{padding:22px;background:#f4f7f6;border-radius:13px;color:var(--muted);font-size:13px;text-align:center}.footer{border-top:1px solid #e0e6e5;padding:23px 0 0;margin-top:38px;color:#82908e;font-size:12px;display:flex;justify-content:space-between;gap:14px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#182f43;color:#fff;padding:12px 18px;border-radius:14px;font-size:13px;box-shadow:var(--shadow);z-index:20;max-width:90%;text-align:center}.tag{display:inline-block;background:#f1f5f3;border-radius:8px;padding:3px 8px;font-size:11px;color:#607b76;font-weight:800}.rowactions{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.wellbeing{background:#eaf4ef;border:1px solid #cae9d9;border-radius:15px;padding:15px;font-size:13px}.mini-plan{font-size:13px;line-height:1.9}.mini-plan b{color:#115d68}.mobile-note{font-size:12px;color:var(--muted)}
+@media(max-width:780px){.shell{padding:16px 15px 32px}.hero{padding:28px 23px;min-height:270px}.hero h1{font-size:30px}.hero-visual{flex:0 0 165px;transform:scale(.74);margin-right:-35px}.two-col,.parent-grid{grid-template-columns:1fr}.modegrid{grid-template-columns:repeat(2,minmax(0,1fr))}.tile{padding:19px}.tile h3{font-size:20px}.footer{flex-direction:column}.quiz-card{padding:21px}.nav button{padding:10px 13px}}
+@media(max-width:520px){.brand{gap:7px}.brand-ball{width:36px;height:36px;font-size:20px}.brand-name{font-size:14px}.brand-sub{font-size:8px;letter-spacing:1.05px}.nav button{font-size:12px;padding:8px 9px}.hero{display:block;min-height:330px;padding:27px 23px}.hero h1{font-size:31px;margin-top:9px}.hero p{font-size:13px;max-width:73%;margin-bottom:22px}.hero-visual{position:absolute;right:-5px;top:120px;width:150px;height:160px;transform:scale(.61);margin:0;pointer-events:none}.hero-actions{max-width:90%;position:relative;z-index:2}.hero .btn{padding:11px 16px;font-size:13px;min-height:43px}.section-title h2{font-size:21px}.tiles{gap:10px}.tile{padding:17px;min-height:195px}.tile-icon{font-size:36px}.tile h3{font-size:18px}.tile p{font-size:12px}.modegrid{gap:10px}.mode{padding:15px;min-height:183px}.mode h3{font-size:16px}.mode .badge{font-size:10px}.optiongrid{grid-template-columns:1fr;gap:10px;margin-top:17px}.option{min-height:59px;font-size:17px}.quiz-card{min-height:auto;padding:18px;border-radius:21px}.question-main{font-size:28px}.question-prompt{font-size:13px}.result-buttons{flex-direction:column}.footer{margin-top:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.topbar,.hero,.footer,.btn,.rowactions,.nav,.parent-banner{display:none!important}.shell{max-width:none;padding:0}.card{break-inside:avoid;box-shadow:none}.parent-grid{display:block}.parent-grid .card{margin-bottom:12px}}
+
+/* English alphabet foundation: mobile-friendly and keyboard accessible */
+.alpha-intro{background:linear-gradient(125deg,#e7f5ec,#edf5ff);border:1px solid #d3e9dd;border-radius:23px;padding:21px 23px;margin:0 0 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.alpha-intro strong{font-size:19px}.alpha-intro p{font-size:13px;margin:6px 0 0;color:#40636d}.alpha-intro .btn{white-space:nowrap}
+.alpha-layout{display:grid;grid-template-columns:minmax(0,1fr) 295px;gap:18px;align-items:start}
+.alpha-main{background:#fff;border:1px solid #dce6e8;border-radius:25px;padding:24px;box-shadow:var(--shadow)}
+.alpha-topline{display:flex;justify-content:space-between;align-items:center;gap:15px;color:var(--muted);font-size:13px;font-weight:800}
+.alpha-hero{display:flex;align-items:center;gap:24px;margin:15px 0}
+.alpha-symbol{font-family:Arial,sans-serif;font-size:clamp(76px,14vw,132px);line-height:1;font-weight:850;color:var(--navy);letter-spacing:1px;min-width:170px;text-align:center}
+.alpha-symbol small{font-size:.58em;color:var(--sky);font-weight:700}
+.alpha-word{font-size:25px;font-weight:900}.alpha-word small{display:block;font-size:14px;font-weight:500;color:var(--muted)}
+.alpha-example-emoji{font-size:55px;display:block;margin-bottom:7px}
+.alpha-audio{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.alpha-audio button{flex:1;min-width:150px}
+.alpha-note{border-radius:14px;background:#f0f7fc;border:1px solid #d3e6ef;padding:13px 16px;font-size:13px;color:#35556c}
+.alpha-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}
+.alpha-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.alpha-item{border:1px solid #dde6e7;border-radius:13px;background:#fff;color:var(--navy);padding:10px 4px;min-height:61px;text-align:center;font-family:Arial,sans-serif;font-weight:900;font-size:24px}
+.alpha-item span{font-size:15px;color:#7591a4;margin-left:2px}
+.alpha-item.selected{background:var(--navy);color:var(--lime);border-color:var(--navy)}
+.alpha-item.selected span{color:#d0dbed}
+.alpha-item:hover{border-color:var(--sky)}
+.alpha-side .card{padding:20px}
+.alpha-phonic-badge{display:inline-block;color:#376278;background:#eff7fa;border-radius:10px;padding:4px 9px;font-weight:900}
+@media(max-width:850px){.alpha-layout{grid-template-columns:1fr}.alpha-grid{grid-template-columns:repeat(7,minmax(0,1fr))}.alpha-intro{flex-direction:column;align-items:stretch}.alpha-intro .btn{width:100%}}
+@media(max-width:520px){.alpha-main{padding:16px}.alpha-symbol{min-width:110px;font-size:80px}.alpha-hero{gap:10px}.alpha-word{font-size:20px}.alpha-example-emoji{font-size:41px}.alpha-audio button{min-width:100%;width:100%}.alpha-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.alpha-item{font-size:21px;min-height:55px}.alpha-item span{font-size:13px}.alpha-controls .btn{padding:10px 12px;min-height:43px;font-size:13px}}
+.speech-controls{margin:14px 0 5px;background:#f0f7fb;border:1px solid #d2e3ee;border-radius:16px;padding:12px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.speech-controls label{font-weight:850;font-size:12px;color:#264c62}
+.speech-controls select{font-size:13px;max-width:210px;min-height:41px;padding:8px;border:1px solid #b8d3e0;border-radius:11px;background:#fff;color:#18354a}
+.speech-controls .speech-test{border:0;border-radius:11px;padding:10px 12px;font-weight:850;background:#e2f2e6;color:#1b6645;min-height:41px}
+.speech-status{min-height:24px;color:#506b7b;font-size:12px;margin:5px 0 12px}
+@media(max-width:520px){.speech-controls select{max-width:100%;flex:1 1 120px}.speech-controls .speech-test{flex:0 0 auto}}
+.parent-auth-card{max-width:450px;margin:35px auto;text-align:center;padding:34px}.parent-auth-card h1{font-size:25px;margin:10px 0}.parent-auth-card p{color:var(--muted);font-size:13px}.auth-emoji{font-size:54px;margin:6px}.pin-form{display:grid;gap:11px;margin:24px 0;text-align:left}.pin-form label{font-size:14px;font-weight:850}.pin-form input{width:100%;min-height:46px;border:1px solid #a9bbc3;border-radius:12px;padding:10px 14px;font-size:17px}.pin-form input:focus{outline:3px solid #b5dfba}.pin-error{min-height:20px;color:#b32d25!important;font-weight:800}.auto-next-hint{margin-top:8px!important;font-weight:750;opacity:.9}
+
+.learning-guide{background:linear-gradient(115deg,#e3f6e9,#f0f8ff);border:1px solid #b6dace;border-radius:19px;padding:20px 23px;margin:7px 0 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}.learning-guide strong{font-weight:900;font-size:20px}.learning-guide p{color:#42616b;font-size:14px;margin:5px 0 0}.guide-actions{display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0}.hint-box{background:#fff8e8;border:1px dashed #e7c788;border-radius:14px;padding:11px 14px;margin:10px 0 4px}.hint-toggle{border:none;background:none;font-weight:900;color:#875929;cursor:pointer}.hint-text{margin:8px 0 0;font-size:13px;color:#77482a}.question-main{overflow-wrap:anywhere}.learning-guide .btn{font-size:13px;padding:9px 14px}
+@media(max-width:640px){.learning-guide{display:block}.guide-actions{margin-top:12px}.learning-guide strong{font-size:18px}}
+
+
+/* Free voice trial controls, rendered within the existing audio toolbar only. */
+.speech-controls .speech-tool{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.speech-controls .speech-tool label{font-size:13px;font-weight:750;white-space:nowrap}
+.speech-controls .speech-tool select{max-width:230px;width:auto;min-width:120px;padding:7px 9px;border-radius:10px;border:1px solid #cad6dc;background:white;color:#142a3e}
+.speech-controls .speech-tool select:focus-visible,.speech-controls button:focus-visible{outline:3px solid #2c6cd4;outline-offset:3px}
+@media (max-width:620px){.speech-controls .speech-tool{width:100%}.speech-controls .speech-tool select{max-width:100%;flex:1}}
+
+/* v18 · 觸控手寫練習板：只在畫布上禁用捲動，其他頁面保持正常滑動。 */
+.hw-entry{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:17px 20px;margin:18px 0 0;background:#edf8f5;border:1px solid #cfe9de;border-radius:19px}
+.hw-entry strong{display:block;font-size:16px}.hw-entry p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.hw-layout{max-width:840px;margin:0 auto}.hw-tabs,.hw-modes,.hw-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:14px 0}
+.hw-tabs button,.hw-modes button{border:1px solid #cbd9d8;background:#fff;border-radius:14px;padding:10px 17px;min-height:45px;font-weight:850;color:#30495a}
+.hw-tabs button.selected,.hw-modes button.selected{background:var(--navy);color:white;border-color:var(--navy)}
+.hw-main{background:#fff;border:1px solid #d9e6e2;border-radius:23px;padding:22px;box-shadow:var(--shadow)}
+.hw-practice-target{background:#f1f7f3;border-radius:15px;padding:14px 17px;margin:13px 0;min-width:0}
+.hw-practice-target .target{font-family:Arial,sans-serif;color:var(--navy);font-weight:850;font-size:clamp(26px,6vw,42px);word-break:break-word}
+.hw-practice-target small{display:block;color:#627779;font-size:13px;margin-top:2px}
+.hw-pad{position:relative;border:2px solid #b6cdd4;border-radius:16px;overflow:hidden;margin:11px 0;background-color:#fff; background-image:linear-gradient(transparent 97%,#dae9ed 98%),linear-gradient(90deg,transparent 97%,#eaf0f0 98%);background-size:34px 34px;}
+.hw-pad.guide{background-image:linear-gradient(transparent 49%,#aac2d064 50%,transparent 51%),linear-gradient(transparent 98%,#b4cbd5 99%);background-size:100% 112px,100% 112px}
+.hw-pad canvas{display:block;width:100%;height:220px;touch-action:none;cursor:crosshair;position:relative;z-index:2;user-select:none;-webkit-user-select:none}
+.hw-guide-text{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;font-family:Arial,sans-serif;font-size:clamp(45px,14vw,92px);letter-spacing:.02em;line-height:1.2;font-weight:650;color:#a7b7c754;z-index:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:5px 15px}
+.hw-guide-text.word{font-size:clamp(28px,7vw,59px);letter-spacing:0;overflow-wrap:anywhere;white-space:normal;text-align:center}
+.hw-guide-text.scratch{display:none}
+.hw-actions{margin:10px 0 0}.hw-actions .btn{min-height:45px;padding:10px 16px}
+.hw-check{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+.hw-check label{display:block;font-weight:850;font-size:14px;margin-bottom:6px}
+.hw-check input{width:100%;min-width:0;border:1px solid #aebfc3;border-radius:12px;min-height:48px;padding:10px 12px;font-size:18px;background:#fff}
+.hw-check .hw-field{flex:1 1 200px;min-width:0}
+.hw-message{font-weight:800;border-radius:12px;padding:10px 14px;margin-top:12px;background:#f1f6f4;color:#254e5d;min-height:41px}
+.hw-message:empty{display:none}.hw-note{font-size:12px;color:var(--muted);line-height:1.65;margin-top:10px}
+.hw-quiz-toggle{margin:15px 0 6px;width:100%;text-align:left;display:flex;align-items:center;gap:10px;border:1px dashed #9fbabc;background:#f5faf8;color:#225d5c;border-radius:13px;padding:12px 14px;font-weight:900;min-height:48px}
+.hw-quiz-box{padding:13px 13px 17px;border-radius:16px;background:#f9fbfa;border:1px solid #e0ece7;margin-top:7px}
+.hw-quiz-box .hw-pad canvas{height:165px}
+.hw-quiz-box .hw-note{margin-bottom:0}
+@media(max-width:520px){.topbar{flex-wrap:wrap;gap:9px}.topbar .nav{width:100%;justify-content:center}.topbar .nav button{flex:1;padding:9px 7px;font-size:12px}.hw-main{padding:15px}.hw-pad canvas{height:190px}.hw-actions .btn{flex:1;padding:9px 12px}.hw-entry .btn{width:100%}.hw-quiz-box .hw-pad canvas{height:155px}}
+@media print{.hw-entry,.hw-actions,.hw-check{display:none!important}}
+
+/* v19：畫布內禁止觸控捲動，其他位置正常滑動；辨識用獨立答題框。 */
+.hw-pad, .hw-pad canvas {touch-action:none!important;overscroll-behavior:contain; -webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}
+.hw-pad canvas{height:clamp(190px,33vh,285px)}
+.hw-pad.hw-answer-pad canvas{height:125px}
+.hw-pad.hw-answer-pad{border-color:#a8bcf5;background-image:repeating-linear-gradient(0deg,#fff 0,#fff 37px,#edf3fb 38px)}
+.hw-ocr-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:13px 0}
+.hw-ocr-actions .btn{min-height:50px;flex:1 1 195px}
+.hw-ocr-hint{font-size:13px;color:#4b6372;line-height:1.7;margin:7px 0 11px}
+.hw-ocr-result{background:#f1f7ff;border:1px solid #c7dafa;border-radius:14px;padding:11px 14px;margin:10px 0;font-size:14px;font-weight:800;color:#20476e;min-height:50px;overflow-wrap:anywhere}
+.hw-ocr-result:empty{display:none}
+.hw-canvas-head{font-size:14px;font-weight:900;color:#284562;margin:17px 0 0}
+@media(max-width:520px){.hw-ocr-actions .btn{width:100%;flex-basis:100%}.hw-pad.hw-answer-pad canvas{height:120px}.hw-pad canvas{height:210px}}
+
+/* v20 - 更大的書寫區，並提供單獨放大／還原；只阻止畫布上的滑動。 */
+.hw-layout{max-width:980px}
+.hw-pad canvas{height:340px}
+.hw-pad.hw-answer-pad canvas{height:218px}
+.hw-quiz-box .hw-pad canvas{height:240px}
+.hw-quiz-box .hw-pad.hw-answer-pad canvas{height:195px}
+.hw-pad.is-expanded canvas{height:510px}
+.hw-pad.hw-answer-pad.is-expanded canvas{height:340px}
+.hw-quiz-box .hw-pad.is-expanded canvas{height:400px}
+.hw-quiz-box .hw-pad.hw-answer-pad.is-expanded canvas{height:310px}
+.hw-zoom{background:#eaf3ff;border:1px solid #9ebbe7;color:#183e74}
+.hw-score{border:1px solid #d7e6ce;background:#f4faec;color:#234d32;border-radius:15px;padding:12px 14px;margin:12px 0;line-height:1.7}
+.hw-score[hidden]{display:none}
+.hw-score strong{font-weight:900}
+.hw-score small{display:block;font-size:12px;color:#55706a;margin-top:5px;font-weight:600}
+@media(max-width:520px){
+  .hw-pad canvas{height:305px}
+  .hw-pad.hw-answer-pad canvas{height:215px}
+  .hw-quiz-box .hw-pad canvas{height:225px}
+  .hw-quiz-box .hw-pad.hw-answer-pad canvas{height:210px}
+  .hw-pad.is-expanded canvas{height:475px}
+  .hw-pad.hw-answer-pad.is-expanded canvas{height:335px}
+  .hw-quiz-box .hw-pad.is-expanded canvas{height:370px}
+  .hw-quiz-box .hw-pad.hw-answer-pad.is-expanded canvas{height:300px}
+  .hw-actions .btn{flex:1 1 145px}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <main id="boot-fallback" style="box-sizing:border-box;min-height:60vh;padding:35px 18px;max-width:760px;margin:0 auto;color:#142a3e;font-family:-apple-system,BlinkMacSystemFont,'PingFang TC',sans-serif">
+   <section style="background:#fff;border:1px solid #dce7e8;border-radius:20px;padding:25px 20px;box-shadow:0 12px 25px rgba(19,48,63,.08)">
+     <div style="font-size:42px;margin-bottom:10px">⚾</div>
+     <h1 style="font-size:25px;line-height:1.3;margin:0 0 12px">全壘打雙軌學院</h1>
+     <p style="margin:0 0 14px;line-height:1.7">正在啟動英文與數學練習…</p>
+     <p style="font-size:14px;line-height:1.7;color:#5f6e77">如果畫面持續停在這裡，請按下方「重新載入」。學習紀錄仍保留在這台裝置，我們不會清除你的資料。</p>
+     <a href="?retry=1" style="display:inline-block;min-height:44px;line-height:44px;padding:0 18px;background:#164676;border-radius:12px;color:#fff;text-decoration:none;font-weight:700">🔄 重新載入網站</a>
+     <div id="boot-problem" role="status" aria-live="polite" style="margin-top:12px;font-size:13px;line-height:1.6;color:#8a4d16"></div>
+   </section>
+  </main>
+</div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  function issue(label, detail){
+    var app=document.getElementById('app');
+    if(!app)return;
+    // Do not interrupt a correctly rendered homepage or an active lesson for an unrelated error.
+    if(app.querySelector('.shell') && app.querySelector('.hero'))return;
+    if(!app.querySelector('#boot-fallback') && app.textContent.trim().length>160)return;
+    var el=document.getElementById('boot-problem');
+    if(el){el.textContent='開啟時遇到相容性問題（'+label+'）。請嘗試 Safari 重新開啟；資料未被清除。';}
+  }
+  window.addEventListener('error',function(e){issue('啟動錯誤',e.message)},false);
+  window.addEventListener('unhandledrejection',function(e){issue('啟動中斷',String(e.reason||''))},false);
+  if(typeof window.structuredClone!=='function'){
+    window.structuredClone=function(value){return JSON.parse(JSON.stringify(value))};
+  }
+})();
+</script>
+<script>
+(function(){'use strict';
+const KEY='baseball_dualtrack_v1';
+const DEFAULT={settings:{math:1,english:1,autoNext:true,reviewEnabled:true},sessions:[],reflections:[],reviewQueue:[]};
+const MODES={english:[{id:'letters',icon:'🔡',name:'字母聽音小挑戰',label:'26 字母基礎',desc:'先認 A～Z 的大小寫，聽聲音再選答案。',skill:'en-letters'},{id:'vocab',icon:'🧢',name:'英文單字',label:'單字辨識',desc:'看英文，選出它的中文意思。',skill:'en-vocab'},{id:'sentence',icon:'📖',name:'短句閱讀',label:'閱讀理解',desc:'讀一小句英文，回答簡單問題。',skill:'en-sentence'},{id:'listening',icon:'🎧',name:'聽力接球',label:'英語聽力',desc:'聽英文發音，找出正確意思。',skill:'en-listening'},{id:'use',icon:'🗣️',name:'單字活用',label:'情境選字',desc:'把單字放進生活、課堂與棒球句子，理解後再選。',skill:'en-use'},{id:'deep',icon:'🧠',name:'深度閱讀',label:'文章思考',desc:'讀短篇故事，從線索推理、找原因、安排順序。',skill:'en-inference'},{id:'review',icon:'🔁',name:'英文錯題補強',label:'個人化複習',desc:'找出真正不熟的地方，分次練習而非硬背答案。',skill:'en-review'}],math:[{id:'calc',icon:'🧮',name:'計算打擊',label:'數與運算',desc:'從加減到乘除、整數四則與多步驟運算，難度分級。',skill:'math-calc'},{id:'story',icon:'⚾',name:'球場應用題',label:'情境解題',desc:'把生活與棒球情境變成算式。',skill:'math-story'},{id:'score',icon:'🏟️',name:'比分小教練',label:'數據判讀',desc:'看比分，理解差距與總分。',skill:'math-score'},{id:'reason',icon:'🧩',name:'策略解題',label:'多步驟推理',desc:'找未知數、讀表格、安排時間與零用錢；每題有思路解析。',skill:'math-reason'},{id:'pattern',icon:'🔎',name:'數列與規律',label:'找規則與數感',desc:'數列、位值、找規律、未知數，練數感而不是只背算式。',skill:'math-pattern'},{id:'measure',icon:'📐',name:'圖形與生活測量',label:'長度·時間·面積',desc:'圖形周長、面積、時間與單位換算，循序加深。',skill:'math-measure'},{id:'review',icon:'🔁',name:'數學錯題補強',label:'個人化複習',desc:'優先複習上次不熟的概念，慢慢建立信心。',skill:'math-review'}]};
+const SKILLS={'en-letters':'字母與大小寫','en-vocab':'單字辨識','en-sentence':'閱讀理解','en-listening':'英語聽力','math-calc':'數與運算','math-story':'情境解題','math-score':'數據判讀','en-inference':'英文推理閱讀','en-order':'英文事件順序','en-context':'英文上下文','math-reason':'多步驟思考','math-data':'資料判讀','math-money':'金錢與時間','en-use':'情境單字活用','math-pattern':'數列規律與位值','math-measure':'圖形、時間與測量','en-review':'英文複習','math-review':'數學複習'};
+const ALPHABET=[{"upper":"A","lower":"a","word":"apple","meaning":"蘋果","icon":"🍎","nameIpa":"/eɪ/","soundIpa":"/æ/"},{"upper":"B","lower":"b","word":"ball","meaning":"球","icon":"⚾","nameIpa":"/biː/","soundIpa":"/b/"},{"upper":"C","lower":"c","word":"cat","meaning":"貓","icon":"🐈","nameIpa":"/siː/","soundIpa":"/k/"},{"upper":"D","lower":"d","word":"dog","meaning":"狗","icon":"🐕","nameIpa":"/diː/","soundIpa":"/d/"},{"upper":"E","lower":"e","word":"egg","meaning":"蛋","icon":"🥚","nameIpa":"/iː/","soundIpa":"/ɛ/"},{"upper":"F","lower":"f","word":"fish","meaning":"魚","icon":"🐟","nameIpa":"/ɛf/","soundIpa":"/f/"},{"upper":"G","lower":"g","word":"goat","meaning":"山羊","icon":"🐐","nameIpa":"/dʒiː/","soundIpa":"/ɡ/"},{"upper":"H","lower":"h","word":"hat","meaning":"帽子","icon":"🧢","nameIpa":"/eɪtʃ/","soundIpa":"/h/"},{"upper":"I","lower":"i","word":"igloo","meaning":"冰屋","icon":"🧊","nameIpa":"/aɪ/","soundIpa":"/ɪ/"},{"upper":"J","lower":"j","word":"jump","meaning":"跳躍","icon":"🤸","nameIpa":"/dʒeɪ/","soundIpa":"/dʒ/"},{"upper":"K","lower":"k","word":"kite","meaning":"風箏","icon":"🪁","nameIpa":"/keɪ/","soundIpa":"/k/"},{"upper":"L","lower":"l","word":"lion","meaning":"獅子","icon":"🦁","nameIpa":"/ɛl/","soundIpa":"/l/"},{"upper":"M","lower":"m","word":"moon","meaning":"月亮","icon":"🌙","nameIpa":"/ɛm/","soundIpa":"/m/"},{"upper":"N","lower":"n","word":"nose","meaning":"鼻子","icon":"👃","nameIpa":"/ɛn/","soundIpa":"/n/"},{"upper":"O","lower":"o","word":"octopus","meaning":"章魚","icon":"🐙","nameIpa":"/oʊ/","soundIpa":"/ɑ/"},{"upper":"P","lower":"p","word":"pig","meaning":"豬","icon":"🐷","nameIpa":"/piː/","soundIpa":"/p/"},{"upper":"Q","lower":"q","word":"queen","meaning":"女王","icon":"👑","nameIpa":"/kjuː/","soundIpa":"/kw/"},{"upper":"R","lower":"r","word":"rabbit","meaning":"兔子","icon":"🐇","nameIpa":"/ɑɹ/","soundIpa":"/ɹ/"},{"upper":"S","lower":"s","word":"sun","meaning":"太陽","icon":"☀️","nameIpa":"/ɛs/","soundIpa":"/s/"},{"upper":"T","lower":"t","word":"tiger","meaning":"老虎","icon":"🐅","nameIpa":"/tiː/","soundIpa":"/t/"},{"upper":"U","lower":"u","word":"umbrella","meaning":"雨傘","icon":"☂️","nameIpa":"/juː/","soundIpa":"/ʌ/"},{"upper":"V","lower":"v","word":"van","meaning":"廂型車","icon":"🚐","nameIpa":"/viː/","soundIpa":"/v/"},{"upper":"W","lower":"w","word":"water","meaning":"水","icon":"💧","nameIpa":"/ˈdʌbəl.juː/","soundIpa":"/w/"},{"upper":"X","lower":"x","word":"fox","meaning":"狐狸","icon":"🦊","nameIpa":"/ɛks/","soundIpa":"/ks/"},{"upper":"Y","lower":"y","word":"yellow","meaning":"黃色","icon":"💛","nameIpa":"/waɪ/","soundIpa":"/j/"},{"upper":"Z","lower":"z","word":"zebra","meaning":"斑馬","icon":"🦓","nameIpa":"/ziː/","soundIpa":"/z/"}];
+let alphaIndex=0;
+
+const VOICE_SETTINGS_KEY='baseball_dualtrack_voice_v15';
+const SPEEDS={slow:0.92,normal:1.0,clear:1.06};
+// iOS speech often sounds clipped or robotic below ~0.85: speak whole natural sentences.
+// 0.93 is clear but preserves connected speech; never break a sentence into words.
+const SENTENCE_RATE=0.93; // relaxed English phrase rhythm, slight slowdown
+const SENTENCE_SLOW_RATE=0.86; // slower replay while keeping normal phrase prosody
+function isEnglishSentence(text){return /[A-Za-z]/.test(text)&&/\s/.test(text);}
+let voicePrefs={speed:'normal',voiceURI:'',engine:'device'};
+let speechActive=null,speechAttempt=0,voiceHealthTimer=null,wordReplayTimer=null;
+const LETTER_RECORDINGS={"A":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/A.mp3?v=13","B":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/B.mp3?v=13","C":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/C.mp3?v=13","D":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/D.mp3?v=13","E":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/E.mp3?v=13","F":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/F.mp3?v=13","G":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/G.mp3?v=13","H":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/H.mp3?v=13","I":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/I.mp3?v=13","J":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/J.mp3?v=13","K":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/K.mp3?v=13","L":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/L.mp3?v=13","M":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/M.mp3?v=13","N":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/N.mp3?v=13","O":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/O.mp3?v=13","P":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/P.mp3?v=13","Q":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/Q.mp3?v=13","R":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/R.mp3?v=13","S":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/S.mp3?v=13","T":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/T.mp3?v=13","U":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/U.mp3?v=13","V":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/V.mp3?v=13","W":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/W.mp3?v=13","X":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/X.mp3?v=13","Y":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/Y.mp3?v=13","Z":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/letters/Z.mp3?v=13"};
+const WORD_RECORDINGS={"apple":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/apple.mp3?v=13","ball":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/ball.mp3?v=13","cat":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/cat.mp3?v=13","dog":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/dog.mp3?v=13","egg":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/egg.mp3?v=13","fish":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/fish.mp3?v=13","goat":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/goat.mp3?v=13","hat":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/hat.mp3?v=13","igloo":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/igloo.mp3?v=13","jump":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/jump.mp3?v=13","kite":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/kite.mp3?v=13","lion":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/lion.mp3?v=13","moon":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/moon.mp3?v=13","nose":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/nose.mp3?v=13","octopus":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/octopus.mp3?v=13","pig":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/pig.mp3?v=13","queen":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/queen.mp3?v=13","rabbit":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/rabbit.mp3?v=13","sun":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/sun.mp3?v=13","tiger":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/tiger.mp3?v=13","umbrella":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/umbrella.mp3?v=13","van":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/van.mp3?v=13","water":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/water.mp3?v=13","fox":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/fox.mp3?v=13","yellow":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/yellow.mp3?v=13","zebra":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/zebra.mp3?v=13","bat":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/bat.mp3?v=13","glove":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/glove.mp3?v=13","run":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/run.mp3?v=13","hit":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/hit.mp3?v=13","catch":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/catch.mp3?v=13","team":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/team.mp3?v=13","coach":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/coach.mp3?v=13","home":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/home.mp3?v=13","school":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/school.mp3?v=13","book":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/book.mp3?v=13","happy":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/happy.mp3?v=13","fast":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/fast.mp3?v=13","friend":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/friend.mp3?v=13","red":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/red.mp3?v=13","blue":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/blue.mp3?v=13","field":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/field.mp3?v=13","player":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/player.mp3?v=13","score":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/score.mp3?v=13","practice":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/practice.mp3?v=13","helmet":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/helmet.mp3?v=13","throw":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/throw.mp3?v=13","first":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/first.mp3?v=13","second":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/second.mp3?v=13","ready":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/ready.mp3?v=13","tired":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/tired.mp3?v=13","before":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/before.mp3?v=13","after":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/after.mp3?v=13","together":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/together.mp3?v=13","early":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/early.mp3?v=13","strong":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/strong.mp3?v=13","clean":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/clean.mp3?v=13","quiet":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/quiet.mp3?v=13","learn":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/learn.mp3?v=13","inning":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/inning.mp3?v=13","batter":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/batter.mp3?v=13","pitcher":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/pitcher.mp3?v=13","exercise":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/exercise.mp3?v=13","improve":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/improve.mp3?v=13","compare":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/compare.mp3?v=13","prepare":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/prepare.mp3?v=13","favorite":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/favorite.mp3?v=13","usually":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/usually.mp3?v=13","careful":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/careful.mp3?v=13","although":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/although.mp3?v=13","because":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/because.mp3?v=13","important":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/important.mp3?v=13","different":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/different.mp3?v=13","question":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/question.mp3?v=13","answer":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/words/answer.mp3?v=13"};
+const SENTENCE_RECORDINGS={"I have a ball.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s01.mp3","The bat is red.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s02.mp3","Tom can run.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s03.mp3","She has a book.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s04.mp3","We are a team.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s05.mp3","The dog is happy.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s06.mp3","Dad drinks water.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s07.mp3","The glove is blue.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s08.mp3","My friend can jump.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s09.mp3","The coach is here.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s10.mp3","Mia wears a helmet to practice.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s11.mp3","Ben is tired after the game.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s12.mp3","The players practice together.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s13.mp3","We clean the field before practice.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s14.mp3","Lily throws the ball to Sam.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s15.mp3","The team is ready for the game.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s16.mp3","The second player has a red bat.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s17.mp3","The coach asks us to learn a new skill.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s18.mp3","I get up early to read a book.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s19.mp3","Please be quiet in the library.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s20.mp3","Although it rains, we practice inside.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s21.mp3","The pitcher prepares before every game.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s22.mp3","Baseball is my favorite sport because I love teamwork.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s23.mp3","We compare two scores to find the difference.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s24.mp3","It is important to drink water after exercise.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s25.mp3","She usually reads before going to sleep.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s26.mp3","The batter asks a question, and the coach gives an answer.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s27.mp3","Each player chooses a different way to improve.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s28.mp3","Please be careful when you carry heavy equipment.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s29.mp3","Our class prepares a small sports event together.":"https://homerun-dualtrack-academy-ihfpcow3e-srxbykfmr8-1971.vercel.app/audio/sentences/s30.mp3"};
+let activeRecordedAudio=null;
+
+function saveVoicePrefs(){} // device voice is the fixed, free source; no choice or persisted engine.
+function speechControls(){return `<div class="speech-controls" aria-label="美式英文朗讀">
+ <span class="speech-tool" style="font-size:13px;font-weight:750">🔊 裝置內建美式英文 · 免費</span>
+ <button class="speech-test" type="button" data-action="voice-test">▶ 試聽 Ball</button>
+ <button class="speech-test" type="button" data-action="voice-test-apple">▶ 試聽 Apple</button>
+ </div><div class="speech-status" id="speech-status" role="status" aria-live="polite">句型採自然清楚語速（0.93 倍），保留英文連音與正常抑揚；聽不清楚可用 0.86 倍重聽。不拆開單字。字母使用真人錄音，單字維持原速，不需付費。</div>`}
+function getEnglishVoices(){if(!('speechSynthesis' in window))return [];try{return speechSynthesis.getVoices().filter(v=>/^(en-US|en_US|en)$/i.test(v.lang||''))}catch(_){return []}}
+function pickEnglishVoice(){
+  const voices=getEnglishVoices();
+  if(voicePrefs.voiceURI){const chosen=voices.find(v=>v.voiceURI===voicePrefs.voiceURI);if(chosen)return chosen}
+  // Some iPhones have downloaded premium/enhanced voices. Prefer them automatically;
+  // if the device has none, its standard US-English voice remains the fallback.
+  const quality=v=>{
+    const name=String(v.name||'').toLowerCase();let score=0;
+    if(/premium|enhanced/.test(name))score+=60;
+    if(/siri|neural|natural/.test(name))score+=38;
+    if(/ava|samantha|allison/.test(name))score+=8;
+    if(v.localService)score+=5;
+    if(v.default)score+=9;
+    return score;
+  };
+  return voices.slice().sort((a,b)=>quality(b)-quality(a))[0]||null;
+}
+function populateSpeechVoices(){} // no voice picker
+function showSpeechStatus(text){const el=document.getElementById('speech-status');if(el)el.textContent=text}
+function stopEnglish(){speechAttempt++;clearTimeout(voiceHealthTimer);clearTimeout(wordReplayTimer);wordReplayTimer=null;if(activeRecordedAudio){try{activeRecordedAudio.pause();activeRecordedAudio.removeAttribute('src');activeRecordedAudio.load()}catch(_){}activeRecordedAudio=null}try{if('speechSynthesis'in window){speechSynthesis.cancel()}}catch(_){}speechActive=null}
+
+const VOCAB={
+1:[["ball","球","⚾"],["bat","球棒","🏏"],["glove","手套","🧤"],["run","跑","🏃"],["hit","擊打","💥"],["catch","接住","🙌"],["team","隊伍","👥"],["coach","教練","🧑‍🏫"],["home","家","🏠"],["school","學校","🏫"],["water","水","💧"],["book","書","📘"],["happy","開心的","😊"],["fast","快速的","💨"],["friend","朋友","🤝"],["red","紅色","🔴"],["blue","藍色","🔵"],["jump","跳","🦘"],["hat","帽子","🧢"],["pen","原子筆","🖊️"],["pencil","鉛筆","✏️"],["bag","書包","🎒"],["desk","書桌","🪑"],["chair","椅子","🪑"],["table","桌子","🛋️"],["door","門","🚪"],["window","窗戶","🪟"],["clock","時鐘","🕒"],["light","燈光","💡"],["breakfast","早餐","🥣"],["lunch","午餐","🍱"],["dinner","晚餐","🍽️"],["rice","米飯","🍚"],["milk","牛奶","🥛"],["bread","麵包","🍞"],["banana","香蕉","🍌"],["orange","橘子","🍊"],["hand","手","✋"],["head","頭","👤"],["foot","腳","🦶"],["eye","眼睛","👁️"],["ear","耳朵","👂"],["leg","腿","🦵"],["shirt","襯衫","👕"],["shoes","鞋子","👟"],["play","玩耍","🎮"],["read","閱讀","📚"],["write","寫字","✍️"],["sing","唱歌","🎤"],["walk","走路","🚶"],["swim","游泳","🏊"],["big","大的","🐘"],["small","小的","🐁"],["long","長的","📏"],["short","短的","📐"],["hot","熱的","🔥"],["cold","冷的","🧊"],["green","綠色","🟢"],["white","白色","⚪"],["black","黑色","⚫"],["park","公園","🌳"],["family","家人","👨‍👩‍👧‍👦"],["mother","媽媽","👩"],["father","爸爸","👨"],["sister","姊妹","👧"],["brother","兄弟","👦"],["teacher","老師","🧑‍🏫"],["student","學生","🧑‍🎓"],["bike","腳踏車","🚲"],["rain","雨","🌧️"],["tree","樹","🌲"],["flower","花","🌸"],["bird","鳥","🐦"]],
+2:[["field","球場","🏟️"],["player","球員","⚾"],["score","得分","🏆"],["practice","練習","🏃"],["helmet","安全帽","🪖"],["throw","投擲","🤾"],["first","第一","1️⃣"],["second","第二","2️⃣"],["ready","準備好的","✅"],["tired","疲倦的","😴"],["before","在……之前","⏪"],["after","在……之後","⏩"],["together","一起","🤝"],["early","早的","🌅"],["strong","強壯的","💪"],["clean","乾淨的","✨"],["quiet","安靜的","🤫"],["learn","學習","🧠"],["arrive","抵達","📍"],["leave","離開","🚶"],["borrow","借入","📗"],["return","歸還","↩️"],["carry","搬運","📦"],["share","分享","🤝"],["invite","邀請","💌"],["remember","記得","🧠"],["forget","忘記","❓"],["decide","決定","✅"],["choose","選擇","🔍"],["enjoy","享受","😊"],["finish","完成","🏁"],["start","開始","🚀"],["problem","問題題目","❗"],["example","例子","💡"],["story","故事","📖"],["plan","計畫","🗓️"],["healthy","健康的","🥗"],["hungry","飢餓的","🍽️"],["thirsty","口渴的","💧"],["busy","忙碌的","📅"],["safe","安全的","🦺"],["simple","簡單的","🟩"],["difficult","困難的","🧗"],["corner","角落","📐"],["circle","圓形","⭕"],["square","正方形","⬜"],["triangle","三角形","🔺"],["straight","筆直的","➡️"],["opposite","相反的","↔️"],["behind","在後方","🔙"],["between","在兩者之間","↕️"],["across","穿越到對面","🚦"],["around","在周圍","🔄"],["sometimes","有時候","🕓"],["always","總是","♾️"],["never","從不","🚫"],["weekend","週末","🎉"],["month","月份","🗓️"],["season","季節","🍂"],["weather","天氣","⛅"],["cloudy","多雲的","☁️"],["sunny","晴朗的","🌞"],["library","圖書館","📚"],["hospital","醫院","🏥"],["market","市場","🛒"],["train","火車","🚆"],["ticket","票券","🎫"],["baseball","棒球運動","⚾"],["uniform","制服","🥋"],["captain","隊長","🧢"],["goalkeeper","守門員","🥅"],["museum","博物館","🏛️"]],
+3:[["inning","局數","📋"],["batter","打者","🏏"],["pitcher","投手","⚾"],["exercise","運動","🏃"],["improve","進步","📈"],["compare","比較","⚖️"],["prepare","準備","🎒"],["favorite","最喜愛的","❤️"],["usually","通常","🔄"],["careful","小心的","🔎"],["although","雖然","💭"],["because","因為","💡"],["important","重要的","⭐"],["different","不同的","🔀"],["question","問題","❔"],["answer","答案","✅"],["strategy","策略","♟️"],["teamwork","團隊合作","🤝"],["responsibility","責任","📝"],["respect","尊重","🙏"],["patience","耐心","⌛"],["effort","努力","💪"],["confident","有自信的","🌟"],["curious","好奇的","🔎"],["discover","發現","🔬"],["explore","探索","🗺️"],["observe","觀察","👀"],["predict","預測","🔮"],["explain","解釋","💬"],["evidence","證據","📑"],["solution","解決方法","🧩"],["mistake","錯誤","❌"],["result","結果","📊"],["progress","進展","📈"],["challenge","挑戰","🏆"],["opportunity","機會","🚪"],["goal","目標","🎯"],["schedule","時間表","🗓️"],["flexible","有彈性的","🤸"],["routine","例行習慣","🔁"],["encourage","鼓勵","🎉"],["communicate","溝通","🗣️"],["cooperate","合作","👥"],["community","社區","🏘️"],["environment","環境","🌱"],["recycle","回收再利用","♻️"],["reduce","減少","📉"],["balance","平衡","⚖️"],["energy","能量","⚡"],["nutrition","營養","🥦"],["concentrate","專心","🧠"],["focus","聚焦","🎯"],["efficient","有效率的","⏱️"],["distance","距離","📏"],["measure","測量","📐"],["estimate","估計","📊"],["fraction","分數（數學）","¼"],["average","平均值","➗"],["multiply","乘","✖️"],["divide","除","➗"],["experiment","實驗","🧪"],["research","研究","📋"],["decision","決策","📌"],["consequence","後果","🔮"],["persistence","毅力","🏃"],["achievement","成就","🏅"],["identify","辨認","🔍"],["participate","參與","🙋"],["positive","正向的","➕"],["negative","負向的","➖"],["independent","獨立的","🧍"]]
+};
+const READ={
+1:[
+['I have a ball.','我有什麼？',['球','球棒','手套','帽子'],'球','I have a ball. 意思是「我有一顆球」。'],
+['The bat is red.','球棒是什麼顏色？',['紅色','藍色','綠色','黃色'],'紅色','red 是紅色。'],
+['Tom can run.','Tom 會做什麼？',['跑步','游泳','唱歌','睡覺'],'跑步','can run 表示「會跑」。'],
+['She has a book.','她有什麼？',['書','水','球','鉛筆'],'書','has a book 表示「有一本書」。'],
+['We are a team.','我們是什麼？',['隊伍','學校','家','公園'],'隊伍','team 表示「隊伍」。'],
+['The dog is happy.','小狗的心情如何？',['開心','難過','生氣','緊張'],'開心','happy 是「開心的」。'],
+['Dad drinks water.','爸爸喝什麼？',['水','牛奶','果汁','茶'],'水','drinks water 表示「喝水」。'],
+['The glove is blue.','手套是什麼顏色？',['藍色','紅色','白色','黑色'],'藍色','blue 是藍色。'],
+['My friend can jump.','我的朋友會做什麼？',['跳','跑','讀書','游泳'],'跳','jump 是「跳」。'],
+['The coach is here.','誰在這裡？',['教練','老師','醫生','球迷'],'教練','coach 是「教練」。']
+],
+2:[
+['Mia wears a helmet to practice.','Mia 練習時戴了什麼？',['安全帽','手套','圍巾','眼鏡'],'安全帽','helmet 是安全帽；wears 表示「穿戴」。'],
+['Ben is tired after the game.','Ben 在比賽後感覺如何？',['疲倦','開心','生氣','興奮'],'疲倦','tired 是疲倦；after 是「在……之後」。'],
+['The players practice together.','球員們如何練習？',['一起','各自在家','只在早上','沒有練習'],'一起','together 是「一起」。'],
+['We clean the field before practice.','他們何時整理球場？',['練習前','練習後','午餐後','睡覺前'],'練習前','before practice 是「練習之前」。'],
+['Lily throws the ball to Sam.','Lily 把球丟給誰？',['Sam','教練','爸爸','沒有人'],'Sam','to Sam 表示動作的對象是 Sam。'],
+['The team is ready for the game.','隊伍的狀態是？',['準備好了','很累','在睡覺','找不到球'],'準備好了','ready 表示「準備好」。'],
+['The second player has a red bat.','哪一位球員有紅球棒？',['第二位','第一位','第三位','教練'],'第二位','second 表示「第二」。'],
+['The coach asks us to learn a new skill.','教練要大家做什麼？',['學新技巧','回家','買球棒','喝水'],'學新技巧','learn a new skill 表示「學習新技巧」。'],
+['I get up early to read a book.','我為什麼早起？',['讀書','看電視','打電動','購物'],'讀書','to read a book 在這裡表示目的。'],
+['Please be quiet in the library.','在圖書館應該怎麼做？',['保持安靜','大聲唱歌','跑步','打球'],'保持安靜','be quiet 表示「保持安靜」。']
+],
+3:[
+['Although it rains, we practice inside.','下雨時他們在哪裡練習？',['室內','操場','海邊','公園'],'室內','although 是「雖然」；inside 是「在裡面」。'],
+['The pitcher prepares before every game.','誰在每場比賽前準備？',['投手','捕手','裁判','觀眾'],'投手','pitcher 是投手；before every game 是每場比賽前。'],
+['Baseball is my favorite sport because I love teamwork.','說話者喜歡棒球的原因是？',['喜歡團隊合作','喜歡下雨','喜歡睡覺','喜歡游泳'],'喜歡團隊合作','because 後面說明原因。'],
+['We compare two scores to find the difference.','為什麼要比較兩個分數？',['找出差距','找出顏色','找出球棒','找出座位'],'找出差距','compare 比較；difference 是差異。'],
+['It is important to drink water after exercise.','運動後重要的是什麼？',['喝水','不睡覺','一直看手機','不吃飯'],'喝水','important 是重要的；after exercise 是運動後。'],
+['She usually reads before going to sleep.','她通常在什麼時候閱讀？',['睡前','早餐後','比賽中','上學途中'],'睡前','usually 是通常；before going to sleep 是睡前。'],
+['The batter asks a question, and the coach gives an answer.','誰回答問題？',['教練','打者','投手','觀眾'],'教練','gives an answer 表示「給出答案」。'],
+['Each player chooses a different way to improve.','每個球員選擇什麼？',['不同的進步方法','同一種制服','同一支球棒','同一個位置'],'不同的進步方法','different 是不同的；improve 是進步。'],
+['Please be careful when you carry heavy equipment.','搬運重裝備時要怎樣？',['小心','快跑','閉眼','大笑'],'小心','careful 是小心的。'],
+['Our class prepares a small sports event together.','班級一起準備什麼？',['小型運動活動','電影','午餐','考試'],'小型運動活動','a small sports event 是小型運動活動。']
+]};
+// Strictly validate older backups before any value reaches HTML or learning statistics.
+// Malformed/legacy items are skipped; the original localStorage key is never erased.
+function cleanHistorySession(s){
+ if(!s||typeof s!=='object'||!['math','english'].includes(s.subject)||!MODES[s.subject].some(m=>m.id===s.mode))return null;
+ const total=Number(s.total),correct=Number(s.correct),when=String(s.date||'');
+ if(!Number.isInteger(total)||total<1||total>8||!Number.isInteger(correct)||correct<0||correct>total||when.length>40||!Number.isFinite(Date.parse(when)))return null;
+ const attempts=Array.isArray(s.attempts)?s.attempts.slice(0,8).filter(a=>a&&typeof a==='object'&&typeof a.skill==='string'&&Object.prototype.hasOwnProperty.call(SKILLS,a.skill)&&typeof a.correct==='boolean').map(a=>({skill:a.skill,correct:a.correct,hintUsed:!!a.hintUsed,review:!!a.review,concept:typeof a.concept==='string'?a.concept.slice(0,80):'',level:[1,2,3].includes(Number(a.level))?Number(a.level):1})):[];
+ return {date:when,subject:s.subject,mode:s.mode,level:[1,2,3].includes(Number(s.level))?Number(s.level):1,total,correct,attempts};
+}
+function cleanHistoryReflection(r){if(!r||typeof r.text!=='string'||r.text.length>10000)return null;const d=String(r.date||'');if(d.length>40||!Number.isFinite(Date.parse(d)))return null;return {date:d,text:r.text.slice(0,160)}}
+function safeLoad(){try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');if(!raw||typeof raw!=='object')return structuredClone(DEFAULT);const sessions=Array.isArray(raw.sessions)?raw.sessions.slice(-300).map(cleanHistorySession).filter(Boolean):[];const reflections=Array.isArray(raw.reflections)?raw.reflections.slice(-100).map(cleanHistoryReflection).filter(Boolean):[];return {settings:{math:[1,2,3].includes(Number(raw.settings?.math))?Number(raw.settings.math):1,english:[1,2,3].includes(Number(raw.settings?.english))?Number(raw.settings.english):1,autoNext:typeof raw.settings?.autoNext==='boolean'?raw.settings.autoNext:true,reviewEnabled:typeof raw.settings?.reviewEnabled==='boolean'?raw.settings.reviewEnabled:true},sessions,reflections,reviewQueue:sanitizeReviewQueue(raw.reviewQueue)}}catch(e){console.warn('Learning history was not readable; using a temporary empty view without deleting anything.',e?.name);return structuredClone(DEFAULT)}}
+let data=safeLoad(),page='home',subject=null,mode=null,session=null,feedback=null,finished=null;
+// 手寫內容暫存在本頁記憶體；不送出、不上傳，也不變更既有的答題紀錄。
+let handTab='english',handMode='letter',handLetter=0,handWord=0,handMath=null,handInk=[],handResult='',handSolution=false,handQuizOpen=false;
+let handActivePointer=null,handResizeObserver=null,handAnswerInk=[],handRecognitionBusy=false,handOcrResult='',handOcrCandidates=[];
+let handScoreHtml='',handInkRevision=0,handExpanded=false,handAnswerExpanded=false;
+const app=document.getElementById('app');
+// Parent PIN is a local-device privacy barrier, NOT server-side account authentication.
+const PARENT_KEY='homerun_parent_pin_v1';
+let parentUnlocked=false,parentFailures=0,parentCooldownUntil=0,advanceTimer=null;
+function clearAdvance(){if(advanceTimer!==null){clearTimeout(advanceTimer);advanceTimer=null}}
+function parentPinRecord(){try{const o=JSON.parse(localStorage.getItem(PARENT_KEY)||'null');return o&&typeof o.salt==='string'&&/^[0-9a-f]{32}$/.test(o.salt)&&typeof o.hash==='string'&&/^[0-9a-f]{64}$/.test(o.hash)?o:null}catch(_){return null}}
+const hex=b=>Array.from(b,x=>x.toString(16).padStart(2,'0')).join('');
+function hexBytes(s){return new Uint8Array(s.match(/.{2}/g).map(x=>parseInt(x,16)))}
+async function hashPin(pin,salt){
+ if(!crypto?.subtle)throw new Error('目前瀏覽器無法安全設定密碼，請使用 Safari 或 Chrome 開啟 HTTPS 網站。');
+ const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveBits']);
+ return hex(new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt:hexBytes(salt),iterations:180000,hash:'SHA-256'},k,256)));
+}
+function constantMatch(a,b){if(a.length!==b.length)return false;let diff=0;for(let i=0;i<a.length;i++)diff|=a.charCodeAt(i)^b.charCodeAt(i);return diff===0}
+function parentGate(){const setup=!parentPinRecord();return `<button class="back" data-action="nav-home">← 回到學習區</button><section class="card parent-auth-card"><div class="auth-emoji" aria-hidden="true">🔐</div><div class="eyebrow">PARENT ACCESS</div><h1>${setup?'首次使用：設定家長密碼':'家長專用｜輸入密碼'}</h1><p>${setup?'請設定 6～12 位數字密碼，之後每次進入家長區都要輸入。':'家長區包含學習紀錄、難度和資料管理，請先解鎖。'}</p><form data-pin-form="${setup?'create':'unlock'}" class="pin-form"><label for="parent-pin">${setup?'設定 6～12 位數字密碼':'家長密碼'}</label><input id="parent-pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]{6,12}" minlength="6" maxlength="12" required autocomplete="off" placeholder="${setup?'至少 6 位數字':'輸入密碼'}" />${setup?`<label for="parent-confirm">再次輸入密碼</label><input id="parent-confirm" name="confirm" type="password" inputmode="numeric" pattern="[0-9]{6,12}" minlength="6" maxlength="12" required autocomplete="off" placeholder="再次確認"/>`:''}<button class="btn btn-dark" type="submit" style="width:100%">${setup?'設定密碼並開啟家長區':'🔓 解鎖家長區'}</button></form><p class="note">${setup?'密碼只保存在本機（經加鹽雜湊），不會上傳；請自己妥善記住。':'忘記密碼？目前無線上重設服務。清除此網站的瀏覽器資料可重設，但本機學習紀錄也可能遺失。'}</p><p class="note">⚠️ 這是共用裝置的家長防誤入機制，不是高安全性的網站登入；能存取裝置儲存資料的人仍可能繞過。</p><p id="pin-error" class="pin-error" role="alert" aria-live="polite"></p></section>`}
+function pinMessage(m){const el=document.getElementById('pin-error');if(el)el.textContent=m;else toast(m)}
+async function handleParentForm(e){const form=e.target;if(!(form instanceof HTMLFormElement)||!form.dataset.pinForm)return;
+ e.preventDefault();const mode=form.dataset.pinForm,pin=String(form.elements.namedItem('pin')?.value||''),confirmPin=String(form.elements.namedItem('confirm')?.value||'');
+ if(!/^[0-9]{6,12}$/.test(pin)){pinMessage('密碼須為 6～12 位數字。');return}
+ const submit=form.querySelector('button[type="submit"]');if(submit)submit.disabled=true;
+ try{
+  if(mode==='create'){
+   if(parentPinRecord()){pinMessage('此裝置已有密碼設定，請重新整理後解鎖。');return}
+   if(pin!==confirmPin){pinMessage('兩次輸入的密碼不一致。');return}
+   const salt=hex(crypto.getRandomValues(new Uint8Array(16)));
+   const hash=await hashPin(pin,salt);
+   localStorage.setItem(PARENT_KEY,JSON.stringify({v:1,salt,hash}));parentUnlocked=true;parentFailures=0;navigate('parent');toast('家長區密碼設定完成。');
+  }else if(mode==='unlock'){
+   if(Date.now()<parentCooldownUntil){pinMessage('錯誤次數過多，請稍後再試。');return}
+   const auth=parentPinRecord();if(!auth){render();return}
+   const hash=await hashPin(pin,auth.salt);
+   if(constantMatch(hash,auth.hash)){parentUnlocked=true;parentFailures=0;parentCooldownUntil=0;navigate('parent')}else{
+    parentFailures++;if(parentFailures>=5){parentCooldownUntil=Date.now()+30000;parentFailures=0;pinMessage('連續輸入錯誤，暫停 30 秒。')}else pinMessage('密碼不正確，請再試一次。');
+    form.elements.namedItem('pin').value='';
+   }
+  }else if(mode==='change'){
+   if(!parentUnlocked||!parentPinRecord()){pinMessage('請先解鎖家長區。');return}
+   const current=String(form.elements.namedItem('current')?.value||'');
+   const auth=parentPinRecord();const currentHash=await hashPin(current,auth.salt);
+   if(!constantMatch(currentHash,auth.hash)){toast('原密碼不正確。');return}
+   if(pin!==confirmPin){toast('兩次新密碼不一致。');return}
+   const salt=hex(crypto.getRandomValues(new Uint8Array(16)));
+   localStorage.setItem(PARENT_KEY,JSON.stringify({v:1,salt,hash:await hashPin(pin,salt)}));form.reset();toast('已更新家長密碼。');
+  }
+ }catch(err){pinMessage('密碼操作失敗：'+(err?.message||'請確認瀏覽器支援安全儲存。'))}finally{if(submit&&submit.isConnected)submit.disabled=false}
+}
+app.addEventListener('submit',handleParentForm);
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));return true}catch(_){toast('本機儲存失敗，請檢查瀏覽器儲存空間。');return false}}
+function h(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const one=a=>a[rand(0,a.length-1)];
+function shuffle(a){const x=a.slice();for(let i=x.length-1;i>0;i--){const j=rand(0,i);[x[i],x[j]]=[x[j],x[i]]}return x}
+const fmtDate=(d)=>new Date(d).toLocaleDateString('zh-TW',{month:'numeric',day:'numeric'});
+function toast(str){const t=document.getElementById('toast');if(!t){console.info(String(str));return}t.textContent=str;t.classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hidden'),3000)}
+function navigate(target){handInk=[];handAnswerInk=[];handOcrResult='';handResult='';handQuizOpen=false;handSolution=false;handActivePointer=null;if(handResizeObserver)handResizeObserver.disconnect();clearAdvance();stopEnglish();if(target!=='parent')parentUnlocked=false;page=target;feedback=null;session=null;finished=null;window.scrollTo(0,0);render()}
+function header(){return `<header class="topbar"><a href="#home" class="brand" data-action="nav-home" aria-label="回學院首頁"><span class="brand-ball" aria-hidden="true">⚾</span><span><span class="brand-name">全壘打雙軌學院</span><span class="brand-sub">BASEBALL × LEARNING</span></span></a><nav class="nav" aria-label="主要導覽"><button type="button" data-action="nav-home" class="${['home','select','quiz','result','alphabet'].includes(page)?'active':''}">👦 學習區</button><button type="button" data-action="nav-handwrite" class="${page==='handwrite'?'active':''}">✍️ 手寫場</button><button type="button" data-action="nav-parent" class="${page==='parent'?'active':''}">📋 家長區</button></nav></header>`}
+function footer(){return `<footer class="footer"><span>⚾ 為孩子設計的小小英數學習場｜不排名、不倒數計時</span><span>學習紀錄僅儲存於本裝置 · 免費語音、手寫辨識僅供練習參考 · v22 穩定優化</span></footer>`}
+function getTodayStats(){const today=new Date().toDateString();const ss=data.sessions.filter(s=>new Date(s.date).toDateString()===today);return {sessions:ss.length,questions:ss.reduce((a,s)=>a+s.total,0)}}
+function getSubStats(s){const ss=data.sessions.filter(x=>x.subject===s);const total=ss.reduce((a,x)=>a+x.total,0);const good=ss.reduce((a,x)=>a+x.correct,0);return {num:ss.length,accuracy:total?Math.round(good/total*100):null}}
+function home(){const today=getTodayStats(),en=getSubStats('english'),ma=getSubStats('math');const suggest=reviewSuggestion();return `<section class="learning-guide"><div><strong>🎯 今天怎麼學？</strong><p>${suggest.en+suggest.ma?`有 ${suggest.en+suggest.ma} 題可複習。錯題不用一次刷完，理解後分次再試。`:suggest.worst?`最近可以多留意「${h(SKILLS[suggest.worst.skill])}」；先練一回合，再看自己怎麼想。`:'建議每天 10～15 分鐘：先練基礎，再挑一題說明自己的思路。'}</p></div><div class="guide-actions">${suggest.en?`<button class="btn btn-outline" data-action="review-english">🔤 英文複習 ${suggest.en}</button>`:''}${suggest.ma?`<button class="btn btn-outline" data-action="review-math">🔢 數學複習 ${suggest.ma}</button>`:''}</div></section><section class="hero"><div><div class="eyebrow">TWO TRACKS, ONE FUTURE</div><h1>棒球追夢，<br><em>英數也能全壘打！</em></h1><p>英文從 A～Z 26 個字母和發音開始，進階學單字與短句；每回合 8 題，沒有倒數壓力。</p><div class="hero-actions"><button class="btn btn-primary" data-action="choose-english">🔤 開始英文</button><button class="btn btn-light" data-action="choose-math">🔢 開始數學</button></div></div><div class="hero-visual" aria-hidden="true"><div class="spark one">✨</div><div class="baseball-illustration"><div class="eyes"><span></span><span></span></div><div class="smile"></div></div><div class="spark two">⭐</div></div></section>
+<div class="section-title"><div><div class="eyebrow">YOUR TRAINING GROUND</div><h2>今天想挑戰哪一科？</h2><p>兩科都能從基礎開始，關卡由家長調整難度。</p></div><span class="pill">🌱 持續練習最重要</span></div>
+<div class="tiles"><button class="tile english" data-action="choose-english"><span class="tile-icon" aria-hidden="true">🔤</span><h3>英文練習</h3><p>26 個字母、發音、單字與聽力</p><div class="tile-foot"><span>${en.num?`已完成 ${en.num} 回合 · 正確率 ${en.accuracy}%`:'準備好打第一球了嗎？'}</span><span class="arrow">→</span></div></button><button class="tile math" data-action="choose-math"><span class="tile-icon" aria-hidden="true">🔢</span><h3>數學練習</h3><p>計算、生活應用、看懂比分</p><div class="tile-foot"><span>${ma.num?`已完成 ${ma.num} 回合 · 正確率 ${ma.accuracy}%`:'從簡單算式開始進步'}</span><span class="arrow">→</span></div></button></div>
+<section class="hw-entry"><div><strong>✍️ 新增｜手寫練習場</strong><p>手指或 Apple Pencil 描寫 A～Z、英文單字；數學列式計算後，可輸入答案即時驗證。</p></div><button class="btn btn-dark" data-action="nav-handwrite">開始手寫 →</button></section><div class="section-title"><div><h2>練習之外，也要會生活</h2><p>雙軌培養：學科能力 × 自主管理</p></div></div>
+<div class="two-col"><section class="card"><h3>🎯 今日小任務</h3><div class="checkrow"><div class="checkicon">🔤</div><div><strong>一回合英文練習</strong><small>先學字母 A～Z，再逐步練單字與聽力</small></div><span aria-hidden="true">${data.sessions.some(s=>s.subject==='english'&&new Date(s.date).toDateString()===new Date().toDateString())?'✅':'○'}</span></div><div class="checkrow"><div class="checkicon">🔢</div><div><strong>一回合數學練習</strong><small>約 4～6 分鐘，理解比速度重要</small></div><span aria-hidden="true">${data.sessions.some(s=>s.subject==='math'&&new Date(s.date).toDateString()===new Date().toDateString())?'✅':'○'}</span></div><div class="checkrow"><div class="checkicon">💬</div><div><strong>告訴大人今天學到什麼</strong><small>用自己的話說 1 件事</small></div></div><div class="tipline">💚 這是「建議菜單」，不是每日強制目標。累了可以休息。</div></section><section class="card"><h3>📈 練習紀錄</h3><div class="statrow"><div class="stat"><strong>${today.sessions}</strong><small>今天完成回合</small></div><div class="stat"><strong>${today.questions}</strong><small>今天完成題數</small></div></div><p class="note" style="margin-bottom:0">練習紀錄不是智力測驗或年級評量；我們只看孩子自己的練習狀況，不與其他孩子排名。</p><div class="rowactions"><button data-action="nav-parent" class="btn btn-outline" style="width:100%">給家長看學習報告 →</button></div></section></div>`}
+function selectView(){const isEn=subject==='english',modes=MODES[subject];const due=dueReviews(subject).length;return `<div class="tipline">🌱 學習路線：${isEn?'字母 → 單字 → 情境活用 → 短句與深度閱讀':'數與運算 → 生活應用 → 數列與規律 → 圖形測量 → 策略解題'}。${due?`目前有 ${due} 道錯題可以複習。`:'沒有到期複習題，先探索新題目。'}</div><button class="back" data-action="nav-home">← 返回首頁</button><div class="pageheading"><div class="eyebrow">${isEn?'ENGLISH PRACTICE':'MATH PRACTICE'}</div><h1>${isEn?'🔤 英文練習場':'🔢 數學練習場'}</h1><p>${isEn?'先從 A～Z 的大小寫與聽音練起，再逐步認識 216 個單字、情境運用、短句及聽力。':'選一個項目，完成 8 題就能休息。答錯會有說明，別急著求快。'}</p></div>${isEn?`<section class="alpha-intro"><div><div class="eyebrow">STEP 01 · FIRST BASE</div><strong>🔡 第一站｜認識 26 個英文字母</strong><p>每張字母卡都能聽字母與例字；可從 A 一張一張往下學。</p></div><button class="btn btn-dark" data-action="alphabet">🔊 開始學 ABC →</button></section>`:''}<div class="modegrid">${modes.map(m=>`<button class="mode" data-action="start" data-mode="${m.id}"><span class="badge">${m.label}</span><div class="mode-icon" aria-hidden="true">${m.icon}</div><h3>${m.name} →</h3><p>${m.desc}</p></button>`).join('')}</div><div class="levelstrip"><div>🎚️ 目前難度：<strong>第 ${data.settings[subject]} 級／${['基礎','進階','挑戰'][data.settings[subject]-1]}</strong><br><span>${isEn?'字母基礎練習不受此難度設定影響；單字和句子難度由家長調整。':'難度不會自動升級；家長可依理解程度調整。'}</span></div><button data-action="nav-parent">家長設定</button></div><section class="card" style="margin-top:17px"><h3>👨‍👩‍👧 給陪練大人的提醒</h3><p class="note" style="margin:0">${isEn?'建議每天聽 3～5 個字母，孩子先聽、再模仿、再選字母。一次聽一個字母，再跟著念；不必急著全部記住。':'先讓孩子自己選答案，答錯時一起讀解析，不直接報答案。每次練習結束，可以問：「你是怎麼想的？」這比單看答對幾題更能了解學習。'}</p></section>`}
+
+function alphabetPage(){const x=ALPHABET[alphaIndex];return `<button class="back" data-action="alpha-back">← 回到英文練習場</button><div class="pageheading"><div class="eyebrow">ABC · ALPHABET SCHOOL</div><h1>🔡 A～Z 字母發音學習</h1><p>先認大小寫，聽一聽字母，再跟著唸它的例字。點一下就只唸一次。</p></div><div class="alpha-layout"><section class="alpha-main"><div class="alpha-topline"><span>📘 第 ${alphaIndex+1} / 26 個字母 · 真人字母錄音</span><span>${x.upper} ${x.lower}</span></div><div class="alpha-hero"><div class="alpha-symbol" lang="en">${x.upper}<small>${x.lower}</small></div><div><span class="alpha-example-emoji" aria-hidden="true">${x.icon}</span><div class="alpha-word" lang="en">${x.word}<small>${x.meaning}</small></div></div></div><div class="alpha-audio"><button class="btn btn-dark" data-action="alpha-name" aria-label="聽字母 ${x.upper}">🔊 聽字母 ${x.upper}</button><button class="btn btn-outline" data-action="alpha-word" aria-label="聽單字 ${x.word}">🔈 聽單字 ${x.word}</button><button class="btn btn-outline" data-action="alpha-repeat" aria-label="慢速播放單字 ${x.word} 兩次（中間會停頓）">🔁 單字慢速跟讀 ×2（停一秒）</button></div>${speechControls()}<div class="rowactions"><button class="btn btn-outline" data-action="alpha-handwrite">✍️ 手寫練習 ${x.upper}／${x.word}</button></div><div class="alpha-note"><strong>👂 小老師提醒：</strong>先按「聽字母」，再按「聽單字」。聽完後，讓孩子自己跟著念一次就好。</div><div class="alpha-controls"><button class="btn btn-outline" data-action="alpha-prev" ${alphaIndex===0?'disabled':''}>← 上一個</button><button class="btn btn-dark" data-action="alpha-next">${alphaIndex===25?'✅ 完成 A～Z':'下一個字母 →'}</button></div></section><aside class="alpha-side"><section class="card"><h3>🎯 選一個字母</h3><div class="alpha-grid" aria-label="26個英文字母">${ALPHABET.map((a,i)=>`<button class="alpha-item ${i===alphaIndex?'selected':''}" data-action="alpha-select" data-index="${i}" aria-label="選擇字母 ${a.upper}" aria-pressed="${i===alphaIndex}" lang="en">${a.upper}<span>${a.lower}</span></button>`).join('')}</div><p class="note">🎙️ 字母使用真人錄音；單字每次唸一個完整英文單字，音檔已補前後留白；慢速跟讀會在兩次播放之間留停頓。<a href="/audio/ATTRIBUTION.txt?v=13" target="_blank" rel="noopener noreferrer">語音來源與授權</a>。</p><div class="rowactions"><button class="btn btn-primary" data-action="alpha-quiz" style="width:100%">⚾ 做 8 題字母挑戰</button></div></section></aside></div>`}
+function choicesForAnswer(answer,level){const set=new Set([answer]);let iter=0;while(set.size<4&&iter++<140){const span=Math.max(4,Math.ceil(Math.max(8,answer)*(.18+(level-1)*.09)));let n=answer+rand(-span,span);if(n===answer||n<0)continue;set.add(n)}while(set.size<4)set.add(answer+set.size+1);return shuffle([...set]).map(String)}
+
+function patternQuestion(level,forcedKind=null){
+ const kind=Number.isInteger(forcedKind)&&forcedKind>=0&&forcedKind<=7?forcedKind:rand(0,7);let main,ans,exp,hint;
+ if(level===1){
+  if(kind===0){const start=rand(2,15),step=one([2,3,4,5]);ans=start+3*step;main=`找規律：${start}、${start+step}、${start+step*2}、□。下一個數字？`;exp=`每次增加 ${step}，所以是 ${start+step*2}＋${step}＝${ans}。`;hint='先看相鄰兩個數差多少。'}
+  else if(kind===1){const step=one([2,3,5]),start=rand(3*step+3,30);ans=start-3*step;main=`找規律：${start}、${start-step}、${start-step*2}、□。下一個數字？`;exp=`每次減少 ${step}，得到 ${ans}。`;hint='看看數字是變大還是變小。'}
+  else if(kind===2){const tens=rand(2,8),ones=rand(0,9);ans=tens*10+ones;main=`${tens} 個十和 ${ones} 個一，合起來是多少？`;exp=`${tens}×10＋${ones}＝${ans}。`;hint='一個十等於10。'}
+  else if(kind===3){const n=rand(11,89),k=one([1,2,5,10]);ans=n+k;main=`從 ${n} 往後跳 ${k} 格，會到哪個數？`;exp=`${n}＋${k}＝${ans}。`;hint='向後跳就是加。'}
+  else if(kind===4){const x=rand(2,8),y=x+rand(2,9);ans=y-x;main=`${x}、${y} 中間相差幾？`;exp=`${y}−${x}＝${ans}。`;hint='大的減小的。'}
+  else if(kind===5){const a=rand(2,8),b=rand(2,8),c=rand(2,8);ans=a+b+c;main=`三個袋子分別有 ${a}、${b}、${c} 顆球，合計多少顆？`;exp=`${a}＋${b}＋${c}＝${ans}。`;hint='可以先合併兩袋，再加第三袋。'}
+  else if(kind===6){const n=rand(3,9),m=one([2,5]);ans=n*m;main=`跳數練習：每次跳 ${m}，跳了 ${n} 次到多少？（從0開始）`;exp=`${n}×${m}＝${ans}。`;hint='數數看重複加了幾次。'}
+  else{const n=rand(3,8),t=rand(2,5);ans=n*t;main=`□＋□＋… 共 ${n} 個 ${t}，可以用乘法得到多少？`;exp=`${n}×${t}＝${ans}。`;hint='重複加法也可以改寫成乘法。'}
+ }else if(level===2){
+  if(kind===0){const a=rand(5,29),d=rand(4,12);ans=a+3*d;main=`找規律：${a}、${a+d}、${a+2*d}、□。`;exp=`公差是 ${d}，所以答案是 ${ans}。`;hint='看每一項固定增加多少。'}
+  else if(kind===1){const d=rand(4,11),a=rand(3*d+8,99);ans=a-3*d;main=`找規律：${a}、${a-d}、${a-2*d}、□。`;exp=`每次減 ${d}，下一項是 ${ans}。`;hint='看相鄰兩項相差多少。'}
+  else if(kind===2){const h=rand(2,8),t=rand(1,9),u=rand(0,9);ans=h*100+t*10+u;main=`${h} 個百、${t} 個十、${u} 個一，共是多少？`;exp=`${h}×100＋${t}×10＋${u}＝${ans}。`;hint='百位代表100，十位代表10。'}
+  else if(kind===3){const n=rand(3,9),d=rand(3,8);ans=n*d;main=`第1排 ${d} 個座位、第2排 ${d} 個……共 ${n} 排，總座位數？`;exp=`${n}×${d}＝${ans}。`;hint='每排一樣多，使用乘法。'}
+  else if(kind===4){const a=rand(4,14),b=rand(3,8),c=rand(2,6);ans=a+b*c;main=`先算乘法：${a}＋${b}×${c}＝？`;exp=`${b}×${c}＝${b*c}，再加 ${a}＝${ans}。`;hint='先乘除、後加減。'}
+  else if(kind===5){const m=rand(3,8),n=rand(2,7),v=m*n;ans=m;main=`□×${n}＝${v}，□應填多少？`;exp=`${v}÷${n}＝${ans}。`;hint='用除法還原未知數。'}
+  else if(kind===6){const a=rand(1,9),b=rand(1,9);ans=a*10+b;main=`${ans} 是幾個一？（不是幾個十）`;exp=`${ans} 就是 ${ans} 個一。`;hint='每個數都可以用「一」作單位。'}
+  else{const a=rand(3,8),d=rand(2,8);ans=a*d;main=`${a} 個小朋友，每人跳 ${d} 下，總共跳幾下？`;exp=`${a}×${d}＝${ans}。`;hint='相同組數，用乘法。'}
+ }else{
+  if(kind===0){const a=rand(13,44),d=rand(7,16);ans=a+4*d;main=`找規律：${a}、${a+d}、${a+2*d}、${a+3*d}、□。`;exp=`每次加 ${d}，下一項 ${ans}。`;hint='先找相鄰的固定差。'}
+  else if(kind===1){const a=one([2,3,4]);ans=a*16;main=`倍數規律：${a}、${a*2}、${a*4}、${a*8}、下一個？`;exp=`每次乘2，下一項是 ${a*16}。`;hint='看看是每次加固定數，還是乘固定數。';ans=a*16;}
+  else if(kind===2){const h=rand(2,8),t=rand(1,8),u=rand(0,9);ans=h*100+t*10+u;main=`哪個數由 ${h} 個百、${t} 個十、${u} 個一組成？`;exp=`${h*100}＋${t*10}＋${u}＝${ans}。`;hint='按百、十、個位組合。'}
+  else if(kind===3){const n=rand(3,9),k=rand(4,9),plus=rand(2,7);ans=n*k+plus;main=`規則是「先乘 ${k}，再加 ${plus}」。輸入 ${n}，輸出多少？`;exp=`${n}×${k}＋${plus}＝${ans}。`;hint='操作順序不能反過來。'}
+  else if(kind===4){const b=rand(3,9),c=rand(3,9),a=rand(b*c,b*c+40);ans=a-b*c;main=`運算規律：${a}−${b}×${c}＝？`;exp=`先乘 ${b}×${c}＝${b*c}，再算 ${a}−${b*c}＝${ans}。`;hint='先乘再減。'}
+  else if(kind===5){const a=rand(3,9),b=rand(3,7),c=rand(2,6);ans=(a+b)*c;main=`（${a}＋${b}）×${c}＝？`;exp=`括號先算 ${a}＋${b}＝${a+b}，再乘 ${c} 得 ${ans}。`;hint='括號內先算。'}
+  else if(kind===6){const a=rand(3,8),b=rand(3,9);ans=a+b;main=`如果 x＋${a}＝${2*a+b}，x 是多少？`;exp=`${2*a+b}−${a}＝${ans}。`;hint='用減法求出未知數。'}
+  else{const a=rand(5,12),b=rand(4,10),c=rand(2,7);ans=(a*b)%c;main=`${a}×${b} 個球，平均每 ${c} 顆放一袋，最後剩幾顆不滿一袋？`;exp=`${a*b}÷${c} 的餘數是 ${ans}。`;hint='把球按每袋數量分完，剩下的就是餘數。'}
+ }
+ if(!Number.isFinite(ans)||ans<0) throw Error('invalid pattern generator');
+ return {skill:'math-pattern',prompt:'🔍 看懂規律與位值，再選出答案',main,answer:String(ans),choices:choicesForAnswer(ans,level),explain:exp,hint,signature:'pattern-'+level+'-'+kind+'-'+main,concept:'pattern-'+kind,reason:true};
+}
+function measureQuestion(level,forcedKind=null){
+ const kind=Number.isInteger(forcedKind)&&forcedKind>=0&&forcedKind<=7?forcedKind:rand(0,7);let main,ans,exp,hint;
+ if(level===1){
+  if(kind===0){const a=rand(6,20),b=rand(2,14);ans=a+b;main=`紅色緞帶長 ${a} 公分，藍色緞帶長 ${b} 公分，接起來長幾公分？`;exp=`${a}＋${b}＝${ans} 公分。`;hint='長度接起來要相加。'}
+  else if(kind===1){const a=rand(11,30),b=rand(3,a-2);ans=a-b;main=`原有 ${a} 公分的紙帶，剪掉 ${b} 公分，剩幾公分？`;exp=`${a}−${b}＝${ans} 公分。`;hint='剪掉的部分要減掉。'}
+  else if(kind===2){const h=rand(7,15),dur=one([1,2,3]);ans=h+dur;main=`使用24小時制：活動 ${h}:00 開始，${dur} 小時後是幾點？`;exp=`${h}＋${dur}＝${ans} 點。`;hint='時數直接往後加。'}
+  else if(kind===3){const n=rand(2,5);ans=n*10;main=`${n} 枚 10 元硬幣，一共多少元？`;exp=`${n}×10＝${ans} 元。`;hint='每枚都是10元。'}
+  else if(kind===4){const w=rand(2,9);ans=4*w;main=`正方形每邊 ${w} 公分，四條邊共幾公分？`;exp=`周長是 ${w}×4＝${ans} 公分。`;hint='周長是繞著外圍一圈的長度。'}
+  else if(kind===5){const a=rand(2,8),b=rand(2,8);ans=a+b;main=`一條繩子長 ${a} 公尺，另一條 ${b} 公尺，合計幾公尺？`;exp=`${a}＋${b}＝${ans} 公尺。`;hint='相同單位才能直接加。'}
+  else if(kind===6){const n=rand(2,4);ans=n*60;main=`${n} 小時等於多少分鐘？`;exp=`1 小時是60分鐘；${n}×60＝${ans} 分鐘。`;hint='1 小時＝60 分鐘。'}
+  else{const n=rand(3,9),unit=rand(2,6);ans=n*unit;main=`長方形地板有 ${n} 排，每排 ${unit} 塊正方形磁磚，一共幾塊？`;exp=`${n}×${unit}＝${ans} 塊。`;hint='每排一樣多，使用乘法。'}
+ }else if(level===2){
+  if(kind===0){const a=rand(3,13),b=rand(2,11);ans=2*(a+b);main=`長方形長 ${a} 公分、寬 ${b} 公分，周長是多少？`;exp=`周長＝(${a}＋${b})×2＝${ans} 公分。`;hint='周長是四邊合計。'}
+  else if(kind===1){const a=rand(3,12),b=rand(2,9);ans=a*b;main=`長方形長 ${a} 公分、寬 ${b} 公分，面積是多少平方公分？`;exp=`面積＝長×寬＝${a}×${b}＝${ans}。`;hint='數格子可用乘法。'}
+  else if(kind===2){const n=rand(2,8);ans=n*100;main=`${n} 公尺等於幾公分？`;exp=`1 公尺＝100 公分，${n} 公尺＝${ans} 公分。`;hint='1公尺等於100公分。'}
+  else if(kind===3){const h=rand(8,15),start=one([0,15,30]),dur=one([15,30,45]),m=h*60+start+dur;ans=m%60;main=`活動 ${String(h).padStart(2,'0')}:${String(start).padStart(2,'0')} 開始，${dur} 分鐘後結束。結束時間的「分鐘」是幾？`;exp=`結束於 ${String(Math.floor(m/60)).padStart(2,'0')}:${String(m%60).padStart(2,'0')}，分鐘是 ${ans}。`;hint='先加分鐘，滿60要進一小時。'}
+  else if(kind===4){const n=rand(2,8),p=one([20,30,40]),paid=n*p+rand(1,5)*10;ans=paid-n*p;main=`買 ${n} 張票，每張 ${p} 元，付 ${paid} 元，找回多少？`;exp=`總價 ${n}×${p}＝${n*p}；找回 ${ans} 元。`;hint='總價用乘法，再從付款中扣除。'}
+  else if(kind===5){const n=rand(2,7);ans=n*1000;main=`${n} 公斤等於幾公克？`;exp=`1公斤＝1000公克，所以是 ${ans} 公克。`;hint='1公斤＝1000公克。'}
+  else if(kind===6){const total=one([12,16,20,24,28]),n=4;ans=total/4;main=`${total} 顆球的四分之一是多少顆？`;exp=`${total}÷4＝${ans}。`;hint='四分之一是平分四份、拿一份。'}
+  else{const h=rand(1,4),m=one([10,20,30,45]);ans=h*60+m;main=`${h} 小時 ${m} 分鐘，總共幾分鐘？`;exp=`${h}×60＋${m}＝${ans} 分鐘。`;hint='先把小時換成分鐘。'}
+ }else{
+  if(kind===0){const a=rand(7,18),b=rand(4,13);ans=a*b;main=`一塊長方形球場模型長 ${a} 公分、寬 ${b} 公分，面積多少平方公分？`;exp=`${a}×${b}＝${ans} 平方公分。`;hint='面積＝長×寬。'}
+  else if(kind===1){const a=rand(8,19),b=rand(5,14);ans=2*(a+b);main=`長方形練習區長 ${a} 公尺、寬 ${b} 公尺，周長幾公尺？`;exp=`(${a}＋${b})×2＝${ans} 公尺。`;hint='周長是四邊總長。'}
+  else if(kind===2){const n=one([3,4,5,6,8]),per=rand(3,9),total=n*per;ans=per;main=`一共有 ${total} 顆球，其中 ${1}/${n} 是紅球，紅球有幾顆？`;exp=`把 ${total} 平分 ${n} 份，其中一份 ${total}÷${n}＝${ans}。`;hint='分母代表平均分幾份。'}
+  else if(kind===3){const h=rand(8,14),st=one([0,15,30,45]),dur=rand(3,8)*15;ans=dur;const finish=h*60+st+dur;main=`練習從 ${String(h).padStart(2,'0')}:${String(st).padStart(2,'0')} 到 ${String(Math.floor(finish/60)).padStart(2,'0')}:${String(finish%60).padStart(2,'0')}，持續幾分鐘？`;exp=`把結束與開始時間相減，得到 ${dur} 分鐘。`;hint='換算為分鐘再相減。'}
+  else if(kind===4){const n=rand(3,12),m=rand(2,8);ans=n*m;main=`棒球館地板長 ${n} 公尺、寬 ${m} 公尺，面積是多少平方公尺？`;exp=`${n}×${m}＝${ans} 平方公尺。`;hint='兩個長度相乘後，面積單位是平方公尺。'}
+  else if(kind===5){const each=rand(2,5),n=rand(4,9);ans=each*n*100;main=`買了 ${n} 條繩子，每條 ${each} 公尺，共多少公分？`;exp=`${n}×${each}＝${n*each} 公尺＝${ans} 公分。`;hint='先算總公尺，再乘100。'}
+  else if(kind===6){const per=one([2,3,4,5,6]),each=rand(3,9),n=per*each;ans=each;main=`${n} 人平均分成 ${per} 組，每組有多少人？`;exp=`${n}÷${per}＝${ans} 人。`;hint='平均分配使用除法。'}
+  else{const x=rand(5,9),y=rand(5,9),z=rand(Math.abs(x-y)+1,Math.min(9,x+y-1));ans=(x+y+z)*2;main=`一個三角形三邊長 ${x}、${y}、${z} 公分，另有一個完全相同的三角形。兩個三角形各自周長相加，一共多少公分？`;exp=`一個三角形周長 ${x}＋${y}＋${z}＝${x+y+z}；兩個合計 ${ans} 公分。`;hint='兩個三角形各自的周長要相加。'}
+ }
+ if(!Number.isFinite(ans)||ans<0)throw Error('invalid measure generator');
+ return {skill:'math-measure',prompt:'📐 把圖形與生活單位轉成數學題',main,answer:String(ans),choices:choicesForAnswer(ans,level),explain:exp,hint,signature:'measure-'+level+'-'+kind+'-'+main,concept:'measure-'+kind,reason:true};
+}
+
+function calcQuestion(level){
+ if(rand(0,1)===0){let a,b,ans,eq,exp;
+  const kind=rand(0,level===1?3:level===2?5:7);
+  if(level===1){
+    if(kind===0){a=rand(3,18);b=rand(2,8);ans=a+b;eq=`□ ＋ ${a} ＝ ${ans}`;exp=`空格＝${ans}−${a}＝${b}。`;ans=b;}
+    else if(kind===1){a=rand(7,19);b=rand(2,a);ans=a-b;eq=`${a} − □ ＝ ${ans}`;exp=`空格＝${a}−${ans}＝${b}。`;ans=b;}
+    else if(kind===2){a=rand(2,9);b=rand(2,5);ans=a*b;eq=`${a} 組，每組 ${b} 個，共幾個？`;exp=`${a}×${b}＝${ans}。`}
+    else{a=rand(11,30);b=rand(3,8);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`${a} 減去 ${b}＝${ans}。`}
+  }else if(level===2){
+    if(kind===0){a=rand(12,68);b=rand(12,26);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`個位相加滿10要進位，答案 ${ans}。`}
+    else if(kind===1){a=rand(50,99);b=rand(18,a-4);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`先算個位，再算十位；答案 ${ans}。`}
+    else if(kind===2){a=rand(2,9);b=rand(2,9);ans=a*b;eq=`${a} × ${b} ＝ ?`;exp=`${a} 乘以 ${b}＝${ans}。`}
+    else if(kind===3){a=rand(2,9);b=rand(2,8);ans=b;eq=`${a*b} ÷ ${a} ＝ ?`;exp=`${a*b} 平均分 ${a} 份，每份 ${b}。`}
+    else if(kind===4){a=rand(5,20);b=rand(5,20);ans=a+b;eq=`□ − ${a} ＝ ${b}`;exp=`空格要加回 ${a}，所以 ${a}+${b}＝${ans}。`}
+    else{a=rand(5,22);b=rand(2,9);ans=a+2*b;eq=`${a} ＋ ${b} ＋ ${b} ＝ ?`;exp=`${a}+${b}+${b}＝${ans}。`}
+  }else{
+    if(kind===0){a=rand(120,680);b=rand(80,420);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`百十個位各自進位，得到 ${ans}。`}
+    else if(kind===1){a=rand(400,900);b=rand(80,a-90);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`三位數減法，答案 ${ans}。`}
+    else if(kind===2){a=rand(12,35);b=rand(2,9);ans=a*b;eq=`${a} × ${b} ＝ ?`;exp=`把 ${a} 拆成十位與個位，再乘 ${b}，共 ${ans}。`}
+    else if(kind===3){a=rand(4,12);b=rand(4,15);ans=b;eq=`${a*b} ÷ ${a} ＝ ?`;exp=`${a*b} 平均分成 ${a} 組，每組 ${ans}。`}
+    else if(kind===4){a=rand(30,120);b=rand(3,9);ans=a+2*b;eq=`${a} ＋ 2 × ${b} ＝ ?`;exp=`先乘：2×${b}＝${2*b}，再加 ${a} 得 ${ans}。`}
+    else if(kind===5){a=rand(5,19);b=rand(5,18);ans=(a+b)*2;eq=`(${a} ＋ ${b}) × 2 ＝ ?`;exp=`先算括號：${a+b}×2＝${ans}。`}
+    else if(kind===6){a=rand(3,9);b=rand(4,13);ans=a*b;eq=`□ ÷ ${a} ＝ ${b}`;exp=`被除數＝${a}×${b}＝${ans}。`}
+    else{a=rand(3,9);b=rand(4,9);ans=a*b;eq=`${a*b} ÷ ${b} × ${b} ＝ ?`;exp=`先除後乘，答案是 ${ans}。`}
+  }
+  return {skill:'math-calc',prompt:'數與運算：一步步找出答案',main:eq,answer:String(ans),choices:choicesForAnswer(ans,level),explain:exp,signature:'calc-extra-'+level+'-'+eq};
+ }
+let a,b,answer,eq,explain;
+if(level===1){if(rand(0,1)){a=rand(2,14);b=rand(1,20-a);answer=a+b;eq=`${a} ＋ ${b} ＝ ?`;explain=`${a} 加上 ${b}，一共有 ${answer}。`}else{a=rand(4,20);b=rand(1,a);answer=a-b;eq=`${a} − ${b} ＝ ?`;explain=`從 ${a} 拿掉 ${b}，還剩 ${answer}。`}}
+else if(level===2){const type=rand(0,2);if(type===0){a=rand(18,69);b=rand(8,100-a);answer=a+b;eq=`${a} ＋ ${b} ＝ ?`;explain=`先算十位再算個位，答案是 ${answer}。`}else if(type===1){a=rand(32,99);b=rand(11,a);answer=a-b;eq=`${a} − ${b} ＝ ?`;explain=`把 ${a} 減去 ${b}，得到 ${answer}。`}else{a=one([2,5,10]);b=rand(2,10);answer=a*b;eq=`${a} × ${b} ＝ ?`;explain=`${a} 個 ${b}，就是 ${a} × ${b}＝${answer}。`}}
+else{const type=rand(0,3);if(type===0){a=rand(75,399);b=rand(45,250);answer=a+b;eq=`${a} ＋ ${b} ＝ ?`;explain=`把百、十、個位分開計算，可得 ${answer}。`}else if(type===1){a=rand(90,500);b=rand(35,a);answer=a-b;eq=`${a} − ${b} ＝ ?`;explain=`${a} − ${b}＝${answer}。`}else if(type===2){a=rand(3,9);b=rand(3,9);answer=a*b;eq=`${a} × ${b} ＝ ?`;explain=`${a} 組、每組 ${b} 個，所以是 ${answer}。`}else{a=rand(3,9);b=rand(2,9);answer=b;eq=`${a*b} ÷ ${a} ＝ ?`;explain=`${a*b} 個分成 ${a} 等份，每份 ${b} 個。`}}
+return {skill:'math-calc',prompt:'算一算，選出正確答案',main:eq,answer:String(answer),choices:choicesForAnswer(answer,level),explain,signature:eq};}
+function storyQuestion(level,scoreMode=false){let a,b,ans,main,explain;
+const type=rand(0,scoreMode?2:3);
+if(level===1){if(scoreMode){if(type===0){a=rand(1,6);b=rand(1,6);ans=a+b;main=`紅隊第一局拿到 ${a} 分，第二局拿到 ${b} 分。紅隊共拿到幾分？`;explain=`${a}＋${b}＝${ans} 分。`}else{a=rand(3,10);b=rand(1,a);ans=a-b;main=`比賽結束，藍隊 ${a} 分，紅隊 ${b} 分。兩隊差幾分？`;explain=`${a}−${b}＝${ans} 分。`}}else{if(type<2){a=rand(2,9);b=rand(2,10);ans=a+b;main=`教練有 ${a} 顆棒球，又拿來 ${b} 顆。現在共有幾顆球？`;explain=`${a}＋${b}＝${ans} 顆。`}else{a=rand(5,18);b=rand(1,a);ans=a-b;main=`球袋裡有 ${a} 顆球，拿出 ${b} 顆練習。球袋裡還有幾顆？`;explain=`${a}−${b}＝${ans} 顆。`}}}
+else if(level===2){if(scoreMode){if(type===0){a=rand(3,9);b=rand(2,8);ans=a+b;main=`紅隊第一場得 ${a} 分，第二場得 ${b} 分。兩場共得幾分？`;explain=`${a}＋${b}＝${ans} 分。`}else if(type===1){a=rand(7,15);b=rand(2,a-1);ans=a-b;main=`紅隊得 ${a} 分，藍隊得 ${b} 分。紅隊領先幾分？`;explain=`${a}−${b}＝${ans} 分。`}else{a=one([2,5,10]);b=rand(2,6);ans=a*b;main=`每場比賽都準備 ${a} 張紀錄紙，${b} 場要準備幾張？`;explain=`${a}×${b}＝${ans} 張。`}}else{if(type===0){a=rand(13,45);b=rand(12,35);ans=a+b;main=`球隊有 ${a} 瓶水，家長再送來 ${b} 瓶。共有多少瓶水？`;explain=`${a}＋${b}＝${ans} 瓶。`}else if(type===1){a=rand(26,80);b=rand(6,a-1);ans=a-b;main=`共有 ${a} 張球賽門票，送出 ${b} 張。還剩幾張？`;explain=`${a}−${b}＝${ans} 張。`}else{a=one([2,5,10]);b=rand(3,8);ans=a*b;main=`每盒裝 ${a} 顆練習球，${b} 盒共有幾顆？`;explain=`${a}×${b}＝${ans} 顆。`}}}
+else {if(scoreMode){if(type===0){a=rand(3,9);b=rand(3,6);ans=a*b;main=`某球隊參加 ${b} 場比賽，每場都發出 ${a} 瓶水。總共發出幾瓶？`;explain=`${a}×${b}＝${ans} 瓶。`}else if(type===1){a=rand(7,15);b=rand(3,a-1);ans=a-b;main=`兩隊得分分別是 ${a} 和 ${b}。分差是多少？`;explain=`${a}−${b}＝${ans} 分。`}else{a=rand(5,13);b=rand(4,12);ans=a+b;main=`紅隊第一場得 ${a} 分，第二場得 ${b} 分。兩場總共拿到幾分？`;explain=`${a}＋${b}＝${ans} 分。`}}else{if(type===0){a=rand(3,9);b=rand(3,9);ans=a*b;main=`${a} 袋棒球，每袋 ${b} 顆。共有幾顆？`;explain=`${a}×${b}＝${ans} 顆。`}else if(type===1){a=rand(3,9);b=rand(2,9);ans=b;main=`${a*b} 顆棒球平均分給 ${a} 個小組，每組幾顆？`;explain=`${a*b}÷${a}＝${b} 顆。`}else{a=rand(60,130);b=rand(20,50);ans=a+b;main=`球隊已走 ${a} 公尺，再走 ${b} 公尺到球場。總共走了幾公尺？`;explain=`${a}＋${b}＝${ans} 公尺。`}}}
+return {skill:scoreMode?'math-score':'math-story',prompt:scoreMode?'🏟️ 分析比賽數字':'⚾ 棒球與生活的數學',main,answer:String(ans),choices:choicesForAnswer(ans,level),explain,signature:main};}
+
+function letterQuestion(used){const pool=ALPHABET.filter(a=>!used.has(a.upper));const x=one(pool.length?pool:ALPHABET);const wrong=shuffle(ALPHABET.filter(a=>a.upper!==x.upper)).slice(0,3);const type=rand(0,2);const data4=shuffle([x,...wrong]);if(type===0)return {skill:'en-letters',prompt:'這個大寫字母對應哪個小寫？',main:x.upper,answer:x.lower,choices:data4.map(a=>a.lower),explain:`${x.upper} 的小寫是 ${x.lower}。例字 ${x.word}（${x.meaning}）。`,signature:x.upper,isEnglish:true,speech:x.upper,showAudio:true};if(type===1)return {skill:'en-letters',prompt:'先聽聲音，再選正確字母',main:'🎧 按下播放，聽聽看',answer:x.upper+' '+x.lower,choices:data4.map(a=>a.upper+' '+a.lower),explain:`你聽到的是字母 ${x.upper}。例字：${x.word}（${x.meaning}）。`,signature:x.upper,isEnglish:true,speech:x.upper,isListening:true};return {skill:'en-letters',prompt:'這個小寫字母對應哪個大寫？',main:x.lower,answer:x.upper,choices:data4.map(a=>a.upper),explain:`${x.lower} 的大寫是 ${x.upper}。例字 ${x.word}（${x.meaning}）。`,signature:x.upper,isEnglish:true,speech:x.upper,showAudio:true}}
+const WORD_USE={"1":[["A ___ uses graphite, not ink.","pencil","鉛筆使用石墨，不是墨水。"],["I carry books to school in my ___.","bag","我把書放在書包裡帶去學校。"],["We sit on a ___ at school.","chair","我們在學校坐在椅子上。"],["Please open the ___ to enter the room.","door","請打開門才能進入房間。"],["I look through the ___.","window","我透過窗戶往外看。"],["The first meal of the day is ___.","breakfast","一天的第一餐是早餐。"],["The white drink from a cow is ___.","milk","牛奶是從牛身上取得的白色飲料。"],["A ___ is a yellow fruit.","banana","香蕉是一種黃色水果。"],["I wear ___ on my feet.","shoes","我把鞋子穿在腳上。"],["I open my book and ___ a story at bedtime.","read","我睡前打開書閱讀故事。"],["Birds can fly above a ___.","tree","鳥能飛到樹的上方。"],["The person whose job is to teach a class is a ___.","teacher","以教書為工作的人是老師。"],["A public green space with trees is a ___.","park","有樹木的公共綠地是公園。"],["The snow feels ___.","cold","雪摸起來很冷。"],["I can ride my ___ to the park.","bike","我能騎腳踏車去公園。"],["The ___ sings in the tree.","bird","鳥兒在樹上唱歌。"],["I call my female parent my ___.","mother","我稱呼我的女性家長為媽媽。"],["On a clear sunny day, the sky looks ___.","blue","晴天時天空看起來是藍色的。"],["I put a ___ on my head.","hat","我把帽子戴在頭上。"],["I have a left ___ and a right hand.","hand","我有一隻左手和一隻右手。"]],"2":[["We ___ at the stadium after the bus gets there.","arrive","巴士到站後我們抵達球場。"],["Can I ___ your book for one day?","borrow","我可以借你的書一天嗎？"],["Please ___ the book tomorrow.","return","請明天歸還這本書。"],["Good teammates ___ their ideas and equipment.","share","好隊友會分享想法與裝備。"],["I need to ___ which team to join.","decide","我需要決定加入哪支球隊。"],["Please ___ your homework before dinner.","finish","請在晚餐前完成作業。"],["A good ___ helps us get ready.","plan","好的計畫能幫助我們準備。"],["I feel ___ after a long run.","thirsty","長跑後我覺得口渴。"],["Wear a helmet to stay ___.","safe","戴好安全帽以確保安全。"],["Draw a ___ with three sides.","triangle","畫一個有三條邊的三角形。"],["The library is ___ the school and the park.","between","圖書館在學校與公園之間。"],["We ___ visit Grandma on Sundays.","sometimes","我們有時在星期天看奶奶。"],["He ___ forgets to bring his glove.","never","他從不忘記帶手套。"],["We have no class on the ___.","weekend","我們週末沒有課。"],["It is ___, so we bring sunglasses.","sunny","天氣晴朗，因此我們帶太陽眼鏡。"],["We go to the ___ to read books.","library","我們去圖書館看書。"],["We buy fruit at the ___.","market","我們在市場買水果。"],["Show your ___ before entering.","ticket","入場前請出示票券。"],["Our team wears a blue ___.","uniform","我們的隊伍穿藍色制服。"],["The ___ leads the team.","captain","隊長帶領球隊。"]],"3":[["We need a good ___ to solve the problem.","strategy","我們需要好策略來解題。"],["A team succeeds through ___.","teamwork","團隊藉由合作取得成功。"],["Keeping a promise shows ___.","responsibility","遵守承諾展現責任感。"],["We show ___ when we listen to others.","respect","聽別人說話展現尊重。"],["Learning a new skill takes ___.","patience","學習新技巧需要耐心。"],["She is ___ enough to ask questions.","confident","她有自信提出問題。"],["Scientists ___ changes and write notes.","observe","科學家觀察變化並做筆記。"],["We can ___ tomorrow’s weather.","predict","我們可以預測明天的天氣。"],["Please give ___ for your answer.","evidence","請提供答案的證據。"],["There may be more than one ___.","solution","可能不只一個解決方法。"],["A wrong answer can help us find a ___.","mistake","錯誤答案能幫助我們找到錯誤。"],["We track our ___ every week.","progress","我們每週追蹤進度。"],["Set one small ___ before practice.","goal","練習前設定一個小目標。"],["Check the ___ before the game.","schedule","比賽前查看時間表。"],["Parents ___ children to try again.","encourage","家長鼓勵孩子再試一次。"],["We ___ clearly during the game.","communicate","我們在比賽中清楚溝通。"],["Planting trees helps the ___.","environment","種樹有助於環境。"],["We should ___ plastic waste.","reduce","我們應該減少塑膠垃圾。"],["Food gives our bodies ___.","energy","食物提供身體能量。"],["Please ___ the length of the table.","measure","請測量桌子的長度。"]]};
+function wordUseQuestion(level,used){
+  const pool=WORD_USE[level].map((entry,i)=>({entry,i})).filter(x=>!used.has('use-'+level+'-'+x.i));
+  const x=one(pool.length?pool:WORD_USE[level].map((entry,i)=>({entry,i})));
+  const [sentence,answer,meaning]=x.entry;
+  const words=VOCAB[level].map(v=>v[0]).filter(w=>w!==answer);
+  const opts=shuffle([answer,...shuffle(words).slice(0,3)]);
+  return {skill:'en-use',prompt:'🗣️ 看懂句子，選出最合適的英文單字',main:sentence,second:'中文線索：'+meaning+'｜選最合適的英文單字。',answer,choices:opts,explain:sentence.replace('___',answer)+' — '+meaning,hint:'先把整句想成生活畫面，判斷這裡需要人物、物品、動作或特徵。',signature:'use-'+level+'-'+x.i,concept:'use-'+level+'-'+x.i,isEnglish:true,reason:true};
+}
+
+function englishQuestion(level,modeName,used){if(modeName==='use')return wordUseQuestion(level,used);if(modeName==='letters')return letterQuestion(used);if(modeName==='sentence'){const pool=READ[level];let t=one(pool),k=0;while(used.has(t[0])&&k++<40)t=one(pool);return {skill:'en-sentence',prompt:'讀這一句英文，再回答問題',main:t[0],second:t[1],answer:t[3],choices:shuffle(t[2]),explain:t[4],signature:t[0],isEnglish:true,speech:t[0]}}
+const pool=VOCAB[level];let entry=one(pool),k=0;while(used.has(entry[0])&&k++<80)entry=one(pool);
+const reverse=modeName==='vocab'&&rand(0,2)===0;
+const distractor=shuffle(pool.filter(x=>x[1]!==entry[1])).slice(0,3);
+const opts=shuffle(reverse?[entry[0],...distractor.map(x=>x[0])]:[entry[1],...distractor.map(x=>x[1])]);
+return {skill:modeName==='vocab'?'en-vocab':'en-listening',prompt:modeName==='listening'?'先按播放，聽聽英文，再選意思':reverse?'讀中文，選出正確的英文單字':'這個英文單字是什麼意思？',main:modeName==='listening'?'🎧 聽力接球':reverse?entry[1]:`${entry[2]}  ${entry[0]}`,answer:reverse?entry[0]:entry[1],choices:opts,explain:`「${entry[0]}」是「${entry[1]}」。`,signature:entry[0],isEnglish:true,speech:entry[0],isListening:modeName==='listening'}}
+
+// 透過新的情境、推論及解題步驟提升思考深度；每道題的干擾選項均明確不同於正解。
+const DEEP_READ={
+1:[
+['Amy takes a blue glove to the park. Ben takes a red ball. They want to play catch.','他們最可能要做什麼？','一起丟接球',['一起丟接球','一起煮飯','一起看書','一起游泳'],'play catch 是互相丟接球；手套與球是線索。','從兩個人的用品推測活動。','en-inference'],
+['Dad puts the helmet by the door. Sam puts his shoes in his bag. They leave for the game.','他們現在最可能要去哪裡？','去比賽',['去比賽','去睡覺','去圖書館','去吃早餐'],'helmet、shoes 和 leave for the game 都指向比賽。','找出最後一句的目的地。','en-inference'],
+['It is hot today. Mia drinks water after practice. She feels better.','Mia 為什麼喝水？','練習後需要補充水分',['練習後需要補充水分','想換新球棒','球場正在下雪','她要畫圖'],'hot、after practice 是線索；喝水讓她比較舒服。','找出前一句的環境線索。','en-inference'],
+['Tom has two books. He gives one to his sister. Now they can read together.','誰拿到 Tom 送出的書？','他的妹妹',['他的妹妹','他的教練','他的朋友','他的老師'],'his sister 就是他的妹妹，give one to 表示送給。','注意 give ... to ... 後面的人。','en-context'],
+['The game starts at nine. Lily gets to the field at eight. She has time to warm up.','Lily 先做哪件事？','抵達球場',['抵達球場','開始比賽','吃晚餐','回家睡覺'],'先在八點到球場，九點才開始比賽；warm up 是暖身。','比較 eight 和 nine。','en-order'],
+['The red team wins today. The blue team looks sad. The coach says, “We can try again.”','教練希望藍隊怎麼做？','下次繼續努力',['下次繼續努力','永遠不打球','責怪隊友','放棄練習'],'We can try again 是「我們可以再試一次」。','對照教練說的話。','en-inference'],
+['Anna is hungry. She eats a banana and drinks milk. Then she goes to school.','Anna 在上學之前做了什麼？','吃了東西並喝牛奶',['吃了東西並喝牛奶','先打棒球','先看電影','先去游泳'],'Then she goes to school，表示前面兩件事先發生。','留意 then 代表接著。','en-order'],
+['The dog is under the table. A ball is on the table. The cat is next to the door.','球在哪裡？','桌子上',['桌子上','桌子下','門旁邊','椅子後面'],'on the table 是桌子上，不要和狗的位置混淆。','把 dog、ball、cat 的位置分開。','en-context'],
+['Ben finds his friend in the rain. They share one umbrella and walk home.','為什麼他們共用雨傘？','因為正在下雨',['因為正在下雨','因為天空很晴朗','因為棒球不見了','因為他們在游泳'],'in the rain 是正在下雨，share 是分享。','從天氣描述找原因。','en-inference'],
+['First, Kai cleans his desk. Next, he reads a book. Last, he goes outside.','Kai 看書後做什麼？','到外面去',['到外面去','再清桌子','再起床','再寫一張卡片'],'Last 指最後；讀書後才去外面。','找出 next 與 last 的先後。','en-order']],
+2:[
+['The team has a game on Saturday. Rain is expected, so the coach asks everyone to bring an extra shirt. The game is not canceled yet.','哪件事可以從文章確定？','比賽尚未取消',['比賽尚未取消','比賽確定取消','星期日才比賽','每個人都不需要帶衣服'],'not canceled yet 表示「目前還沒有取消」；預報下雨不等於一定停賽。','注意 yet 和 not 的意思。','en-context'],
+['Nora wanted a new bat, but her old bat still worked well. She chose to save her money for a school trip.','Nora 為什麼不買新球棒？','想先存錢參加校外旅行',['想先存錢參加校外旅行','因為她沒有球棒','因為比賽已結束','因為她不想上學'],'第二句說她選擇為 school trip 存錢；舊球棒仍能使用。','找出 but 表示的轉折。','en-inference'],
+['Ben practices after school on Mondays and Fridays. Today is Wednesday, so he goes home early to finish his project.','今天 Ben 最可能做什麼？','回家完成作業專題',['回家完成作業專題','參加星期五練習','參加星期一練習','直接去比賽'],'Wednesday 不是 Monday 或 Friday，今天要 finish his project。','先確認練習是星期幾。','en-inference'],
+['The blue team scored twice in the first inning. The red team scored once. In the second inning, neither team scored.','第二局發生什麼事？','兩隊都沒有得分',['兩隊都沒有得分','藍隊得兩分','紅隊得一分','紅隊獲勝'],'neither team scored 表示兩隊都沒得分；不要把第一局搞混。','留意 first inning / second inning。','en-context'],
+['Leo is afraid to ask questions. His coach tells him that asking for help is part of learning. Leo raises his hand during practice.','Leo 最可能學到什麼？','遇到不懂可以主動提問',['遇到不懂可以主動提問','所有問題都很簡單','只能自己猜答案','練習不能說話'],'教練鼓勵他 asking for help，Leo 也舉手了。','由前後行為推測改變。','en-inference'],
+['Mia packs her bag before dinner. She puts in her glove, water bottle, and a towel. The next morning, she only needs to take the bag.','Mia 提前整理球袋的好處？','隔天比較從容',['隔天比較從容','可以不去練習','不必喝水','可以少一個隊友'],'前一晚整理，隔天就不用重新找東西。','注意 before dinner 與 next morning。','en-inference'],
+['Amy bought a ball for her brother. He already had a glove but no ball. He smiled when he opened the gift.','弟弟為什麼開心？','他收到自己缺少的球',['他收到自己缺少的球','他收到第二個手套','他不喜歡禮物','他找不到哥哥'],'already had a glove but no ball 表示缺的是球。','but 後面的資訊是關鍵。','en-context'],
+['The class wants to help the school. They can plant a tree or clean the playground. They vote, and most students choose to clean.','最後班級決定做什麼？','清理遊戲場',['清理遊戲場','種樹','準備棒球比賽','去游泳'],'most students choose to clean 表示多數決選擇清理。','留意投票後的決定。','en-order'],
+['At practice, the coach explains a new rule. The players listen first, ask questions next, and try it together at the end.','哪個順序符合文章？','先聽說明，再提問，最後嘗試',['先聽說明，再提問，最後嘗試','先嘗試，再睡覺','先提問，再離開','先去買東西，再練習'],'first → next → at the end 是明確的時間順序。','觀察表示順序的三個詞。','en-order'],
+['The team lost 3–4, but the players worked together and congratulated the other team. Their coach was proud of their attitude.','教練最看重什麼？','良好的團隊態度',['良好的團隊態度','比分一定要贏','對手必須認輸','自己一個人打完比賽'],'although they lost, coach was proud of their attitude，重點是態度。','答案不是只看比分。','en-inference']],
+3:[
+['Judy practiced catching every day, but she still missed many balls. Her coach suggested shorter sessions with more rest. After two weeks, she felt stronger and made fewer mistakes.','哪個結論最符合文章？','適當休息也可能改善練習效果',['適當休息也可能改善練習效果','練得越久一定越好','每天不練才能進步','只要贏球就不會犯錯'],'短練習加休息後失誤變少，但故事並不能證明對每個人都必然有效。','分辨故事觀察和絕對化的說法。','en-inference'],
+['The library is closed on Sundays. Leo planned to borrow a book on Sunday, but he checked the schedule on Saturday. He went to the library that afternoon instead.','Leo 在星期六去了圖書館的原因？','發現星期日不開放',['發現星期日不開放','星期六要參加比賽','星期日他已經借到書','星期六有棒球課'],'closed on Sundays 是他改變計畫的原因。','找出使計畫改變的資訊。','en-inference'],
+['On Tuesday, the team practiced throwing. On Thursday, they watched a game video and discussed mistakes. On Saturday, they tried those ideas in a friendly game.','團隊在星期四做什麼？','看影片並討論錯誤',['看影片並討論錯誤','進行友誼賽','練習投球','休息並旅行'],'Thursday 的行動是 watched a game video and discussed mistakes。','建立 Tuesday→Thursday→Saturday 的時間線。','en-order'],
+['Mina has one hour before dinner. She needs 20 minutes for homework, 15 minutes for reading, and 10 minutes to pack her bag. She decides to do the important tasks first.','哪一項最符合 Mina 的計畫？','先完成必須做的事，仍有剩餘時間',['先完成必須做的事，仍有剩餘時間','三件事要超過一小時','她只能做一件事','她沒有任何空閒時間'],'20＋15＋10＝45 分鐘，距離60分鐘還剩15分鐘。','跨科思考：把英文資訊變成數學算式。','en-inference'],
+['The red team had fewer hits, but it scored more runs. The coach explained that a hit does not always lead to a run.','哪一個推論合理？','安打數多不代表得分一定多',['安打數多不代表得分一定多','得分多一定安打多','安打數跟棒球無關','兩隊得分一定相同'],'fewer hits but more runs 說明兩種數字不一定同步。','比較 hits 與 runs，避免因果誤判。','en-inference'],
+['After school, Alan wanted to play games. He noticed that he had a test the next day, so he reviewed his notes for twenty minutes first. Then he enjoyed his free time.','Alan 展現了哪一種能力？','安排優先順序與自我管理',['安排優先順序與自我管理','完全不休息','跳過考試','把作業交給同學'],'他先讀書再休閒，展現管理時間而非完全禁止娛樂。','注意 first 與 then。','en-inference'],
+['A poster says: "Bring a water bottle. Meet at the field at 8:30. Practice starts at 9:00." Ken arrives at 8:45 with water.','Ken 哪一項沒有遵照海報？','集合時間',['集合時間','有帶水','比賽地點','練習開始時間'],'8:45 比規定集合8:30晚15分鐘，但練習9:00還沒開始。','分別比較 meet 與 starts。','en-context'],
+['The girls designed two practice plans. Plan A repeats the same easy task. Plan B mixes easy and difficult tasks and includes rest. They want to compare their progress after a month.','哪個做法比較能公平比較兩個計畫？','用一致標準記錄兩組進步',['用一致標準記錄兩組進步','只記錄計畫 B 的好成績','每次偷偷更改計分方式','只問最厲害的人'],'不同計畫比較時，需要使用相同的評量標準。','推理：如何確保比較不偏心？','en-inference'],
+['The coach asked the players to share feedback. Ben said the drill was confusing, while Amy said she needed more time. The coach changed the instructions and gave everyone another try.','教練主要回應了哪兩項問題？','說明不清楚和時間不足',['說明不清楚和時間不足','球場太大和天氣太冷','球員沒有帶球棒','比賽沒有裁判'],'confusing instructions 對應說明不清；needed more time 對應時間。','結合兩個人提出的不同需求。','en-context'],
+['The team can use either the school field or the community field. The school field is closer, but it closes at 5:00. Practice ends at 5:30. The community field stays open until 7:00.','哪個場地較適合這次練習？','社區球場',['社區球場','學校球場','兩個都一定不能用','只要比較近就選學校球場'],'練習5:30結束，學校球場5:00已關閉；社區球場7:00才關。','把兩個條件與結束時間一起比較。','en-inference']]
+};
+function deepQuestion(level,used){const pool=DEEP_READ[level],index=pool.map((x,i)=>({x,i})).filter(v=>!used.has('deep-'+level+'-'+v.i));const {x,i}=one(index.length?index:pool.map((x,i)=>({x,i})));return {skill:x[6],prompt:'📖 先讀完故事，再根據線索回答',main:x[0],second:x[1],answer:x[2],choices:shuffle(x[3]),explain:x[4],hint:x[5],signature:'deep-'+level+'-'+i,concept:'deep-'+x[6],isEnglish:true,readingOnly:true,speech:x[0]};}
+function reasonQuestion(level,concept=null){const patterns=[];
+ function add(id,make){patterns.push({id,make})}
+ if(level===1){
+  add('find-missing',()=>{const x=rand(3,10),y=rand(2,8),tot=x+y;return [`球盒原有 ${x} 顆球，教練又放了一些進去，現在共有 ${tot} 顆。教練放了幾顆？`,y,`先想：${x}＋□＝${tot}。所以 □＝${tot}−${x}＝${y}。`,'總數−原有＝新增。']});
+  add('two-step',()=>{const a=rand(5,11),b=rand(3,6),c=rand(1,a+b-1),v=a+b-c;return [`今天球隊先拿 ${a} 顆球，再借到 ${b} 顆，後來收走 ${c} 顆。現在有幾顆？`,v,`${a}＋${b}＝${a+b}；${a+b}−${c}＝${v}。`,'分兩步算：先增加，再減少。']});
+  add('compare',()=>{const x=rand(6,13),d=rand(2,7),y=x+d;return [`阿明有 ${x} 張棒球卡，阿宇有 ${y} 張。阿宇比阿明多幾張？`,d,`${y}−${x}＝${d} 張。`,'「比⋯多幾個」要找差。']});
+  add('group',()=>{const each=rand(2,4),groups=rand(2,4),total=each*groups;return [`有 ${groups} 位小朋友，每人拿到 ${each} 顆球。總共需要幾顆？`,total,`把 ${each} 加 ${groups} 次，或用 ${groups}×${each}＝${total}。`,'先看每人幾顆，再看有幾人。']});
+  add('order',()=>{const x=rand(3,8),y=rand(1,x-1),addend=rand(1,5);return [`球隊原有 ${x} 顆球，借出 ${y} 顆後又買了 ${addend} 顆。現在有幾顆？`,x-y+addend,`先借出：${x}−${y}＝${x-y}；再買：${x-y}＋${addend}＝${x-y+addend}。`,'注意借出和買進的先後。']});
+  add('which-more',()=>{const a=rand(6,9),b=rand(5,9),c=rand(1,4),d=rand(1,4);return [`紅隊上午拿 ${a} 分、下午拿 ${b} 分；藍隊上午拿 ${c} 分、下午拿 ${d} 分。紅隊比藍隊多幾分？`,a+b-c-d,`紅隊 ${a}＋${b}＝${a+b}；藍隊 ${c}＋${d}＝${c+d}；相差 ${a+b-c-d}。`,'先分別求兩隊總分，再比較差。']});
+  add('money',()=>{const a=rand(2,5)*10,b=rand(1,3)*5,paid=a+b+rand(1,3)*10;return [`買一本筆記本 ${a} 元、一支鉛筆 ${b} 元，付了 ${paid} 元。找回多少元？`,paid-a-b,`一共 ${a}＋${b}＝${a+b} 元；${paid}−${a+b}＝${paid-a-b} 元。`,'先算花了多少，再算找零。']});
+  add('bar',()=>{const red=rand(3,7),blue=rand(1,6),green=rand(2,5);return [`練習紀錄（每個 ⚾ 表示 1 次）：\n紅隊：${'⚾'.repeat(red)}\n藍隊：${'⚾'.repeat(blue)}\n綠隊：${'⚾'.repeat(green)}\n三隊共完成幾次練習？`,red+blue+green,`${red}＋${blue}＋${green}＝${red+blue+green} 次。`,'按每隊圖示數量相加。','math-data']});
+ }else if(level===2){
+  add('multi',()=>{const groups=rand(3,6),each=rand(4,8),used=rand(5,groups*each-4);return [`教練買了 ${groups} 袋球，每袋 ${each} 顆，已拿出 ${used} 顆使用。還剩幾顆？`,groups*each-used,`先算總數：${groups}×${each}＝${groups*each}；減去 ${used}，剩 ${groups*each-used}。`,'先乘再減。']});
+  add('unknown',()=>{const per=one([2,5,10]),bags=rand(3,7),all=per*bags;return [`一共有 ${all} 顆球，平均裝進 ${bags} 個袋子。每袋幾顆？`,per,`${all}÷${bags}＝${per} 顆。`,'知道總數和袋數，可以平均分。']});
+  add('money',()=>{const x=rand(3,8)*10,y=rand(2,6)*5,cost=x+y,paid=Math.ceil(cost/100)*100+100;return [`運動水壺 ${x} 元、筆記本 ${y} 元。帶了 ${paid} 元，全部買下後剩多少？`,paid-cost,`先算 ${x}＋${y}＝${cost} 元，再算 ${paid}−${cost}＝${paid-cost} 元。`,'錢夠不夠？先算合計。','math-money']});
+  add('table',()=>{const r1=rand(3,9),r2=rand(2,8),b1=rand(3,9),b2=rand(1,7);return [`兩局得分表：\n隊伍　第一局　第二局\n紅隊　${r1}　　　${r2}\n藍隊　${b1}　　　${b2}\n兩隊合計得了幾分？`,r1+r2+b1+b2,`紅隊 ${r1+r2}，藍隊 ${b1+b2}；合計 ${r1+r2+b1+b2}。`,'四個數字都要加，不要只看一列。','math-data']});
+  add('time',()=>{const h=rand(8,16),start=one([0,15,30]),dur=one([15,30,45]),tm=h*60+start+dur;const hh=Math.floor(tm/60),mm=tm%60;return [`練習從 ${String(h).padStart(2,'0')}:${String(start).padStart(2,'0')} 開始，練習了 ${dur} 分鐘，幾點結束？`,`${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`,`把 ${dur} 分鐘加到開始時間，得到 ${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}。`,'注意分鐘滿60要進一小時。','math-money','time']});
+  add('average-groups',()=>{const per=rand(3,8),n=rand(3,6),extra=rand(1,4);return [`每個小組需要 ${per} 顆球，${n} 個小組共需幾顆？如果又增加 ${extra} 顆備用球，全部需要多少？`,per*n+extra,`${per}×${n}＝${per*n}；再加 ${extra}＝${per*n+extra}。`,'先算每組，再加備用。']});
+  add('reverse',()=>{const x=rand(15,40),take=rand(5,14);return [`一箱球原來有一些球。教練取出 ${take} 顆後還有 ${x} 顆，原來有多少顆？`,x+take,`原有＝剩下 ${x}＋拿出 ${take}＝${x+take}。`,'反向想：取出的要補回。']});
+  add('compare',()=>{const r=rand(13,30),b=rand(11,28),bonus=rand(3,9);return [`紅隊兩天練習 ${r} 次，藍隊兩天 ${b} 次。藍隊又增加 ${bonus} 次，現在兩隊相差幾次？`,Math.abs(r-(b+bonus)),`藍隊更新為 ${b}+${bonus}＝${b+bonus}；差 ${Math.abs(r-(b+bonus))} 次。`,'先更新藍隊，再比較兩隊。']});
+ }else{
+  add('budget',()=>{const price=rand(4,9)*10,n=rand(3,6),budget=price*n+rand(2,6)*10;return [`球隊準備買 ${n} 個水壺，每個 ${price} 元，預算 ${budget} 元。買完還剩多少預算？`,budget-price*n,`總價 ${price}×${n}＝${price*n}；預算剩 ${budget}−${price*n}＝${budget-price*n} 元。`,'先乘出總價，再跟預算比較。','math-money']});
+  add('travel',()=>{const a=rand(2,7)*10,b=rand(3,8)*10,c=rand(1,5)*10;return [`從家到球場：先走 ${a} 公尺，再走 ${b} 公尺，最後走 ${c} 公尺。全程幾公尺？`,a+b+c,`${a}＋${b}＋${c}＝${a+b+c} 公尺。`,'把三段長度合併。']});
+  add('tickets',()=>{const n=rand(3,8),p=rand(4,9)*10,discount=rand(1,3)*10;return [`${n} 張入場券每張 ${p} 元，團體購票總共折扣 ${discount} 元。最後要付多少？`,n*p-discount,`${n}×${p}＝${n*p} 元；扣掉 ${discount}，付 ${n*p-discount} 元。`,'先乘原價，再減折扣。','math-money']});
+  add('table',()=>{const a=rand(4,9),b=rand(3,7),c=rand(2,8),d=rand(4,9);return [`安打統計：\n　　　週一　週三\n甲組　 ${a}　　 ${b}\n乙組　 ${c}　　 ${d}\n甲組兩天安打數比乙組多幾支？（若較少，填差距）`,Math.abs(a+b-c-d),`甲組 ${a+b}，乙組 ${c+d}；相差 ${Math.abs(a+b-c-d)} 支。`,'先計算兩組合計，再取差距。','math-data']});
+  add('two-mult',()=>{const a=rand(3,8),b=rand(3,7),c=rand(2,6),d=rand(1,4);return [`每箱有 ${a} 顆球，買了 ${b} 箱；又收到 ${c} 袋、每袋 ${d} 顆。總共多少顆球？`,a*b+c*d,`${a}×${b}＝${a*b}；${c}×${d}＝${c*d}；合計 ${a*b+c*d}。`,'兩種包裝分開算，再加在一起。']});
+  add('fraction',()=>{const total=one([12,16,20,24]),part=total/4;return [`班上共有 ${total} 人，其中四分之一參加棒球社。棒球社有幾人？`,part,`把 ${total} 平均分成4組，每組 ${total}÷4＝${part} 人。`,'四分之一代表平均分成4份、取1份。']});
+  add('op-order',()=>{const a=rand(3,7),b=rand(4,8),c=rand(4,15);return [`教練準備 ${a} 盒球，每盒 ${b} 顆，又多拿 ${c} 顆。總數是？`,a*b+c,`先算 ${a}×${b}＝${a*b}，再加 ${c}＝${a*b+c}。`,'別把盒數跟每盒顆數直接相加。']});
+  add('reverse',()=>{const n=rand(5,9),per=rand(3,8),given=rand(3,12);return [`球袋中原有一些球，分別發給 ${n} 個人、每人 ${per} 顆後，還剩 ${given} 顆。原來有多少？`,n*per+given,`發出去 ${n}×${per}＝${n*per}，加上剩餘 ${given}＝${n*per+given}。`,'要倒回去：原有＝發出＋剩下。']});
+ }
+ const chosen=(patterns.find(x=>x.id===concept)||one(patterns));const made=chosen.make();const [main,ans,explain,hint,skill='math-reason',form='number']=made;
+ let choices;if(form==='time'){
+  const [hh,mm]=String(ans).split(':').map(Number),tm=hh*60+mm;const offsets=[-30,-15,15,30,45];const set=new Set([ans]);for(const offset of shuffle(offsets)){const x=tm+offset;if(x>=0&&x<1440)set.add(String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0'));if(set.size===4)break}choices=shuffle([...set]);
+ }else choices=choicesForAnswer(ans,level);
+ return {skill,prompt:'🧩 不只算答案，先想要分成哪幾步',main,answer:String(ans),choices,explain,hint,signature:'reason-'+level+'-'+chosen.id+'-'+main,concept:chosen.id,reason:true};
+}
+function safeReviewQuestion(q){if(!q||typeof q!=='object'||typeof q.main!=='string'||typeof q.answer!=='string'||!Array.isArray(q.choices)||q.choices.length!==4||!q.choices.includes(q.answer)||q.main.length>650||q.explain?.length>800)return null;
+ const result={};for(const k of ['skill','prompt','main','second','answer','explain','hint','signature','concept','speech'])if(typeof q[k]==='string')result[k]=q[k].slice(0,800);
+ result.choices=q.choices.map(x=>String(x).slice(0,120));for(const k of ['isEnglish','isListening','readingOnly','reason','showAudio'])if(typeof q[k]==='boolean')result[k]=q[k];return result;
+}
+function sanitizeReviewQueue(raw){if(!Array.isArray(raw))return [];return raw.slice(-140).flatMap(e=>{if(!e||!['math','english'].includes(e.subject)||!MODES[e.subject].some(m=>m.id===e.mode)||e.mode==='review'||typeof e.id!=='string'||!Number.isFinite(+e.dueAt))return [];const q=safeReviewQuestion(e.q);if(!q)return [];return [{id:e.id.slice(0,75),subject:e.subject,mode:e.mode,level:[1,2,3].includes(+e.level)?+e.level:1,q,stage:Math.min(3,Math.max(0,Number(e.stage)||0)),dueAt:+e.dueAt,lastAttemptAt:Number(e.lastAttemptAt)||0,misses:Math.min(30,Math.max(1,Number(e.misses)||1))}]})}
+function dueReviews(sub=null){if(data.settings.reviewEnabled===false)return [];return data.reviewQueue.filter(e=>(!sub||e.subject===sub)&&e.dueAt<=Date.now()).sort((a,b)=>a.dueAt-b.dueAt)}
+function newReviewMiss(q,s){if(data.settings.reviewEnabled===false)return;const safe=safeReviewQuestion(q);if(!safe)return;const same=data.reviewQueue.find(x=>x.subject===s.subject&&x.mode===s.mode&&x.level===s.level&&x.q.signature===q.signature);if(same){same.misses=Math.min(30,same.misses+1);same.stage=0;same.dueAt=Date.now();same.q=safe;return}
+ const id=String(Date.now())+'-'+String(Math.random()).slice(2,10);data.reviewQueue.push({id,subject:s.subject,mode:s.mode,level:s.level,q:safe,stage:0,dueAt:Date.now(),lastAttemptAt:0,misses:1});data.reviewQueue=data.reviewQueue.slice(-140);
+}
+function markReview(q,ok){const idx=data.reviewQueue.findIndex(x=>x.id===q.reviewId);if(idx<0)return;const item=data.reviewQueue[idx];if(ok){item.stage++;if(item.stage>=4){data.reviewQueue.splice(idx,1);return}const days=[0,1,3,7][item.stage];item.dueAt=Date.now()+days*86400000;item.lastAttemptAt=Date.now();}
+ else{item.stage=0;item.dueAt=Date.now()+86400000;item.lastAttemptAt=Date.now();item.misses=Math.min(30,item.misses+1)}
+}
+function freshReviewQuestion(item){let q=structuredClone(item.q);if(item.subject==='math'){try{if(item.mode==='reason'&&item.q.concept)q=reasonQuestion(item.level,item.q.concept);else if(item.mode==='calc')q=calcQuestion(item.level);else if(['story','score'].includes(item.mode))q=storyQuestion(item.level,item.mode==='score')}catch(_){}}
+ if(item.subject==='english'&&item.mode==='deep'){const pool=DEEP_READ[item.level],alt=pool.map((x,i)=>i).filter(i=>('deep-'+item.level+'-'+i)!==item.q.signature&&xSkill(pool[i][6])===xSkill(item.q.skill));if(alt.length){const v=pool[one(alt)],ix=pool.indexOf(v);q={skill:v[6],prompt:'📖 先讀完故事，再根據線索回答',main:v[0],second:v[1],answer:v[2],choices:shuffle(v[3]),explain:v[4],hint:v[5],signature:'deep-'+item.level+'-'+ix,concept:'deep-'+v[6],isEnglish:true,readingOnly:true}}}
+ q.reviewId=item.id;q.reviewLevel=item.level;return q;
+}
+function xSkill(s){return String(s||'')}
+function reviewSuggestion(){const en=dueReviews('english').length,ma=dueReviews('math').length;const recent=data.sessions.slice(-12).flatMap(s=>Array.isArray(s.attempts)?s.attempts:[]).filter(a=>a&&typeof a==='object'&&Object.prototype.hasOwnProperty.call(SKILLS,a.skill));const by=new Map();for(const r of recent){const arr=by.get(r.skill)||[];arr.push(r.correct);by.set(r.skill,arr)}let worst=[...by].filter(x=>x[1].length>=3).map(([skill,a])=>({skill,p:a.filter(Boolean).length/a.length})).sort((a,b)=>a.p-b.p)[0];return {en,ma,worst};}
+
+function generateQuestions(sub,m,lv){if(m==='review')return dueReviews(sub).slice(0,8).map(freshReviewQuestion);
+ const list=[],used=new Set(),fixedKinds=shuffle([0,1,2,3,4,5,6,7]);for(let i=0;i<8;i++){let q,k=0;do{q=sub==='english'?(m==='deep'?deepQuestion(lv,used):englishQuestion(lv,m,used)):m==='reason'?reasonQuestion(lv):m==='pattern'?patternQuestion(lv,fixedKinds[i]):m==='measure'?measureQuestion(lv,fixedKinds[i]):m==='calc'?calcQuestion(lv):storyQuestion(lv,m==='score');k++}while(used.has(['reason','pattern','measure'].includes(m)?q.concept:q.signature)&&k<60);used.add(['reason','pattern','measure'].includes(m)?q.concept:q.signature);list.push(q)}
+ // 正常練習也帶入近期錯題（最多2題），並保留其他題目的廣度。
+ if(data.settings.reviewEnabled&&m!=='letters'&&m!=='deep'&&m!=='reason'){const pending=dueReviews(sub).filter(e=>e.mode===m).slice(0,2);for(let i=0;i<pending.length;i++)list[5+i]=freshReviewQuestion(pending[i]);}
+ return list}
+function start(m){handInk=[];handAnswerInk=[];handOcrResult='';handQuizOpen=false;handResult='';clearAdvance();if(!MODES[subject]?.some(x=>x.id===m))return;mode=m;const items=generateQuestions(subject,m,data.settings[subject]);if(!items.length){toast('目前沒有到期錯題，先練習新題目吧！');return;}session={subject,mode,level:data.settings[subject],items,idx:0,correct:0,attempts:[],missed:[],usedHint:false};feedback=null;page='quiz';window.scrollTo(0,0);render()}
+
+function quiz(){if(!session)return '';const q=session.items[session.idx],selected=feedback?.selected??null;const m=MODES[session.subject].find(x=>x.id===session.mode),tot=session.items.length;return `<div class="quiz-wrap"><div class="quiz-top"><button class="quit" data-action="quit">✕ 暫停練習</button><span class="quiz-progress">${m.name} · 第 ${session.idx+1} / ${tot} 題</span></div><div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${session.idx}" aria-label="練習進度"><div class="fill" style="width:${session.idx/tot*100}%"></div></div><section class="quiz-card"><span class="topiccap">${m.icon} ${m.label}　｜　難度 ${q.reviewLevel||session.level} ${q.reviewId?'· 🔁 複習題':''}</span><div class="question-prompt">${h(q.prompt)}</div><div class="question-main ${q.isEnglish?'question-en':''}" style="white-space:pre-line" ${q.isEnglish?'lang="en"':''}>${h(q.main)}</div>${q.second?`<div style="font-weight:800;margin:2px 0 13px">❓ ${h(q.second)}</div>`:''}${q.speech?`<button type="button" class="speaker" data-action="speak">${isEnglishSentence(q.speech)?'🔊 聽自然英文句型 <small>0.93 倍・清楚不斷句</small>':'🔊 播放英文發音 <small>可以重複聽</small>'}</button>${isEnglishSentence(q.speech)?'<button type="button" class="speech-test" data-action="speak-slower" style="margin-bottom:12px;margin-left:8px">🐢 再慢一點（0.86 倍）</button>':''}${speechControls()}${q.isListening?`<button type="button" data-action="transcript" style="display:block;background:none;border:0;color:#718490;font-size:12px;padding:0 3px">聽不清楚？顯示英文提示</button><div id="transcript" class="hidden note" style="margin-top:7px" lang="en">${h(q.speech)}</div>`:''}`:''}${q.readingOnly?'<div class="tipline">📚 這是自主閱讀關卡：先自己讀、圈出線索；不必搶快，也不用一次全懂。</div>':''}${q.hint&&!feedback?`<div class="hint-box"><button type="button" class="hint-toggle" data-action="hint">💭 不知道怎麼開始？看思路提示</button>${session.usedHint?`<p class="hint-text">${h(q.hint)}</p>`:''}</div>`:''}<button type="button" class="hw-quiz-toggle" data-action="quiz-handwrite" aria-expanded="${handQuizOpen}">✍️ ${session.subject==='math'?'手寫計算草稿':'手寫英文草稿'}　${handQuizOpen?'▲ 收起':'▼ 展開'}（可用手指／Apple Pencil）</button>${handQuizOpen?`<section class="hw-quiz-box">${handPadMarkup('',false,true)}${handRecognizerControls(session.subject==='math'?'math':'english')}${session.subject==='math'?`<form class="hw-check" data-hw-form="quiz"><div class="hw-field"><label for="hw-check-input">算好後輸入答案驗算</label><input id="hw-check-input" inputmode="decimal" autocomplete="off" placeholder="例如：24" aria-label="輸入計算答案"></div><button class="btn btn-dark" type="submit">✅ 驗算</button></form><div class="hw-message" id="hw-feedback" role="status" aria-live="polite">${h(handResult)}</div>`:''}<p class="hw-note">試用免費本機筆跡辨識；辨識可能有誤，請確認自動填入的答案後，再按核對或驗算。原本的選擇題分數不受影響。</p></section>`:''}<div class="optiongrid" role="group" aria-label="選擇答案">${q.choices.map((o,i)=>{const correct=feedback&&o===q.answer,wrong=feedback&&o===selected&&o!==q.answer;return `<button class="option ${correct?'correct':''} ${wrong?'incorrect':''}" data-action="answer" data-choice="${i}" ${feedback?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span>${h(o)}</span></button>`}).join('')}</div>${feedback?`<div class="feedback ${feedback.correct?'':'bad'}" role="status"><strong>${feedback.correct?'✅ 答對了！做得好！':'💡 沒關係，我們一起看看'}</strong><p>正確答案：<b>${h(q.answer)}</b><br>${h(q.explain)}</p>${session.mode==='use'?'<button class="speech-test" type="button" data-action="speak-answer">🔊 聽正確單字</button>':''}${q.reviewId?'<p class="auto-next-hint">🔁 複習題：即使答對，也會隔一段時間再複習，確認真的記得。</p>':''}${feedback.correct&&data.settings.autoNext&&!handQuizOpen&&!q.reason&&!q.readingOnly?'<p class="auto-next-hint">⏳ 短暫顯示解析後自動繼續；也可手動按下一題。</p>':(q.reason||q.readingOnly)?'<p class="auto-next-hint">🧠 深度題不自動跳題，請想一想解題思路再繼續。</p>':!feedback.correct?'<p class="auto-next-hint">先看懂解析，再按下一題。</p>':''}</div><button class="btn btn-dark quiz-next" data-action="next">${session.idx===tot-1?'看這回合的練習回顧':'下一題 →'}</button>`:''}</section><p class="mobile-note" style="text-align:center;margin-top:14px">不用搶快。答錯是找出學習方向的重要線索。</p></div>`}
+function answer(choiceIndex){clearAdvance();if(!session||feedback)return;const q=session.items[session.idx],sel=q.choices[choiceIndex];if(sel===undefined)return;const ok=sel===q.answer;feedback={selected:sel,correct:ok};if(ok)session.correct++;else session.missed.push({main:q.isListening?q.speech:q.main,answer:q.answer,explain:q.explain});session.attempts.push({skill:q.skill,correct:ok,hintUsed:!!session.usedHint,review:!!q.reviewId,concept:q.concept||'',level:q.reviewLevel||session.level});if(q.reviewId)markReview(q,ok);else if(!ok)newReviewMiss(q,session);save();session.usedHint=false;render();if(ok&&data.settings.autoNext&&!handQuizOpen&&!q.reason&&!q.readingOnly){const currentSession=session,currentFeedback=feedback;advanceTimer=setTimeout(()=>{advanceTimer=null;if(page==='quiz'&&session===currentSession&&feedback===currentFeedback)next()},1600)}}
+function next(){clearAdvance();if(!session||!feedback)return;session.idx++;feedback=null;handInk=[];handAnswerInk=[];handOcrResult='';handQuizOpen=false;handResult='';session.usedHint=false;if(session.idx>=session.items.length)finish();else render()}
+function finish(){clearAdvance();const s=session;if(!s)return;finished={...s};const entry={date:new Date().toISOString(),subject:s.subject,mode:s.mode,level:s.level,total:s.items.length,correct:s.correct,attempts:s.attempts};data.sessions.push(entry);data.sessions=data.sessions.slice(-300);save();page='result';session=null;window.scrollTo(0,0);render()}
+function result(){if(!finished)return '';const s=finished,tot=s.items.length;const rate=Math.round(100*s.correct/tot),title=rate>=88?'今天完成了一場好練習！':rate>=63?'每一題都在讓你進步！':'錯的題目，就是下一次的起點！';const due=dueReviews(s.subject).length;return `<div class="result"><div class="result-hero"><div class="result-emoji" aria-hidden="true">${rate>=88?'🏆':rate>=63?'⚾':'🌱'}</div><h1>${title}</h1><p>${s.subject==='english'?'英文':'數學'} · 第 ${s.level} 級 · ${MODES[s.subject].find(m=>m.id===s.mode).name}</p><div class="result-score">${s.correct} <span style="font-size:20px">/ ${tot} 題</span></div><p>理解比速度重要；有錯題就透過下次練習慢慢補強。</p></div>${s.missed.length?`<section class="card review"><h3>💡 今天可以再想一想的題目</h3><ul style="padding-left:20px">${s.missed.slice(0,4).map(x=>`<li>${h(x.main)}<br><strong>答案：${h(x.answer)}</strong>　${h(x.explain)}</li>`).join('')}</ul><p class="note">答錯題目會加入本機複習清單；如果已關閉複習功能，則只保留本回合的解析。</p></section>`:''}<section class="card reflection"><label for="reflection">💬 用一句話告訴家人：今天我學到……（可不填）</label><textarea id="reflection" maxlength="160" placeholder="例如：我知道 because 表示原因；我會先算總價再找零。"></textarea><div class="rowactions"><button class="btn btn-outline" data-action="save-reflection">儲存小心得</button></div></section><div class="result-buttons">${due?`<button class="btn btn-primary" data-action="review-${s.subject}">🔁 立即複習 ${due} 題</button>`:''}<button class="btn btn-dark" data-action="again">再練一次</button><button class="btn btn-outline" data-action="nav-home">回到首頁</button></div></div>`}
+
+function getSkillStat(skill){const attempts=data.sessions.flatMap(s=>Array.isArray(s.attempts)?s.attempts:[]).filter(a=>a.skill===skill);const n=attempts.length,hit=attempts.filter(a=>a.correct).length;return {n,hit,pct:n?Math.round(hit/n*100):0}}
+function subjectReport(sub){const x=getSubStats(sub),s=data.sessions.filter(x=>x.subject===sub),recent=s.slice(-4),rAcc=recent.length?Math.round(recent.reduce((a,x)=>a+x.correct,0)/recent.reduce((a,x)=>a+x.total,0)*100):null;return `<div style="display:flex;justify-content:space-between;gap:10px"><strong style="font-size:18px">${sub==='english'?'🔤 英文':'🔢 數學'}</strong><span class="tag">難度 ${data.settings[sub]}</span></div><div class="statrow" style="margin-top:14px"><div class="stat"><strong>${x.num}</strong><small>已完成回合</small></div><div class="stat"><strong>${rAcc===null?'—':rAcc+'%'}</strong><small>近4回合正確率</small></div></div>${recent.length?`<p class="note">${recent.length<2?'目前資料很少，先累積幾次練習。':recent.filter(x=>x.correct>=7).length>=2?'近4回合至少兩回合答對7題以上，可考慮先觀察孩子解題過程，再試進階。':'練習時可優先複習答錯的概念，不必急著升級。'}</p>`:`<p class="note">還沒有練習紀錄。先從基礎級玩一回合吧。</p>`}`}
+function parent(){if(!parentUnlocked)return parentGate();const ss=data.sessions.slice(-8).reverse();const w=['en-letters','en-vocab','en-use','en-sentence','en-listening','en-inference','en-order','en-context','math-calc','math-story','math-score','math-reason','math-data','math-money','math-pattern','math-measure'];const weakest=w.map(k=>({k,...getSkillStat(k)})).filter(x=>x.n>=5).sort((a,b)=>a.pct-b.pct).slice(0,2);return `<div class="pageheading"><div class="eyebrow">PARENT COACH CENTER</div><h1>📋 家長陪練中心</h1><p>讓孩子保有棒球熱情，也把英數與生活能力慢慢練起來。</p></div><div class="parent-banner">🔒 <b>隱私說明：</b>這是單機試作版，不需要帳號，不會上傳學習紀錄。家長區設有本機密碼，可阻止孩子誤入，但無法取代正式帳號與伺服器權限管理。</div><div class="parent-grid"><section class="card"><h3>英語進度</h3>${subjectReport('english')}</section><section class="card"><h3>數學進度</h3>${subjectReport('math')}</section></div>
+<div class="section-title"><div><h2>十六項練習能力</h2><p>以練習題答對比例估算，不能當作正式能力鑑定。</p></div></div><div class="parent-grid"><section class="card"><h3>🔤 英文能力</h3>${w.slice(0,8).map(skillMeter).join('')}</section><section class="card"><h3>🔢 數學能力</h3>${w.slice(8).map(skillMeter).join('')}</section></div>
+<div class="section-title"><div><h2>個人化複習排程</h2><p>答錯先加入清單；答對後於1、3、7天再複習，逐步鞏固理解。這是設計規則，不是教育成效保證。</p></div></div><section class="card"><div class="statrow"><div class="stat"><strong>${data.reviewQueue.length}</strong><small>待鞏固概念</small></div><div class="stat"><strong>${dueReviews().length}</strong><small>目前可複習</small></div></div><div class="rowactions" style="margin-top:13px">${dueReviews('english').length?`<button class="btn btn-outline" data-action="review-english">英文複習 ${dueReviews('english').length} 題</button>`:''}${dueReviews('math').length?`<button class="btn btn-outline" data-action="review-math">數學複習 ${dueReviews('math').length} 題</button>`:''}</div><p class="note">複習清單存在本機；答錯後可以當天再挑戰，接著按間隔安排下一次。大人應一起確認解題過程，不只看正確率。</p></section><div class="section-title"><div><h2>每週陪伴建議</h2><p>把練習學到的東西用回生活，比多刷幾題更重要。</p></div></div><div class="two-col"><section class="card"><h3>🏡 本週家中任務</h3><div class="mini-plan"><b>英文：</b>先認 3 個大小寫字母並聽發音，再找家裡 1 個物品學英文名稱。<br><b>數學：</b>去超市時請孩子估算 2～3 件商品的總價，再核對結果。<br><b>表達：</b>請孩子解釋一題他算對或算錯的題目，重點是「怎麼想」。<br><b>自主管理：</b>自己檢查球具與隔天上學用品。</div><p class="note">上面的生活任務是家長可自行調整的建議，不是標準化教育測驗。</p></section><section class="card"><h3>🧭 需要多一點陪練的地方</h3>${weakest.length?weakest.map(x=>`<p class="note">• <strong>${SKILLS[x.k]}</strong>：目前 ${x.hit}/${x.n} 題正確，適合一起回顧錯題與概念。</p>`).join(''):'<div class="empty">各項能力至少練過 5 題後，這裡才會提示值得複習的領域。</div>'}<div class="wellbeing" style="margin-top:16px">🌿 孩子疲倦、挫折或不想練時，可以直接結束，不用補做或追進度。</div></section></div>
+<div class="section-title"><div><h2>練習難度設定</h2><p>請依孩子實際理解調整，不以年齡直接決定。</p></div></div><section class="card"><div class="settings-row"><label for="set-en">英文難度<small>字母 A～Z 不分難度；第1級字詞與短句</small></label><select id="set-en" data-action="level" data-subject="english"><option value="1" ${data.settings.english===1?'selected':''}>1 基礎</option><option value="2" ${data.settings.english===2?'selected':''}>2 進階</option><option value="3" ${data.settings.english===3?'selected':''}>3 挑戰</option></select></div><div class="settings-row"><label for="set-ma">數學難度<small>第1級：20以內加減法；第2級擴充至100及2／5／10乘法</small></label><select id="set-ma" data-action="level" data-subject="math"><option value="1" ${data.settings.math===1?'selected':''}>1 基礎</option><option value="2" ${data.settings.math===2?'selected':''}>2 進階</option><option value="3" ${data.settings.math===3?'selected':''}>3 挑戰</option></select></div><p class="note">第3級會增加閱讀難度、乘法與簡單除法。若孩子不理解題目，建議先降級並補充口頭示範。</p></section>
+<div class="section-title"><div><h2>答題節奏</h2><p>答對給短暫回饋、答錯保留解析，避免為了過關而忽略理解。</p></div></div><section class="card"><div class="settings-row"><label for="auto-next-toggle">答對自動下一題<small>答對約 1.6 秒後自動繼續；答錯必須手動閱讀解析再繼續。</small></label><input type="checkbox" id="auto-next-toggle" data-action="auto-next" ${data.settings.autoNext?'checked':''} style="width:24px;height:24px;accent-color:#1b9277"/></div><p class="note">建議：保留正確答案的簡短提示。數學應用題若需要時間理解，也可以關閉自動切題。</p></section>
+<section class="card" style="margin-top:14px"><div class="settings-row"><label for="review-toggle">個人化錯題複習<small>答錯保留題目，安排當日、1天、3天與7天的重練。</small></label><input type="checkbox" id="review-toggle" data-action="review-enabled" ${data.settings.reviewEnabled?'checked':''} style="width:24px;height:24px;accent-color:#1b9277"/></div></section><div class="section-title"><div><h2>家長密碼</h2><p>離開家長區會自動鎖定。可以在這裡更換密碼。</p></div></div><section class="card"><div class="rowactions"><button type="button" class="btn btn-outline" data-action="lock-parent">🔒 立即鎖定家長區</button></div><details style="margin-top:16px"><summary style="font-weight:850;cursor:pointer">更換家長密碼</summary><form data-pin-form="change" class="pin-form"><label for="parent-old">原密碼</label><input id="parent-old" name="current" type="password" inputmode="numeric" autocomplete="off" required /><label for="parent-new">新密碼（6～12 位數字）</label><input id="parent-new" name="pin" type="password" inputmode="numeric" pattern="[0-9]{6,12}" minlength="6" maxlength="12" required autocomplete="off" /><label for="parent-new-confirm">確認新密碼</label><input id="parent-new-confirm" name="confirm" type="password" inputmode="numeric" pattern="[0-9]{6,12}" minlength="6" maxlength="12" required autocomplete="off" /><button class="btn btn-dark" type="submit">確認更換密碼</button></form></details><p class="note">設定僅保存在這個瀏覽器，不會與其他家長或手機共享。</p></section>
+<div class="section-title"><div><h2>最近的練習紀錄</h2><p>記錄保存在這個瀏覽器，不會跨裝置同步。</p></div></div><section class="card">${ss.length?`<div style="overflow:auto"><table class="history-table"><thead><tr><th>日期</th><th>科目</th><th>練習項目</th><th>級別</th><th>答對</th></tr></thead><tbody>${ss.map(s=>`<tr><td>${fmtDate(s.date)}</td><td>${s.subject==='english'?'英文':'數學'}</td><td>${h(MODES[s.subject].find(m=>m.id===s.mode)?.name||s.mode)}</td><td>${s.level}</td><td>${s.correct}/${s.total}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">尚無紀錄；完成一次練習後會出現在這裡。</div>'}</section>
+<div class="section-title"><div><h2>資料管理</h2><p>可匯出備份，也可以完全清除本機學習紀錄。</p></div></div><section class="card"><p class="note" style="margin-top:0">不輸入孩子姓名、不需要登入、沒有廣告或外部分析服務；資料使用瀏覽器 localStorage。清除瀏覽器資料、無痕模式或換裝置，紀錄可能遺失。匯出的 JSON 備份檔可能包含練習心得，請妥善保管。</p><div class="rowactions"><button class="btn btn-outline" data-action="export">⬇ 匯出紀錄 JSON</button><button class="btn btn-outline" data-action="import">⬆ 匯入紀錄 JSON</button><input class="hidden" type="file" id="import-file" accept=".json,application/json" aria-label="選擇練習紀錄 JSON"/><button class="btn btn-outline" data-action="print">🖨 列印家長報告</button><button class="btn btn-danger" data-action="reset">🗑 清除本機紀錄</button></div></section>`}
+function skillMeter(k){const a=getSkillStat(k),state=a.n<5?'資料不足':a.pct>=85?'近期表現穩定':a.pct>=65?'繼續練習':'建議一起複習';return `<div class="meter"><div class="meter-label"><span>${SKILLS[k]}</span><small>${a.n?a.hit+'/'+a.n+' 題 · '+state:'尚未練習'}</small></div><div class="meter-bar"><div style="width:${a.pct}%"></div></div></div>`}
+
+// v18：一張免費的觸控畫布；不使用影像辨識或付費 API。
+function handWordPool(){return VOCAB[data.settings.english]||VOCAB[1]}
+function currentHandTarget(){const words=handWordPool();return handMode==='letter'?ALPHABET[handLetter].upper:words[handWord%words.length][0]}
+function handPadMarkup(target='',showGuide=false,quizMode=false){const size=target.length>3?'word':'letter';return `<div class="hw-pad ${showGuide?'guide':''} ${handExpanded?'is-expanded':''}"><div class="hw-guide-text ${!showGuide?'scratch':size}" aria-hidden="true">${showGuide?h(target):''}</div><canvas id="hw-canvas" width="780" height="360" aria-label="${quizMode?'手寫草稿畫板':'英文或數學手寫畫板'}，可用手指、觸控筆或滑鼠書寫" role="img"></canvas></div><div class="hw-actions"><button type="button" class="btn btn-outline" data-action="hand-undo">↩️ 撤銷一筆</button><button type="button" class="btn btn-outline" data-action="hand-clear">🧽 清空重寫</button><button type="button" class="btn hw-zoom" data-action="hand-zoom" aria-pressed="${handExpanded}">🔎 ${handExpanded?'還原':'放大'}書寫區</button></div>`}
+function handAnswerPadMarkup(){return `<div class="hw-canvas-head">🖊️ 最後答案手寫區</div><p class="hw-ocr-hint">先在上方草稿列式，再只把最後答案寫在下面。數字之間留一點空隙，較容易辨識。</p><div class="hw-pad hw-answer-pad ${handAnswerExpanded?'is-expanded':''}"><canvas id="hw-answer-canvas" aria-label="手寫最後數字答案；畫板上滑動不會捲動畫面"></canvas></div><div class="hw-actions"><button type="button" class="btn btn-outline" data-action="hand-answer-undo">↩️ 撤銷一筆</button><button type="button" class="btn btn-outline" data-action="hand-answer-clear">🧽 清空最後答案</button><button type="button" class="btn hw-zoom" data-action="hand-answer-zoom" aria-pressed="${handAnswerExpanded}">🔎 ${handAnswerExpanded?'還原':'放大'}答案區</button></div>`}
+function handRecognizerControls(kind){return `${kind==='math'?handAnswerPadMarkup():`<p class="hw-ocr-hint">✏️ 英文請用印刷體寫字母，字母之間留一點間隔。辨識結果只供參考，不會直接當成正確答案。</p>`}<div class="hw-ocr-actions"><button type="button" class="btn btn-dark" data-action="hand-recognize" ${handRecognitionBusy?'disabled':''}>🔎 ${handRecognitionBusy?'正在辨識…':'辨識手寫'+(kind==='math'?'答案':'英文')}</button></div><div class="hw-ocr-result" id="hw-ocr-result" role="status" aria-live="polite">${h(handOcrResult)}</div><div class="hw-score" id="hw-score" role="status" aria-live="polite" ${handScoreHtml?'':'hidden'}>${handScoreHtml}</div><div id="hw-ocr-candidates" class="hw-ocr-actions" aria-label="可能的英文單字"></div>`}
+function handwritingPage(){
+ if(!handMath)handMath=calcQuestion(data.settings.math);
+ const english=handTab==='english',pool=handWordPool(),word=pool[handWord%pool.length],target=currentHandTarget();
+ return `<div class="hw-layout"><button class="back" data-action="nav-home">← 回到學習首頁</button><div class="pageheading"><div class="eyebrow">HANDWRITING × BASEBALL</div><h1>✍️ 手寫練習場</h1><p>手機用手指、平板用觸控筆、電腦用滑鼠。寫完可以核對拼字或數學答案，不需要額外費用。</p></div><div class="hw-tabs" role="group" aria-label="選擇手寫練習科目"><button type="button" data-action="hand-tab-english" class="${english?'selected':''}" aria-pressed="${english}">🔤 英文手寫</button><button type="button" data-action="hand-tab-math" class="${!english?'selected':''}" aria-pressed="${!english}">🧮 數學計算</button></div>
+ <section class="hw-main">${english?`<div class="hw-modes" role="group" aria-label="英文手寫類型"><button type="button" data-action="hand-mode-letter" class="${handMode==='letter'?'selected':''}" aria-pressed="${handMode==='letter'}">🔡 A～Z 字母</button><button type="button" data-action="hand-mode-word" class="${handMode==='word'?'selected':''}" aria-pressed="${handMode==='word'}">📚 英文單字</button></div><div class="hw-practice-target"><div class="target" lang="en">${h(target)}${handMode==='letter'?` <span style="color:#7691a0">${ALPHABET[handLetter].lower}</span>`:''}</div><small>${handMode==='letter'?`第 ${handLetter+1}／26 個字母・${ALPHABET[handLetter].word}（${ALPHABET[handLetter].meaning}）`:`第 ${handWord%pool.length+1}／${pool.length} 個單字 · ${h(word[1])}`}</small></div><div class="rowactions"><button type="button" class="btn btn-outline" data-action="hand-listen">🔊 聽發音</button><button type="button" class="btn btn-outline" data-action="hand-prev">← 上一個</button><button type="button" class="btn btn-dark" data-action="hand-next">下一個 →</button></div>${handPadMarkup(handMode==='letter'?target+' '+ALPHABET[handLetter].lower:target,true)}${handRecognizerControls('english')}<form class="hw-check" data-hw-form="english"><div class="hw-field"><label for="hw-check-input">🖊️ 用鍵盤拼一次，再核對</label><input id="hw-check-input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="35" aria-label="輸入單字核對拼字" placeholder="例如：${h(target)}"></div><button class="btn btn-dark" type="submit">✅ 核對拼字</button></form>`:
+ `<div class="hw-practice-target"><div style="font-size:13px;color:#627779;font-weight:800">數學計算 · 第 ${data.settings.math} 級</div><div style="font-size:clamp(20px,4vw,28px);font-weight:900;margin-top:7px;white-space:pre-wrap">${h(handMath.main)}</div></div><div class="rowactions"><button class="btn btn-outline" type="button" data-action="hand-math-next">🔄 換一題</button><button class="btn btn-outline" type="button" data-action="hand-math-explain">💡 ${handSolution?'隱藏解析':'看解題解析'}</button></div>${handPadMarkup('',false)}${handRecognizerControls('math')}<form class="hw-check" data-hw-form="math"><div class="hw-field"><label for="hw-check-input">🧮 寫完算式，再輸入答案驗算</label><input id="hw-check-input" type="text" inputmode="decimal" autocomplete="off" maxlength="20" aria-label="輸入數學答案" placeholder="輸入數字，例如：24"></div><button class="btn btn-dark" type="submit">✅ 驗證計算</button></form>${handSolution?`<div class="hw-message">📖 ${h(handMath.explain)}</div>`:''}`}
+ <div class="hw-message" id="hw-feedback" role="status" aria-live="polite">${h(handResult)}</div><p class="hw-note">⚠️ 評分分成「答案是否正確」與「筆跡形狀相似度參考」。形狀分數是本機筆畫和印刷字樣的簡易比較，並非老師評分，不適合判斷孩子真正的字體美觀或書寫能力。辨識錯誤時可自行修正；資料不會上傳，也不會更改原本的測驗紀錄。</p></section></div>`;
+}
+function handReset(){handInk.length=0;handAnswerInk.length=0;handInkRevision++;handOcrCandidates=[];handOcrResult='';handScoreHtml='';handResult='';handSolution=false;handActivePointer=null}
+function paintHandCanvas(canvas){
+ const ctx=canvas.getContext('2d');if(!ctx)return;
+ const ink=canvas.id==='hw-answer-canvas'?handAnswerInk:handInk;
+ const r=canvas.getBoundingClientRect(),w=Math.max(1,r.width),hh=Math.max(1,r.height),dpr=Math.min(3,window.devicePixelRatio||1);
+ if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(hh*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(hh*dpr)}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,hh);
+ ctx.strokeStyle='#264eab';ctx.fillStyle='#264eab';ctx.lineWidth=4.2;ctx.lineCap='round';ctx.lineJoin='round';
+ for(const stroke of ink){if(!stroke.length)continue;if(stroke.length===1){ctx.beginPath();ctx.arc(stroke[0][0]*w,stroke[0][1]*hh,2.1,0,Math.PI*2);ctx.fill();continue}
+ ctx.beginPath();ctx.moveTo(stroke[0][0]*w,stroke[0][1]*hh);for(let i=1;i<stroke.length;i++)ctx.lineTo(stroke[i][0]*w,stroke[i][1]*hh);ctx.stroke()}
+}
+function returnToWritingPad(id){const c=document.getElementById(id);if(!c)return;requestAnimationFrame(()=>{if(!c.isConnected)return;try{c.scrollIntoView({block:'center',behavior:'auto'})}catch(_){c.scrollIntoView()}})}
+const handPendingFrames=new WeakMap();
+function queueHandPaint(canvas){
+ if(!canvas||!canvas.isConnected||handPendingFrames.has(canvas))return;
+ const ticket=requestAnimationFrame(()=>{handPendingFrames.delete(canvas);if(canvas.isConnected)paintHandCanvas(canvas)});
+ handPendingFrames.set(canvas,ticket);
+}
+function initHandCanvas(){
+ if(handResizeObserver){handResizeObserver.disconnect();handResizeObserver=null}
+ const canvases=[...document.querySelectorAll('#hw-canvas,#hw-answer-canvas')];if(!canvases.length)return;
+ handActivePointer=null;
+ for(const c of canvases){const inkNow=()=>c.id==='hw-answer-canvas'?handAnswerInk:handInk;let drawingPointer=null;
+ // iOS Safari: explicitly suppress touch scrolling only if the event began inside the canvas.
+ const noScroll=e=>{if(e.cancelable)e.preventDefault()};
+ c.addEventListener('touchstart',noScroll,{passive:false});c.addEventListener('touchmove',noScroll,{passive:false});
+ c.addEventListener('gesturestart',noScroll,{passive:false});
+ const loc=e=>{const r=c.getBoundingClientRect();return [Math.min(1,Math.max(0,(e.clientX-r.left)/Math.max(1,r.width))),Math.min(1,Math.max(0,(e.clientY-r.top)/Math.max(1,r.height)))]};
+ c.addEventListener('pointerdown',e=>{if(drawingPointer!==null||e.isPrimary===false||(e.pointerType==='mouse'&&e.button!==0))return;e.preventDefault();drawingPointer=e.pointerId;const ink=inkNow();ink.push([loc(e)]);handInkRevision++;handScoreHtml='';if(ink.length>240)ink.shift();try{c.setPointerCapture(e.pointerId)}catch(_){}paintHandCanvas(c)});
+ c.addEventListener('pointermove',e=>{const ink=inkNow();if(e.pointerId!==drawingPointer||!ink.length)return;e.preventDefault();const stroke=ink[ink.length-1];if(stroke.length<5000)stroke.push(loc(e));queueHandPaint(c)});
+ const end=e=>{if(e.pointerId!==drawingPointer)return;e.preventDefault();drawingPointer=null;try{if(c.hasPointerCapture(e.pointerId))c.releasePointerCapture(e.pointerId)}catch(_){}paintHandCanvas(c)};
+ c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end);c.addEventListener('lostpointercapture',()=>{drawingPointer=null});
+ }
+ if('ResizeObserver'in window){handResizeObserver=new ResizeObserver(entries=>{for(const entry of entries){const c=entry.target;if(c.isConnected)queueHandPaint(c)}});canvases.forEach(c=>handResizeObserver.observe(c))}
+ requestAnimationFrame(()=>canvases.forEach(c=>{if(c.isConnected)paintHandCanvas(c)}));
+}
+
+// 免費本機辨識：優先使用支援的瀏覽器原生筆跡 API；其他瀏覽器使用本地筆畫形狀比對。
+// 沒有網路傳送，也不需模型下載。非正式 OCR 校正，結果需由孩子核對。
+function handStrokeGroups(ink){
+ const strokes=ink.filter(s=>s&&s.length).map(points=>({points,x1:Math.min(...points.map(p=>p[0])),x2:Math.max(...points.map(p=>p[0])),y1:Math.min(...points.map(p=>p[1])),y2:Math.max(...points.map(p=>p[1]))}));
+ if(!strokes.length)return [];
+ // Horizontal overlap combines multi-stroke glyphs (A, H, t and dotted i).
+ let groups=strokes.map(s=>({strokes:[s],x1:s.x1,x2:s.x2,y1:s.y1,y2:s.y2}));
+ let changed=true,rounds=0;
+ while(changed&&rounds++<100){changed=false;outer:for(let i=0;i<groups.length;i++)for(let j=i+1;j<groups.length;j++){
+ const a=groups[i],b=groups[j];const overlap=Math.min(a.x2,b.x2)-Math.max(a.x1,b.x1);
+ const eps=.007;
+ const gap=Math.max(0,Math.max(a.x1,b.x1)-Math.min(a.x2,b.x2));
+ const centerClose=Math.abs((a.x1+a.x2)-(b.x1+b.x2))<Math.max(.027,Math.min(a.x2-a.x1,b.x2-b.x1)*.8);
+ const nearby=overlap>=-.002||(gap<eps&&centerClose);
+ if(nearby){groups[i]={strokes:a.strokes.concat(b.strokes),x1:Math.min(a.x1,b.x1),x2:Math.max(a.x2,b.x2),y1:Math.min(a.y1,b.y1),y2:Math.max(a.y2,b.y2)};groups.splice(j,1);changed=true;break outer}
+ }}
+ return groups.sort((a,b)=>a.x1-b.x1);
+}
+function handMaskFromStrokes(strokes){
+ const useAnswer=handTab==='math'||page==='quiz'&&session?.subject==='math';
+ const el=document.getElementById(useAnswer?'hw-answer-canvas':'hw-canvas');
+ const ratio=el?Math.max(.9,Math.min(useAnswer?2.4:1.65,el.clientWidth/Math.max(1,el.clientHeight))):1.4;
+ const points=strokes.flatMap(s=>(s.points||s).map(p=>[p[0]*ratio,p[1]]));if(!points.length)return null;
+ let xmin=1,xmax=0,ymin=1,ymax=0;
+ for(const [x,y]of points){xmin=Math.min(xmin,x);xmax=Math.max(xmax,x);ymin=Math.min(ymin,y);ymax=Math.max(ymax,y)}
+ const ww=Math.max(.004,xmax-xmin),hh=Math.max(.004,ymax-ymin),size=52,pad=5;
+ const canvas=document.createElement('canvas');canvas.width=size;canvas.height=size;const ctx=canvas.getContext('2d',{willReadFrequently:true});
+ ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.strokeStyle='#000';ctx.lineWidth=3.2;ctx.lineCap='round';ctx.lineJoin='round';
+ const scale=Math.min((size-2*pad)/ww,(size-2*pad)/hh);const px=(size-ww*scale)/2,py=(size-hh*scale)/2;
+ for(const st of strokes){const ps=(st.points||st).map(p=>[p[0]*ratio,p[1]]);if(ps.length<1)continue;ctx.beginPath();ctx.moveTo(px+(ps[0][0]-xmin)*scale,py+(ps[0][1]-ymin)*scale);for(const pt of ps.slice(1))ctx.lineTo(px+(pt[0]-xmin)*scale,py+(pt[1]-ymin)*scale);if(ps.length===1){ctx.lineTo(px+(ps[0][0]-xmin)*scale+.1,py+(ps[0][1]-ymin)*scale)}ctx.stroke()}
+ return handImageFeatures(ctx.getImageData(0,0,size,size).data,size);
+}
+function handImageFeatures(rgba,size){const pixel=[];for(let i=0;i<size*size;i++){const value=rgba[i*4];pixel.push(value<165?1:0)}return pixel}
+let handTemplateCache=null;
+function handTemplates(){
+ if(handTemplateCache)return handTemplateCache;
+ const all=[];const glyphs='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-.';
+ const canv=document.createElement('canvas');canv.width=80;canv.height=80;const ctx=canv.getContext('2d',{willReadFrequently:true});
+ for(const char of glyphs){for(const font of ['Arial','Georgia','monospace','cursive']){
+ ctx.clearRect(0,0,80,80);ctx.fillStyle='white';ctx.fillRect(0,0,80,80);ctx.font='bold 64px '+font;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#000';ctx.fillText(char,40,43);
+ const d=ctx.getImageData(0,0,80,80).data;let x1=80,x2=0,y1=80,y2=0;
+ for(let y=0;y<80;y++)for(let x=0;x<80;x++){const i=(y*80+x)*4;if(d[i]<160){x1=Math.min(x1,x);x2=Math.max(x2,x);y1=Math.min(y1,y);y2=Math.max(y2,y)}}
+ if(x1>x2)continue;const pad=5,srcw=x2-x1+1,srch=y2-y1+1,scale=Math.min(42/srcw,42/srch);
+ const res=document.createElement('canvas');res.width=52;res.height=52;const rc=res.getContext('2d',{willReadFrequently:true});rc.fillStyle='white';rc.fillRect(0,0,52,52);rc.imageSmoothingEnabled=true;
+ rc.drawImage(canv,x1,y1,srcw,srch,(52-srcw*scale)/2,(52-srch*scale)/2,srcw*scale,srch*scale);
+ all.push({char,mask:handImageFeatures(rc.getImageData(0,0,52,52).data,52),ratio:srcw/srch});
+ }}handTemplateCache=all;return all;
+}
+function handMaskDistance(a,b){
+ // Symmetric nearest-neighbor strokes (chamfer-like) tolerates moderate stroke width differences.
+ const n=52,ar=[],br=[];for(let i=0;i<n*n;i++){if(a[i])ar.push(i);if(b[i])br.push(i)}if(!ar.length||!br.length)return Infinity;
+ // 5x5 soft overlap. Fast approximation to distance transform.
+ const neigh=(src,dst)=>{let sum=0;for(const i of src){const x=i%n,y=(i/n)|0;let best=12;
+ for(let dy=-4;dy<=4;dy++)for(let dx=-4;dx<=4;dx++){
+ const xx=x+dx,yy=y+dy;if(xx<0||xx>=n||yy<0||yy>=n)continue;
+ if(dst[yy*n+xx])best=Math.min(best,dx*dx+dy*dy);
+ }sum+=Math.min(12,best)}return sum/src.length};
+ return neigh(ar,b)*.55+neigh(br,a)*.45;
+}
+function handGuessCharacter(strokes,kind){
+ const allPoints=strokes.flatMap(st=>st.points||st);
+ if(allPoints.length>=2){const xs=allPoints.map(p=>p[0]),ys=allPoints.map(p=>p[1]);const width=Math.max(...xs)-Math.min(...xs),height=Math.max(...ys)-Math.min(...ys);
+ if(width<.006&&height>.05)return {char:kind==='digit'?'1':'l',distance:.2};
+ if(kind==='digit'&&width>.055&&height>.09){
+ // A handwritten 2 often ends with a long bottom horizontal underline, unlike 3, 7, or 1.
+ const ymin=Math.min(...ys),ymax=Math.max(...ys),xmin=Math.min(...xs),xmax=Math.max(...xs);
+ const bottomStroke=strokes.some(st=>{const pts=st.points||st;for(let i=1;i<pts.length;i++){
+ const p=pts[i-1],q=pts[i];if(Math.min(p[1],q[1])>ymin+height*.78&&Math.abs(p[1]-q[1])<height*.12&&Math.abs(p[0]-q[0])>width*.4)return true;
+ }return false});
+ const topArc=allPoints.some(pt=>pt[1]<ymin+height*.30)&&allPoints.some(pt=>pt[0]<xmin+width*.35&&pt[1]>ymin+height*.55);
+ if(bottomStroke&&topArc)return {char:'2',distance:.2};
+ }
+ }
+ const sample=handMaskFromStrokes(strokes);if(!sample)return null;
+ let best=null;for(const tmpl of handTemplates()){
+ if(kind==='digit'&&!('0123456789'.includes(tmpl.char)))continue;
+ if((kind==='letter'||kind==='word')&&!(/[A-Za-z]/.test(tmpl.char)))continue;
+ let d=handMaskDistance(sample,tmpl.mask);
+ if(!best||d<best.distance)best={char:tmpl.char,distance:d};
+ }return best;
+}
+function handTryLocalRecognize(ink,kind){
+ let groups=handStrokeGroups(ink);if(!groups.length)return null;
+ if(kind==='letter'){return handGuessCharacter(ink.map(points=>({points})),kind)?.char||null}
+ if(groups.length>25)return null;
+ return groups.map(g=>handGuessCharacter(g.strokes,kind)?.char||'?').join('');
+}
+// 練習用評分，不是 OCR 信心指標，也不是由老師判定筆順／字體好壞。
+// 分別顯示：答案核對分（100或0）＋筆跡字形近似分（僅在分字清楚時提供）。
+function handShapeScore(ink,text,kind){
+ const clean=String(text||'').trim();
+ if(!clean||!ink||!ink.some(s=>s&&s.length))return null;
+ let glyphs=[...clean];
+ if(glyphs.length>18||glyphs.some(ch=>!/[A-Za-z0-9]/.test(ch)))return null;
+ let groups=kind==='letter'?[{strokes:ink.map(points=>({points}))}]:handStrokeGroups(ink);
+ if(groups.length!==glyphs.length)return null;
+ const templates=handTemplates();const scores=[];
+ for(let i=0;i<glyphs.length;i++){
+   const mask=handMaskFromStrokes(groups[i].strokes);if(!mask)return null;
+   let best=Infinity;
+   for(const t of templates){if(t.char.toLowerCase()!==glyphs[i].toLowerCase())continue;const dist=handMaskDistance(mask,t.mask);if(dist<best)best=dist}
+   if(!Number.isFinite(best))return null;
+   scores.push(Math.max(0,Math.min(100,Math.round(100-21*best))));
+ }
+ return Math.max(0,Math.min(100,Math.round(scores.reduce((sum,n)=>sum+n,0)/scores.length)));
+}
+function showHandScores(correctness=null,guess=null){
+ const kind=((page==='quiz'&&session?.subject==='math')||(page==='handwrite'&&handTab==='math'))?'math':'english';
+ const ink=kind==='math'?handAnswerInk:handInk;
+ const isLetter=kind==='english'&&page==='handwrite'&&handMode==='letter';
+ const shape=handShapeScore(ink,guess,kind==='math'?'digit':isLetter?'letter':'word');
+ const items=[];
+ if(correctness!==null)items.push(`<div>🎯 <strong>答案核對：${correctness?'100':'0'} 分</strong>　${correctness?'答對了！':'再試一次'}</div>`);
+ if(shape!==null)items.push(`<div>✍️ <strong>筆跡形狀參考：${shape} 分</strong>（與字形範本接近程度）</div>`);
+ else if(ink.length)items.push('<div>✍️ 字形分數：暫無法可靠估計（請分開寫字，或先練單一字母）</div>');
+ if(items.length)items.push('<small>⚠️ 形狀分數只是簡單字形比較，不代表筆順、字體美觀或英文能力；答案核對分和形狀分是兩件事。</small>');
+ handScoreHtml=items.join('');const el=document.getElementById('hw-score');if(el){el.innerHTML=handScoreHtml;el.hidden=!items.length}
+}
+function clearHandScore(){handScoreHtml='';const score=document.getElementById('hw-score');if(score){score.innerHTML='';score.hidden=true}}
+function clearHandRecognition(){handInkRevision++;handOcrCandidates=[];handOcrResult='';clearHandScore();const el=document.getElementById('hw-ocr-result');if(el)el.textContent='';const c=document.getElementById('hw-ocr-candidates');if(c)c.innerHTML=''}
+function resizeHandPad(answer=false){
+ const c=document.getElementById(answer?'hw-answer-canvas':'hw-canvas');if(!c)return;
+ const pad=c.closest('.hw-pad');if(!pad)return;
+ if(answer)handAnswerExpanded=!handAnswerExpanded;else handExpanded=!handExpanded;
+ const expanded=answer?handAnswerExpanded:handExpanded;
+ pad.classList.toggle('is-expanded',expanded);
+ const btn=document.querySelector('[data-action="'+(answer?'hand-answer-zoom':'hand-zoom')+'"]');
+ if(btn){btn.setAttribute('aria-pressed',String(expanded));btn.textContent='🔎 '+(expanded?'還原':'放大')+(answer?'答案區':'書寫區')}
+ requestAnimationFrame(()=>{if(c.isConnected)paintHandCanvas(c)});
+}
+async function handTryNativeRecognize(ink){
+ if(typeof navigator.createHandwritingRecognizer!=='function'||typeof HandwritingStroke!=='function')return null;
+ let recognizer=null;
+ try{recognizer=await navigator.createHandwritingRecognizer({languages:['en']});const drawing=recognizer.startDrawing({recognitionType:'text',alternatives:2});
+ for(const stroke of ink){if(!stroke.length)continue;const st=new HandwritingStroke();for(const [x,y] of stroke)st.addPoint({x:x*1000,y:y*1000});drawing.addStroke(st)}
+ const results=await drawing.getPrediction();return String(results?.[0]?.text||'').trim()||null;
+ }catch(_){return null}finally{try{recognizer?.finish()}catch(_){}}
+}
+function handWordAlternatives(guess){
+ const word=guess.toLowerCase();if(!/^[a-z]{2,20}$/.test(word))return [];
+ const edit=(a,b)=>{const prev=Array.from({length:b.length+1},(_,j)=>j);for(let i=1;i<=a.length;i++){let before=prev[0];prev[0]=i;for(let j=1;j<=b.length;j++){const old=prev[j];prev[j]=Math.min(prev[j]+1,prev[j-1]+1,before+(a[i-1]===b[j-1]?0:1));before=old}}return prev[b.length]};
+ const all=[...new Set([1,2,3].flatMap(lv=>(VOCAB[lv]||[]).map(row=>String(row[0]).toLowerCase())).filter(w=>/^[a-z]{2,20}$/.test(w)))];
+ const sorted=all.filter(w=>Math.abs(w.length-word.length)<2&&w!==word).map(w=>({w,d:edit(word,w)})).sort((a,b)=>a.d-b.d||a.w.localeCompare(b.w));
+ return sorted.filter(v=>v.d<=Math.max(1,Math.ceil(word.length*.28))).slice(0,3).map(v=>v.w);
+}
+async function handRecognize(){
+ if(handRecognitionBusy)return;const kind=(page==='quiz'&&session?.subject==='math')||page==='handwrite'&&handTab==='math'?'math':'english';
+ const ink=kind==='math'?handAnswerInk:handInk;
+ const charKind=kind==='math'?'digit':'letter';
+ if(!ink.length||ink.every(x=>!x.length)){reportHand('先在手寫畫板寫下'+(kind==='math'?'最後答案':'字母或單字')+'，再按辨識。');return}
+ handRecognitionBusy=true;handOcrCandidates=[];const revisionAtStart=handInkRevision;const btn=document.querySelector('[data-action="hand-recognize"]');if(btn){btn.disabled=true;btn.textContent='⌛ 正在辨識…'}
+ const box=document.getElementById('hw-ocr-result');if(box)box.textContent='🔎 正在辨識；請稍候…';
+ try{
+ let guess=await handTryNativeRecognize(ink);
+ if(!guess)guess=handTryLocalRecognize(ink,kind==='english'?(page==='handwrite'&&handMode==='letter'?'letter':'word'):charKind);
+ if(revisionAtStart!==handInkRevision){handOcrResult='';return}
+ if(!guess||guess.includes('?')){handOcrResult='⚠️ 沒有辨識清楚。請寫大一點，讓每個字母／數字間保留空隙；也可以直接修正輸入欄位。';return}
+ guess=guess.trim().replace(/\s+/g,' ');
+ if(kind==='math')guess=guess.replace(/[^0-9.\-]/g,'').slice(0,20);
+ else guess=guess.replace(/[^A-Za-z]/g,'').slice(0,35);
+ if(!guess||(kind==='math'&&!/[0-9]/.test(guess))){handOcrResult='⚠️ 無法辨識有效答案，請重寫或使用輸入框完成。';return}
+ if(kind==='english'&&!(page==='handwrite'&&handMode==='letter'))handOcrCandidates=handWordAlternatives(guess);const input=document.getElementById('hw-check-input');if(input)input.value=guess;
+ handOcrResult='✍️ 我猜是「'+guess+'」。請先確認文字，再按下方的「核對／驗算」按鈕；辨識不等於答對。';
+ showHandScores(null,guess);
+ }catch(_){handOcrResult='⚠️ 這次辨識失敗，請修改輸入框或再寫一次。';}finally{
+ if(box)box.textContent=handOcrResult;
+ const choices=document.getElementById('hw-ocr-candidates');if(choices){choices.innerHTML=handOcrCandidates.length?'<span style="font-size:13px;font-weight:800;color:#48647a;width:100%">📚 字庫相近的單字（不代表一定正確）：</span>'+handOcrCandidates.map(w=>`<button class="btn btn-outline" data-action="hand-ocr-select" data-word="${h(w)}" type="button">${h(w)}</button>`).join(''):''}
+ handRecognitionBusy=false;
+ if(btn){btn.disabled=false;btn.textContent='🔎 辨識手寫'+(kind==='math'?'答案':'英文')}
+ }
+}
+
+function reportHand(message){handResult=message;const out=document.getElementById('hw-feedback');if(out)out.textContent=message;else toast(message)}
+function handCheck(kind){const input=document.getElementById('hw-check-input');if(!input)return;const raw=input.value.normalize('NFKC').trim();if(!raw){reportHand('先在輸入框寫下答案，才能進行核對喔。');return}
+ if(kind==='english'){const target=currentHandTarget(),correct=raw.toLowerCase()===target.toLowerCase();reportHand(correct?'✅ 拼對了！再用手寫板練習筆順吧！':'💡 再檢查一次拼字，對照上方範字試試。');showHandScores(correct,raw);return}
+ const target=kind==='quiz'?session?.items[session.idx]?.answer:handMath?.answer;
+ if(!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(raw)){reportHand('請輸入一個數字作為答案，例如 24 或 3.5。');return}
+ const got=Number(raw),expected=Number(target);
+ if(!Number.isFinite(got)||!Number.isFinite(expected)){reportHand('這題無法用純數字驗算，請使用下方的選擇題。');return}
+ const correct=got===expected;reportHand(correct?'✅ 答案正確！你的計算成功了！'+(kind==='quiz'?' 再選下方的選項完成這題。':''):'💡 還不正確。檢查進位、運算順序，再算一次。');showHandScores(correct,raw);
+}
+
+function render(){
+ try{
+   const view=page==='home'?home():page==='select'?selectView():page==='quiz'?quiz():page==='result'?result():page==='alphabet'?alphabetPage():page==='handwrite'?handwritingPage():parent();
+   app.innerHTML=`<div class="shell">${header()}<main id="content">${view}</main>${footer()}</div>`;
+   // Speech availability must never prevent displaying the lesson or writing pad.
+   try{populateSpeechVoices()}catch(e){console.warn('English voice setup unavailable',e)}
+   try{initHandCanvas()}catch(e){console.warn('Handwriting initialization unavailable',e)}
+ }catch(e){
+   console.error('App render failed',e);
+   const reason=e&&e.name?String(e.name):'相容性錯誤';
+   app.innerHTML=`<main style="max-width:700px;margin:40px auto;padding:30px;border-radius:20px;background:#fff;color:#17324a;font-family:-apple-system,BlinkMacSystemFont,sans-serif"><h1>⚾ 全壘打雙軌學院</h1><p>網站載入時遇到問題（${reason.replace(/[^a-zA-Z0-9 ]/g,'')}），已保留你的原有學習資料。</p><button type="button" onclick="location.reload()" style="background:#174675;color:#fff;padding:14px 22px;border:0;border-radius:12px;font-size:17px">🔄 重新載入</button></main>`;
+ }
+}
+// Free device voice is the default. Existing recordings remain a network fallback.
+// Keep full sentences intact; only gently slow the speaking rate.
+function playSavedAudio(url,label,rate=null,repeat=1){
+  stopEnglish();
+  const id=speechAttempt;
+  const audio=new Audio();activeRecordedAudio=audio;
+  audio.preload='auto';audio.src=url;
+  audio.playbackRate=rate??SPEEDS[voicePrefs.speed];
+  // Keep the same pitch when a child slows the recording down; supported in modern Safari.
+  if('preservesPitch' in audio)audio.preservesPitch=true;
+  let remaining=repeat;
+  audio.onplaying=()=>{if(id===speechAttempt)showSpeechStatus('🔊 播放：'+label)};
+  audio.onended=()=>{if(id!==speechAttempt)return;
+    if(--remaining>0){
+      // Keep a real pause between the two *whole words*. Otherwise iPhone replay sounds glued together.
+      showSpeechStatus('👂 停頓一下，再聽第二次；可以跟著念。');
+      wordReplayTimer=setTimeout(()=>{
+        wordReplayTimer=null;
+        if(id!==speechAttempt || activeRecordedAudio!==audio)return;
+        try{audio.currentTime=0;const next=audio.play();if(next?.catch)next.catch(fail)}catch(_){fail()}
+      },780);
+      return;
+    }
+    activeRecordedAudio=null;showSpeechStatus('✅ 播放完成，可以再按一次重聽。');
+  };
+  function fail(){if(id!==speechAttempt)return;activeRecordedAudio=null;if(url.includes('/audio/letters/')){showSpeechStatus('⚠️ 字母音檔暫時無法播放，請稍後重新按播放鍵。');return;}showSpeechStatus('⚠️ 音檔無法播放；改用手機的預設語音。');playSyntheticEnglish(label)}
+  audio.onerror=fail;
+  try{const p=audio.play();if(p?.catch)p.catch(fail)}catch(_){fail()}
+  showSpeechStatus('🔊 正在載入發音…');
+  return true;
+}
+function playRecordedLetter(letter){return playSavedAudio(LETTER_RECORDINGS[letter],letter,1)}
+function playDeviceEnglish(text,rate=null,repeat=1,fallbackUrl=null){
+  const value=String(text||'').trim();
+  if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined'){
+    if(fallbackUrl)return playSavedAudio(fallbackUrl,value,rate,repeat);
+    showSpeechStatus('⚠️ 這台裝置沒有可用的英文語音。');return false;
+  }
+  stopEnglish();
+  const id=speechAttempt;
+  const synth=window.speechSynthesis;
+  const selected=pickEnglishVoice();
+  let index=0,started=false,fellBack=false;
+  function fail(reason){
+    if(id!==speechAttempt||fellBack)return;
+    fellBack=true;clearTimeout(voiceHealthTimer);
+    if(fallbackUrl){showSpeechStatus('⚠️ 內建英文語音未啟動，改用原本音檔。');playSavedAudio(fallbackUrl,value,rate,repeat)}
+    else{speechActive=null;showSpeechStatus('⚠️ 無法播放裝置語音：'+reason+'。請確認裝置有美式英文語音。')}
+  }
+  function begin(){
+    if(id!==speechAttempt||fellBack)return;
+    started=false;
+    try{
+      // Keep the full utterance intact. Splitting words, over-slowing the voice or
+      // inserting artificial gaps makes children's example sentences robotic.
+      const fullPhrase=isEnglishSentence(value)?value.replace(/\s+/g,' ').trim():value;
+      const u=new SpeechSynthesisUtterance(fullPhrase);
+      u.lang='en-US';
+      if(selected)u.voice=selected;
+      u.rate=Math.max(.82,Math.min(1.06,rate??SPEEDS[voicePrefs.speed]));
+      u.pitch=1;u.volume=1;
+      speechActive=u;
+      u.onstart=()=>{if(id===speechAttempt){started=true;clearTimeout(voiceHealthTimer);showSpeechStatus('🔊 美式英文：'+value+(repeat>1?'（第 '+(index+1)+' 次）':''))}};
+      u.onend=()=>{
+        if(id!==speechAttempt||fellBack)return;
+        clearTimeout(voiceHealthTimer);speechActive=null;
+        index++;
+        if(index<repeat){
+          showSpeechStatus('⏸️ 中間停頓一秒，準備再唸一次。');
+          wordReplayTimer=setTimeout(()=>{wordReplayTimer=null;begin()},1100);
+        }else showSpeechStatus('✅ 播放完成，可以重聽或挑戰下一題。');
+      };
+      u.onerror=e=>{if(id!==speechAttempt||fellBack||['canceled','interrupted'].includes(e.error))return;fail(e.error||'裝置語音異常')};
+      synth.speak(u);
+      voiceHealthTimer=setTimeout(()=>{
+        if(id!==speechAttempt||fellBack||started)return;
+        if(!synth.speaking&&!synth.pending)fail('語音未啟動');
+      },3200);
+    }catch(err){fail(err.message||'播放失敗')}
+  }
+  try{if(synth.paused)synth.resume();begin();return true}catch(err){fail(err.message||'啟動失敗');return false}
+}
+function playSyntheticEnglish(text,rate=null){return playDeviceEnglish(text,rate,1,null)}
+function playEnglish(text,rate=null){
+  const value=String(text||'').trim();
+  if(/^[A-Z]$/.test(value))return playRecordedLetter(value);
+  const rep=value.match(/^([A-Za-z]+)\.\s+\1\.$/i);
+  const word=rep?rep[1]:value;
+  const url=WORD_RECORDINGS[word.toLowerCase()]||SENTENCE_RECORDINGS[value]||null;
+  const repeat=rep?2:1;
+  return playDeviceEnglish(word,rate??(isEnglishSentence(word)?SENTENCE_RATE:null),repeat,url);
+}
+function speak(){if(!session)return;const q=session.items[session.idx];if(q.speech)playEnglish(q.speech)}
+function speakSlower(){if(!session)return;const q=session.items[session.idx];if(q.speech&&isEnglishSentence(q.speech))playEnglish(q.speech,SENTENCE_SLOW_RATE)}
+function exportJson(){if(!parentUnlocked)return;const s=JSON.stringify({exportedAt:new Date().toISOString(),app:'全壘打雙軌學院',...data},null,2),blob=new Blob([s],{type:'application/json;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='英數練習備份_'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),800)}
+app.addEventListener('submit',e=>{if(!e.target?.dataset?.hwForm)return;e.preventDefault();handCheck(e.target.dataset.hwForm)});
+app.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const act=b.dataset.action;switch(act){case'nav-home':navigate('home');break;case'nav-handwrite':navigate('handwrite');break;case'nav-parent':navigate('parent');break;case'lock-parent':parentUnlocked=false;render();toast('家長區已鎖定。');break;case'choose-english':subject='english';navigate('select');break;case'choose-math':subject='math';navigate('select');break;case'alphabet':subject='english';alphaIndex=0;navigate('alphabet');break;case'alpha-back':subject='english';navigate('select');break;case'alpha-select':{stopEnglish();const i=Number(b.dataset.index);if(Number.isInteger(i)&&i>=0&&i<26){alphaIndex=i;render()}break}case'alpha-prev':stopEnglish();alphaIndex=Math.max(0,alphaIndex-1);render();break;case'alpha-next':stopEnglish();if(alphaIndex<25){alphaIndex++;render()}else{subject='english';navigate('select');toast('你看完 A～Z 了！想再聽一次或挑戰 8 題都可以。')}break;case'alpha-name':playEnglish(ALPHABET[alphaIndex].upper);break;case'alpha-word':playEnglish(ALPHABET[alphaIndex].word);break;case'alpha-handwrite':handTab='english';handMode='letter';handLetter=alphaIndex;navigate('handwrite');break;case'alpha-repeat':playEnglish(ALPHABET[alphaIndex].word+'. '+ALPHABET[alphaIndex].word+'.',.92);break;case'voice-test':playEnglish('ball');break;case'voice-test-apple':playEnglish('apple');break;case'alpha-quiz':subject='english';start('letters');break;case'start':if(b.dataset.mode==='review'&&!dueReviews(subject).length){toast('目前沒有到期的錯題。');break;}start(b.dataset.mode);break;case'review-english':subject='english';start('review');break;case'review-math':subject='math';start('review');break;case'hint':if(session&&!feedback){session.usedHint=true;render()}break;case'quiz-handwrite':handQuizOpen=!handQuizOpen;handAnswerInk=[];handOcrResult='';handResult='';clearAdvance();render();break;
+ case'hand-tab-english':handTab='english';handReset();render();break;
+ case'hand-tab-math':handTab='math';handReset();render();break;
+ case'hand-mode-letter':handMode='letter';handReset();render();break;
+ case'hand-mode-word':handMode='word';handReset();render();break;
+ case'hand-prev':if(handMode==='letter')handLetter=(handLetter+25)%26;else handWord=(handWord+handWordPool().length-1)%handWordPool().length;handReset();render();break;
+ case'hand-next':if(handMode==='letter')handLetter=(handLetter+1)%26;else handWord=(handWord+1)%handWordPool().length;handReset();render();break;
+ case'hand-ocr-select':{const w=b.dataset.word;if(!w||!handOcrCandidates.includes(w))break;const input=document.getElementById('hw-check-input');if(input)input.value=w;handOcrResult='✍️ 已選擇字庫候選：'+w+'。請核對你的筆跡後，再按下方核對。';const status=document.getElementById('hw-ocr-result');if(status)status.textContent=handOcrResult;break;}case'hand-math-next':handMath=calcQuestion(data.settings.math);handReset();render();break;case'hand-recognize':handRecognize();break;case'hand-answer-undo':if(handAnswerInk.length)handAnswerInk.pop();clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}break;case'hand-answer-clear':handAnswerInk.length=0;clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}returnToWritingPad('hw-answer-canvas');break;
+ case'hand-math-explain':handSolution=!handSolution;render();break;case'hand-zoom':resizeHandPad(false);break;case'hand-answer-zoom':resizeHandPad(true);break;
+ case'hand-listen':playEnglish(currentHandTarget());break;
+ case'hand-clear':handInk.length=0;clearHandRecognition();handActivePointer=null;{const c=document.getElementById('hw-canvas');if(c)paintHandCanvas(c)}returnToWritingPad('hw-canvas');break;
+ case'hand-undo':if(handInk.length)handInk.pop();clearHandRecognition();handActivePointer=null;{const c=document.getElementById('hw-canvas');if(c)paintHandCanvas(c)}break;
+ case'answer':stopEnglish();answer(Number(b.dataset.choice));break;case'next':stopEnglish();next();break;case'speak':speak();break;case'speak-slower':speakSlower();break;case'speak-answer':if(session&&feedback&&session.mode==='use')playEnglish(session.items[session.idx].answer);break;case'transcript':document.getElementById('transcript')?.classList.toggle('hidden');break;case'quit':if(confirm('這回合還沒完成，確定要離開嗎？未完成的題目不會計入紀錄。'))navigate('select');break;case'again':if(finished){const s=finished;subject=s.subject;start(s.mode)}break;case'save-reflection':{const val=document.getElementById('reflection')?.value.trim();if(!val){toast('還沒寫心得，也可以跳過喔。');break}data.reflections.push({date:new Date().toISOString(),text:val.slice(0,160)});data.reflections=data.reflections.slice(-100);save();document.getElementById('reflection').value='';toast('已在這台裝置儲存小心得！');break}case'export':if(parentUnlocked)exportJson();break;case'import':if(parentUnlocked)document.getElementById('import-file')?.click();break;case'print':if(parentUnlocked)window.print();break;case'reset':if(parentUnlocked&&confirm('確定清除這台裝置的所有練習紀錄與心得嗎？此操作無法還原。')){data=structuredClone(DEFAULT);save();render();toast('已清除本機練習紀錄。')}break;default:break}});
+app.addEventListener('change',async e=>{const el=e.target;if(el.id!=='import-file'||!parentUnlocked)return;const file=el.files?.[0];if(!file)return;try{if(file.size>2_000_000)throw new Error('檔案超過2MB');const obj=JSON.parse(await file.text());if(obj.app!=='全壘打雙軌學院'||!Array.isArray(obj.sessions)||!Array.isArray(obj.reflections)||!obj.settings)throw new Error('格式不符');if(!confirm('匯入會取代這台裝置目前的紀錄。確定要繼續嗎？'))return;const sessions=obj.sessions.slice(-300).map(cleanHistorySession).filter(Boolean);const reflections=obj.reflections.slice(-100).map(cleanHistoryReflection).filter(Boolean);data={settings:{math:[1,2,3].includes(Number(obj.settings.math))?Number(obj.settings.math):1,english:[1,2,3].includes(Number(obj.settings.english))?Number(obj.settings.english):1,autoNext:typeof obj.settings.autoNext==='boolean'?obj.settings.autoNext:true,reviewEnabled:typeof obj.settings.reviewEnabled==='boolean'?obj.settings.reviewEnabled:true},sessions,reflections,reviewQueue:sanitizeReviewQueue(obj.reviewQueue)};save();render();toast('練習紀錄已匯入。')}catch(err){toast('無法匯入：'+err.message)}finally{el.value=''}});
+// No voice/engine selector: device speech is always used; fallback MP3 only for unavailable devices.
+app.addEventListener('change',e=>{const x=e.target;if(x.dataset.action==='review-enabled'){if(!parentUnlocked)return;data.settings.reviewEnabled=x.checked;save();render();toast(x.checked?'已開啟複習排程':'已暫停複習排程（原紀錄仍保存）');return}if(x.dataset.action==='auto-next'){if(!parentUnlocked){toast('請先解鎖家長區。');return}data.settings.autoNext=x.checked;save();toast(x.checked?'已開啟：答對自動下一題':'已關閉：每題都手動按下一題');return}if(x.dataset.action!=='level')return;const sub=x.dataset.subject,lv=Number(x.value);if(!parentUnlocked||!['math','english'].includes(sub)||![1,2,3].includes(lv))return;data.settings[sub]=lv;save();render();toast('已調整'+(sub==='math'?'數學':'英文')+'難度為第 '+lv+' 級。')});
+if('speechSynthesis' in window){try{window.speechSynthesis.addEventListener('voiceschanged',populateSpeechVoices)}catch(_){}}
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopEnglish();clearAdvance();if(page==='parent'){parentUnlocked=false;render()}}});
+window.addEventListener('hashchange',()=>{if(location.hash==='#home')navigate('home')});
+render();
+populateSpeechVoices();
+})();
+</script>
+</body>
+</html>
