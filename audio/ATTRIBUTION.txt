@@ -1,0 +1,19 @@
+全壘打雙軌學院 v12｜錄音及授權說明（2026-10-17）
+
+字母 A–Z：26個檔案採同一位真人說出的字母音，出處為
+Wikimedia Commons：English alphabet woman.oga
+https://commons.wikimedia.org/wiki/File:English_alphabet_woman.oga
+原作者將錄音釋出為 Public Domain（公有領域）。本版本切分每個字母並做小幅音量與降噪處理。
+各字母僅保留一次發音，沒有前後說明詞。
+
+英文單字：75個檔案重新採用 Kokoro-82M（af_sarah 美式英文聲音）以單字文字獨立合成；
+使用原始語音音高，不再套用逐字尾音音高改造。不另添加「The letter」或例句。
+英文短句：30個檔案保留原版 Kokoro-82M 句子朗讀。
+Kokoro-82M 原模型 Apache License 2.0：
+https://huggingface.co/hexgrad/Kokoro-82M
+https://www.apache.org/licenses/LICENSE-2.0
+
+語音仍包含 AI 合成部分，尚未由真人英語教師逐字審核；音量與口音因裝置有所差異。
+模型授權及公有領域錄音授權不等於保證各音節均無誤，本教材供家長陪同使用。
+
+v13 音訊後製：75 個單字以原有 v12 Kokoro-82M af_sarah 美式英語 MP3 重新編碼，音色不變、節奏減慢約16%，每檔補足起頭與結束留白。兩次跟讀間隔另由網頁端計時器控制。檢驗全部音檔的時長、音量、峰值及兩端靜音；不等於由英文老師逐一聆聽。
