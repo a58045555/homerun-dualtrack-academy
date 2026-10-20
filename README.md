@@ -54,3 +54,6 @@ node check.cjs
 提供字音、詞義、句型與閱讀共 312 道原創題目，可選學期、課次或混合練習。字詞與短文不是課本全文或完整生字表。來源與版本說明見 CHINESE_SOURCES.md。
 
 執行 node check-chinese.cjs 可測試全題庫、課次篩選、保存與複習欄位。部署時須一併上傳 assets/chinese-content.js，並在 app.js 之前載入。
+
+## 九九乘法
+數學 → 開始學九九乘法：1～9 分組及完整表、手機中文朗讀、遮答案自測、單組與混合練習。錯題沿用個別小朋友的複習紀錄。執行 node check-times.cjs 驗證全部 81 算式。
