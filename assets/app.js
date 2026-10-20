@@ -52,35 +52,35 @@ function logicPatternQuestion(level){
  else if(level===2){const len=u.length*3,blank=rand(u.length,len-2);main=[...Array(len)].map((_,i)=>i===blank?'❓':at(i)).join(' ');ans=at(blank);second='中間的 ❓ 應該是哪一個？';explain=`重複的一組是：${[...u].map((_,i)=>at(i)).join(' ')}。第 ${blank+1} 個位置是 ${ans}。`;hint='從頭開始一組一組圈起來，看 ❓ 落在一組裡的第幾個。'}
  else{const show=u.length*2,N=rand(12,24);main=[...Array(show)].map((_,i)=>at(i)).join(' ')+' …';ans=at(N-1);second=`照這個規律一直排下去，第 ${N} 個是哪一個？`;const r=N%u.length||u.length;explain=`每 ${u.length} 個一組。${N}÷${u.length}＝${Math.floor(N/u.length)} 餘 ${N%u.length}${N%u.length===0?'（剛好排完一組，是一組的最後一個）':''}，所以第 ${N} 個和每組第 ${r} 個一樣，是 ${ans}。`;hint='不用全部畫出來：用除法算出排了幾組，看餘數。'}
  const others=shuffle(PATTERN_SYMBOLS.filter(s=>s!==ans));const choices=shuffle([ans,...others.slice(0,3)]);
- return {skill:'logic-pattern',prompt:'🔁 找出圖案重複的規律',main,second,answer:ans,choices,explain,hint,signature:'lp-'+main+second,concept:'lpattern-'+u,reason:level===3};
+ return {skill:'logic-pattern',prompt:'🔁 找出圖案重複的規律',main,second,answer:ans,choices,explain,hint,signature:'lp-'+main+second,concept:'lpattern-'+u,reason:level>=3};
 }
 // --- 題庫格式：{l:級別, q:題目, a:答案, o:[四個選項], e:解析, h:提示} ---
 const ODD_BANK=[
  {l:1,q:'哪一個不是球？',a:'🧤 手套',o:['⚾ 棒球','🏀 籃球','⚽ 足球','🧤 手套'],e:'棒球、籃球、足球都是球；手套是用來接球的用具。'},
- {l:1,q:'哪一個和其他不一樣？',a:'球棒',o:['蘋果','香蕉','橘子','球棒'],e:'蘋果、香蕉、橘子都是水果，球棒是運動用品。'},
- {l:1,q:'哪一個和其他不一樣？',a:'三角形',o:['紅色','藍色','綠色','三角形'],e:'紅、藍、綠是顏色；三角形是形狀。'},
+ {l:1,q:'哪一個不是水果？',a:'球棒',o:['蘋果','香蕉','橘子','球棒'],e:'蘋果、香蕉、橘子都是水果，球棒是運動用品。'},
+ {l:1,q:'哪一個不是顏色名稱？',a:'三角形',o:['紅色','藍色','綠色','三角形'],e:'紅、藍、綠是顏色；三角形是形狀。'},
  {l:1,q:'哪一個不是動物？',a:'汽車',o:['狗','貓','鳥','汽車'],e:'狗、貓、鳥都是動物，汽車是交通工具。'},
- {l:1,q:'哪一個數字和其他不一樣？',a:'7',o:['2','4','6','7'],e:'2、4、6 都是雙數（偶數），7 是單數（奇數）。',h:'試試看能不能平分成兩半。'},
+ {l:1,q:'哪一個數字不能兩個兩個分完，會剩下一個？',a:'7',o:['2','4','6','7'],e:'2、4、6 都是雙數（偶數），7 是單數（奇數）。',h:'試試看能不能平分成兩半。'},
  {l:1,q:'哪一個不是棒球場上的壘包？',a:'四壘',o:['一壘','二壘','三壘','四壘'],e:'棒球場有一壘、二壘、三壘和本壘，沒有「四壘」。'},
  {l:1,q:'哪一個不是穿在身上的？',a:'球棒',o:['帽子','球衣','球鞋','球棒'],e:'帽子、球衣、球鞋都穿戴在身上；球棒是拿在手上的用具。'},
- {l:1,q:'哪一個和其他不一樣？',a:'晚餐',o:['星期一','星期三','星期六','晚餐'],e:'星期一、三、六都是星期幾；晚餐是一餐飯。'},
+ {l:1,q:'哪一個不是「星期幾」？',a:'晚餐',o:['星期一','星期三','星期六','晚餐'],e:'星期一、三、六都是星期幾；晚餐是一餐飯。'},
  {l:2,q:'哪一個不是球員？',a:'裁判',o:['投手','捕手','游擊手','裁判'],e:'投手、捕手、游擊手都是場上的球員；裁判負責判決，不屬於任何一隊。'},
- {l:2,q:'哪一個數字和其他不一樣？',a:'10',o:['3','6','9','10'],e:'3、6、9 都是 3 的倍數，10 不是。',h:'想想看 3 的乘法。'},
+ {l:2,q:'哪一個不是3的倍數？',a:'10',o:['3','6','9','10'],e:'3、6、9 都是 3 的倍數，10 不是。',h:'想想看 3 的乘法。'},
  {l:2,q:'哪一個不是季節？',a:'下雨',o:['春天','夏天','冬天','下雨'],e:'春夏冬是季節；下雨是天氣，任何季節都可能下雨。'},
- {l:2,q:'哪一個形狀和其他不一樣？',a:'圓形',o:['正方形','長方形','三角形','圓形'],e:'正方形、長方形、三角形都有直直的邊和角；圓形沒有角。'},
+ {l:2,q:'哪一個形狀沒有角？',a:'圓形',o:['正方形','長方形','三角形','圓形'],e:'正方形、長方形、三角形都有直直的邊和角；圓形沒有角。'},
  {l:2,q:'哪一個不是鳥？',a:'蝴蝶',o:['麻雀','鴿子','企鵝','蝴蝶'],e:'企鵝雖然不會飛，但有羽毛、會下蛋，是鳥；蝴蝶是昆蟲。',h:'會飛的不一定是鳥，不會飛的也可能是鳥。'},
  {l:2,q:'哪一個不是守備位置？',a:'打者',o:['一壘手','中外野手','捕手','打者'],e:'一壘手、中外野手、捕手都是守備位置；打者是進攻方。'},
  {l:2,q:'哪一個不是時間單位？',a:'公尺',o:['小時','分鐘','秒','公尺'],e:'小時、分鐘、秒都是時間單位；公尺是長度單位。'},
  {l:3,q:'哪一個不是哺乳類動物？',a:'鯊魚',o:['鯨魚','海豚','鯊魚','海豹'],e:'鯨魚、海豚、海豹用肺呼吸、會餵奶，是哺乳類；鯊魚用鰓呼吸，是魚類。',h:'住在海裡的不一定是魚。'},
- {l:3,q:'哪一個和其他不一樣？',a:'太陽',o:['太陽','地球','火星','木星'],e:'地球、火星、木星都是繞著太陽轉的行星；太陽是自己會發光的恆星。'},
- {l:3,q:'哪一個和其他不一樣？',a:'木頭',o:['冰','水','水蒸氣','木頭'],e:'冰、水、水蒸氣都是「水」的不同樣子（固體、液體、氣體）；木頭不是。'},
- {l:3,q:'哪一個結果會讓打者出局？',a:'三振',o:['安打','全壘打','四壞球保送','三振'],e:'安打、全壘打、保送都能讓打者上壘；三振則是打者出局。'},
- {l:3,q:'哪一個數字和其他不一樣？',a:'25',o:['12','18','24','25'],e:'12、18、24 都是 6 的倍數，25 不是。'},
+ {l:3,q:'哪一個不是行星？',a:'太陽',o:['太陽','地球','火星','木星'],e:'地球、火星、木星都是繞著太陽轉的行星；太陽是自己會發光的恆星。'},
+ {l:3,q:'哪一個不是水的固態、液態或氣態？',a:'木頭',o:['冰','水','水蒸氣','木頭'],e:'冰、水、水蒸氣都是「水」的不同樣子（固體、液體、氣體）；木頭不是。'},
+ {l:3,q:'以下哪個情況會讓打者直接出局？',a:'第三好球被捕手合法接住',o:['安打','全壘打','四壞球保送','第三好球被捕手合法接住'],e:'第三好球被捕手合法接住時，打者三振出局；第三好球未被接住時，部分情況下打者仍可跑向一壘，不能一概說三振必定立刻出局。'},
+ {l:3,q:'哪一個不是6的倍數？',a:'25',o:['12','18','24','25'],e:'12、18、24 都是 6 的倍數，25 不是。'},
  {l:3,q:'哪一個不是植物需要的？',a:'電視',o:['陽光','水','空氣','電視'],e:'植物需要陽光、水和空氣來生長。'},
- {l:3,q:'哪一個詞和其他不一樣？',a:'難過',o:['開心','興奮','驕傲','難過'],e:'開心、興奮、驕傲是愉快的感覺；難過是不愉快的感覺。'}
+ {l:3,q:'哪個詞表示不愉快的感受？',a:'難過',o:['開心','興奮','喜悅','難過'],e:'開心、興奮、喜悅是愉快的感覺；難過是不愉快的感覺。'}
 ];
 const RULES_BANK=[
- {l:1,q:'打者累積三個好球，會發生什麼事？',a:'三振出局',o:['三振出局','保送上一壘','得到一分','換投手'],e:'三個好球就是「三振」，打者出局。'},
+ {l:1,q:'打者第三個好球被捕手合法接住，會發生什麼事？',a:'三振出局',o:['三振出局','保送上一壘','得到一分','換投手'],e:'第三個好球被捕手合法接住時，打者三振出局；未接住第三好球的情況另有規則。'},
  {l:1,q:'投手投出四個壞球，打者可以怎麼做？',a:'直接走到一壘',o:['直接走到一壘','回到休息區','重新打擊一次','跑回本壘'],e:'四個壞球叫「四壞球保送」，打者可以安全走上一壘。'},
  {l:1,q:'防守的一方抓到三個出局後，會怎樣？',a:'攻守交換',o:['攻守交換','比賽重來','防守方得分','繼續打擊'],e:'每半局三個出局數，滿了就換另一隊進攻。'},
  {l:1,q:'跑者要怎麼跑才能得分？',a:'依序踩一、二、三壘，再回本壘',o:['依序踩一、二、三壘，再回本壘','直接從一壘跑回本壘','只要跑到二壘','繞著外野跑一圈'],e:'跑者要按照一壘 → 二壘 → 三壘 → 本壘的順序跑，回到本壘才得一分。'},
@@ -88,25 +88,25 @@ const RULES_BANK=[
  {l:1,q:'球賽結束時，誰獲勝？',a:'得分比較多的隊伍',o:['得分比較多的隊伍','安打比較多的隊伍','球衣比較好看的隊伍','先上場打擊的隊伍'],e:'棒球比的是得分，安打多不一定得分多。'},
  {l:1,q:'打出全壘打的打者可以怎麼做？',a:'繞完所有壘包回本壘得分',o:['繞完所有壘包回本壘得分','只能停在一壘','要重新打一次','換下一位打者'],e:'全壘打讓打者自己繞完一、二、三壘回到本壘，得一分；壘上的跑者也一起回來得分。'},
  {l:1,q:'在場上打擊和跑壘時，為什麼要戴頭盔？',a:'保護頭部安全',o:['保護頭部安全','讓自己跑比較快','因為比較好看','讓球打比較遠'],e:'球速很快，頭盔可以保護頭部，避免被球打傷。'},
- {l:2,q:'已經兩好球，打者揮棒打成界外球（不是觸擊），現在是幾好球？',a:'還是兩好球',o:['還是兩好球','三好球，三振','一好球','壞球加一'],e:'兩好球後再打成界外球，好球數不會增加；只有觸擊界外才會變三振。',h:'界外球不會直接造成三振。'},
+ {l:2,q:'已經兩好球，打者揮棒打成未被接住的界外球（非觸擊、非擦棒球），現在是幾好球？',a:'還是兩好球',o:['還是兩好球','三好球，三振','一好球','壞球加一'],e:'兩好球後，這種未被接住的普通界外球不增加好球數；觸擊界外、被捕手合法接住的擦棒球等情況有不同規則。',h:'先確認題目排除了觸擊與擦棒球，再看普通界外球如何計數。'},
  {l:2,q:'一壘有跑者，這時打者被四壞球保送，一壘跑者要怎麼辦？',a:'被推進到二壘',o:['被推進到二壘','回到本壘','留在一壘不動','出局'],e:'打者要占用一壘，原本在一壘的跑者會被「擠」到二壘。'},
  {l:2,q:'好壞球數是兩好三壞，下一球是壞球，結果是？',a:'保送上一壘',o:['保送上一壘','三振出局','重新數球數','打者出局'],e:'壞球累積到四個就保送；三壞再加一壞就是四壞。'},
  {l:2,q:'每一局分成上半局和下半局。上半局通常由哪一隊進攻？',a:'客隊',o:['客隊','主隊','兩隊同時','裁判決定'],e:'棒球規定客隊先攻（上半局），主隊後攻（下半局）。'},
  {l:2,q:'最後一局的上半局結束時，主隊已經領先，下半局還要打嗎？',a:'不用打，主隊獲勝',o:['不用打，主隊獲勝','一定要打完','改由客隊再打一次','比賽重來'],e:'主隊後攻，如果最後一局上半結束時已經領先，客隊沒有機會再追，就不用打下半局。',h:'想想看：還有誰需要進攻？'},
- {l:2,q:'兩出局時，打者被三振，接下來會？',a:'三出局，攻守交換',o:['三出局，攻守交換','打者再打一次','跑者全部得分','變成一出局'],e:'兩出局再多一個出局，就是三出局，換邊。'},
+ {l:2,q:'兩出局時，打者第三好球被捕手合法接住，接下來會？',a:'三出局，攻守交換',o:['三出局，攻守交換','打者再打一次','跑者全部得分','變成一出局'],e:'兩出局再多一個出局，就是三出局，換邊。'},
  {l:2,q:'投手每天能投的球數有限制，主要原因是？',a:'保護還在成長的手臂',o:['保護還在成長的手臂','讓比賽快一點','省下棒球','讓打者比較好打'],e:'小朋友的骨頭和關節還在發育，投太多球容易受傷，所以有投球數限制。'},
- {l:3,q:'規則：「如果下雨，比賽就延期。」今天比賽照常舉行。可以推論什麼？',a:'今天沒有下雨',o:['今天沒有下雨','今天有下雨','明天一定下雨','無法知道比賽有沒有舉行'],e:'如果下雨一定會延期；今天沒延期，就代表沒有下雨。這叫反過來推論。',h:'假設今天下雨，會發生什麼？和事實一樣嗎？'},
+ {l:3,q:'假設一定遵守規則：「如果下雨，比賽就延期。」今天比賽照常舉行。可以推論什麼？',a:'今天沒有下雨',o:['今天沒有下雨','今天有下雨','明天一定下雨','無法知道比賽有沒有舉行'],e:'如果下雨一定會延期；今天沒延期，就代表沒有下雨。這叫反過來推論。',h:'假設今天下雨，會發生什麼？和事實一樣嗎？'},
  {l:3,q:'「如果打出全壘打，就一定會得分。」紅隊得分了，一定是打出全壘打嗎？',a:'不一定，安打也能送跑者回來得分',o:['不一定，安打也能送跑者回來得分','一定是全壘打','一定是三振','紅隊一定輸了'],e:'全壘打會得分，但得分不一定是全壘打，也可能是安打、高飛犧牲打等方式。',h:'「A 一定造成 B」不代表「B 一定來自 A」。'},
- {l:3,q:'「所有隊員打擊時都要戴頭盔。」小安是隊員，正在打擊。可以知道什麼？',a:'小安戴著頭盔',o:['小安戴著頭盔','小安沒戴頭盔','小安是投手','不知道小安是誰'],e:'規則說「所有隊員」打擊都要戴，小安是隊員又在打擊，所以他戴著頭盔。'},
+ {l:3,q:'假設大家都遵守「所有隊員打擊時都要戴頭盔」。小安是隊員，正在打擊。可以知道什麼？',a:'小安戴著頭盔',o:['小安戴著頭盔','小安沒戴頭盔','小安是投手','不知道小安是誰'],e:'規則說「所有隊員」打擊都要戴，小安是隊員又在打擊，所以他戴著頭盔。'},
  {l:3,q:'紅隊贏過藍隊，藍隊贏過綠隊。能確定紅隊和綠隊比賽時，紅隊一定贏嗎？',a:'不能確定，要真的比過才知道',o:['不能確定，要真的比過才知道','紅隊一定贏','綠隊一定贏','一定平手'],e:'比賽不像身高可以直接比，每場狀況不同；沒比過就不能確定結果。'},
  {l:3,q:'阿哲比小安高，小安比小美高。三個人裡誰最矮？',a:'小美',o:['小美','小安','阿哲','無法判斷'],e:'阿哲 > 小安 > 小美，所以小美最矮。身高可以這樣一路比下去。',h:'把三個人從高排到矮。'},
- {l:3,q:'「只有完成暖身的人才能上場。」阿宏上場比賽了，可以知道什麼？',a:'阿宏有完成暖身',o:['阿宏有完成暖身','阿宏沒有暖身','阿宏是教練','所有人都上場了'],e:'沒暖身的人不能上場；阿宏上場了，所以他一定完成了暖身。'},
+ {l:3,q:'假設大家遵守「只有完成暖身的人才能上場」。阿宏上場比賽了，可以知道什麼？',a:'阿宏有完成暖身',o:['阿宏有完成暖身','阿宏沒有暖身','阿宏是教練','所有人都上場了'],e:'沒暖身的人不能上場；阿宏上場了，所以他一定完成了暖身。'},
  {l:3,q:'投手、捕手、一壘手由小美、阿哲、小安擔任。阿哲是投手，小美不是捕手。小安守哪裡？',a:'捕手',o:['捕手','投手','一壘手','無法判斷'],e:'阿哲是投手；小美不是捕手，只能是一壘手；剩下的捕手就是小安。',h:'先把確定的人填進去，再看剩下的位置。'},
- {l:3,q:'「有些球員是左撇子。」可以說「每個球員都是左撇子」嗎？',a:'不可以，只知道有一部分是',o:['不可以，只知道有一部分是','可以，大家都是','可以，只是說法不同','球員都不是左撇子'],e:'「有些」代表一部分，不等於「全部」。'}
+ {l:3,q:'只知道「有些球員是左撇子」，能確定每個球員都是左撇子嗎？',a:'不能確定，只知道至少有一人是',o:['不能確定，只知道至少有一人是','可以，大家都是','可以，只是說法不同','球員都不是左撇子'],e:'「有些」表示至少有一人符合，不能據此確定全部都符合，也不能確定一定有人不符合。'}
 ];
 const SCIENCE_BANK={
  body:[
-  {l:1,q:'打球流了很多汗之後，最應該做什麼？',a:'補充水分',o:['補充水分','馬上睡覺','吃很多糖果','繼續跑不休息'],e:'流汗會讓身體失去水分，要喝水補回來，才不會頭暈或抽筋。'},
+  {l:1,q:'打球流了很多汗之後，最應該做什麼？',a:'補充水分',o:['補充水分','馬上睡覺','吃很多糖果','繼續跑不休息'],e:'流汗會讓身體失去水分。適時補水和休息，有助避免脫水；若頭暈或抽筋，應停止活動並告訴大人。'},
   {l:1,q:'運動前先做暖身，主要是為了什麼？',a:'減少受傷',o:['減少受傷','讓自己變高','肚子比較不餓','讓球變輕'],e:'暖身讓肌肉和關節慢慢準備好，突然用力時比較不容易拉傷。'},
   {l:1,q:'跑完壘包後，摸摸胸口，心跳會怎樣？',a:'變快',o:['變快','變慢','停止','完全不變'],e:'運動時肌肉需要更多氧氣，心臟要跳得更快，把血液送到全身。'},
   {l:1,q:'晚上睡飽覺，對打球的小朋友有什麼幫助？',a:'身體恢復、長高長壯',o:['身體恢復、長高長壯','讓眼睛變大','不用再吃飯','讓頭髮變長'],e:'睡覺時身體會修復疲勞的肌肉，也是長高的重要時間。'},
@@ -120,32 +120,32 @@ const SCIENCE_BANK={
   {l:2,q:'投球後手臂很痠痛，應該怎麼做？',a:'休息並告訴大人或教練',o:['休息並告訴大人或教練','忍住繼續投','投更多球練習','不跟任何人說'],e:'痠痛是身體在提醒你需要休息，硬撐可能讓手臂受傷。'},
   {l:3,q:'吃蛋、魚、豆腐這類食物，主要提供哪種營養，幫助肌肉生長？',a:'蛋白質',o:['蛋白質','糖分','鹽分','咖啡因'],e:'蛋白質是修補和建造肌肉的重要材料。'},
   {l:3,q:'喝牛奶、吃小魚乾，可以補充鈣質，主要對什麼有幫助？',a:'骨頭和牙齒',o:['骨頭和牙齒','頭髮顏色','視力','心跳速度'],e:'鈣是骨頭和牙齒的重要成分，成長中的孩子特別需要。'},
-  {l:3,q:'大熱天練球，覺得頭暈、想吐、皮膚很燙，最好怎麼做？',a:'馬上到陰涼處、補水並告訴大人',o:['馬上到陰涼處、補水並告訴大人','再多跑幾圈','穿上外套','自己忍著不說'],e:'這可能是中暑的徵兆，要立刻降溫、補充水分並請大人協助。'},
-  {l:3,q:'為什麼運動後要做緩和的伸展？',a:'幫助肌肉放鬆、恢復',o:['幫助肌肉放鬆、恢復','讓自己更累','讓骨頭變短','可以不用喝水'],e:'運動後慢慢伸展，可以讓緊繃的肌肉放鬆，減少隔天痠痛。'}
+  {l:3,q:'大熱天練球，覺得頭暈、想吐、皮膚很燙，最好怎麼做？',a:'停止活動，到陰涼處並立即告訴大人',o:['停止活動，到陰涼處並立即告訴大人','再多跑幾圈','穿上外套','自己忍著不說'],e:'這可能是熱傷害，要停止活動、到陰涼處降溫並立即找大人。只有意識清楚且能吞嚥時才可少量喝水；意識不清或情況嚴重時，大人應撥打119，不可強灌水。'},
+  {l:3,q:'為什麼運動後要做緩和的伸展？',a:'維持關節活動範圍',o:['維持關節活動範圍','讓自己更累','讓骨頭變短','可以不用喝水'],e:'溫和伸展有助維持柔軟度與關節活動範圍，但不能保證減少隔天痠痛。有疼痛時要停止並告訴大人，不要勉強拉伸。'}
  ],
  force:[
   {l:1,q:'把球往上丟，為什麼它會掉下來？',a:'地心引力把球往下拉',o:['地心引力把球往下拉','球自己想回來','風把球吹下來','球累了'],e:'地球會把所有東西往下拉，這個力量叫做「地心引力」。'},
   {l:1,q:'同樣的球棒，用力揮和輕輕揮，哪一個通常讓球飛比較遠？',a:'用力揮',o:['用力揮','輕輕揮','一樣遠','都不會飛'],e:'給球的力量越大，球通常飛得越快、越遠。'},
   {l:1,q:'同樣力氣滾球，在哪裡滾得比較遠？',a:'平滑的水泥地',o:['平滑的水泥地','長長的草地','沙坑','泥巴地'],e:'草地、沙子比較粗糙，「摩擦力」大，會讓球比較快停下來。'},
-  {l:1,q:'推一個裝滿球的箱子和推一個空箱子，哪個比較費力？',a:'裝滿球的箱子',o:['裝滿球的箱子','空箱子','一樣','都推不動'],e:'東西越重，要讓它動起來就需要越大的力。'},
-  {l:1,q:'球從溜滑梯上滾下來，速度會怎樣？',a:'越滾越快',o:['越滾越快','越滾越慢','速度不變','停在中間'],e:'往下坡時地心引力一直拉著球，所以速度越來越快。'},
+  {l:1,q:'同一個箱子放在同樣地面，要推動時，裝滿球和空箱子通常哪個比較費力？',a:'裝滿球的箱子',o:['裝滿球的箱子','空箱子','一樣','都推不動'],e:'同一箱子與地面接觸條件相同時，裝得較重通常有較大的滑動阻力；若要得到相同加速度，也需要較大的合力。'},
+  {l:1,q:'球從平順斜坡上由靜止開始往下滾，在尚未到坡底時通常會怎樣？',a:'越滾越快',o:['越滾越快','越滾越慢','速度不變','停在中間'],e:'重力沿斜坡向下的分量使球加速；這裡比較平順斜坡上、尚未到坡底的一段。'},
   {l:1,q:'打擊時，球會往反方向飛出去，是因為什麼？',a:'球棒把力量傳給了球',o:['球棒把力量傳給了球','球自己會轉彎','裁判喊了一聲','觀眾在加油'],e:'球棒撞到球，把力量傳給球，球就改變方向飛出去。'},
   {l:1,q:'球被丟出去後，最後停下來，主要和什麼有關？',a:'摩擦力和空氣阻力',o:['摩擦力和空氣阻力','球的顏色','球的名字','天氣好不好'],e:'空氣和地面會一直「擋」著球，讓它慢慢停下來。'},
   {l:2,q:'接球時，手套順著球的方向往身體收，為什麼手比較不痛？',a:'讓球慢慢停下來',o:['讓球慢慢停下來','讓球變輕','讓球變小','讓球飛走'],e:'讓球停下來的時間變長，手受到的衝擊就變小，所以比較不痛。'},
   {l:2,q:'跑者滑壘時，身體會在地上慢慢停住，是因為什麼力？',a:'摩擦力',o:['摩擦力','磁力','浮力','電力'],e:'身體和泥土摩擦，產生阻止滑動的力，讓跑者停下來。'},
-  {l:2,q:'想把球丟最遠，大概往哪個方向丟比較好？',a:'斜斜往上丟',o:['斜斜往上丟','直直往上丟','直直往下丟','往地上丟'],e:'太平會很快落地，太高會一直往上浪費力氣；斜斜往上丟最容易丟遠。'},
+  {l:2,q:'想把球丟最遠，大概往哪個方向丟比較好？',a:'斜斜往上丟',o:['斜斜往上丟','直直往上丟','直直往下丟','往地上丟'],e:'在相同拋出速度和起落高度、且不考慮風時，斜向上拋能兼顧水平速度與飛行時間；垂直向上拋幾乎沒有水平距離。'},
   {l:2,q:'球打到牆壁會彈回來，表示什麼？',a:'牆壁也對球施了力',o:['牆壁也對球施了力','牆壁會動','球不見了','球變重了'],e:'球推牆壁，牆壁也推回球，所以球會反彈。'},
   {l:2,q:'球棒的哪一部分打到球，球通常飛最遠？',a:'球棒前段較粗的「甜蜜點」附近',o:['球棒前段較粗的「甜蜜點」附近','握把','球棒最尾端的蓋子','都一樣'],e:'球棒前段有一個區域，打到時力量傳得最好、手也比較不麻，叫「甜蜜點」。'},
-  {l:3,q:'在月球上丟棒球，會比在地球上丟得遠還是近？',a:'比較遠',o:['比較遠','比較近','一樣遠','球會往上飛走'],e:'月球的引力只有地球的大約六分之一，球落地前可以飛得更遠。'},
+  {l:3,q:'忽略空氣阻力，以相同速度和向斜上方的角度，從平地拋出棒球。在月球會比在地球落得遠還是近？',a:'比較遠',o:['比較遠','比較近','一樣遠','球會往上飛走'],e:'在相同拋出速度、角度和起落高度，且忽略空氣阻力時，月球表面重力較小，球飛行較久，水平距離較遠。'},
   {l:3,q:'球在空中飛時，除了地心引力，什麼也會讓它慢下來？',a:'空氣阻力',o:['空氣阻力','陽光','聲音','影子'],e:'球要推開空氣才能前進，空氣會擋住它，這叫空氣阻力。'},
   {l:3,q:'變化球會在空中轉彎，主要原因是什麼？',a:'球旋轉，讓兩邊的空氣推力不一樣',o:['球旋轉，讓兩邊的空氣推力不一樣','球裡面有馬達','投手用魔法','球的顏色不同'],e:'球旋轉時，兩側空氣流動的情形不同，空氣就把球往一邊推，所以會轉彎。'},
-  {l:3,q:'為什麼鋪草地的外野，滾地球會比內野紅土滾得慢？',a:'草地摩擦力比較大',o:['草地摩擦力比較大','草地比較熱','草的顏色是綠的','外野比較遠'],e:'草葉會擋住球、增加摩擦，球的速度就掉得比較快。'}
+  {l:3,q:'同一顆球以相同速度進入長草地和夯實平整的紅土，為什麼通常在長草地較快慢下來？',a:'長草造成的滾動阻力通常較大',o:['長草造成的滾動阻力通常較大','草地比較熱','草的顏色是綠的','外野比較遠'],e:'長草會彎曲、阻擋球並消耗動能，通常使球較快慢下來；實際情況還受草長、土質與濕度影響，不能說所有草地都一定比紅土阻力大。'}
  ],
  nature:[
-  {l:1,q:'練球時聽到打雷、看到閃電，應該怎麼做？',a:'立刻停止，進到室內躲避',o:['立刻停止，進到室內躲避','躲到大樹下','繼續練球','站在空曠的球場中間'],e:'閃電容易打到空曠處和高的東西；聽到雷聲就要立刻進到建築物或車子裡。'},
-  {l:1,q:'太陽每天從哪一邊升起？',a:'東邊',o:['東邊','西邊','南邊','北邊'],e:'太陽從東邊升起、西邊落下。'},
+  {l:1,q:'練球時聽到打雷、看到閃電，應該怎麼做？',a:'立刻停止，進到室內躲避',o:['立刻停止，進到室內躲避','躲到大樹下','繼續練球','站在空曠的球場中間'],e:'聽到雷聲應停止戶外活動，和大人進入堅固、封閉的建築物，或關好窗的硬頂車內；樹下、涼亭及開放式棚子不能當作安全避雷處。'},
+  {l:1,q:'在台灣，太陽通常從哪個方向附近升起？',a:'東邊',o:['東邊','西邊','南邊','北邊'],e:'在台灣，太陽通常從東方附近升起、在西方附近落下；位置會隨季節改變，不是每天都正東正西。'},
   {l:1,q:'下過雨的球場，跑壘時要注意什麼？',a:'地很滑，要小心',o:['地很滑，要小心','地會變熱','球會變大','可以跑更快'],e:'地面有水會變滑，摩擦力變小，容易滑倒。'},
-  {l:1,q:'球場的草要長得好，需要什麼？',a:'陽光、水和空氣',o:['陽光、水和空氣','只要黑暗','只要石頭','只要冰塊'],e:'植物用陽光、水和空氣製造自己的養分。'},
+  {l:1,q:'球場的草要長得好，需要什麼？',a:'陽光、水和空氣',o:['陽光、水和空氣','只要黑暗','只要石頭','只要冰塊'],e:'綠色植物利用陽光、水和空氣中的二氧化碳進行光合作用，製造糖類等養分；生長也需要適合的溫度與礦物質。'},
   {l:1,q:'晚上的天空為什麼看得到月亮？',a:'月亮反射了太陽光',o:['月亮反射了太陽光','月亮自己點燈','月亮是一顆燈泡','因為有路燈'],e:'月亮自己不會發光，我們看到的是它反射的太陽光。'},
   {l:1,q:'哪一個季節通常最熱？',a:'夏天',o:['夏天','冬天','春天','都一樣'],e:'台灣的夏天氣溫最高，練球時要特別注意補水。'},
   {l:1,q:'冬天早上練球，嘴巴呼出的氣看起來白白的，是什麼？',a:'很小的水滴',o:['很小的水滴','煙','灰塵','雪'],e:'呼出的熱水氣遇到冷空氣，變成很小的水滴，看起來就像白霧。'},
@@ -153,8 +153,8 @@ const SCIENCE_BANK={
   {l:2,q:'先看到閃電，過幾秒才聽到雷聲，原因是？',a:'光跑得比聲音快',o:['光跑得比聲音快','聲音跑得比光快','雷聲比較懶','耳朵比較慢'],e:'閃電和雷其實同時發生，但光速比聲音快很多，所以先看到光。'},
   {l:2,q:'水放進冰箱冷凍庫，溫度到 0 度以下會怎樣？',a:'結成冰',o:['結成冰','變成水蒸氣','消失不見','變成牛奶'],e:'水在 0°C 以下會凍結成固體的冰。'},
   {l:2,q:'把濕球衣曬在太陽下，水到哪裡去了？',a:'蒸發到空氣中',o:['蒸發到空氣中','被衣服吃掉','流到地底','變成灰塵'],e:'太陽的熱讓水變成看不見的水蒸氣，跑進空氣裡，這叫蒸發。'},
-  {l:2,q:'白天為什麼看不到星星？',a:'太陽光太亮，把星光蓋過去',o:['太陽光太亮，把星光蓋過去','星星白天回家睡覺','星星只有晚上才存在','雲把星星吃掉'],e:'星星一直都在，只是白天的陽光太亮，我們看不到它們微弱的光。'},
-  {l:3,q:'雲是怎麼形成的？',a:'水蒸氣上升遇冷，變成小水滴',o:['水蒸氣上升遇冷，變成小水滴','工廠製造的','棉花飛上天','鳥的羽毛'],e:'地面的水蒸發成水蒸氣，上升到高空遇冷凝結成小水滴，聚在一起就是雲。'},
+  {l:2,q:'晴天白晝，除了太陽，為什麼大多數星星不容易用肉眼看見？',a:'陽光經大氣散射，使天空太亮',o:['陽光經大氣散射，使天空太亮','星星白天回家睡覺','星星只有晚上才存在','雲把星星吃掉'],e:'星星白天也存在。陽光經大氣散射，使天空明亮，多數星光因此不容易被肉眼看見；太陽本身也是恆星。'},
+  {l:3,q:'雲是怎麼形成的？',a:'水蒸氣遇冷，形成小水滴或冰晶',o:['水蒸氣遇冷，形成小水滴或冰晶','工廠製造的','棉花飛上天','鳥的羽毛'],e:'空氣中的水蒸氣在適當條件下遇冷，可形成微小水滴或冰晶，懸浮在空氣中形成雲。雲不是氣態的水蒸氣本身。'},
   {l:3,q:'為什麼會有白天和黑夜？',a:'地球自己在轉動',o:['地球自己在轉動','太陽晚上關燈','月亮擋住太陽','雲遮住天空'],e:'地球每天自轉一圈，面向太陽的一面是白天，背對的一面是黑夜。'},
   {l:3,q:'颱風要來時，球隊最應該怎麼做？',a:'取消戶外練習，待在安全的室內',o:['取消戶外練習，待在安全的室內','趁風大練習打高飛球','到海邊看浪','照常比賽'],e:'颱風的強風和大雨會吹倒東西、造成危險，要聽從停課停班資訊，待在室內。'},
   {l:3,q:'夏天站在柏油路上比站在草地上熱，主要原因是？',a:'深色柏油吸收比較多太陽的熱',o:['深色柏油吸收比較多太陽的熱','草地比較靠近太陽','柏油會自己發熱','草地有冷氣'],e:'深色的東西吸收比較多陽光的熱，所以柏油路會變得很燙。'}
@@ -173,7 +173,7 @@ const SCIENCE_BANK={
   {l:2,q:'想知道植物需不需要陽光，應該怎麼安排？',a:'兩盆一樣的植物，一盆照光、一盆放暗處',o:['兩盆一樣的植物，一盆照光、一盆放暗處','兩盆都放在暗處','一盆澆水、一盆不澆水又不照光','只種一盆看看'],e:'只有「陽光」不同，其他像水、土都一樣，才知道陽光的影響。'},
   {l:3,q:'小安說：「今天吃了香蕉，所以打出全壘打。」只發生一次，可以這樣下結論嗎？',a:'不行，要多次比較才知道',o:['不行，要多次比較才知道','可以，一定是香蕉','可以，每次都會','香蕉讓球變重'],e:'一次的巧合不能證明原因，要比較吃與不吃很多次的結果才知道。'},
   {l:3,q:'想研究「球棒長度會不會影響打擊距離」，實驗中應該改變什麼？',a:'只改變球棒長度',o:['只改變球棒長度','球棒長度和打者都換','球的種類也一起換','什麼都不改變'],e:'要研究的條件（球棒長度）才改變，其他條件都維持一樣。'},
-  {l:3,q:'測量球滾動的距離時，為什麼要用同一把捲尺？',a:'讓測量標準一致',o:['讓測量標準一致','捲尺比較好看','因為只有一把','可以量得比較長'],e:'測量工具一致，誤差比較小，結果才能互相比較。'},
+  {l:3,q:'測量球滾動的距離時，為什麼要用同一把捲尺？',a:'讓測量標準一致',o:['讓測量標準一致','捲尺比較好看','因為只有一把','可以量得比較長'],e:'使用相同單位、檢查過的工具和一致的測量方式，能減少工具差異；同一把尺仍可能有誤差，不能保證比較準確。'},
   {l:3,q:'實驗記錄：第1次 3 公尺、第2次 3 公尺、第3次 9 公尺。第 3 次最應該怎麼處理？',a:'檢查是不是哪裡出錯，再重做一次',o:['檢查是不是哪裡出錯，再重做一次','直接當成正確答案','把前兩次刪掉','改成 3 公尺'],e:'和其他結果差很多的數字，可能是操作出錯，要檢查原因並重做，不能隨便改數字。'},
   {l:3,q:'科學家發現新結果後，為什麼要請別人再做一次實驗？',a:'確認結果是真的，不是巧合或錯誤',o:['確認結果是真的，不是巧合或錯誤','因為自己懶得做','讓別人比較累','為了比賽'],e:'別人也做出一樣的結果，這個發現才更可信。'}
  ]
@@ -191,7 +191,14 @@ const SCI_PROMPT={body:'💪 運動與身體的科學',force:'🚀 球場上的�
 function scienceQuestion(lv,m,used){const area=m==='mix'?one(Object.keys(SCIENCE_BANK)):m;const t=pickBank(SCIENCE_BANK[area],lv,used,'sci-'+area);return bankQuestionFrom(t.x,'sci-'+area,SCI_PROMPT[area],t.sig,true)}
 function generateNewSubjectRound(sub,m,lv){const size=Math.min(8,bankPoolSize(sub,m,lv)),list=[],used=new Set();
  for(let i=0;i<size;i++){let q,k=0;do{q=sub==='logic'?logicQuestion(lv,m,used):scienceQuestion(lv,m,used);k++}while(used.has(q.signature)&&k<60);used.add(q.signature);list.push(q)}return list}
-function freshNewSubjectReview(item){if(item.subject==='logic'&&item.mode==='lineup')return lineupQuestion(item.level);if(item.subject==='logic'&&item.mode==='lpattern')return logicPatternQuestion(item.level);const q=structuredClone(item.q);q.choices=shuffle(q.choices);return q}
+function freshNewSubjectReview(item){
+ if(item.subject==='logic')return logicQuestion(effectiveLevel('logic',item.level),item.mode,new Set());
+ const match=String(item.q.signature||'').match(/^sci-([a-z]+)-(\d+)$/),row=match&&SCIENCE_BANK[match[1]]?.[Number(match[2])];
+ if(row&&row.l<=effectiveLevel('science',item.level))return bankQuestionFrom(row,'sci-'+match[1],SCI_PROMPT[match[1]],item.q.signature,true);
+ const course=SCI_COURSES.courses.find(c=>c.id===item.q.sciCourseId),ix=Number(String(item.q.signature||'').split('-').at(-1)),r=course?.questions[ix];
+ if(r)return {skill:'sci-'+course.area,prompt:course.title+'｜課後練習',main:r[0],answer:r[1],choices:shuffle(r.slice(1,5)),explain:r[5],signature:'course-'+course.id+'-'+ix,concept:'course-'+course.id,courseLabel:course.title,sciCourseId:course.id,reason:true};
+ return scienceQuestion(effectiveLevel('science',item.level),item.mode==='lesson'?'mix':item.mode,new Set());
+}
 
 // --- 球場進度：每答對 1 題推進 1 個壘包，4 個壘包回本壘得 1 分 ---
 function localDay(d){const x=new Date(d);return x.getFullYear()+'-'+(x.getMonth()+1)+'-'+x.getDate()}
@@ -223,7 +230,7 @@ function progressCard(){const p=progressStats(),earned=new Set(earnedBadgeIds())
  return `<section class="card ballpark"><div class="ballpark-top"><div>${diamondSvg(p.runner)}</div><div><h3>${themeCopy().ballpark}</h3><p class="ballpark-line">今天答對 <b>${p.todayCorrect}</b> 題＝推進 <b>${p.todayCorrect}</b> 個壘包</p><p class="ballpark-line">今日得分 <b class="runs">${p.todayRuns}</b> 分 · 生涯 <b>${p.careerRuns}</b> 分</p><p class="note" style="margin:6px 0 0">${p.todayCorrect?`再答對 ${p.toNext} 題，跑者就能跑回本壘得分！`:'每答對 1 題推進 1 個壘包，跑完 4 個壘包回本壘得 1 分。'}</p></div></div><details class="badges"><summary>🏅 我的${themeCopy().badgeWord} ${earned.size}／${BADGES.length}</summary><div class="badge-grid">${BADGES.map(b=>`<div class="badge ${earned.has(b.id)?'got':''}" title="${h(b.desc)}"><span>${earned.has(b.id)?b.icon:'🔒'}</span><strong>${h(b.name)}</strong><small>${h(b.desc)}</small></div>`).join('')}</div></details></section>`}
 
 function resultBallpark(s){const p=progressStats(),nb=(s.newBadges||[]).map(id=>BADGES.find(b=>b.id===id)).filter(Boolean);return `<section class="card ballpark-result"><div>${diamondSvg(p.runner)}</div><div><strong>⚾ 這回合推進 ${s.correct} 個壘包</strong><p class="note" style="margin:4px 0 0">今日得分 ${p.todayRuns} 分 · 生涯 ${p.careerRuns} 分</p>${nb.length?`<div class="new-badges">${nb.map(b=>`<span class="badge got"><span>${b.icon}</span><strong>新徽章：${h(b.name)}</strong></span>`).join('')}</div>`:''}</div></section>`}
-function selectView(){if(subject==='chinese')return chineseView();const meta=SUBJECT_META[subject],isEn=subject==='english',modes=visibleModes(subject);const due=dueReviews(subject).length;return `<div class="tipline">🌱 學習路線：${meta.route}。${due?`目前有 ${due} 道錯題可以複習。`:'沒有到期複習題，先探索新題目。'}</div><button class="back" data-action="nav-home">← 返回首頁</button><div class="pageheading"><div class="eyebrow">${meta.eyebrow}</div><h1>${meta.title}</h1><p>${meta.desc}</p></div>${isEn?`<section class="alpha-intro"><div><div class="eyebrow">${worldInfo().step}</div><strong>🔡 第一站｜認識 26 個英文字母</strong><p>每張字母卡都能聽字母與例字；可從 A 一張一張往下學。</p></div><button class="btn btn-dark" data-action="alphabet">🔊 開始學 ABC →</button></section>`:''}${subject==='zhuyin'?`<section class="alpha-intro"><div><div class="eyebrow">${worldInfo().step}</div><strong>ㄅ 第一站｜認識 37 個注音符號</strong><p>每張符號卡都有圖和語詞，可以聽聲音、跟著唸。</p></div><button class="btn btn-dark" data-action="zy-cards">🔊 開始看符號卡 →</button></section>`:''}${subject==='math'?'<section class="alpha-intro"><div><strong>✖️ 九九乘法表</strong><p>1～9 全部混合、獨立練習，不受數學難度影響。</p></div><button class="btn btn-dark" data-action="times-open">開始學九九乘法 →</button></section>':''}${subject==='science'?'<section class="alpha-intro"><div><strong>📖 科學小教室｜先學習，再練習</strong><p>12 堂可聽讀課程，包含 8 堂太空課程；本風格共 '+Object.values(SCIENCE_BANK).reduce((n,a)=>n+a.length,0)+' 道科學題目。</p></div><div class="times-actions"><button class="btn btn-dark" data-action="sci-open">先學科學 →</button><button class="btn btn-outline" data-action="sci-open" data-area="space">🪐 太空課程 →</button></div></section>':''}<div class="modegrid">${modes.map(m=>`<button class="mode" data-action="start" data-mode="${m.id}"><span class="badge">${m.label}</span><div class="mode-icon" aria-hidden="true">${m.icon}</div><h3>${m.name} →</h3><p>${m.desc}</p></button>`).join('')}</div><div class="levelstrip"><div>🎚️ 目前難度：<strong>第 ${data.settings[subject]} 級／${LEVEL_NAMES[data.settings[subject]-1]}</strong><br><span>${meta.levelNote}</span></div><button data-action="nav-parent">家長設定</button></div><section class="card" style="margin-top:17px"><h3>👨‍👩‍👧 給陪練大人的提醒</h3><p class="note" style="margin:0">${meta.tip}</p></section>`}
+function selectView(){if(subject==='chinese')return chineseView();const meta=SUBJECT_META[subject],isEn=subject==='english',modes=visibleModes(subject);const due=dueReviews(subject).length;return `<div class="tipline">🌱 學習路線：${meta.route}。${due?`目前有 ${due} 道錯題可以複習。`:'沒有到期複習題，先探索新題目。'}</div><button class="back" data-action="nav-home">← 返回首頁</button><div class="pageheading"><div class="eyebrow">${meta.eyebrow}</div><h1>${meta.title}</h1><p>${meta.desc}</p></div>${isEn?`<section class="alpha-intro"><div><div class="eyebrow">${worldInfo().step}</div><strong>🔡 第一站｜認識 26 個英文字母</strong><p>每張字母卡都能聽字母與例字；可從 A 一張一張往下學。</p></div><button class="btn btn-dark" data-action="alphabet">🔊 開始學 ABC →</button></section>`:''}${subject==='zhuyin'?`<section class="alpha-intro"><div><div class="eyebrow">${worldInfo().step}</div><strong>ㄅ 第一站｜認識 37 個注音符號</strong><p>每張符號卡都有圖和語詞，可以聽聲音、跟著唸。</p></div><button class="btn btn-dark" data-action="zy-cards">🔊 開始看符號卡 →</button></section>`:''}${subject==='math'?'<section class="alpha-intro"><div><strong>✖️ 九九乘法表</strong><p>1～9 全部混合、獨立練習，不受數學難度影響。</p></div><button class="btn btn-dark" data-action="times-open">開始學九九乘法 →</button></section>':''}${subject==='science'?'<section class="alpha-intro"><div><strong>📖 科學小教室｜先學習，再練習</strong><p>12 堂可聽讀課程，包含 8 堂太空課程；本風格共 '+Object.values(SCIENCE_BANK).reduce((n,a)=>n+a.length,0)+' 道科學題目。</p></div><div class="times-actions"><button class="btn btn-dark" data-action="sci-open">先學科學 →</button><button class="btn btn-outline" data-action="sci-open" data-area="space">🪐 太空課程 →</button></div></section>':''}<p class="tipline">${h(gradeNote(subject))}</p><div class="modegrid">${modes.map(m=>`<button class="mode" data-action="start" data-mode="${m.id}"><span class="badge">${m.label}</span><div class="mode-icon" aria-hidden="true">${m.icon}</div><h3>${m.name} →</h3><p>${m.desc}</p></button>`).join('')}</div><div class="levelstrip"><div>🎚️ 目前難度：<strong>第 ${effectiveLevel(subject)} 級／${LEVEL_NAMES[effectiveLevel(subject)-1]}（依年級調整）</strong><br><span>${meta.levelNote}</span></div><button data-action="nav-parent">家長設定</button></div><section class="card" style="margin-top:17px"><h3>👨‍👩‍👧 給陪練大人的提醒</h3><p class="note" style="margin:0">${meta.tip}</p></section>`}
 const SKILL_GROUPS={english:['en-letters','en-vocab','en-use','en-sentence','en-listening','en-inference','en-order','en-context'],math:['math-calc','math-story','math-score','math-reason','math-data','math-money','math-pattern','math-measure'],logic:['logic-order','logic-pattern','logic-classify','logic-rule'],science:['sci-body','sci-force','sci-nature','sci-lab']};
 
 
@@ -271,15 +278,17 @@ function timesPage(){
 
 const CN_VOCAB=window.HOMERUN_CHINESE_VOCAB;
 let dictKind='word',dictCount=10,dictExam=null;
-const DICT_CUES={'年':'新年','希':'希望','望':'希望','坐':'坐下','位':'位子','本':'課本','淡':'淡淡','書':'書本','老':'老師','師':'老師','以':'以前','為':'成為','故':'故事','用':'用力','力':'用力','只':'只有','現':'現在','還':'還有','中':'中間','乾':'風乾','行':'旅行','難':'難道','少':'多少','相':'相反','待':'等待','衣':'衣服','哪':'哪裡','切':'切開','吐':'吐司','假':'暑假','幾':'幾個','沖':'沖水','發':'發現','朝':'朝陽'};
+const DICT_CUES={"年":"新年","希":"希望","望":"希望","坐":"坐下","位":"位子","本":"課本","淡":"淡淡","書":"書本","老":"老師","師":"老師","以":"以前","為":"成為","故":"故事","用":"用力","力":"用力","只":"只有","現":"現在","還":"還有","中":"中間","乾":"風乾","行":"旅行","難":"難道","少":"多少","相":"相反","待":"等待","衣":"衣服","哪":"哪裡","切":"切開","吐":"吐司","假":"暑假","幾":"幾個","沖":"沖水","發":"發現","朝":"朝陽","蛋":"雞蛋","煎":"煎蛋","夾":"夾子","畫":"畫圖","貓":"小貓","屋":"房屋","忙":"幫忙","娶":"娶妻","飄":"飄揚","哇":"哇哇叫","往":"來往","腳":"雙腳","帶":"帶路","跨":"跨過","吹":"吹風","排":"排隊","月":"月亮","買":"買菜","胖":"胖胖","針":"針線","棒":"棒球","眼":"眼睛","喝":"喝水","裝":"裝滿","忘":"忘記","哈":"哈哈笑","腿":"大腿","砍":"砍斷","牽":"牽手","沿":"沿路","卻":"退卻","皮":"皮膚","飛":"飛機","嘴":"嘴巴","伸":"伸手","飽":"吃飽","站":"站立","灰":"灰色","涼":"涼風","冰":"冰塊"};
 function dictSource(){return cnSelected().map(l=>({lesson:l,vocab:CN_VOCAB.lessons[l.id]})).filter(x=>x.vocab)}
 function dictItems(){
  const out=[];
  for(const {lesson,vocab} of dictSource()){
   const label=cnLabel(lesson);
   if(dictKind!=='word')for(const char of vocab.characters){
-   const cue=DICT_CUES[char]||vocab.words.find(w=>w.includes(char));
-   out.push({answer:char,label,kind:'生字',speech:cue?cue+'的'+char+'。請寫一個字。':char+'。請寫一個字。'});
+   const cue=DICT_CUES[char]||vocab.words.find(w=>w.includes(char))||Object.values(CN_VOCAB.lessons).flatMap(l=>l.words).find(w=>w.includes(char))||CN.words.find(w=>w[0].includes(char))?.[0];
+   if(!cue||!cue.includes(char))throw Error('Missing dictation context: '+char);
+   const position=[...cue].indexOf(char)+1;
+   out.push({answer:char,label,kind:'生字',speech:cue+'。請寫這個詞的第'+position+'個字。'});
   }
   if(dictKind!=='char')for(const word of vocab.words)out.push({answer:word,label,kind:'語詞',speech:word+'。請寫'+[...word].length+'個字。'});
  }
@@ -291,7 +300,7 @@ function dictationPage(){
  if(dictExam){
   const e=dictExam;
   if(e.answers)return '<button class="back" data-action="dict-setup">← 回聽寫設定</button><div class="pageheading"><h1>📝 聽寫答案卷</h1><p>請家長對照紙本批改。本功能不會辨識或自動評分紙上的字。</p></div><button class="btn btn-outline" data-action="dict-resume">隱藏答案，返回考試</button><ol class="dict-answers">'+e.items.map((q,i)=>'<li><strong>'+h(q.answer)+'</strong><small>'+h(q.kind+' · '+q.label)+'</small></li>').join('')+'</ol>';
-  return '<button class="back" data-action="dict-setup">← 回聽寫設定</button><section class="card dict-exam"><div class="eyebrow">紙本聽寫 · '+(dictKind==='char'?'生字':dictKind==='word'?'語詞':'生字＋語詞')+'</div><h1>第 '+(e.index+1)+'／'+e.items.length+' 題</h1><p>準備紙和筆，寫下聽到的字詞。</p><p>答案已隱藏。寫完再按下一題，不限時間。</p><button class="btn btn-dark dict-play" data-action="dict-play">🔊 播放本題（念兩次）</button><div class="times-actions"><button class="btn btn-outline" data-action="dict-prev" '+(e.index===0?'disabled':'')+'>← 上一題</button><button class="btn btn-dark" data-action="dict-next">'+(e.index===e.items.length-1?'寫完了，看答案':'下一題 →')+'</button><button class="btn btn-outline" data-action="dict-stop">停止播放</button></div><p class="note">可重複播放；生字會盡量附上詞語提示，避免同音字混淆。語音由裝置提供，請家長先試聽多音字。</p></section>';
+  return '<button class="back" data-action="dict-setup">← 回聽寫設定</button><section class="card dict-exam"><div class="eyebrow">紙本聽寫 · '+(dictKind==='char'?'生字':dictKind==='word'?'語詞':'生字＋語詞')+'</div><h1>第 '+(e.index+1)+'／'+e.items.length+' 題</h1><p>準備紙和筆，寫下聽到的字詞。</p><p>答案已隱藏。寫完再按下一題，不限時間。</p><button class="btn btn-dark dict-play" data-action="dict-play">🔊 播放本題（念兩次）</button><div class="times-actions"><button class="btn btn-outline" data-action="dict-prev" '+(e.index===0?'disabled':'')+'>← 上一題</button><button class="btn btn-dark" data-action="dict-next">'+(e.index===e.items.length-1?'寫完了，看答案':'下一題 →')+'</button><button class="btn btn-outline" data-action="dict-stop">停止播放</button></div><p class="note">可重複播放；每個生字都附詞語與字序提示，避免單讀多音字。語音由裝置提供，請家長先試聽多音字。</p></section>';
  }
  const source=dictSource(),pool=dictItems();
  return '<button class="back" data-action="dict-back">← 返回國語</button><div class="pageheading"><h1>📒 生字、圈詞與紙本聽寫</h1><p>範圍沿用國語頁選擇的學期與課次。</p></div><div class="cn-edition '+(source.length?'verified':'pending')+'"><strong>'+h(cnSemester==='upper'?'115 二上｜教育雲生字詞彙表':'二下教材清單待核對')+'</strong><p>語詞清單供圈詞練習使用；老師實際圈選的範圍請以課本為準。認讀字另列，不放進生字聽寫。</p></div>'+
@@ -378,22 +387,65 @@ MODES.math.unshift(...KID_MATH_MODES);
 Object.assign(SKILLS,{'zy-symbol':'注音符號辨認','zy-picture':'語詞開頭注音','zy-tone':'聲調','zy-spell':'拼音','zy-review':'注音複習','math-count':'數數','math-compare':'數的大小','math-add10':'10以內加減'});
 SKILL_GROUPS.zhuyin=['zy-symbol','zy-picture','zy-tone','zy-spell'];SKILL_GROUPS.math.unshift('math-count','math-compare','math-add10');
 // 大班只顯示適合的題型；一年級隱藏太難的閱讀
-const HIDE_BY_GRADE={k:{english:['sentence','use','deep'],math:['calc','story','score','reason','pattern','measure'],logic:['lineup','rules'],zhuyin:['spell']},g1:{english:['deep']}};
+const HIDE_BY_GRADE={
+ k:{english:['sentence','use','deep','spell','order'],math:['calc','story','score','reason','pattern','measure','challenge'],logic:['lineup','rules','sudoku','truth'],zhuyin:['spell','word']},
+ g1:{english:['sentence','use','deep','order'],math:['reason','pattern','measure','challenge'],logic:['lineup','rules','truth']},
+ g2:{english:['use','deep'],math:['challenge'],logic:['truth']}
+};
+function effectiveLevel(sub,requested=data.settings[sub]){
+ const n=Math.min(4,Math.max(1,Number(requested)||1)),g=grade();
+ if(g==='g3'||sub==='chinese')return n;
+ if(g==='k')return 1;
+ if(g==='g1')return Math.min(n,sub==='zhuyin'?2:1);
+ return Math.min(n,sub==='math'||sub==='english'||sub==='logic'||sub==='science'?1:3);
+}
+function canPractice(sub,m){
+ if(!subjectsForGrade().includes(sub))return false;
+ if(sub==='science'&&m==='lesson')return true;
+ return visibleModes(sub).some(x=>x.id===m);
+}
+function gradeNote(sub){
+ const g=grade();
+ if(sub==='english'&&g!=='g3')return '英語啟蒙延伸：以字母、聽音和基礎單字為主，並非低年級必修課程。';
+ if(sub==='science'&&g!=='g3')return '生活觀察與科學啟蒙：先聽課程、動手觀察；太空內容屬延伸探索，建議大人陪讀。';
+ if(sub==='math')return g==='k'?'以數數、大小和10以內圖像加減為主；九九乘法保留完整1～9，屬自主延伸。':g==='g1'?'以加減與生活情境為主；九九乘法保留完整1～9，屬自主延伸。':g==='g2'?'以加減、乘法、兩步驟情境與具體測量為主。':'三年級以上共用題庫，進階挑戰含跨年級內容，請按孩子能力調整。';
+ return g==='g3'?'三年級以上共用題庫；國語為二年級複習，其餘科目按能力選擇難度。':'依年級提供入門題型；可按朗讀並由大人陪練。';
+}
+function gradeCalculation(lv){
+ const max=grade()==='k'?10:grade()==='g1'?20:lv===1?99:999;
+ if(grade()==='g2'&&rand(0,2)===2){const a=rand(1,9),b=rand(1,9),n=a*b;return {skill:'math-calc',prompt:'算一算，選出正確答案',main:`${a} × ${b} ＝ ?`,answer:String(n),choices:choicesForAnswer(n,1),explain:`${a} 組，每組 ${b} 個，共 ${n} 個。`,signature:'grade-times-'+a+'-'+b}}
+ const a=rand(1,max),add=rand(0,1)===0,b=rand(0,add?max-a:a),n=add?a+b:a-b,op=add?'＋':'−';
+ return {skill:'math-calc',prompt:'算一算，選出正確答案',main:`${a} ${op} ${b} ＝ ?`,answer:String(n),choices:choicesForAnswer(n,1),explain:`${a} ${add?'加上':'減去'} ${b}，得到 ${n}。`,signature:'grade-calc-'+a+op+b};
+}
+function gradeStoryQuestion(){
+ const a=rand(2,12),add=rand(0,1)===0,b=rand(1,add?20-a:a),n=add?a+b:a-b;
+ return {skill:'math-story',prompt:'生活中的加減法',main:add?`盒子裡有 ${a} 顆球，又放進 ${b} 顆，現在共有幾顆？`:`盒子裡有 ${a} 顆球，拿走 ${b} 顆，還剩幾顆？`,answer:String(n),choices:choicesForAnswer(n,1),explain:`${a} ${add?'＋':'−'} ${b}＝${n} 顆。`,signature:'grade-story-'+a+(add?'+':'-')+b};
+}
+function practiceQuestions(sub,m,requested){
+ if(!canPractice(sub,m))return [];
+ const lv=effectiveLevel(sub,requested),g=grade();
+ applyWorld();
+ if(sub==='math'&&m==='calc'&&g!=='g3')return roundFrom(()=>worldize(gradeCalculation(lv),currentWorld()));
+ if(sub==='math'&&m==='story'&&g==='g1')return roundFrom(()=>worldize(gradeStoryQuestion(),currentWorld()));
+ if(sub==='math'&&m==='measure'&&g==='g2')return roundFrom(()=>worldize(measureQuestion(1,one([0,1,3,4,5,7])),currentWorld()));
+ return generateQuestions(sub,m,lv);
+}
+function handCalculation(){return grade()==='g3'?calcQuestion(effectiveLevel('math')):gradeCalculation(effectiveLevel('math'))}
 function visibleModes(sub){const g=grade(),hide=HIDE_BY_GRADE[g]?.[sub]||[];return MODES[sub].filter(m=>!hide.includes(m.id)&&(!m.grades||m.grades.includes(g)))}
 function subjectsForGrade(){const g=grade();return g==='k'?['zhuyin','math','logic','science','english']:g==='g1'?['zhuyin','math','english','logic','science']:['chinese','english','math','logic','science','zhuyin']}
 
 // --- 注音資料 ---
 const ZHUYIN=[
- ['ㄅ','爸爸','ㄅㄚˋ ㄅㄚ˙','👨','玻'],['ㄆ','葡萄','ㄆㄨˊ ㄊㄠˊ','🍇','坡'],['ㄇ','貓','ㄇㄠ','🐱','摸'],['ㄈ','飛機','ㄈㄟ ㄐㄧ','✈️','佛'],
- ['ㄉ','蛋','ㄉㄢˋ','🥚','得'],['ㄊ','兔子','ㄊㄨˋ ㄗ˙','🐰','特'],['ㄋ','牛','ㄋㄧㄡˊ','🐮','訥'],['ㄌ','老虎','ㄌㄠˇ ㄏㄨˇ','🐯','勒'],
- ['ㄍ','狗','ㄍㄡˇ','🐶','哥'],['ㄎ','褲子','ㄎㄨˋ ㄗ˙','👖','科'],['ㄏ','花','ㄏㄨㄚ','🌸','喝'],
+ ['ㄅ','爸爸','ㄅㄚˋ ˙ㄅㄚ','👨','玻'],['ㄆ','葡萄','ㄆㄨˊ ㄊㄠˊ','🍇','坡'],['ㄇ','貓','ㄇㄠ','🐱','摸'],['ㄈ','飛機','ㄈㄟ ㄐㄧ','✈️','佛'],
+ ['ㄉ','蛋','ㄉㄢˋ','🥚','得'],['ㄊ','兔子','ㄊㄨˋ ˙ㄗ','🐰','特'],['ㄋ','牛','ㄋㄧㄡˊ','🐮','訥'],['ㄌ','老虎','ㄌㄠˇ ㄏㄨˇ','🐯','勒'],
+ ['ㄍ','狗','ㄍㄡˇ','🐶','哥'],['ㄎ','褲子','ㄎㄨˋ ˙ㄗ','👖','科'],['ㄏ','花','ㄏㄨㄚ','🌸','喝'],
  ['ㄐ','雞','ㄐㄧ','🐔','基'],['ㄑ','球','ㄑㄧㄡˊ','⚾','欺'],['ㄒ','西瓜','ㄒㄧ ㄍㄨㄚ','🍉','希'],
- ['ㄓ','豬','ㄓㄨ','🐷','知'],['ㄔ','車','ㄔㄜ','🚗','吃'],['ㄕ','獅子','ㄕ ㄗ˙','🦁','詩'],['ㄖ','日','ㄖˋ','☀️','日'],
- ['ㄗ','嘴巴','ㄗㄨㄟˇ ㄅㄚ˙','👄','資'],['ㄘ','草','ㄘㄠˇ','🌱','雌'],['ㄙ','傘','ㄙㄢˇ','☂️','思'],
+ ['ㄓ','豬','ㄓㄨ','🐷','知'],['ㄔ','車','ㄔㄜ','🚗','吃'],['ㄕ','獅子','ㄕ ˙ㄗ','🦁','詩'],['ㄖ','日','ㄖˋ','☀️','日'],
+ ['ㄗ','嘴巴','ㄗㄨㄟˇ ˙ㄅㄚ','👄','資'],['ㄘ','草','ㄘㄠˇ','🌱','雌'],['ㄙ','傘','ㄙㄢˇ','☂️','思'],
  ['ㄧ','衣服','ㄧ ㄈㄨˊ','👕','衣'],['ㄨ','烏龜','ㄨ ㄍㄨㄟ','🐢','屋'],['ㄩ','魚','ㄩˊ','🐟','迂'],
- ['ㄚ','阿姨','ㄚ ㄧˊ','👩','啊'],['ㄛ','喔喔叫','ㄛ ㄛ ㄐㄧㄠˋ','🐓','喔'],['ㄜ','鵝','ㄜˊ','🦢','鵝'],['ㄝ','葉子','ㄧㄝˋ ㄗ˙','🍃','耶'],
- ['ㄞ','愛心','ㄞˋ ㄒㄧㄣ','❤️','哀'],['ㄟ','杯子','ㄅㄟ ㄗ˙','🥤','欸'],['ㄠ','帽子','ㄇㄠˋ ㄗ˙','🧢','凹'],['ㄡ','猴子','ㄏㄡˊ ㄗ˙','🐒','歐'],
- ['ㄢ','山','ㄕㄢ','⛰️','安'],['ㄣ','門','ㄇㄣˊ','🚪','恩'],['ㄤ','糖果','ㄊㄤˊ ㄍㄨㄛˇ','🍬','骯'],['ㄥ','燈','ㄉㄥ','💡','嗡'],['ㄦ','耳朵','ㄦˇ ㄉㄨㄛ˙','👂','耳']
+ ['ㄚ','阿姨','ㄚ ㄧˊ','👩','啊'],['ㄛ','喔喔叫','ㄛ ㄛ ㄐㄧㄠˋ','🐓','喔'],['ㄜ','鵝','ㄜˊ','🦢','鵝'],['ㄝ','葉子','ㄧㄝˋ ˙ㄗ','🍃','耶'],
+ ['ㄞ','愛心','ㄞˋ ㄒㄧㄣ','❤️','哀'],['ㄟ','杯子','ㄅㄟ ˙ㄗ','🥤','欸'],['ㄠ','帽子','ㄇㄠˋ ˙ㄗ','🧢','凹'],['ㄡ','猴子','ㄏㄡˊ ˙ㄗ','🐒','歐'],
+ ['ㄢ','山','ㄕㄢ','⛰️','安'],['ㄣ','門','ㄇㄣˊ','🚪','恩'],['ㄤ','糖果','ㄊㄤˊ ㄍㄨㄛˇ','🍬','骯'],['ㄥ','燈','ㄉㄥ','💡','嗡'],['ㄦ','耳朵','ㄦˇ ˙ㄉㄨㄛ','👂','耳']
 ].map(([sym,word,zy,icon,sound])=>({sym,word,zy,icon,sound}));
 const ZY_CONFUSE=[['ㄅ','ㄆ','ㄇ','ㄉ'],['ㄉ','ㄊ','ㄋ','ㄌ'],['ㄍ','ㄎ','ㄏ'],['ㄐ','ㄑ','ㄒ'],['ㄓ','ㄗ','ㄔ','ㄘ'],['ㄕ','ㄙ','ㄖ'],['ㄢ','ㄤ','ㄣ','ㄥ'],['ㄛ','ㄜ','ㄡ','ㄠ'],['ㄞ','ㄟ','ㄝ'],['ㄧ','ㄨ','ㄩ']];
 // 拼音用字：字、注音
@@ -402,7 +454,7 @@ const TONE_NAMES=['一聲','二聲','三聲','四聲'];
 function toneOf(zy){return zy.includes('ˊ')?1:zy.includes('ˇ')?2:zy.includes('ˋ')?3:zy.includes('˙')?4:0}
 function zyChoicesFor(sym,lv){const set=new Set([sym]);if(lv>=2){const g=ZY_CONFUSE.find(g=>g.includes(sym));if(g)for(const s of shuffle(g))if(set.size<(lv===2?3:4))set.add(s)}for(const z of shuffle(ZHUYIN))if(set.size<4)set.add(z.sym);return shuffle([...set])}
 function zhuyinQuestion(lv,m,used){
- if(m==='listen'){const pool=ZHUYIN.filter(z=>!used.has('zl-'+z.sym));const z=one(pool.length?pool:ZHUYIN);return {skill:'zy-symbol',prompt:'👂 聽一聽，找出聽到的注音符號',main:'🎧 按下「播放聲音」',answer:z.sym,choices:zyChoicesFor(z.sym,lv),explain:`聽到的是「${z.sym}」，就像「${z.word}」（${z.zy}）。`,signature:'zl-'+z.sym,zhSound:z.sound+'，'+z.word,noReadOptions:true,bigChoices:true,hint:`像「${z.word}」${z.icon} 的第一個音`}}
+ if(m==='listen'){const pool=ZHUYIN.filter(z=>!used.has('zl-'+z.sym));const z=one(pool.length?pool:ZHUYIN);return {skill:'zy-symbol',prompt:'👂 聽一聽，找出聽到的注音符號',main:'🎧 按下「播放聲音」',answer:z.sym,choices:zyChoicesFor(z.sym,lv),explain:`聽到的是「${z.sym}」，就像「${z.word}」（${z.zy}）。`,signature:'zl-'+z.sym,zhSound:z.sound+'，'+z.word,noReadOptions:true,bigChoices:true,hint:`先聽符號發音，再對照「${z.word}」的完整注音 ${z.zy}。例詞裡的符號不一定在開頭。`}}
  if(m==='picture'){const pool=ZHUYIN.filter(z=>!used.has('zp-'+z.word));const z=one(pool.length?pool:ZHUYIN);const first=z.zy[0];return {skill:'zy-picture',prompt:'🖼️ 看圖聽一聽，這個語詞的第一個注音是什麼？',main:`${z.icon}  ${z.word}`,answer:first,choices:zyChoicesFor(first,lv),explain:`「${z.word}」的注音是 ${z.zy}，第一個符號是「${first}」。`,signature:'zp-'+z.word,zhSound:z.word,noReadOptions:true,bigChoices:true,hint:'慢慢唸這個語詞，注意嘴巴一開始的樣子。'}}
  if(m==='tone'){const pool=ZY_SYLLABLES.filter(([c,zy])=>!used.has('zt-'+c)&&toneOf(zy)<4);const [c,zy]=one(pool.length?pool:ZY_SYLLABLES.filter(([,zy])=>toneOf(zy)<4));const t=toneOf(zy);const marks=['沒有符號','ˊ','ˇ','ˋ'];return {skill:'zy-tone',prompt:'🎵 看注音、聽聲音，這是第幾聲？',main:`${c}　${zy}`,answer:TONE_NAMES[t],choices:TONE_NAMES.slice(),explain:`「${c}」（${zy}）是${TONE_NAMES[t]}。聲調符號：一聲不標、二聲 ˊ、三聲 ˇ、四聲 ˋ；這個字是「${marks[t]}」。`,signature:'zt-'+c,zhSound:c,noReadOptions:true,hint:'一聲平平、二聲往上、三聲先下再上、四聲往下。'}}
  const pool=ZY_SYLLABLES.filter(([c])=>!used.has('zs-'+c));const [c,zy]=one(pool.length?pool:ZY_SYLLABLES);const ini=zy[0],fin=zy.replace(/[ˊˇˋ˙]/g,'').slice(1),tone=toneOf(zy);
@@ -461,19 +513,19 @@ const insertBeforeReview=(sub,mode)=>{const arr=MODES[sub],i=arr.findIndex(m=>m.
 insertBeforeReview('math',{id:'challenge',icon:'🏆',name:'思考挑戰',label:'數學思維',desc:'植樹、排隊、年齡、猜數字、雞兔同籠……真正需要動腦的題目。',skill:'math-challenge'});
 insertBeforeReview('logic',{id:'sudoku',icon:'🔢',name:'4×4 數獨',label:'空間推理',desc:'每排、每列、每個田字格 1～4 各一次，推出 ？ 是多少。',skill:'logic-sudoku'});
 insertBeforeReview('logic',{id:'truth',icon:'🕵️',name:'誰說謊？',label:'真假推理',desc:'只有一個人說謊（或只有一個人說真話），找出是誰做的。',skill:'logic-truth'});
-insertBeforeReview('english',{id:'spell',icon:'✏️',name:'拼字挑戰',label:'拼字',desc:'四個拼法只有一個正確，找出正確的單字。',skill:'en-spell'});
-insertBeforeReview('english',{id:'order',icon:'🧱',name:'句子重組',label:'句型',desc:'把打亂的單字排成正確的英文句子。',skill:'en-order-sentence'});
+insertBeforeReview('english',{id:'spell',icon:'✏️',name:'拼字挑戰',label:'拼字',desc:'依圖示與中文意思，選出符合意思的英文單字。',skill:'en-spell'});
+insertBeforeReview('english',{id:'order',icon:'🧱',name:'聽音排句子',label:'聽音與句型',desc:'先聽完整英文，選出與錄音順序完全相同的句子。',skill:'en-order-sentence'});
 insertBeforeReview('zhuyin',{id:'word',icon:'📝',name:'語詞注音',label:'完整拼寫',desc:'看圖聽語詞，選出完全正確的注音（包含聲調）。',skill:'zy-word'});
 Object.assign(SKILLS,{'math-challenge':'數學思考挑戰','logic-sudoku':'數獨推理','logic-truth':'真假推理','en-spell':'英文拼字','en-order-sentence':'句子重組','zy-word':'語詞注音'});
 SKILL_GROUPS.math.push('math-challenge');SKILL_GROUPS.logic.push('logic-sudoku','logic-truth');SKILL_GROUPS.english.push('en-spell','en-order-sentence');SKILL_GROUPS.zhuyin.push('zy-word');
 // 不再依年級隱藏題型：大班與一年級先排適合的，其他題型照樣可以挑戰
-for(const k of Object.keys(HIDE_BY_GRADE))delete HIDE_BY_GRADE[k];
+// 年級限制由 HIDE_BY_GRADE 與 practiceQuestions 一致執行。
 GRADE_PRESETS.k.roundSize=5;GRADE_PRESETS.g1.roundSize=8;GRADE_PRESETS.g2.roundSize=8;GRADE_PRESETS.g3.roundSize=10;
 
 // --- 數學思考挑戰（每題都由程式計算答案） ---
 const WEEK=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
 function guessNumberPuzzle(){
- for(let tries=0;tries<400;tries++){const n=rand(11,98),a=Math.floor(n/10),b=n%10;
+ for(let tries=0;tries<400;tries++){const n=rand(10,99),a=Math.floor(n/10),b=n%10;
   const gens=shuffle([
    ()=>{const lo=a*10;return {t:`比 ${lo} 大、比 ${lo+10} 小`,f:x=>x>lo&&x<lo+10,ok:n>lo}},
    ()=>({t:n%2?'是單數（奇數）':'是雙數（偶數）',f:x=>x%2===n%2,ok:true}),
@@ -482,9 +534,9 @@ function guessNumberPuzzle(){
    ()=>{const k=one([3,4,5].filter(k=>n%k===0));return k?{t:`是 ${k} 的倍數`,f:x=>x%k===0,ok:true}:{ok:false}},
    ()=>{const d=b-a;return d>=1&&d<=4?{t:`個位數字比十位數字多 ${d}`,f:x=>x%10-Math.floor(x/10)===d,ok:true}:{ok:false}}
   ]);
-  const props=[];for(const g of gens){const p=g();if(!p.ok||!p.t)continue;props.push(p);const c=[...Array(89)].map((_,i)=>i+10).filter(x=>props.every(q=>q.f(x)));if(c.length===1)break}
-  const cand=[...Array(89)].map((_,i)=>i+10).filter(x=>props.every(q=>q.f(x)));
-  if(cand.length===1&&cand[0]===n&&props.length>=2&&props.length<=4){const marks='①②③④';const first=[...Array(89)].map((_,i)=>i+10).filter(x=>props[0].f(x)&&props[1].f(x));
+  const props=[];for(const g of gens){const p=g();if(!p.ok||!p.t)continue;props.push(p);const c=[...Array(90)].map((_,i)=>i+10).filter(x=>props.every(q=>q.f(x)));if(c.length===1)break}
+  const cand=[...Array(90)].map((_,i)=>i+10).filter(x=>props.every(q=>q.f(x)));
+  if(cand.length===1&&cand[0]===n&&props.length>=2&&props.length<=4){const marks='①②③④';const first=[...Array(90)].map((_,i)=>i+10).filter(x=>props[0].f(x)&&props[1].f(x));
    return {main:'我是一個兩位數：\n'+props.map((p,i)=>marks[i]+' '+p.t).join('\n')+'\n我是多少？',ans:n,exp:`同時符合①②的數：${first.slice(0,12).join('、')}${first.length>12?'……':''}${props.length>2?'；再用後面的線索一個一個刪掉':''}，最後只剩 ${n}。`,hint:'先用一條線索列出可能的數，再用其他線索一個一個刪掉。',sig:'guess-'+n+props.map(p=>p.t).join()}}}
  return {main:'我是一個兩位數：\n① 十位和個位加起來是 9\n② 十位數字比個位數字多 5\n我是多少？',ans:72,exp:'和是 9、差是 5：十位 7、個位 2，所以是 72。',hint:'和與差都知道，可以先試試看。',sig:'guess-72'};
 }
@@ -497,7 +549,7 @@ function challengeQuestion(lv,used){
  else if(kind==='stairs'){const n=rand(3,lv===1?5:8),s=lv===1?rand(5,12):rand(12,22);ans=(n-1)*s;main=`從 1 樓走到 ${n} 樓，每一層樓梯有 ${s} 階。一共要爬幾階？`;exp=`1 樓到 ${n} 樓只要爬 ${n-1} 層。${n-1}×${s}＝${ans} 階。`;hint='1 樓到 2 樓爬幾層？1 樓到 3 樓呢？';sig='stairs'+n+s}
  else if(kind==='weekday'){const w=rand(0,6),n=lv===1?rand(2,9):lv===2?rand(10,30):rand(30,100),r=n%7;ans=WEEK[(w+r)%7];main=`今天是${WEEK[w]}，再過 ${n} 天是星期幾？`;exp=`一個星期 7 天。${n}÷7＝${Math.floor(n/7)} 餘 ${r}，所以從${WEEK[w]}往後數 ${r} 天，是${ans}。`;hint='每過 7 天又回到同一個星期幾。';choices=shuffle([ans,...shuffle(WEEK.filter(x=>x!==ans)).slice(0,3)]);sig='wd'+w+'-'+n}
  else if(kind==='flags'){const d=one([2,3,5,10]),k=rand(3,10),L=d*k;ans=k+1;main=`一條長 ${L} 公尺的步道，每隔 ${d} 公尺插一面旗子，頭和尾都要插。一共要插幾面旗子？`;exp=`${L}÷${d}＝${k} 個間隔；頭尾都插，旗子比間隔多 1：${ans} 面。`;hint='先畫一段短的試試：3 個間隔要插幾面？';sig='fl'+L+d}
- else if(kind==='flags0'){const d=one([2,3,5,10]),k=rand(4,10),L=d*k;ans=k-1;main=`兩棵大樹之間相距 ${L} 公尺，中間每隔 ${d} 公尺種一棵小樹（大樹旁邊不種）。中間要種幾棵小樹？`;exp=`${L}÷${d}＝${k} 個間隔；兩端已經是大樹，小樹比間隔少 1：${ans} 棵。`;hint='兩端都不種的時候，樹比間隔多還是少？';sig='f0'+L+d}
+ else if(kind==='flags0'){const d=one([2,3,5,10]),k=rand(4,10),L=d*k;ans=k-1;main=`兩棵大樹之間相距 ${L} 公尺，中間每隔 ${d} 公尺種一棵小樹（兩端大樹所在的位置不種）。中間要種幾棵小樹？`;exp=`${L}÷${d}＝${k} 個間隔；兩端已經是大樹，小樹比間隔少 1：${ans} 棵。`;hint='兩端都不種的時候，樹比間隔多還是少？';sig='f0'+L+d}
  else if(kind==='circle'){const d=one([2,5,10]),k=rand(5,15),L=d*k;ans=k;main=`一個圓形跑道一圈是 ${L} 公尺，每隔 ${d} 公尺站一位小朋友。一共站了幾位？`;exp=`繞一圈頭尾接在一起，人數等於間隔數：${L}÷${d}＝${ans} 位。`;hint='圓形的頭和尾是同一個點。';sig='ci'+L+d}
  else if(kind==='coins'){const X=rand(3,19)*5;ans=Math.floor(X/10)+(X%10?1:0);main=`只用 10 元和 5 元硬幣，要湊出 ${X} 元，最少要幾枚硬幣？`;exp=`盡量用 10 元：${Math.floor(X/10)} 枚 10 元${X%10?'，再加 1 枚 5 元':''}，共 ${ans} 枚。`;hint='想要硬幣少，就先用大的。';sig='co'+X}
  else if(kind==='age'){const a=rand(8,12),b=rand(3,7),y=rand(2,7),S=a+b+2*y;ans=y;main=`哥哥今年 ${a} 歲，妹妹今年 ${b} 歲。再過幾年，兩人的年齡加起來是 ${S} 歲？`;exp=`現在合計 ${a+b} 歲，還差 ${S-a-b} 歲。每過一年兩人一共多 2 歲：${S-a-b}÷2＝${ans} 年。`;hint='每過 1 年，兩個人加起來會多幾歲？';sig='ag'+a+b+S}
@@ -529,7 +581,7 @@ function truthQuestion(lv){const names=shuffle(LINEUP_NAMES).slice(0,3),event=on
    return t===0?{who:sp,text:'不是我做的。',f:c=>c!==sp}:t===1?{who:sp,text:`是${x}做的。`,f:c=>c===x}:t===2?{who:sp,text:`不是${x}做的。`,f:c=>c!==x}:{who:sp,text:'是我做的。',f:c=>c===sp}});
   const fits=names.filter(c=>st.filter(s=>!s.f(c)).length===K);if(fits.length!==1)continue;const ans=fits[0];
   const check=st.map(s=>`${s.who}說「${s.text}」→${s.f(ans)?'真話':'說謊'}`).join('；');
-  return {skill:'logic-truth',prompt:'🕵️ 偵探時間：讀完每個人說的話，再推理',main:st.map(s=>`${s.who}：「${s.text}」`).join('\n'),second:`三個人裡，${oneTruth?'只有一個人說真話':'只有一個人說謊'}。是誰${event}？`,answer:ans,choices:shuffle([...names,'無法判斷']),explain:`假設是${ans}做的：${check}。剛好${oneTruth?'只有一人說真話':'只有一人說謊'}，符合條件；換成其他人都不符合。`,hint:'一個一個假設：「如果是小安做的」，數數看有幾個人說謊。',signature:'tr-'+names.join('')+st.map(s=>s.text).join(),concept:'truth-'+K,reason:true}}
+  return {skill:'logic-truth',prompt:'🕵️ 偵探時間：讀完每個人說的話，再推理',main:st.map(s=>`${s.who}：「${s.text}」`).join('\n'),second:`這件事是三人中的一人做的。三個人裡，${oneTruth?'只有一個人說真話':'只有一個人說謊'}。是誰${event}？`,answer:ans,choices:shuffle([...names,'無法判斷']),explain:`假設是${ans}做的：${check}。剛好${oneTruth?'只有一人說真話':'只有一人說謊'}，符合條件；換成其他人都不符合。`,hint:'一個一個假設：「如果是其中一人做的」，數數看有幾個人說謊。',signature:'tr-'+names.join('')+st.map(s=>s.text).join(),concept:'truth-'+K,reason:true}}
  return truthQuestion(lv)}
 
 // --- 英文：拼字挑戰、句子重組 ---
@@ -541,24 +593,25 @@ function misspellings(w){const all=new Set(Object.values(VOCAB).flat().map(v=>v[
   else{const vi=[...w].map((c,k)=>vowels.includes(c)?k:-1).filter(k=>k>=0);if(vi.length){const k=one(vi);x=w.slice(0,k)+one([...vowels].filter(v=>v!==w[k]))+w.slice(k+1)}}
   if(x!==w&&!all.has(x))out.add(x)}return [...out]}
 function spellQuestion(lv,used){const pool=VOCAB[lv].filter(v=>v[0].length>=3&&!used.has('sp-'+v[0]));const [w,mean,icon]=one(pool.length?pool:VOCAB[lv]);const wrong=misspellings(w);if(wrong.length<3)return spellQuestion(lv,used);
- return {skill:'en-spell',prompt:'✏️ 哪一個拼字是正確的？',main:`${icon||'📘'}  ${mean}`,answer:w,choices:shuffle([w,...wrong]),explain:`「${mean}」的英文是 ${w}，拼法：${w.split('').join('-')}。`,hint:'可以先按播放聽發音，再一個字母一個字母比對。',signature:'sp-'+w,isEnglish:true,speech:lv===1?w:undefined,noReadOptions:true}}
+ return {skill:'en-spell',prompt:'✏️ 哪個英文單字的拼寫符合這個中文意思？',main:`${icon||'📘'}  ${mean}`,answer:w,choices:shuffle([w,...wrong]),explain:`「${mean}」的英文是 ${w}，拼法：${w.split('').join('-')}。`,hint:'可以先按播放聽發音，再一個字母一個字母比對。',signature:'sp-'+w,isEnglish:true,speech:w,noReadOptions:true}}
 const NAMES_EN=['I','Tom','Mia','Ben','Lily','Sam','Amy','Dad','Grandma','Sundays','Saturday'];
 function orderQuestion(lv,used){const pool=[...READ[lv].map(x=>x[0]),...WORD_USE[lv].map(x=>x[0].replace('___',x[1]))].filter(s=>!/[?“"]/.test(s)&&s.split(' ').length>=4&&s.split(' ').length<=(lv===1?6:lv===2?8:10));
  const fresh=pool.filter(s=>!used.has('or-'+s));const s=one(fresh.length?fresh:pool);const toks=s.replace(/[.!]$/,'').split(' ').map((w,i)=>i===0&&!NAMES_EN.includes(w.replace(/[,’']/g,''))?w.toLowerCase():w);
  const fmt=a=>{const t=a.join(' ');return t.charAt(0).toUpperCase()+t.slice(1)+'.'};const correct=fmt(toks);const set=new Set([correct]);let g=0;
  while(set.size<4&&g++<300){const a=toks.slice(),t=rand(0,1);if(t===0){const i=rand(0,a.length-1),j=rand(0,a.length-1);[a[i],a[j]]=[a[j],a[i]]}else{const i=rand(0,a.length-1),[x]=a.splice(i,1);a.splice(rand(0,a.length),0,x)}if(/^(is|are|can|do|does)$/i.test(a[0]))continue;set.add(fmt(a))}
- return {skill:'en-order-sentence',prompt:'🧱 把打亂的單字排成正確的句子',main:shuffle(toks).join(' / '),answer:correct,choices:shuffle([...set]),explain:`正確的句子是：${correct}`,hint:'先找「誰」（主詞），再找「做什麼」（動詞），最後放其他的字。',signature:'or-'+s,isEnglish:true,speech:lv===1?s:undefined,noReadOptions:true}}
+ return {skill:'en-order-sentence',prompt:'🧱 先聽英文，選出與錄音順序完全相同的句子',main:shuffle(toks).join(' / '),answer:correct,choices:shuffle([...set]),explain:`錄音的句子是：${correct}。這題核對的是錄音中的字詞順序。`,hint:'先按播放，可以重複聽；逐字核對錄音與選項的順序。',signature:'or-'+s,isEnglish:true,speech:correct,isListening:true,noReadOptions:true}}
 
 // --- 注音：語詞完整拼寫 ---
-const ZY_WORDS=[['棒球','ㄅㄤˋ ㄑㄧㄡˊ','⚾'],['學校','ㄒㄩㄝˊ ㄒㄧㄠˋ','🏫'],['老師','ㄌㄠˇ ㄕ','🧑‍🏫'],['蘋果','ㄆㄧㄥˊ ㄍㄨㄛˇ','🍎'],['香蕉','ㄒㄧㄤ ㄐㄧㄠ','🍌'],['媽媽','ㄇㄚ ㄇㄚ˙','👩'],['書包','ㄕㄨ ㄅㄠ','🎒'],['月亮','ㄩㄝˋ ㄌㄧㄤˋ','🌙'],['太陽','ㄊㄞˋ ㄧㄤˊ','☀️'],['星星','ㄒㄧㄥ ㄒㄧㄥ','⭐'],['雨傘','ㄩˇ ㄙㄢˇ','☂️'],['手套','ㄕㄡˇ ㄊㄠˋ','🧤'],['火車','ㄏㄨㄛˇ ㄔㄜ','🚆'],['熊貓','ㄒㄩㄥˊ ㄇㄠ','🐼'],['蝴蝶','ㄏㄨˊ ㄉㄧㄝˊ','🦋'],['冰淇淋','ㄅㄧㄥ ㄑㄧˊ ㄌㄧㄣˊ','🍦'],['恐龍','ㄎㄨㄥˇ ㄌㄨㄥˊ','🦖'],['牙齒','ㄧㄚˊ ㄔˇ','🦷'],['飛機','ㄈㄟ ㄐㄧ','✈️'],['西瓜','ㄒㄧ ㄍㄨㄚ','🍉'],['老虎','ㄌㄠˇ ㄏㄨˇ','🐯'],['葡萄','ㄆㄨˊ ㄊㄠˊ','🍇'],['烏龜','ㄨ ㄍㄨㄟ','🐢'],['糖果','ㄊㄤˊ ㄍㄨㄛˇ','🍬'],['花朵','ㄏㄨㄚ ㄉㄨㄛˇ','🌸'],['鉛筆','ㄑㄧㄢ ㄅㄧˇ','✏️'],['跑步','ㄆㄠˇ ㄅㄨˋ','🏃'],['游泳','ㄧㄡˊ ㄩㄥˇ','🏊']];
+const ZY_WORDS=[['棒球','ㄅㄤˋ ㄑㄧㄡˊ','⚾'],['學校','ㄒㄩㄝˊ ㄒㄧㄠˋ','🏫'],['老師','ㄌㄠˇ ㄕ','🧑‍🏫'],['蘋果','ㄆㄧㄥˊ ㄍㄨㄛˇ','🍎'],['香蕉','ㄒㄧㄤ ㄐㄧㄠ','🍌'],['媽媽','ㄇㄚ ˙ㄇㄚ','👩'],['書包','ㄕㄨ ㄅㄠ','🎒'],['月亮','ㄩㄝˋ ㄌㄧㄤˋ','🌙'],['太陽','ㄊㄞˋ ㄧㄤˊ','☀️'],['星星','ㄒㄧㄥ ㄒㄧㄥ','⭐'],['雨傘','ㄩˇ ㄙㄢˇ','☂️'],['手套','ㄕㄡˇ ㄊㄠˋ','🧤'],['火車','ㄏㄨㄛˇ ㄔㄜ','🚆'],['熊貓','ㄒㄩㄥˊ ㄇㄠ','🐼'],['蝴蝶','ㄏㄨˊ ㄉㄧㄝˊ','🦋'],['冰淇淋','ㄅㄧㄥ ㄑㄧˊ ㄌㄧㄣˊ','🍦'],['恐龍','ㄎㄨㄥˇ ㄌㄨㄥˊ','🦖'],['牙齒','ㄧㄚˊ ㄔˇ','🦷'],['飛機','ㄈㄟ ㄐㄧ','✈️'],['西瓜','ㄒㄧ ㄍㄨㄚ','🍉'],['老虎','ㄌㄠˇ ㄏㄨˇ','🐯'],['葡萄','ㄆㄨˊ ㄊㄠˊ','🍇'],['烏龜','ㄨ ㄍㄨㄟ','🐢'],['糖果','ㄊㄤˊ ㄍㄨㄛˇ','🍬'],['花朵','ㄏㄨㄚ ㄉㄨㄛˇ','🌸'],['鉛筆','ㄑㄧㄢ ㄅㄧˇ','✏️'],['跑步','ㄆㄠˇ ㄅㄨˋ','🏃'],['游泳','ㄧㄡˊ ㄩㄥˇ','🏊']];
 const TONE_MARKS=['','ˊ','ˇ','ˋ'];
+function markedSyllable(base,mark){return mark==='˙'?'˙'+base:base+mark}
 function mutateSyllable(s){const base=s.replace(/[ˊˇˋ˙]/g,''),mark=(s.match(/[ˊˇˋ˙]/)||[''])[0],t=rand(0,2);
  if(t===0)return base+one(TONE_MARKS.filter(m=>m!==mark));
- if(t===1){const g=ZY_CONFUSE.find(g=>g.includes(base[0]));if(g)return one(g.filter(x=>x!==base[0]))+base.slice(1)+mark}
- const swaps={'ㄢ':'ㄤ','ㄤ':'ㄢ','ㄣ':'ㄥ','ㄥ':'ㄣ','ㄠ':'ㄡ','ㄡ':'ㄠ','ㄞ':'ㄟ','ㄟ':'ㄞ','ㄛ':'ㄜ','ㄜ':'ㄛ','ㄧ':'ㄩ','ㄩ':'ㄧ'};const last=base.slice(-1);return swaps[last]?base.slice(0,-1)+swaps[last]+mark:base+one(TONE_MARKS.filter(m=>m!==mark))}
+ if(t===1){const g=ZY_CONFUSE.find(g=>g.includes(base[0]));if(g)return markedSyllable(one(g.filter(x=>x!==base[0]))+base.slice(1),mark)}
+ const swaps={'ㄢ':'ㄤ','ㄤ':'ㄢ','ㄣ':'ㄥ','ㄥ':'ㄣ','ㄠ':'ㄡ','ㄡ':'ㄠ','ㄞ':'ㄟ','ㄟ':'ㄞ','ㄛ':'ㄜ','ㄜ':'ㄛ','ㄧ':'ㄩ','ㄩ':'ㄧ'};const last=base.slice(-1);return swaps[last]?markedSyllable(base.slice(0,-1)+swaps[last],mark):base+one(TONE_MARKS.filter(m=>m!==mark))}
 function zhuyinWordQuestion(lv,used){const pool=ZY_WORDS.filter(w=>!used.has('zw-'+w[0]));const [word,zy,icon]=one(pool.length?pool:ZY_WORDS);const sy=zy.split(' ');const set=new Set([zy]);let g=0;
  while(set.size<4&&g++<200){const a=sy.slice(),i=rand(0,a.length-1);a[i]=mutateSyllable(a[i]);if(lv===3&&a.length>1&&rand(0,1)){const j=(i+1)%a.length;a[j]=mutateSyllable(a[j])}set.add(a.join(' '))}
- return {skill:'zy-word',prompt:'📝 這個語詞的注音，哪一個完全正確？',main:`${icon}  ${word}`,answer:zy,choices:shuffle([...set]),explain:`「${word}」的注音是 ${zy}。注意每個字的聲母、韻母和聲調。`,hint:'一個字一個字慢慢唸，特別注意聲調符號。',signature:'zw-'+word,zhSound:word,noReadOptions:true}}
+ return {skill:'zy-word',prompt:'📝 這個語詞的注音，哪一個完全正確？',main:`${icon}  ${word}`,answer:zy,choices:shuffle([...set]),explain:`「${word}」的注音是 ${zy}。注意每個字的聲母、韻母和聲調。`,hint:'一個字一個字慢慢唸，注意聲調。輕聲的「˙」標在該音節前面。',signature:'zw-'+word,zhSound:word,noReadOptions:true}}
 
 // --- 5 人打序（第 3 級） ---
 const _lineupV24=lineupQuestion;
@@ -708,7 +761,7 @@ const CN5=['一','二','三','四','五'];
 const ASSIGN_SCENES=[
  {id:'pos',title:'守備位置',items:['投手','捕手','一壘手','游擊手','中外野手'],is:(a,x)=>`${a}守${x}。`,not:(a,x)=>`${a}不是${x}。`,either:(a,b,x)=>`${x}是${a}或${b}其中一人。`,askWho:x=>`誰是${x}？`,askWhat:a=>`${a}守哪個位置？`,intro:n=>`${n} 人各守一個不同的位置。`},
  {id:'glove',title:'手套顏色',items:['紅色','藍色','黑色','白色','金色'],is:(a,x)=>`${a}的手套是${x}。`,not:(a,x)=>`${a}的手套不是${x}。`,either:(a,b,x)=>`${x}手套是${a}或${b}的。`,askWho:x=>`誰的手套是${x}？`,askWhat:a=>`${a}的手套是什麼顏色？`,intro:n=>`${n} 人的手套顏色都不一樣。`},
- {id:'snack',title:'賽後點心',items:['雞排','珍珠奶茶','烤香腸','蛋餅','西瓜'],is:(a,x)=>`${a}吃${x}。`,not:(a,x)=>`${a}沒有吃${x}。`,either:(a,b,x)=>`吃${x}的是${a}或${b}。`,askWho:x=>`誰吃${x}？`,askWhat:a=>`${a}吃什麼？`,intro:n=>`比賽後 ${n} 人各吃一種不同的點心。`},
+ {id:'snack',title:'賽後點心',items:['雞排','布丁','烤香腸','蛋餅','西瓜'],is:(a,x)=>`${a}吃${x}。`,not:(a,x)=>`${a}沒有吃${x}。`,either:(a,b,x)=>`吃${x}的是${a}或${b}。`,askWho:x=>`誰吃${x}？`,askWhat:a=>`${a}吃什麼？`,intro:n=>`比賽後 ${n} 人各吃一種不同的點心。`},
  {id:'num',title:'背號推理',items:['3號','7號','11號','24號','52號'],numeric:true,is:(a,x)=>`${a}穿${x}。`,not:(a,x)=>`${a}不是穿${x}。`,either:(a,b,x)=>`穿${x}的是${a}或${b}。`,gt:(a,b)=>`${a}的背號比${b}大。`,odd:(a,o)=>`${a}的背號是${o?'單數':'雙數'}。`,askWho:x=>`誰穿${x}？`,askWhat:a=>`${a}穿幾號？`,intro:n=>`${n} 人的背號都不一樣。`}
 ];
 const numOf=x=>parseInt(x,10);
@@ -782,7 +835,7 @@ const STORY_T=[
  {min:3,f:(lv,r)=>{const F=rand(32,45),s=rand(6,10),y=rand(3,9);return {main:`爸爸今年 ${F} 歲，${STORY_NAMES()}今年 ${s} 歲。${y} 年後，爸爸比他大幾歲？`,ans:F-s,exp:`兩人每年都長一歲，年齡差永遠不變：${F}−${s}＝${F-s} 歲。`}}},
  {min:3,f:(lv,r)=>{const x=rand(15,40),y=3*x-rand(1,4)*5;return {main:`A 店一顆棒球 ${x} 元；B 店 3 顆一組賣 ${y} 元。買 3 顆的話，B 店便宜多少元？`,ans:3*x-y,exp:`A 店 3 顆：${x}×3＝${3*x} 元；便宜 ${3*x}−${y}＝${3*x-y} 元。`}}},
  {min:3,f:(lv,r)=>{const n=rand(3,8),u=rand(3,9)*10,hh=rand(10,30)*10,P=Math.ceil((n*u+hh)/100)*100+100;return {main:`買 ${n} 顆球每顆 ${u} 元，再買一頂 ${hh} 元的帽子，付了 ${P} 元，找回多少元？`,ans:P-n*u-hh,exp:`球 ${n}×${u}＝${n*u}；共 ${n*u}＋${hh}＝${n*u+hh}；找回 ${P}−${n*u+hh}＝${P-n*u-hh} 元。`}}},
- {min:3,f:(lv,r)=>{const a=rand(20,90),b=rand(10,60),c=rand(50,150);return {main:`${STORY_NAMES()}先用掉 ${a} 元，後來又拿到零用錢 ${b} 元，現在有 ${c} 元。他原本有多少元？`,ans:c-b+a,exp:`倒回去想：${c}−${b}＝${c-b}（拿到前），再加回用掉的 ${a}：${c-b+a} 元。`}}},
+ {min:3,f:(lv,r)=>{const a=rand(20,90),b=rand(10,60),c=rand(Math.max(50,b),150);return {main:`${STORY_NAMES()}先用掉 ${a} 元，後來又拿到零用錢 ${b} 元，現在有 ${c} 元。他原本有多少元？`,ans:c-b+a,exp:`倒回去想：${c}−${b}＝${c-b}（拿到前），再加回用掉的 ${a}：${c-b+a} 元。`}}},
  {min:3,f:(lv,r)=>{const g=rand(130,150),n=rand(3,6);return {main:`一顆棒球大約 ${g} 公克，${n} 顆大約多重？`,ans:g*n,exp:`${g}×${n}＝${g*n} 公克。`}}},
  {min:3,f:(lv,r)=>{const k=one([2,3,4,5]),T=k*rand(3,9);return {main:`球隊 ${T} 人中，有 1/${k} 是左打。左打有幾人？`,ans:T/k,exp:`把 ${T} 人平分成 ${k} 份，一份是 ${T}÷${k}＝${T/k} 人。`}}},
  {min:4,f:(lv,r)=>{const k=one([3,4,5,6,8]),m=rand(2,k-1),T=k*rand(4,12);return {main:`球隊有 ${T} 人，其中 ${m}/${k} 參加過比賽。參加過比賽的有幾人？`,ans:T/k*m,exp:`一份是 ${T}÷${k}＝${T/k} 人，${m} 份是 ${T/k}×${m}＝${T/k*m} 人。`}}},
@@ -806,7 +859,7 @@ const _storyV30=storyQuestion;
 storyQuestion=function(level,scoreMode=false){const pool=(scoreMode?SCORE_T:STORY_T).filter(t=>t.min<=level);const r=storyRange(level);for(let i=0;i<30;i++){const ti=rand(0,pool.length-1),out=pool[ti].f(level,r);if(!out||!Number.isFinite(out.ans)||out.ans<0)continue;const ans=out.ans;
   return {skill:scoreMode?'math-score':'math-story',prompt:scoreMode?'🏟️ 看懂比賽數字':'⚾ 生活與棒球的數學',main:out.main,answer:String(ans),choices:choicesForAnswer(ans,Math.min(level,3),out.max??Infinity),explain:out.exp,hint:'先找出題目要問什麼，再想要用加、減、乘還是除。',signature:(scoreMode?'sc-':'st-')+out.main,concept:(scoreMode?'sc':'st')+'-'+(scoreMode?SCORE_T:STORY_T).indexOf(pool[ti]),reason:level>=3}}
  return _storyV30(Math.min(level,3),scoreMode)};
-Object.assign(THEME_COPY.princess,{right:'✨ 答對了！你好棒！'});Object.assign(THEME_COPY.animals,{right:'🐾 答對了！小動物都為你拍手！'});Object.assign(THEME_COPY._default,{right:'✅ 答對了！做得好！'});
+Object.assign(THEME_COPY.space,{right:'🚀 答對了！探索成功！'});Object.assign(THEME_COPY.princess,{right:'✨ 答對了！你好棒！'});Object.assign(THEME_COPY.animals,{right:'🐾 答對了！小動物都為你拍手！'});Object.assign(THEME_COPY._default,{right:'✅ 答對了！做得好！'});
 // --- 第 4 級：計算 ---
 const _calcV30=calcQuestion;
 calcQuestion=function(level){if(level<4)return _calcV30(level);const kind=rand(0,7);let main,ans,exp,max=Infinity;
@@ -844,16 +897,16 @@ const _sudokuV30=sudokuQuestion;sudokuQuestion=function(lv){const q=_sudokuV30(M
 SCIENCE_BANK.body.push(
  {l:1,q:'我們用什麼器官聞到烤香腸的香味？',a:'鼻子',o:['鼻子','耳朵','手肘','膝蓋'],e:'鼻子裡有感覺氣味的細胞，能聞到香味。'},
  {l:1,q:'打球前要先上廁所、喝點水，再做什麼最好？',a:'暖身運動',o:['暖身運動','直接全力衝刺','吃一大碗麵','躺下睡覺'],e:'先暖身讓身體準備好，再開始練習比較不會受傷。'},
- {l:1,q:'手指被擦傷流了一點血，最先應該做什麼？',a:'用乾淨的水沖洗並告訴大人',o:['用乾淨的水沖洗並告訴大人','用嘴巴吹一吹就好','抹上泥土','假裝沒事繼續玩'],e:'先把傷口沖乾淨，再請大人幫忙消毒、貼上 OK 繃。'},
+ {l:1,q:'手指被擦傷流了一點血，最先應該做什麼？',a:'用乾淨的水沖洗並告訴大人',o:['用乾淨的水沖洗並告訴大人','用嘴巴吹一吹就好','抹上泥土','假裝沒事繼續玩'],e:'先告訴大人，用乾淨的流動水清潔小擦傷，再由大人評估並以乾淨敷料覆蓋；若持續流血或傷口較深，應請大人協助就醫。'},
  {l:1,q:'打球回家後，為什麼要先洗手？',a:'把手上的細菌洗掉',o:['把手上的細菌洗掉','讓手變大','讓手變冷','讓球變乾淨'],e:'手會碰到很多東西，洗手可以減少細菌跑進嘴巴裡。'},
- {l:1,q:'哪一種飲料最適合運動後補充水分？',a:'白開水',o:['白開水','汽水','咖啡','可樂'],e:'白開水最健康；含糖飲料喝太多對牙齒和身體不好。'},
- {l:1,q:'晚上幾點睡覺，對 8 歲小朋友比較好？',a:'早一點睡，睡滿 9～11 小時',o:['早一點睡，睡滿 9～11 小時','半夜 12 點再睡','不用睡覺','白天睡、晚上玩'],e:'學齡兒童大約需要 9～11 小時睡眠，身體才能恢復和成長。'},
+ {l:1,q:'一般短時間活動後，以下哪種飲料較適合補充水分？',a:'白開水',o:['白開水','汽水','咖啡','可樂'],e:'一般短時間活動後通常可喝白開水；長時間大量流汗時，則請大人依活動情況協助補充水分和電解質。'},
+ {l:1,q:'8 歲小朋友每天通常需要多少睡眠？',a:'規律作息，每天睡約9～12小時',o:['規律作息，每天睡約9～12小時','半夜 12 點再睡','不用睡覺','白天睡、晚上玩'],e:'6～12歲兒童通常建議每天睡9～12小時，並維持規律的就寢和起床時間。'},
  {l:1,q:'看電視或平板太久，眼睛會怎樣？',a:'容易疲勞',o:['容易疲勞','變得更亮','長出睫毛','變大'],e:'眼睛一直看近的東西會疲勞，記得每 30 分鐘休息、看看遠方。'},
  {l:1,q:'哪個身體部位幫助我們站穩、跑步？',a:'腳和腿',o:['腳和腿','耳朵','頭髮','指甲'],e:'腳和腿的骨頭、肌肉撐起身體，讓我們能跑能跳。'},
  {l:2,q:'人的身體裡，哪個部位負責思考、指揮身體動作？',a:'大腦',o:['大腦','胃','肺','腳底'],e:'大腦接收眼睛、耳朵的訊息，再指揮肌肉做出動作。'},
  {l:2,q:'吃下去的食物，主要在哪裡被消化？',a:'胃和腸子',o:['胃和腸子','肺','心臟','骨頭'],e:'食物經過胃和腸子被分解，營養再被身體吸收。'},
  {l:2,q:'肺的主要工作是什麼？',a:'吸進氧氣、呼出二氧化碳',o:['吸進氧氣、呼出二氧化碳','消化食物','打敗細菌','讓骨頭變硬'],e:'我們呼吸時，肺把氧氣送進血液，再把二氧化碳排出去。'},
- {l:2,q:'摸手腕或脖子側邊，感覺到一跳一跳的是什麼？',a:'脈搏',o:['脈搏','骨頭在動','肚子餓','肌肉抽筋'],e:'心臟每跳一下，血管就跟著跳動，這叫脈搏。'},
+ {l:2,q:'輕摸手腕靠拇指的一側，感覺到一跳一跳的是什麼？',a:'脈搏',o:['脈搏','骨頭在動','肚子餓','肌肉抽筋'],e:'心臟收縮推動血液，會使動脈有規律地搏動，這就是脈搏。'},
  {l:2,q:'小腿突然抽筋時，比較好的處理方式是？',a:'停下來，慢慢伸展小腿',o:['停下來，慢慢伸展小腿','繼續用力跑','用力捶打','立刻跳進冷水'],e:'抽筋時先停下來，輕輕把腳尖往身體方向拉，慢慢伸展。'},
  {l:2,q:'為什麼打擊時要戴頭盔、捕手要戴護具？',a:'保護重要部位，減少受傷',o:['保護重要部位，減少受傷','讓自己變重','跑得比較快','讓球飛更遠'],e:'球速很快，護具能吸收撞擊力，保護頭部和身體。'},
  {l:2,q:'牙齒外面最硬的那層叫什麼？',a:'琺瑯質',o:['琺瑯質','肌肉','頭髮','指紋'],e:'琺瑯質是人體最硬的部分，但吃太多糖又不刷牙會被蛀壞。'},
@@ -864,13 +917,13 @@ SCIENCE_BANK.body.push(
  {l:3,q:'吃蔬菜水果主要可以補充什麼？',a:'維生素和纖維',o:['維生素和纖維','大量脂肪','咖啡因','塑膠'],e:'蔬果有維生素、礦物質和纖維，幫助身體正常運作、排便順暢。'},
  {l:3,q:'感冒時為什麼要多休息、多喝水？',a:'幫助身體對抗病毒、恢復體力',o:['幫助身體對抗病毒、恢復體力','讓病毒長得更快','讓肚子變大','因為不能說話'],e:'休息和補充水分能讓身體的免疫系統更好地對抗病毒。'},
  {l:3,q:'從暗的地方走到大太陽下，瞳孔會怎樣？',a:'變小',o:['變小','變大','不變','消失'],e:'光線很亮時瞳孔縮小，減少進入眼睛的光，保護眼睛。'},
- {l:3,q:'被球砸到腫起來，剛開始最常用的處理是？',a:'冰敷並休息，請大人看看',o:['冰敷並休息，請大人看看','用力按摩','用熱水燙','繼續比賽不管它'],e:'剛受傷時冰敷可以減少腫脹，嚴重時要請大人帶去看醫生。'},
+ {l:3,q:'被球砸到腫起來，剛開始最常用的處理是？',a:'冰敷並休息，請大人看看',o:['冰敷並休息，請大人看看','用力按摩','用熱水燙','繼續比賽不管它'],e:'先停止活動並告訴大人。若需要冰敷，應由大人以毛巾包住冰袋、短時間使用，不能直接貼皮膚；疼痛劇烈或不能活動時要就醫。'},
  {l:3,q:'身高、體重會長大，主要和下面哪件事最有關係？',a:'營養、睡眠和運動',o:['營養、睡眠和運動','玩手機時間','頭髮長度','衣服顏色'],e:'均衡飲食、充足睡眠和規律運動，都是成長的重要條件。'},
  {l:4,q:'血液裡負責運送氧氣的是哪一種細胞？',a:'紅血球',o:['紅血球','白血球','神經細胞','皮膚細胞'],e:'紅血球含有血紅素，能帶著氧氣送到全身。'},
  {l:4,q:'白血球的主要工作是什麼？',a:'對抗細菌和病毒',o:['對抗細菌和病毒','運送氧氣','消化食物','長出頭髮'],e:'白血球是身體的「防衛隊」，會攻擊入侵的病菌。'},
  {l:4,q:'打擊時看到球就揮棒，訊息的傳遞順序是？',a:'眼睛 → 大腦 → 肌肉',o:['眼睛 → 大腦 → 肌肉','肌肉 → 眼睛 → 大腦','大腦 → 腳 → 眼睛','耳朵 → 胃 → 手'],e:'眼睛看到球，神經把訊息傳到大腦，大腦再指揮手臂肌肉揮棒。'},
  {l:4,q:'長時間激烈運動、又流很多汗，除了水之外身體也會流失什麼？',a:'鹽分（電解質）',o:['鹽分（電解質）','骨頭','頭髮','視力'],e:'汗水裡有鹽分，長時間大量流汗時要適當補充電解質。'},
- {l:4,q:'為什麼小朋友不適合長時間練習變化球？',a:'手臂骨頭的生長板還在發育，容易受傷',o:['手臂骨頭的生長板還在發育，容易受傷','因為球會變小','因為會變矮','因為太容易三振別人'],e:'成長中的骨頭末端有生長板，反覆扭轉用力容易受傷，所以少棒會限制投球。'},
+ {l:4,q:'為什麼小朋友投球要遵守教練安排的球數與休息時間？',a:'手臂還在發育，過度使用容易受傷',o:['手臂還在發育，過度使用容易受傷','因為球會變小','因為會變矮','因為太容易三振別人'],e:'成長中的手臂仍在發育，過度投球可能傷害骨骼、肌肉與關節。應依年齡與專業指導安排球數和休息，有疼痛就停止並告訴大人。'},
  {l:4,q:'人體大約有多少比例是水？',a:'大約一半以上',o:['大約一半以上','不到一成','完全沒有','百分之百'],e:'人體大約 50～70% 是水，所以補充水分很重要。'}
 );
 SCIENCE_BANK.force.push(
@@ -883,24 +936,24 @@ SCIENCE_BANK.force.push(
  {l:1,q:'把氣球吹大後放開不綁，氣球會怎樣？',a:'一邊噴氣一邊亂飛',o:['一邊噴氣一邊亂飛','停在空中不動','變成石頭','直接掉到地上不動'],e:'空氣往一邊噴出，氣球就被推往相反的方向。'},
  {l:1,q:'推門的時候，推哪裡最省力？',a:'離門軸最遠的地方',o:['離門軸最遠的地方','最靠近門軸的地方','門的正中間上方','推哪裡都一樣'],e:'離轉軸越遠，轉動需要的力越小，所以門把裝在離門軸遠的那邊。'},
  {l:2,q:'兩塊磁鐵，同樣的極（N 對 N）靠近時會怎樣？',a:'互相排斥',o:['互相排斥','互相吸引','沒有反應','變成一塊'],e:'同極相斥、異極相吸。'},
- {l:2,q:'為什麼球棒握在尾端揮擊，比握在中間揮得更有力？',a:'球棒前端轉得更快',o:['球棒前端轉得更快','球棒變輕了','球變小了','手變長了'],e:'握在尾端時，球棒前端離轉動中心更遠，速度更快，打擊更有力。'},
+ {l:2,q:'球棒以相同角速度轉動時，擊球處離轉軸較遠，線速度會怎樣？',a:'線速度較大',o:['線速度較大','球棒變輕了','球變小了','手變長了'],e:'在角速度相同時，離轉軸越遠，線速度越大。但改變握棒位置也會影響揮棒能力，不能直接推論每個人握尾端就一定打得更有力。'},
  {l:2,q:'籃球從同樣高度落到木頭地板和沙子上，哪裡彈得比較高？',a:'木頭地板',o:['木頭地板','沙子','一樣高','都不會彈'],e:'沙子會吸收球的能量，硬的地板讓球彈得比較高。'},
- {l:2,q:'同樣大小的鐵球和塑膠球，從同樣高度放手（不考慮空氣），哪個先落地？',a:'幾乎同時落地',o:['幾乎同時落地','鐵球一定先落地很多','塑膠球先落地','都不會落地'],e:'在沒有空氣阻力時，物體不論輕重都以相同的方式落下；同樣大小的球，空氣影響也很小。'},
+ {l:2,q:'同樣大小的鐵球和塑膠球，從同樣高度放手（不考慮空氣），哪個先落地？',a:'幾乎同時落地',o:['幾乎同時落地','鐵球一定先落地很多','塑膠球先落地','都不會落地'],e:'在同一地點、忽略空氣阻力，且從相同高度同時由靜止放手時，兩球的重力加速度相同，會同時落地；有空氣時則還要考慮阻力。'},
  {l:2,q:'溜滑梯時，穿褲子和墊著塑膠墊，哪個滑得比較快？',a:'墊著光滑的塑膠墊',o:['墊著光滑的塑膠墊','穿粗糙的褲子','一樣快','都滑不動'],e:'表面越光滑，摩擦力越小，滑得越快。'},
- {l:2,q:'拉弓或拉橡皮筋，放手後東西飛出去，力量是從哪裡來的？',a:'被拉長的彈力',o:['被拉長的彈力','磁力','電力','光'],e:'橡皮筋被拉長時儲存了彈力，放手時彈力把東西推出去。'},
+ {l:2,q:'拉長橡皮筋再放開，哪一種力會讓橡皮筋縮回？',a:'橡皮筋的彈力',o:['橡皮筋的彈力','磁力','電力','光'],e:'橡皮筋被拉長時儲存彈性位能；放開後，彈力使它縮回，位能可轉成動能。力不是被儲存的能量。'},
  {l:2,q:'用吸管喝飲料，飲料是被什麼推上來的？',a:'空氣的壓力',o:['空氣的壓力','磁力','地心引力往上拉','聲音'],e:'吸走吸管裡的空氣後，外面的空氣壓力把飲料推進吸管。'},
- {l:2,q:'為什麼腳踏車煞車時，輪子會慢慢停下來？',a:'煞車皮和輪子摩擦',o:['煞車皮和輪子摩擦','輪子沒電了','地心引力變大','風太大'],e:'煞車皮壓住輪子產生摩擦力，讓輪子越轉越慢。'},
+ {l:2,q:'使用輪圈煞車的腳踏車，煞車時輪子為什麼會慢下來？',a:'煞車皮和輪圈摩擦',o:['煞車皮和輪圈摩擦','輪子沒電了','地心引力變大','風太大'],e:'輪圈煞車的煞車皮壓住輪圈，摩擦會讓輪子減速；其他種類如碟煞，則是煞車片與碟盤接觸。'},
  {l:3,q:'投手投出的快速球，大約要多久才到本壘？',a:'不到 1 秒',o:['不到 1 秒','大約 5 秒','大約 10 秒','大約 1 分鐘'],e:'職業投手的快速球從投手丘到本壘大約只要 0.4～0.5 秒，打者要非常快地判斷。'},
  {l:3,q:'用槓桿（像蹺蹺板）抬重物，支點靠近重物會怎樣？',a:'比較省力',o:['比較省力','比較費力','完全抬不動','一樣'],e:'支點越靠近重物，施力的那一邊越長，越省力。'},
  {l:3,q:'為什麼跑壘時要繞著跑，而不是在壘包前急停再轉直角？',a:'速度轉彎時需要向內的力，弧線比較不會減速',o:['速度轉彎時需要向內的力，弧線比較不會減速','因為規則規定一定要畫圓','因為壘包會動','因為比較好看'],e:'要改變跑的方向需要力，用弧線轉彎比急停再轉更能保持速度。'},
  {l:3,q:'打出的高飛球，飛到最高點時速度會怎樣？',a:'往上的速度變成零，然後開始往下',o:['往上的速度變成零，然後開始往下','變得最快','突然停在空中很久','往上的速度越來越快'],e:'地心引力一直讓球往上的速度變慢，到最高點時往上速度是零，接著開始落下。'},
- {l:3,q:'聲音在下面哪一種物質中傳得最快？',a:'鐵',o:['鐵','空氣','真空','棉花'],e:'聲音在固體中傳得比液體、氣體快；真空中無法傳聲。'},
+ {l:3,q:'聲音在下面哪一種物質中傳得最快？',a:'鐵',o:['鐵','空氣','真空','棉花'],e:'在這些選項中，聲音沿鐵傳播的速度通常比在空氣中快。不同材料仍有差異，不能只看固體或氣體就一概而論；真空中無法傳聲。'},
  {l:3,q:'把耳朵貼在桌上，聽朋友敲桌子的聲音會怎樣？',a:'聽得比較清楚',o:['聽得比較清楚','完全聽不到','聲音變成光','聲音變慢很多'],e:'聲音在木頭（固體）中傳得比空氣好，所以聽得更清楚。'},
  {l:3,q:'同樣力量揮棒，打到球棒的甜蜜點和打到手把附近，哪個手比較麻？',a:'打到手把附近',o:['打到手把附近','打到甜蜜點','一樣麻','都不會麻'],e:'打到甜蜜點時球棒振動最小；打偏時振動傳到手上，所以手會麻。'},
  {l:3,q:'為什麼盜壘時常常要滑壘？',a:'減少被觸殺的範圍，也能在壘包停住',o:['減少被觸殺的範圍，也能在壘包停住','因為滑壘比跑步快很多','因為鞋子太滑','因為規則一定要滑'],e:'滑壘讓身體貼地、靠摩擦力停在壘包上，不會衝過頭。'},
- {l:4,q:'在完全沒有空氣的太空中，丟出去的球會怎樣？',a:'一直以同樣速度往前飛，直到被其他力改變',o:['一直以同樣速度往前飛，直到被其他力改變','馬上停下來','慢慢變慢然後停','掉回地面'],e:'沒有摩擦和空氣阻力時，物體會保持原本的運動，這叫慣性。'},
+ {l:4,q:'球在太空中飛行，假設受到的合外力為零，它的運動會怎樣？',a:'一直以同樣速度往前飛，直到被其他力改變',o:['一直以同樣速度往前飛，直到被其他力改變','馬上停下來','慢慢變慢然後停','掉回地面'],e:'合外力為零時，物體保持等速直線運動，這是慣性。真空只表示沒有空氣，仍可能有重力；沒有空氣不等於沒有外力。'},
  {l:4,q:'坐車時突然煞車，身體會往前傾，這是因為？',a:'慣性：身體想保持原來的運動',o:['慣性：身體想保持原來的運動','磁力把人往前吸','車子變重','風把人吹向前'],e:'車子停了，但身體還想往前動，所以會往前傾，要繫好安全帶。'},
- {l:4,q:'同樣的打擊力量，打木製球棒和鋁製球棒，為什麼鋁棒常常讓球飛更遠？',a:'鋁棒比較有彈性，把更多能量傳給球',o:['鋁棒比較有彈性，把更多能量傳給球','鋁棒比較重很多','球碰到鋁會變輕','鋁棒有磁力'],e:'中空的鋁棒在擊球瞬間有「彈床效應」，能把更多能量還給球。'},
+ {l:4,q:'有些中空鋁製球棒擊球時會有「彈床效應」，主要指什麼？',a:'管壁受撞擊變形再回彈，將部分能量還給球',o:['管壁受撞擊變形再回彈，將部分能量還給球','鋁棒比較重很多','球碰到鋁會變輕','鋁棒有磁力'],e:'有些中空球棒的管壁在撞擊時變形再回彈，稱為彈床效應。實際擊球距離還受設計、揮棒速度及擊中位置影響，不能說所有鋁棒一定比木棒打得遠。'},
  {l:4,q:'投手讓球往前旋轉（上旋），球會比較快落下還是比較慢落下？',a:'比較快落下',o:['比較快落下','比較慢落下','完全不受影響','會往上飛'],e:'旋轉讓周圍空氣產生不同的壓力；上旋會讓球受到往下的力，掉得比較快。'},
  {l:4,q:'能量會「消失」嗎？例如球滾著滾著停下來了。',a:'不會消失，變成熱和聲音等其他形式',o:['不會消失，變成熱和聲音等其他形式','會完全消失','會變成新的球','會跑到月亮上'],e:'能量守恆：球的動能透過摩擦轉成熱能和聲音，總量不變。'},
  {l:4,q:'想用最少的力氣把重箱子抬上卡車，用哪個方法比較好？',a:'用一塊長斜板慢慢推上去',o:['用一塊長斜板慢慢推上去','直接垂直抬上去','把箱子丟上去','在箱子上綁氣球'],e:'斜面讓距離變長、需要的力變小，所以比較省力。'}
@@ -911,7 +964,7 @@ SCIENCE_BANK.nature.push(
  {l:1,q:'蝴蝶小時候是什麼樣子？',a:'毛毛蟲',o:['毛毛蟲','蝌蚪','小鳥','小蛇'],e:'蝴蝶的一生：卵 → 幼蟲（毛毛蟲）→ 蛹 → 成蟲。'},
  {l:1,q:'台灣哪個季節常有颱風？',a:'夏天和秋天',o:['夏天和秋天','只有冬天','只有春天','從來沒有'],e:'台灣的颱風大多出現在夏季到秋季。'},
  {l:1,q:'晚上天空中，月亮的形狀每天都一樣嗎？',a:'不一樣，會慢慢改變',o:['不一樣，會慢慢改變','每天都一樣圓','每天都是彎彎的','月亮只有白天才有'],e:'月亮大約一個月會從新月變成滿月再變回新月。'},
- {l:1,q:'植物的哪個部分會從土裡吸水？',a:'根',o:['根','花','果實','葉子尖端'],e:'根長在土裡，吸收水分和養分，也幫植物站穩。'},
+ {l:1,q:'植物的哪個部分會從土裡吸水？',a:'根',o:['根','花','果實','葉子尖端'],e:'一般陸生植物的根能吸收土壤中的水分與礦物質，也幫植物固定；葉片可透過光合作用製造糖類等養分。'},
  {l:1,q:'冬天把手放進冷水裡，手會覺得？',a:'冰冰冷冷的',o:['冰冰冷冷的','很燙','完全沒有感覺','很黏'],e:'皮膚能感覺溫度，冷水會讓手覺得冷。'},
  {l:1,q:'哪一種動物是用鰓在水裡呼吸？',a:'魚',o:['魚','狗','鳥','貓'],e:'魚用鰓從水中取得氧氣。'},
  {l:2,q:'把一杯熱水放在桌上，過一段時間會怎樣？',a:'慢慢變涼',o:['慢慢變涼','越來越燙','變成冰塊','完全不變'],e:'熱會從溫度高的地方傳到溫度低的地方，熱水會慢慢冷下來。'},
@@ -923,10 +976,10 @@ SCIENCE_BANK.nature.push(
  {l:2,q:'為什麼下過大雨後，河水常常變得混濁？',a:'雨水把泥沙沖進河裡',o:['雨水把泥沙沖進河裡','河水變成牛奶','魚把水弄髒','太陽把水染色'],e:'大雨沖刷地面，泥沙跟著流進河裡，水就變混濁了。'},
  {l:2,q:'台灣的冬天，北部和南部哪邊通常比較溫暖？',a:'南部',o:['南部','北部','一樣冷','台灣沒有冬天'],e:'南部比較接近赤道，冬天也受東北季風影響較小，通常比較溫暖。'},
  {l:3,q:'地球繞太陽一圈大約要多久？',a:'一年',o:['一年','一天','一個月','一小時'],e:'地球公轉一圈大約 365 天，就是一年。'},
- {l:3,q:'月亮繞地球一圈大約多久？',a:'大約一個月',o:['大約一個月','一天','一年','一小時'],e:'月亮繞地球大約 27～29 天，所以月相大約一個月變化一輪。'},
+ {l:3,q:'月亮繞地球一圈大約多久？',a:'大約一個月',o:['大約一個月','一天','一年','一小時'],e:'月球相對遠方恆星繞地球一圈約27.3天；從一次新月到下次新月的月相週期約29.5天。兩種週期的參考方向不同，不能混為一談。'},
  {l:3,q:'為什麼會有春夏秋冬四季？',a:'地球的自轉軸是傾斜的，繞太陽時陽光照射角度改變',o:['地球的自轉軸是傾斜的，繞太陽時陽光照射角度改變','地球離太陽時遠時近得很多','太陽會關掉一陣子','月亮擋住太陽'],e:'地軸傾斜，讓一年中不同時間陽光照射的角度和時間長短不同，產生季節。'},
  {l:3,q:'食物鏈「草 → 兔子 → 老鷹」中，兔子吃什麼？',a:'草',o:['草','老鷹','石頭','陽光直接'],e:'食物鏈表示誰吃誰：兔子吃草，老鷹吃兔子。'},
- {l:3,q:'海水為什麼是鹹的？',a:'河流把陸地上的礦物鹽帶進海裡，長久累積',o:['河流把陸地上的礦物鹽帶進海裡，長久累積','有人倒鹽巴進去','魚的眼淚','太陽把海曬鹹'],e:'雨水和河流溶解岩石中的鹽分帶入海中，水蒸發了鹽留下來，越積越多。'},
+ {l:3,q:'海水中的鹽分，一個重要來源是什麼？',a:'河流把陸地上的礦物鹽帶進海裡，長久累積',o:['河流把陸地上的礦物鹽帶進海裡，長久累積','有人倒鹽巴進去','魚的眼淚','太陽把海曬鹹'],e:'河流會把岩石風化、溶解產生的離子帶進海洋，海底也有物質交換。水蒸發時大多不帶走鹽分；鹽分也有移出的途徑，不能認為海水會無限變鹹。'},
  {l:3,q:'地震時在室內，最好的做法是？',a:'趴下、掩護、穩住',o:['趴下、掩護、穩住','馬上搭電梯下樓','跑到窗戶旁邊','站在吊燈下面'],e:'地震時要「趴下、掩護、穩住」，遠離窗戶與會掉落的東西，不要搭電梯。'},
  {l:3,q:'植物利用陽光、水和二氧化碳製造養分，同時會放出什麼？',a:'氧氣',o:['氧氣','二氧化碳','煙','鹽'],e:'這叫光合作用，植物會釋放氧氣，讓動物可以呼吸。'},
  {l:3,q:'為什麼要做資源回收？',a:'減少垃圾、讓資源可以再利用',o:['減少垃圾、讓資源可以再利用','讓垃圾變多','讓垃圾車比較累','因為好玩而已'],e:'回收紙、塑膠、金屬等可以再製成新東西，節省資源也減少污染。'},
@@ -946,22 +999,22 @@ SCIENCE_BANK.lab.push(
  {l:1,q:'記錄實驗結果時，下面哪個方法最清楚？',a:'用表格寫下每一次的數字',o:['用表格寫下每一次的數字','只用腦袋記','隨便寫在手上','不用記錄'],e:'表格能清楚整理資料，方便之後比較。'},
  {l:2,q:'小紀種兩盆豆子，一盆每天澆水，一盆不澆水，其他都一樣。他想知道什麼？',a:'水對植物生長的影響',o:['水對植物生長的影響','陽光對植物的影響','土的顏色','花盆的價錢'],e:'只有「澆不澆水」不同，所以他在研究水的影響。'},
  {l:2,q:'想比較三種球誰彈得最高，每種球都要從哪裡放下？',a:'同一個高度',o:['同一個高度','不同高度','用力往下丟','隨便丟'],e:'放下的高度要一樣，比較才公平。'},
- {l:2,q:'測量跑 50 公尺的時間，為什麼最好量 3 次再取平均？',a:'減少每一次的誤差',o:['減少每一次的誤差','讓數字變大','因為量一次會壞掉','比較浪費時間'],e:'每次測量都可能有一點誤差，多次取平均比較準確。'},
+ {l:2,q:'測量跑 50 公尺的時間，為什麼最好量 3 次再取平均？',a:'減少隨機誤差對平均結果的影響',o:['減少隨機誤差對平均結果的影響','讓數字變大','因為量一次會壞掉','比較浪費時間'],e:'相同條件下多次測量取平均，有助減少隨機誤差的影響；工具偏差或操作方式一直有錯，不能靠平均消除。'},
  {l:2,q:'實驗中「故意改變的條件」叫做什麼？',a:'操縱變因',o:['操縱變因','控制變因','結果','結論'],e:'故意改變的是操縱變因；保持不變的是控制變因；觀察到的是結果。'},
  {l:2,q:'想知道「溫度會不會影響糖溶解的速度」，要改變什麼？',a:'水的溫度',o:['水的溫度','糖的種類和水的溫度一起換','杯子的顏色','攪拌的人'],e:'只改變水溫，其他（糖量、水量、攪拌方式）都一樣。'},
  {l:2,q:'觀察天氣一個星期，最好的記錄方式是？',a:'每天同一個時間記錄天氣和氣溫',o:['每天同一個時間記錄天氣和氣溫','想到才記','只記星期日','只記下雨的日子'],e:'固定時間記錄，資料才能互相比較。'},
  {l:3,q:'畫圖表時，想看出「一週的氣溫怎麼變化」，用什麼圖最好？',a:'折線圖',o:['折線圖','圓餅圖','地圖','照片'],e:'折線圖能清楚看出數字隨時間上升或下降。'},
  {l:3,q:'想比較「全班最喜歡的運動各占多少」，用什麼圖最好？',a:'圓餅圖或長條圖',o:['圓餅圖或長條圖','折線圖','地圖','流程圖'],e:'圓餅圖看比例、長條圖比大小，都適合比較各項目的多寡。'},
- {l:3,q:'大顏說：「有戴手環的那天我都打得比較好。」要證明手環有效，應該怎麼做？',a:'很多場比賽中比較戴和不戴的結果',o:['很多場比賽中比較戴和不戴的結果','只看一場比賽','問朋友覺得怎樣','直接相信'],e:'要用足夠多次、公平的比較，才能判斷手環是不是真的有影響。'},
+ {l:3,q:'大顏說：「有戴手環的那天我都打得比較好。」想進一步檢查這個說法，應該怎麼做？',a:'很多場比賽中比較戴和不戴的結果',o:['很多場比賽中比較戴和不戴的結果','只看一場比賽','問朋友覺得怎樣','直接相信'],e:'需要多次且盡量公平的比較，並考慮對手、練習和身體狀態等因素；只看戴手環那幾場，不能證明手環有效。'},
  {l:3,q:'實驗結果和預測不同時，最正確的態度是？',a:'接受結果，找出可能的原因再驗證',o:['接受結果，找出可能的原因再驗證','把結果改成預測的樣子','說實驗壞掉了不算','再也不做實驗'],e:'科學是根據證據修正想法，意外的結果常常帶來新發現。'},
  {l:3,q:'「猜想：用力越大，球飛越遠。」這在科學方法中叫做什麼？',a:'假設',o:['假設','結論','工具','記錄表'],e:'實驗前提出、等著被驗證的猜想叫做假設。'},
  {l:3,q:'下面哪一個是「觀察」，不是「推論」？',a:'球從桌上掉到地上',o:['球從桌上掉到地上','球掉下來是因為它想回家','球一定是故意的','球很傷心'],e:'觀察是用感官看到、聽到的事實；推論是根據觀察猜原因。'},
  {l:4,q:'想研究「球棒重量是否影響揮棒速度」，下列哪個應該保持不變？',a:'同一位打者、同樣的揮棒方式',o:['同一位打者、同樣的揮棒方式','球棒的重量','換不同打者每次揮','有時用力有時不用力'],e:'球棒重量是要改變的條件，其他像打者、揮棒方式都要控制不變。'},
  {l:4,q:'5 次測量結果是 12、13、12、30、13 秒，30 秒最可能是什麼？',a:'可能出錯的異常值，要檢查原因',o:['可能出錯的異常值，要檢查原因','最正確的數字','平均值','一定要刪掉其他數字'],e:'和其他數據差很多的值叫異常值，要檢查是否測量失誤，而不是隨便刪改。'},
  {l:4,q:'為什麼科學家要把實驗方法寫得很詳細？',a:'讓別人可以重做，驗證結果',o:['讓別人可以重做，驗證結果','讓文章比較長','怕自己忘記吃飯','讓別人看不懂'],e:'能被別人重複做出相同結果，科學發現才可信。'},
- {l:4,q:'溫度計讀數是 25.4 度，比較精確的說法是？',a:'大約 25 度多一點',o:['大約 25 度多一點','剛好 30 度','大約 2 度','25 公尺'],e:'25.4 度介於 25 和 26 之間，比較接近 25。'},
+ {l:4,q:'溫度計讀數是25.4°C，下面哪個描述符合讀數？',a:'大約 25 度多一點',o:['大約 25 度多一點','剛好 30 度','大約 2 度','25 公尺'],e:'25.4 度介於 25 和 26 之間，比較接近 25。'},
  {l:4,q:'「每天喝牛奶的同學比較高」，這能證明牛奶讓人長高嗎？',a:'不能直接證明，可能還有其他原因',o:['不能直接證明，可能還有其他原因','可以，一定是牛奶','可以，喝越多越高','牛奶會讓人變矮'],e:'兩件事一起出現不代表一個造成另一個，可能還有飲食、睡眠、遺傳等因素。'},
- {l:4,q:'設計實驗時，「對照組」的作用是什麼？',a:'作為比較的標準',o:['作為比較的標準','讓實驗更好玩','可以不用記錄','增加花費'],e:'對照組不做改變，和實驗組比較，才知道改變造成什麼差異。'}
+ {l:4,q:'設計實驗時，「對照組」的作用是什麼？',a:'作為比較的標準',o:['作為比較的標準','讓實驗更好玩','可以不用記錄','增加花費'],e:'對照組作為比較基準，與實驗組的重要差別應是研究的處理條件；其他條件盡量相同，才能評估該處理的影響。'}
 );
 
 const ALPHABET=[{"upper":"A","lower":"a","word":"apple","meaning":"蘋果","icon":"🍎","nameIpa":"/eɪ/","soundIpa":"/æ/"},{"upper":"B","lower":"b","word":"ball","meaning":"球","icon":"⚾","nameIpa":"/biː/","soundIpa":"/b/"},{"upper":"C","lower":"c","word":"cat","meaning":"貓","icon":"🐈","nameIpa":"/siː/","soundIpa":"/k/"},{"upper":"D","lower":"d","word":"dog","meaning":"狗","icon":"🐕","nameIpa":"/diː/","soundIpa":"/d/"},{"upper":"E","lower":"e","word":"egg","meaning":"蛋","icon":"🥚","nameIpa":"/iː/","soundIpa":"/ɛ/"},{"upper":"F","lower":"f","word":"fish","meaning":"魚","icon":"🐟","nameIpa":"/ɛf/","soundIpa":"/f/"},{"upper":"G","lower":"g","word":"goat","meaning":"山羊","icon":"🐐","nameIpa":"/dʒiː/","soundIpa":"/ɡ/"},{"upper":"H","lower":"h","word":"hat","meaning":"帽子","icon":"🧢","nameIpa":"/eɪtʃ/","soundIpa":"/h/"},{"upper":"I","lower":"i","word":"igloo","meaning":"冰屋","icon":"🧊","nameIpa":"/aɪ/","soundIpa":"/ɪ/"},{"upper":"J","lower":"j","word":"jump","meaning":"跳躍","icon":"🤸","nameIpa":"/dʒeɪ/","soundIpa":"/dʒ/"},{"upper":"K","lower":"k","word":"kite","meaning":"風箏","icon":"🪁","nameIpa":"/keɪ/","soundIpa":"/k/"},{"upper":"L","lower":"l","word":"lion","meaning":"獅子","icon":"🦁","nameIpa":"/ɛl/","soundIpa":"/l/"},{"upper":"M","lower":"m","word":"moon","meaning":"月亮","icon":"🌙","nameIpa":"/ɛm/","soundIpa":"/m/"},{"upper":"N","lower":"n","word":"nose","meaning":"鼻子","icon":"👃","nameIpa":"/ɛn/","soundIpa":"/n/"},{"upper":"O","lower":"o","word":"octopus","meaning":"章魚","icon":"🐙","nameIpa":"/oʊ/","soundIpa":"/ɑ/"},{"upper":"P","lower":"p","word":"pig","meaning":"豬","icon":"🐷","nameIpa":"/piː/","soundIpa":"/p/"},{"upper":"Q","lower":"q","word":"queen","meaning":"女王","icon":"👑","nameIpa":"/kjuː/","soundIpa":"/kw/"},{"upper":"R","lower":"r","word":"rabbit","meaning":"兔子","icon":"🐇","nameIpa":"/ɑɹ/","soundIpa":"/ɹ/"},{"upper":"S","lower":"s","word":"sun","meaning":"太陽","icon":"☀️","nameIpa":"/ɛs/","soundIpa":"/s/"},{"upper":"T","lower":"t","word":"tiger","meaning":"老虎","icon":"🐅","nameIpa":"/tiː/","soundIpa":"/t/"},{"upper":"U","lower":"u","word":"umbrella","meaning":"雨傘","icon":"☂️","nameIpa":"/juː/","soundIpa":"/ʌ/"},{"upper":"V","lower":"v","word":"van","meaning":"廂型車","icon":"🚐","nameIpa":"/viː/","soundIpa":"/v/"},{"upper":"W","lower":"w","word":"water","meaning":"水","icon":"💧","nameIpa":"/ˈdʌbəl.juː/","soundIpa":"/w/"},{"upper":"X","lower":"x","word":"fox","meaning":"狐狸","icon":"🦊","nameIpa":"/ɛks/","soundIpa":"/ks/"},{"upper":"Y","lower":"y","word":"yellow","meaning":"黃色","icon":"💛","nameIpa":"/waɪ/","soundIpa":"/j/"},{"upper":"Z","lower":"z","word":"zebra","meaning":"斑馬","icon":"🦓","nameIpa":"/ziː/","soundIpa":"/z/"}];
@@ -1012,12 +1065,12 @@ function showSpeechStatus(text){const el=document.getElementById('speech-status'
 function stopEnglish(){clearTimeout(autoReadTimer);speechAttempt++;clearTimeout(voiceHealthTimer);clearTimeout(wordReplayTimer);wordReplayTimer=null;if(activeRecordedAudio){try{activeRecordedAudio.pause();activeRecordedAudio.removeAttribute('src');activeRecordedAudio.load()}catch(_){}activeRecordedAudio=null}try{if('speechSynthesis'in window){speechSynthesis.cancel()}}catch(_){}speechActive=null}
 
 const VOCAB={
-1:[["ball","球","⚾"],["bat","球棒",""],["glove","手套","🧤"],["run","跑","🏃"],["hit","擊打","💥"],["catch","接住","🙌"],["team","隊伍","👥"],["coach","教練","🧑‍🏫"],["home","家","🏠"],["school","學校","🏫"],["water","水","💧"],["book","書","📘"],["happy","開心的","😊"],["fast","快速的","💨"],["friend","朋友","🤝"],["red","紅色","🔴"],["blue","藍色","🔵"],["jump","跳","🦘"],["hat","帽子","🧢"],["pen","原子筆","🖊️"],["pencil","鉛筆","✏️"],["bag","書包","🎒"],["desk","書桌",""],["chair","椅子","🪑"],["table","桌子",""],["door","門","🚪"],["window","窗戶","🪟"],["clock","時鐘","🕒"],["light","燈光","💡"],["breakfast","早餐","🥣"],["lunch","午餐","🍱"],["dinner","晚餐","🍽️"],["rice","米飯","🍚"],["milk","牛奶","🥛"],["bread","麵包","🍞"],["banana","香蕉","🍌"],["orange","橘子","🍊"],["hand","手","✋"],["head","頭","🙂"],["foot","腳","🦶"],["eye","眼睛","👁️"],["ear","耳朵","👂"],["leg","腿","🦵"],["shirt","襯衫","👕"],["shoes","鞋子","👟"],["play","玩耍","🎮"],["read","閱讀","📚"],["write","寫字","✍️"],["sing","唱歌","🎤"],["walk","走路","🚶"],["swim","游泳","🏊"],["big","大的","🐘"],["small","小的","🐁"],["long","長的","📏"],["short","短的","📐"],["hot","熱的","🔥"],["cold","冷的","🧊"],["green","綠色","🟢"],["white","白色","⚪"],["black","黑色","⚫"],["park","公園","🌳"],["family","家人","👨‍👩‍👧‍👦"],["mother","媽媽","👩"],["father","爸爸","👨"],["sister","姊妹","👧"],["brother","兄弟","👦"],["teacher","老師","🧑‍🏫"],["student","學生","🧑‍🎓"],["bike","腳踏車","🚲"],["rain","雨","🌧️"],["tree","樹","🌲"],["flower","花","🌸"],["bird","鳥","🐦"]],
+1:[["ball","球","⚾"],["bat","球棒",""],["glove","手套","🧤"],["run","跑","🏃"],["hit","擊打","💥"],["catch","接住","🙌"],["team","隊伍","👥"],["coach","教練","🧑‍🏫"],["home","家","🏠"],["school","學校","🏫"],["water","水","💧"],["book","書","📘"],["happy","開心的","😊"],["fast","快速的","💨"],["friend","朋友","🤝"],["red","紅色","🔴"],["blue","藍色","🔵"],["jump","跳","🦘"],["hat","帽子","🧢"],["pen","原子筆","🖊️"],["pencil","鉛筆","✏️"],["bag","袋子；包包","🎒"],["desk","書桌",""],["chair","椅子","🪑"],["table","桌子",""],["door","門","🚪"],["window","窗戶","🪟"],["clock","時鐘","🕒"],["light","燈光","💡"],["breakfast","早餐","🥣"],["lunch","午餐","🍱"],["dinner","晚餐","🍽️"],["rice","米飯","🍚"],["milk","牛奶","🥛"],["bread","麵包","🍞"],["banana","香蕉","🍌"],["orange","橘子","🍊"],["hand","手","✋"],["head","頭","🙂"],["foot","腳","🦶"],["eye","眼睛","👁️"],["ear","耳朵","👂"],["leg","腿","🦵"],["shirt","襯衫","👕"],["shoes","鞋子","👟"],["play","玩耍","🎮"],["read","閱讀","📚"],["write","寫字","✍️"],["sing","唱歌","🎤"],["walk","走路","🚶"],["swim","游泳","🏊"],["big","大的","🐘"],["small","小的","🐁"],["long","長的","📏"],["short","短的","📐"],["hot","熱的","🔥"],["cold","冷的","🧊"],["green","綠色","🟢"],["white","白色","⚪"],["black","黑色","⚫"],["park","公園","🌳"],["family","家人","👨‍👩‍👧‍👦"],["mother","媽媽","👩"],["father","爸爸","👨"],["sister","姊妹","👧"],["brother","兄弟","👦"],["teacher","老師","🧑‍🏫"],["student","學生","🧑‍🎓"],["bike","腳踏車","🚲"],["rain","雨","🌧️"],["tree","樹","🌲"],["flower","花","🌸"],["bird","鳥","🐦"]],
 2:[["field","球場","🏟️"],["player","球員","⚾"],["score","得分","🏆"],["practice","練習","🏃"],["helmet","安全帽",""],["throw","投擲",""],["first","第一","1️⃣"],["second","第二","2️⃣"],["ready","準備好的","✅"],["tired","疲倦的","😴"],["before","在……之前","⏪"],["after","在……之後","⏩"],["together","一起","🤝"],["early","早的","🌅"],["strong","強壯的","💪"],["clean","乾淨的","✨"],["quiet","安靜的","🤫"],["learn","學習","🧠"],["arrive","抵達","📍"],["leave","離開","🚶"],["borrow","借入","📗"],["return","歸還","↩️"],["carry","搬運","📦"],["share","分享","🤝"],["invite","邀請","💌"],["remember","記得","🧠"],["forget","忘記","❓"],["decide","決定","✅"],["choose","選擇","🔍"],["enjoy","享受","😊"],["finish","完成","🏁"],["start","開始","🚀"],["problem","問題；難題","❗"],["example","例子","💡"],["story","故事","📖"],["plan","計畫","🗓️"],["healthy","健康的","🥗"],["hungry","飢餓的","🍽️"],["thirsty","口渴的","💧"],["busy","忙碌的","📅"],["safe","安全的","🦺"],["simple","簡單的","🟩"],["difficult","困難的","🧗"],["corner","角落","📐"],["circle","圓形","⭕"],["square","正方形","⬜"],["triangle","三角形","🔺"],["straight","筆直的","➡️"],["opposite","相反的","↔️"],["behind","在後方","🔙"],["between","在兩者之間","↕️"],["across","穿越到對面","🚦"],["around","在周圍","🔄"],["sometimes","有時候","🕓"],["always","總是","♾️"],["never","從不","🚫"],["weekend","週末","🎉"],["month","月份","🗓️"],["season","季節","🍂"],["weather","天氣","⛅"],["cloudy","多雲的","☁️"],["sunny","晴朗的","🌞"],["library","圖書館","📚"],["hospital","醫院","🏥"],["market","市場","🛒"],["train","火車","🚆"],["ticket","票券","🎫"],["baseball","棒球運動","⚾"],["uniform","制服",""],["captain","隊長","🧢"],["catcher","捕手",""],["museum","博物館","🏛️"]],
-3:[["inning","局數","📋"],["batter","打者","🏏"],["pitcher","投手","⚾"],["exercise","運動","🏃"],["improve","進步","📈"],["compare","比較","⚖️"],["prepare","準備","🎒"],["favorite","最喜愛的","❤️"],["usually","通常","🔄"],["careful","小心的","🔎"],["although","雖然","💭"],["because","因為","💡"],["important","重要的","⭐"],["different","不同的","🔀"],["question","問題","❔"],["answer","答案","✅"],["strategy","策略","♟️"],["teamwork","團隊合作","🤝"],["responsibility","責任","📝"],["respect","尊重","🙏"],["patience","耐心","⌛"],["effort","努力","💪"],["confident","有自信的","🌟"],["curious","好奇的","🔎"],["discover","發現","🔬"],["explore","探索","🗺️"],["observe","觀察","👀"],["predict","預測","🔮"],["explain","解釋","💬"],["evidence","證據","📑"],["solution","解決方法","🧩"],["mistake","錯誤","❌"],["result","結果","📊"],["progress","進展","📈"],["challenge","挑戰","🏆"],["opportunity","機會","🚪"],["goal","目標","🎯"],["schedule","時間表","🗓️"],["flexible","有彈性的","🤸"],["routine","例行習慣","🔁"],["encourage","鼓勵","🎉"],["communicate","溝通","🗣️"],["cooperate","合作","👥"],["community","社區","🏘️"],["environment","環境","🌱"],["recycle","回收","♻️"],["reduce","減少","📉"],["balance","平衡","⚖️"],["energy","能量","⚡"],["nutrition","營養","🥦"],["concentrate","專心","🧠"],["focus","聚焦","🎯"],["efficient","有效率的","⏱️"],["distance","距離","📏"],["measure","測量","📐"],["estimate","估計","📊"],["fraction","分數（數學）","¼"],["average","平均值","➗"],["multiply","乘","✖️"],["divide","除","➗"],["experiment","實驗","🧪"],["research","研究","📋"],["decision","決策","📌"],["consequence","後果","🔮"],["persistence","毅力","🏃"],["achievement","成就","🏅"],["identify","辨認","🔍"],["participate","參與","🙋"],["positive","正向的","➕"],["negative","負向的","➖"],["independent","獨立的","🧍"]]
+3:[["inning","一局","📋"],["batter","打者","🏏"],["pitcher","投手","⚾"],["exercise","運動","🏃"],["improve","進步","📈"],["compare","比較","⚖️"],["prepare","準備","🎒"],["favorite","最喜愛的","❤️"],["usually","通常","🔄"],["careful","小心的","🔎"],["although","雖然","💭"],["because","因為","💡"],["important","重要的","⭐"],["different","不同的","🔀"],["question","問題","❔"],["answer","答案","✅"],["strategy","策略","♟️"],["teamwork","團隊合作","🤝"],["responsibility","責任","📝"],["respect","尊重","🙏"],["patience","耐心","⌛"],["effort","努力","💪"],["confident","有自信的","🌟"],["curious","好奇的","🔎"],["discover","發現","🔬"],["explore","探索","🗺️"],["observe","觀察","👀"],["predict","預測","🔮"],["explain","解釋","💬"],["evidence","證據","📑"],["solution","解決方法","🧩"],["mistake","錯誤","❌"],["result","結果","📊"],["progress","進展","📈"],["challenge","挑戰","🏆"],["opportunity","機會","🚪"],["goal","目標","🎯"],["schedule","時間表","🗓️"],["flexible","有彈性的","🤸"],["routine","例行習慣","🔁"],["encourage","鼓勵","🎉"],["communicate","溝通","🗣️"],["cooperate","合作","👥"],["community","社區","🏘️"],["environment","環境","🌱"],["recycle","回收","♻️"],["reduce","減少","📉"],["balance","平衡","⚖️"],["energy","能量","⚡"],["nutrition","營養","🥦"],["concentrate","專心","🧠"],["focus","聚焦","🎯"],["efficient","有效率的","⏱️"],["distance","距離","📏"],["measure","測量","📐"],["estimate","估計","📊"],["fraction","分數（數學）","¼"],["average","平均值","➗"],["multiply","乘","✖️"],["divide","除","➗"],["experiment","實驗","🧪"],["research","研究","📋"],["decision","決策","📌"],["consequence","後果","🔮"],["persistence","毅力","🏃"],["achievement","成就","🏅"],["identify","辨認","🔍"],["participate","參與","🙋"],["positive","正向的","➕"],["negative","負向的","➖"],["independent","獨立的","🧍"]]
 };
 // 容易混淆或在句子裡都說得通的字，不會同時出現在選項中。
-const CONFUSE=[['desk','table','chair'],['sometimes','always','never','usually'],['confident','curious','careful'],['observe','predict','explore','discover','research','experiment','identify'],['improve','progress','achievement'],['effort','persistence','patience'],['teamwork','cooperate','participate','community'],['focus','concentrate'],['goal','plan','schedule','strategy'],['solution','answer','result'],['question','problem'],['exercise','practice'],['early','fast'],['tired','thirsty','hungry','busy'],['happy','enjoy'],['big','long','strong'],['small','short'],['read','learn','study'],['player','captain','catcher','batter','pitcher','coach','team'],['field','park'],['bag','shoes','shirt']];
+const CONFUSE=[['desk','table','chair'],['decide','choose'],['sometimes','always','never','usually'],['confident','curious','careful'],['observe','predict','explore','discover','research','experiment','identify'],['improve','progress','achievement'],['effort','persistence','patience'],['teamwork','cooperate','participate','community'],['focus','concentrate'],['goal','plan','schedule','strategy'],['solution','answer','result'],['question','problem'],['exercise','practice'],['early','fast'],['tired','thirsty','hungry','busy'],['happy','enjoy'],['big','long','strong'],['small','short'],['read','learn','study'],['player','captain','catcher','batter','pitcher','coach','team'],['field','park'],['bag','shoes','shirt']];
 function confusable(a,b){return a===b||CONFUSE.some(g=>g.includes(a)&&g.includes(b))}
 const READ={
 1:[
@@ -1194,7 +1247,7 @@ function patternQuestion(level,forcedKind=null){
   if(kind===0){const start=rand(2,15),step=one([2,3,4,5]);ans=start+3*step;main=`找規律：${start}、${start+step}、${start+step*2}、□。下一個數字？`;exp=`每次增加 ${step}，所以是 ${start+step*2}＋${step}＝${ans}。`;hint='先看相鄰兩個數差多少。'}
   else if(kind===1){const step=one([2,3,5]),start=rand(3*step+3,30);ans=start-3*step;main=`找規律：${start}、${start-step}、${start-step*2}、□。下一個數字？`;exp=`每次減少 ${step}，得到 ${ans}。`;hint='看看數字是變大還是變小。'}
   else if(kind===2){const tens=rand(2,8),ones=rand(0,9);ans=tens*10+ones;main=`${tens} 個十和 ${ones} 個一，合起來是多少？`;exp=`${tens}×10＋${ones}＝${ans}。`;hint='一個十等於10。'}
-  else if(kind===3){const n=rand(11,89),k=one([1,2,5,10]);ans=n+k;main=`從 ${n} 往後跳 ${k} 格，會到哪個數？`;exp=`${n}＋${k}＝${ans}。`;hint='向後跳就是加。'}
+  else if(kind===3){const n=rand(11,89),k=one([1,2,5,10]);ans=n+k;main=`在每格相差 1 的數線上，從 ${n} 往數字較大的方向跳 ${k} 格，會到哪個數？`;exp=`${n}＋${k}＝${ans}。`;hint='往數字較大的方向移動，用加法。'}
   else if(kind===4){const x=rand(2,8),y=x+rand(2,9);ans=y-x;main=`${x}、${y} 中間相差幾？`;exp=`${y}−${x}＝${ans}。`;hint='大的減小的。'}
   else if(kind===5){const a=rand(2,8),b=rand(2,8),c=rand(2,8);ans=a+b+c;main=`三個袋子分別有 ${a}、${b}、${c} 顆球，合計多少顆？`;exp=`${a}＋${b}＋${c}＝${ans}。`;hint='可以先合併兩袋，再加第三袋。'}
   else if(kind===6){const n=rand(3,9),m=one([2,5]);ans=n*m;main=`跳數練習：每次跳 ${m}，跳了 ${n} 次到多少？（從0開始）`;exp=`${n}×${m}＝${ans}。`;hint='數數看重複加了幾次。'}
@@ -1264,14 +1317,14 @@ function calcQuestion(level){
     else if(kind===2){a=rand(2,9);b=rand(2,5);ans=a*b;eq=`${a} 組，每組 ${b} 個，共幾個？`;exp=`${a}×${b}＝${ans}。`}
     else{a=rand(11,30);b=rand(3,8);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`${a} 減去 ${b}＝${ans}。`}
   }else if(level===2){
-    if(kind===0){a=rand(12,68);b=rand(12,26);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`個位相加滿10要進位，答案 ${ans}。`}
+    if(kind===0){a=rand(12,68);b=rand(12,26);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`先把個位相加；滿10時才向十位進位。答案 ${ans}。`}
     else if(kind===1){a=rand(50,99);b=rand(18,a-4);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`先算個位，再算十位；答案 ${ans}。`}
     else if(kind===2){a=rand(2,9);b=rand(2,9);ans=a*b;eq=`${a} × ${b} ＝ ?`;exp=`${a} 乘以 ${b}＝${ans}。`}
     else if(kind===3){a=rand(2,9);b=rand(2,8);ans=b;eq=`${a*b} ÷ ${a} ＝ ?`;exp=`${a*b} 平均分 ${a} 份，每份 ${b}。`}
     else if(kind===4){a=rand(5,20);b=rand(5,20);ans=a+b;eq=`□ − ${a} ＝ ${b}`;exp=`空格要加回 ${a}，所以 ${a}+${b}＝${ans}。`}
     else{a=rand(5,22);b=rand(2,9);ans=a+2*b;eq=`${a} ＋ ${b} ＋ ${b} ＝ ?`;exp=`${a}+${b}+${b}＝${ans}。`}
   }else{
-    if(kind===0){a=rand(120,680);b=rand(80,420);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`百十個位各自進位，得到 ${ans}。`}
+    if(kind===0){a=rand(120,680);b=rand(80,420);ans=a+b;eq=`${a} ＋ ${b} ＝ ?`;exp=`按個位、十位、百位相加；某一位滿10時向左進位，得到 ${ans}。`}
     else if(kind===1){a=rand(400,900);b=rand(80,a-90);ans=a-b;eq=`${a} − ${b} ＝ ?`;exp=`三位數減法，答案 ${ans}。`}
     else if(kind===2){a=rand(12,35);b=rand(2,9);ans=a*b;eq=`${a} × ${b} ＝ ?`;exp=`把 ${a} 拆成十位與個位，再乘 ${b}，共 ${ans}。`}
     else if(kind===3){a=rand(4,12);b=rand(4,15);ans=b;eq=`${a*b} ÷ ${a} ＝ ?`;exp=`${a*b} 平均分成 ${a} 組，每組 ${ans}。`}
@@ -1302,11 +1355,11 @@ function wordUseQuestion(level,used){
   const [sentence,answer,meaning]=x.entry;
   const words=VOCAB[level].map(v=>v[0]).filter(w=>!confusable(w,answer));
   const opts=shuffle([answer,...shuffle(words).slice(0,3)]);
-  return {skill:'en-use',prompt:'🗣️ 看懂句子，選出最合適的英文單字',main:sentence,second:'先自己讀英文；真的卡住再看提示裡的中文線索。',answer,choices:opts,explain:sentence.replace('___',answer)+' — '+meaning,hint:'先把整句想成生活畫面。中文線索：'+meaning,signature:'use-'+level+'-'+x.i,concept:'use-'+level+'-'+x.i,isEnglish:true,reason:true};
+  return {skill:'en-use',prompt:'🗣️ 依中文意思，選出符合語意的英文單字',main:sentence,second:'中文意思：'+meaning,answer,choices:opts,explain:sentence.replace('___',answer)+' — '+meaning,hint:'先把整句想成生活畫面。中文線索：'+meaning,signature:'use-'+level+'-'+x.i,concept:'use-'+level+'-'+x.i,isEnglish:true,reason:true};
 }
 
-function englishQuestion(level,modeName,used){if(modeName==='use')return wordUseQuestion(level,used);if(modeName==='letters')return letterQuestion(used);if(modeName==='sentence'){const pool=READ[level];let t=one(pool),k=0;while(used.has(t[0])&&k++<40)t=one(pool);return {skill:'en-sentence',prompt:'讀這一句英文，再回答問題',main:t[0],second:t[1],answer:t[3],choices:shuffle(t[2]),explain:t[4],signature:t[0],isEnglish:true,speech:t[0]}}
-const pool=VOCAB[level];let entry=one(pool),k=0;while(used.has(entry[0])&&k++<80)entry=one(pool);
+function englishQuestion(level,modeName,used){if(modeName==='use')return wordUseQuestion(level,used);if(modeName==='letters')return letterQuestion(used);if(modeName==='sentence'){const fresh=READ[level].filter(t=>!used.has(t[0]));const t=one(fresh.length?fresh:READ[level]);return {skill:'en-sentence',prompt:'讀這一句英文，再回答問題',main:t[0],second:t[1],answer:t[3],choices:shuffle(t[2]),explain:t[4],signature:t[0],isEnglish:true,speech:t[0]}}
+const pool=VOCAB[level],fresh=pool.filter(v=>!used.has(v[0]));const entry=one(fresh.length?fresh:pool);
 const reverse=modeName==='vocab'&&rand(0,2)===0;
 const distractor=shuffle(pool.filter(x=>x[1]!==entry[1]&&!confusable(x[0],entry[0]))).slice(0,3);
 const opts=shuffle(reverse?[entry[0],...distractor.map(x=>x[0])]:[entry[1],...distractor.map(x=>x[1])]);
@@ -1343,7 +1396,7 @@ const DEEP_READ={
 ['Mina has one hour before dinner. She needs 20 minutes for homework, 15 minutes for reading, and 10 minutes to pack her bag. She decides to do the important tasks first.','哪一項最符合 Mina 的計畫？','先完成必須做的事，仍有剩餘時間',['先完成必須做的事，仍有剩餘時間','三件事要超過一小時','她只能做一件事','她沒有任何空閒時間'],'20＋15＋10＝45 分鐘，距離60分鐘還剩15分鐘。','跨科思考：把英文資訊變成數學算式。','en-inference'],
 ['The red team had fewer hits, but it scored more runs. The coach explained that a hit does not always lead to a run.','哪一個推論合理？','安打數多不代表得分一定多',['安打數多不代表得分一定多','得分多一定安打多','安打數跟棒球無關','兩隊得分一定相同'],'fewer hits but more runs 說明兩種數字不一定同步。','比較 hits 與 runs，避免因果誤判。','en-inference'],
 ['After school, Alan wanted to play games. He noticed that he had a test the next day, so he reviewed his notes for twenty minutes first. Then he enjoyed his free time.','Alan 展現了哪一種能力？','安排優先順序與自我管理',['安排優先順序與自我管理','完全不休息','跳過考試','把作業交給同學'],'他先讀書再休閒，展現管理時間而非完全禁止娛樂。','注意 first 與 then。','en-inference'],
-['A poster says: "Bring a water bottle. Meet at the field at 8:30. Practice starts at 9:00." Ken arrives at 8:45 with water.','Ken 哪一項沒有遵照海報？','集合時間',['集合時間','有帶水','比賽地點','練習開始時間'],'8:45 比規定集合8:30晚15分鐘，但練習9:00還沒開始。','分別比較 meet 與 starts。','en-context'],
+['A poster says: "Bring a water bottle. Meet at the field at 8:30. Practice starts at 9:00." Ken arrives at the field at 8:45 with water.','Ken 哪一項沒有遵照海報？','集合時間',['集合時間','有帶水','練習地點','練習開始時間'],'8:45 比規定集合8:30晚15分鐘，但練習9:00還沒開始。','分別比較 meet 與 starts。','en-context'],
 ['The girls designed two practice plans. Plan A repeats the same easy task. Plan B mixes easy and difficult tasks and includes rest. They want to compare their progress after a month.','哪個做法比較能公平比較兩個計畫？','用一致標準記錄兩組進步',['用一致標準記錄兩組進步','只記錄計畫 B 的好成績','每次偷偷更改計分方式','只問最厲害的人'],'不同計畫比較時，需要使用相同的評量標準。','推理：如何確保比較不偏心？','en-inference'],
 ['The coach asked the players to share feedback. Ben said the drill was confusing, while Amy said she needed more time. The coach changed the instructions and gave everyone another try.','教練主要回應了哪兩項問題？','說明不清楚和時間不足',['說明不清楚和時間不足','球場太大和天氣太冷','球員沒有帶球棒','比賽沒有裁判'],'confusing instructions 對應說明不清；needed more time 對應時間。','結合兩個人提出的不同需求。','en-context'],
 ['The team can use either the school field or the community field. The school field is closer, but it closes at 5:00. Practice ends at 5:30. The community field stays open until 7:00.','哪個場地較適合這次練習？','社區球場',['社區球場','學校球場','兩個都一定不能用','只要比較近就選學校球場'],'練習5:30結束，學校球場5:00已關閉；社區球場7:00才關。','把兩個條件與結束時間一起比較。','en-inference']]
@@ -1369,24 +1422,24 @@ READ[3].push(
  ['Even though Ben was tired, he kept running until the end of the race.','Ben 累了之後怎麼做？',['繼續跑到終點','馬上停下來','回家睡覺','換別人跑'],'繼續跑到終點','even though 雖然；kept running 是「一直跑」。'],
  ['If it rains tomorrow, the game will be moved to Sunday.','如果明天下雨會怎樣？',['比賽改到星期日','比賽取消不打','比賽照常','比賽提早'],'比賽改到星期日','if 如果；be moved to 改到。'],
  ['Most students in my class prefer basketball, but I prefer baseball.','說話者比較喜歡什麼？',['棒球','籃球','足球','游泳'],'棒球','but 表示轉折；I prefer baseball。'],
- ['The coach reminded us to stretch carefully to avoid injuries.','教練提醒大家做什麼？',['小心做伸展避免受傷','早點回家','多吃點心','買新球棒'],'小心做伸展避免受傷','stretch 伸展；avoid injuries 避免受傷。'],
+ ['The coach reminded us to warm up carefully before exercise.','教練提醒大家做什麼？',['運動前小心做暖身','早點回家','多吃點心','買新球棒'],'運動前小心做暖身','warm up 暖身；before exercise 運動之前。'],
  ['Neither Amy nor Tom brought an umbrella, so they shared a raincoat.','誰帶了雨傘？',['兩個人都沒帶','只有 Amy','只有 Tom','兩個人都帶了'],'兩個人都沒帶','neither... nor... 是「兩者都不」。'],
  ['After losing the first game, the team watched videos to learn from their mistakes.','球隊輸球後做了什麼？',['看影片從錯誤中學習','解散球隊','責怪裁判','不再練習'],'看影片從錯誤中學習','learn from their mistakes 從錯誤中學習。']);
 READ[4]=[
  ['The tournament was postponed because the field was flooded after the typhoon.','錦標賽為什麼延期？',['颱風後球場淹水','裁判生病','觀眾太少','球隊遲到'],'颱風後球場淹水','postponed 延期；flooded 淹水。'],
- ['Although our team scored fewer hits, we won because we made no errors on defense.','球隊為什麼能贏？',['防守沒有失誤','安打比較多','對手棄權','比賽下雨'],'防守沒有失誤','although 雖然；no errors on defense 防守零失誤。'],
+ ['Although our team had fewer hits, we won because we made no errors on defense.','球隊為什麼能贏？',['防守沒有失誤','安打比較多','對手棄權','比賽下雨'],'防守沒有失誤','although 雖然；no errors on defense 防守零失誤。'],
  ['The pitcher was nervous at first, but the applause from the audience made him confident.','什麼讓投手變得有自信？',['觀眾的掌聲','教練的處罰','下雨','換球衣'],'觀眾的掌聲','applause 掌聲；audience 觀眾。'],
  ['Approximately three hundred volunteers helped clean the stadium after the championship.','大約多少志工幫忙清理？',['三百人','三十人','三千人','三人'],'三百人','approximately 大約；three hundred 三百。'],
  ['She was disappointed with the result, yet she decided to practice harder instead of giving up.','她對結果失望後決定怎麼做？',['更努力練習','放棄','換別的運動','休息一整年'],'更努力練習','instead of giving up 而不是放棄。'],
- ['The referee explained that the runner was out because he left the base too early.','跑者為什麼出局？',['太早離開壘包','跑太慢','沒戴頭盔','跑錯方向'],'太早離開壘包','left the base too early 太早離壘。'],
+ ['The umpire explained that the runner was out because a fielder tagged him with the ball before he reached the base.','跑者為什麼出局？',['到壘前被持球防守員觸碰','跑太慢','沒戴頭盔','跑錯方向'],'到壘前被持球防守員觸碰','umpire 是棒球裁判；tagged him with the ball 指持球觸碰跑者。'],
  ['To calculate the batting average, divide the number of hits by the number of at-bats.','怎麼算打擊率？',['安打數除以打數','打數除以安打數','安打數加打數','安打數乘以打數'],'安打數除以打數','divide A by B 是 A÷B。'],
- ['It is necessary to protect your eyes with sunglasses when you play under strong sunlight.','強烈陽光下打球必須做什麼？',['戴太陽眼鏡保護眼睛','閉上眼睛','只在晚上打','多喝汽水'],'戴太陽眼鏡保護眼睛','necessary 必要的；protect 保護。'],
- ['Many fans whispered nervously as the batter stepped into the box with the bases loaded.','球迷為什麼小聲又緊張地說話？',['滿壘時打者上場','比賽結束了','下雨了','有人掉東西'],'滿壘時打者上場','bases loaded 滿壘；whispered 低聲說。'],
+ ['UV-blocking sunglasses can help protect your eyes in strong sunlight.','強烈陽光下，什麼有助於保護眼睛？',['戴抗UV太陽眼鏡','閉上眼睛','只在晚上打','多喝汽水'],'戴抗UV太陽眼鏡','UV-blocking 抗紫外線的；can help 表示可以幫助，不是保證完全防護。'],
+ ['Many fans whispered nervously as the batter stepped into the box with the bases loaded.','滿壘時打者上場，球迷如何說話？',['緊張地低聲說話','開心地大聲唱歌','生氣地喊叫','完全沒有說話'],'緊張地低聲說話','whispered nervously 是緊張地低聲說話；as 在這裡表示同時發生，不直接說明原因。'],
  ['I wonder whether our team will keep the tradition of bowing to the fans after every game.','說話者想知道什麼？',['球隊會不會保持向球迷鞠躬的傳統','比賽幾點開始','誰是冠軍','球票多少錢'],'球隊會不會保持向球迷鞠躬的傳統','wonder whether 想知道是否；tradition 傳統。']];
-WORD_USE[1].push(["I close one ___ and look.","eye","我閉上一隻眼睛看。"],["The sun is very ___ in summer.","hot","夏天的太陽很熱。"],["A ___ can fly in the sky.","bird","鳥可以在天上飛。"],["I drink ___ every morning.","milk","我每天早上喝牛奶。"]);
+WORD_USE[1].push(["I close one ___ and look.","eye","我閉上一隻眼睛看。"],["The soup is very ___, so I let it cool.","hot","湯很熱，所以我先讓它放涼。"],["A ___ can fly in the sky.","bird","鳥可以在天上飛。"],["I drink ___ every morning.","milk","我每天早上喝牛奶。"]);
 WORD_USE[2].push(["We need a ___ to take the train.","ticket","搭火車需要票。"],["Draw a ___ with four equal sides.","square","畫一個四邊一樣長的正方形。"],["I am ___ after the long game, so I need food.","hungry","比賽很久之後我很餓，需要吃東西。"],["Doctors and nurses work in a ___.","hospital","醫生和護士在醫院工作。"],["The ___ is sunny and warm today.","weather","今天天氣晴朗溫暖。"]);
 WORD_USE[3].push(["Eat vegetables for good ___.","nutrition","吃蔬菜可以有好的營養。"],["Please ___ the answer in your own words.","explain","請用自己的話解釋答案。"],["She did an ___ to see if plants need light.","experiment","她做了一個實驗看植物需不需要光。"],["We ___ bottles and paper every week.","recycle","我們每週回收瓶子和紙。"],["His hard work led to a great ___.","achievement","他的努力帶來很棒的成就。"]);
-WORD_USE[4]=[["The ___ will decide if the ball is fair or foul.","referee","裁判會決定是界內球還是界外球。"],["Our team won the ___ and became the champion.","tournament","我們隊贏得錦標賽，成為冠軍。"],["The ___ cheered loudly when the game started.","audience","比賽開始時觀眾大聲歡呼。"],["Good ___ stops the other team from scoring.","defense","好的防守能讓對手無法得分。"],["She felt ___ before her first big game.","nervous","她在第一場大比賽前覺得很緊張。"],["Please ___ your bag before practice.","organize","練習前請整理好你的包包。"],["It is ___ to drink water on a hot day.","necessary","熱天喝水是必要的。"],["I ___ baseball to soccer.","prefer","我比較喜歡棒球勝過足球。"],["A ___ helped clean the stadium for free.","volunteer","一位志工免費幫忙打掃球場。"],["Wear a helmet to ___ your head.","protect","戴頭盔保護頭部。"],["The stadium holds ___ twenty thousand people.","approximately","這座體育場大約可容納兩萬人。"],["We should ___ different ways before we choose one.","compare","選擇之前我們應該比較不同的方法。"]];
+WORD_USE[4]=[["The ___ checks for fouls in the basketball game.","referee","裁判會判斷籃球比賽中的犯規。"],["Our team won the ___ and became the champion.","tournament","我們隊贏得錦標賽，成為冠軍。"],["The ___ cheered loudly when the game started.","audience","比賽開始時觀眾大聲歡呼。"],["Good ___ stops the other team from scoring.","defense","好的防守能讓對手無法得分。"],["She felt ___ before her first big game.","nervous","她在第一場大比賽前覺得很緊張。"],["Please ___ your bag before practice.","organize","練習前請整理好你的包包。"],["It is ___ to drink water on a hot day.","necessary","熱天喝水是必要的。"],["I ___ baseball to soccer.","prefer","我比較喜歡棒球勝過足球。"],["A ___ helped clean the stadium for free.","volunteer","一位志工免費幫忙打掃球場。"],["Wear a helmet to ___ your head.","protect","戴頭盔保護頭部。"],["The stadium holds ___ twenty thousand people.","approximately","這座體育場大約可容納兩萬人。"],["We should ___ different ways before we choose one.","compare","選擇之前我們應該比較不同的方法。"]];
 DEEP_READ[1].push(
  ['Kai has a red bat. Ben has a blue bat. Kai gives his bat to Ben for one day.','今天誰有兩支球棒？','Ben',['Ben','Kai','教練','沒有人'],'Ben 本來有一支，Kai 又借他一支。','數一數每個人手上的球棒。','en-inference'],
  ['The sky is dark. Mia hears thunder. She goes inside.','Mia 為什麼進到屋裡？','因為打雷了',['因為打雷了','因為肚子餓','因為天氣很熱','因為要睡覺'],'thunder 是打雷，打雷要進到室內。','找出 Mia 聽到什麼。','en-inference'],
@@ -1396,12 +1449,12 @@ DEEP_READ[2].push(
  ['The game started at 2:00. It lasted three hours because of a long rain delay.','比賽大約幾點結束？','五點',['五點','三點','兩點','七點'],'2 點開始、打了 3 小時，所以 5 點結束。','把開始時間加上比賽時間。','en-context'],
  ['Leo hit the ball far, but the center fielder caught it before it touched the ground.','Leo 這一打結果如何？','被接殺出局',['被接殺出局','全壘打','安打上壘','保送'],'球落地前被接住就是接殺。','注意 before it touched the ground。','en-inference']);
 DEEP_READ[3].push(
- ['Nora practiced pitching for an hour every day, while her brother practiced for three hours only on Sundays. After a month, Nora improved more.','這個故事最可能想說明什麼？','每天固定練習可能比偶爾練很久更有效',['每天固定練習可能比偶爾練很久更有效','練越久一定越好','只要星期日練就好','練習沒有用'],'Nora 每天練 1 小時，進步比較多；但這只是一個例子，不代表一定如此。','比較兩人練習的方式和結果。','en-inference'],
- ['The scoreboard showed 3–3 in the ninth inning. The home team scored one run in the bottom of the ninth, and the fans ran onto the field to celebrate.','比賽結果是什麼？','主隊以 4 比 3 獲勝',['主隊以 4 比 3 獲勝','客隊以 4 比 3 獲勝','雙方平手','比賽延期'],'3 比 3 時主隊下半局再得 1 分，再見勝利。','原本平手，再加一分。','en-context']);
+ ['Nora practiced piano for ten minutes on six days each week, while her brother practiced for sixty minutes only on Sundays. They each practiced for one hour a week. After a month, Nora improved more.','這個故事最可能想說明什麼？','分散到多天練習可能有幫助',['分散到多天練習可能有幫助','練越久一定越好','只要星期日練就好','練習沒有用'],'兩人每週都練60分鐘；故事中的Nora分散到六天練習，進步較多，但這個例子不能保證每個人都會得到同樣結果。','比較兩人練習的方式和結果。','en-inference'],
+ ['The scoreboard showed 3–3 in the ninth inning. The home team scored one run in the bottom of the ninth, and the fans cheered from their seats.','比賽結果是什麼？','主隊以 4 比 3 獲勝',['主隊以 4 比 3 獲勝','客隊以 4 比 3 獲勝','雙方平手','比賽延期'],'3 比 3 時主隊下半局再得 1 分，再見勝利。','原本平手，再加一分。','en-context']);
 DEEP_READ[4]=[
- ['The Hawks were losing 2–5 in the seventh inning. Instead of giving up, the coach changed the batting order. The new leadoff hitter reached base three times, and the Hawks won 6–5.','球隊能逆轉最主要的原因是什麼？','教練調整打序，新的第一棒多次上壘',['教練調整打序，新的第一棒多次上壘','對手主動投降','比賽因雨提前結束','裁判判錯'],'文章提到教練換打序，新的開路先鋒上壘三次。','找出比賽中「改變」的是什麼。','en-inference'],
+ ['The Hawks had lost their last game 2–5. Before the next game, the coach changed the batting order. The new leadoff hitter reached base three times, and the Hawks won 6–5.','下一場比賽前後，文章提到哪項調整與表現？','教練調整打序，新的第一棒多次上壘',['教練調整打序，新的第一棒多次上壘','對手主動投降','比賽因雨提前結束','裁判判錯'],'教練在下一場比賽前調整打序，新的第一棒上壘三次；文章未證明勝利只由這項調整造成。','找出比賽中「改變」的是什麼。','en-inference'],
  ['A survey asked 40 students about their favorite sport. Half chose baseball, a quarter chose basketball, and the rest chose swimming.','選游泳的有幾人？','10 人',['10 人','20 人','5 人','30 人'],'一半 20 人選棒球，四分之一 10 人選籃球，剩下 40−20−10＝10 人選游泳。','把英文的 half、quarter 換成數字。','en-context'],
- ['Kevin believed that lucky socks helped him hit home runs. His sister kept a record for twenty games and found that he hit the same number of home runs with or without the socks.','妹妹的紀錄說明了什麼？','襪子和全壘打數量沒有關係',['襪子和全壘打數量沒有關係','襪子讓他打更多全壘打','他應該每天換襪子','妹妹不喜歡棒球'],'穿與不穿全壘打數一樣，代表襪子沒有影響。','比較「有穿」和「沒穿」的結果。','en-inference'],
+ ['Kevin believed that lucky socks helped him hit home runs. His sister recorded ten games with the socks and ten games without them. He hit the same number of home runs in each group.','妹妹的紀錄說明了什麼？','這20場紀錄未顯示幸運襪增加全壘打',['這20場紀錄未顯示幸運襪增加全壘打','襪子讓他打更多全壘打','他應該每天換襪子','妹妹不喜歡棒球'],'這20場中，穿與不穿各10場，兩組全壘打數相同。紀錄沒有顯示增加效果，但不能證明任何情況下都沒有影響。','比較「有穿」和「沒穿」的結果。','en-inference'],
  ['Before the championship, the players organized a volunteer day to clean the beach. Their coach said that teamwork on the field starts with helping each other off the field.','教練想表達什麼？','場外互相幫忙，也能培養場上的團隊合作',['場外互相幫忙，也能培養場上的團隊合作','打掃比練球重要','冠軍賽不重要','海灘比球場好玩'],'on the field 球場上；off the field 球場外。','注意教練說的話。','en-inference'],
  ['The game was scheduled for Saturday, but heavy rain was predicted. The league decided to play on Friday night instead, one day earlier.','比賽最後改到什麼時候？','星期五晚上',['星期五晚上','星期六','星期日','下星期六'],'instead 表示改成；one day earlier 提早一天。','找出 instead 後面的時間。','en-context'],
  ['Maya noticed that her throws were inaccurate when she was tired. She suggested that the team take short breaks during long practices, and the coach agreed to try it for two weeks.','教練同意做什麼？','試兩週在長時間練習中短暫休息',['試兩週在長時間練習中短暫休息','取消所有練習','只讓 Maya 休息','每天練更久'],'suggested 建議；agreed to try 同意試試。','找出 Maya 的建議和教練的回應。','en-order']];
@@ -1409,27 +1462,27 @@ DEEP_READ[4]=[
 ODD_BANK.push(
  {l:1,q:'哪一個不是交通工具？',a:'冰箱',o:['公車','火車','腳踏車','冰箱'],e:'公車、火車、腳踏車都可以載人移動；冰箱是電器。'},
  {l:1,q:'哪一個不是身體的部位？',a:'鉛筆',o:['手','腳','眼睛','鉛筆'],e:'手、腳、眼睛都是身體部位；鉛筆是文具。'},
- {l:1,q:'哪一個數字和其他不一樣？',a:'9',o:['10','20','30','9'],e:'10、20、30 都是 10 的倍數，9 不是。'},
+ {l:1,q:'哪個數字的個位不是0？',a:'9',o:['10','20','30','9'],e:'10、20、30 的個位都是0；9的個位是9。'},
  {l:1,q:'哪一個不是棒球用品？',a:'泳鏡',o:['球棒','手套','頭盔','泳鏡'],e:'泳鏡是游泳用的。'},
  {l:1,q:'哪一個不是水果？',a:'紅蘿蔔',o:['西瓜','芒果','葡萄','紅蘿蔔'],e:'紅蘿蔔是蔬菜（植物的根）。'},
- {l:2,q:'哪一個時間和其他不一樣？',a:'中午',o:['星期一','星期二','星期五','中午'],e:'星期一、二、五是星期幾；中午是一天中的時段。'},
+ {l:2,q:'哪一個是一天中的時段，而不是「星期幾」？',a:'中午',o:['星期一','星期二','星期五','中午'],e:'星期一、二、五是星期幾；中午是一天中的時段。'},
  {l:2,q:'哪一個不是昆蟲？',a:'蜘蛛',o:['螞蟻','蜜蜂','蝴蝶','蜘蛛'],e:'昆蟲有 6 隻腳；蜘蛛有 8 隻腳，不是昆蟲。'},
- {l:2,q:'哪一個數字和其他不一樣？',a:'14',o:['5','15','25','14'],e:'5、15、25 個位數都是 5，而且都是 5 的倍數；14 不是。'},
+ {l:2,q:'哪一個數字的個位不是5？',a:'14',o:['5','15','25','14'],e:'5、15、25 個位數都是 5，而且都是 5 的倍數；14 不是。'},
  {l:2,q:'哪一個不是固體？',a:'果汁',o:['石頭','冰塊','木頭','果汁'],e:'果汁是液體，其他是固體。'},
- {l:2,q:'哪一個打擊結果和其他不一樣？',a:'界外球',o:['一壘安打','二壘安打','全壘打','界外球'],e:'前三個都是安打；界外球不算安打。'},
- {l:3,q:'哪一個數字和其他不一樣？',a:'27',o:['16','36','49','27'],e:'16＝4×4、36＝6×6、49＝7×7 都是「平方數」；27 不是。'},
+ {l:2,q:'哪一個打擊結果不記為安打？',a:'界外球',o:['一壘安打','二壘安打','全壘打','界外球'],e:'前三個都是安打；界外球不算安打。'},
+ {l:3,q:'哪一個不是整數的平方數？',a:'27',o:['16','36','49','27'],e:'16＝4×4、36＝6×6、49＝7×7 都是「平方數」；27 不是。'},
  {l:3,q:'哪一個不是爬蟲類？',a:'青蛙',o:['烏龜','蛇','蜥蜴','青蛙'],e:'青蛙是兩棲類；烏龜、蛇、蜥蜴是爬蟲類。'},
- {l:3,q:'哪一個不是能源？',a:'塑膠袋',o:['太陽能','風力','水力','塑膠袋'],e:'太陽能、風力、水力都能產生能量；塑膠袋不是能源。'},
+ {l:3,q:'哪一個通常不列為再生能源？',a:'煤',o:['太陽能','風力','水力','煤'],e:'太陽能、風力、水力通常列為再生能源；煤是形成需很長時間的化石燃料，屬非再生能源。'},
  {l:3,q:'哪一個不是守備的「內野」位置？',a:'右外野手',o:['一壘手','二壘手','游擊手','右外野手'],e:'右外野手守外野。'},
- {l:3,q:'哪一個單位和其他不一樣？',a:'公斤',o:['公分','公尺','公里','公斤'],e:'公分、公尺、公里量長度；公斤量重量。'},
- {l:4,q:'哪一個數字和其他不一樣？',a:'21',o:['2','3','5','21'],e:'2、3、5 都是質數（只有 1 和自己兩個因數）；21＝3×7 不是質數。'},
+ {l:3,q:'哪一個不是長度單位？',a:'公斤',o:['公分','公尺','公里','公斤'],e:'公分、公尺、公里量長度；公斤量重量。'},
+ {l:4,q:'哪一個不是質數？',a:'21',o:['2','3','5','21'],e:'2、3、5 都是質數（只有 1 和自己兩個因數）；21＝3×7 不是質數。'},
  {l:4,q:'哪一個不是行星？',a:'月球',o:['金星','火星','土星','月球'],e:'月球是地球的衛星，不是行星。'},
- {l:4,q:'哪一個詞和其他不一樣？',a:'增加',o:['減少','降低','縮小','增加'],e:'減少、降低、縮小都是變少；增加是變多。'},
- {l:4,q:'哪一個分數和其他不一樣？',a:'2/5',o:['1/2','2/4','3/6','2/5'],e:'1/2、2/4、3/6 都等於二分之一；2/5 不是。'},
+ {l:4,q:'哪個詞表示數量變多？',a:'增加',o:['減少','降低','縮小','增加'],e:'減少、降低、縮小都是變少；增加是變多。'},
+ {l:4,q:'哪一個分數不等於二分之一？',a:'2/5',o:['1/2','2/4','3/6','2/5'],e:'1/2、2/4、3/6 都等於二分之一；2/5 不是。'},
  {l:4,q:'哪一個不是哺乳類？',a:'企鵝',o:['蝙蝠','鯨魚','海豚','企鵝'],e:'蝙蝠、鯨魚、海豚是哺乳類；企鵝是鳥類。'}
 );
 RULES_BANK.push(
- {l:1,q:'打者打出的球落在界外線外面，叫做什麼？',a:'界外球',o:['界外球','全壘打','安打','三振'],e:'球落在界外線外是界外球。'},
+ {l:1,q:'打出的飛球越過一壘或三壘後，第一次落在界外地區且未被接住，叫做什麼？',a:'界外球',o:['界外球','全壘打','安打','三振'],e:'這裡的飛球越過一壘或三壘後，首次落在界外地區，判為界外球；內野落地後再滾動的球，還要看球的位置與觸碰情況。'},
  {l:1,q:'防守時，誰站在本壘後面接投手的球？',a:'捕手',o:['捕手','投手','一壘手','中外野手'],e:'捕手蹲在本壘後方接球。'},
  {l:1,q:'棒球比賽一隊上場守備有幾個人？',a:'9 人',o:['9 人','5 人','11 人','3 人'],e:'棒球守備是 9 人：投手、捕手、4 位內野手、3 位外野手。'},
  {l:2,q:'一局上半，紅隊已經兩出局，打者擊出高飛球被接殺，接下來會怎樣？',a:'三出局，換邊',o:['三出局，換邊','打者上一壘','跑者全部得分','比賽結束'],e:'兩出局再一個出局就是三出局，攻守交換。'},
@@ -1442,10 +1495,10 @@ RULES_BANK.push(
  {l:4,q:'「如果 A，則 B」成立。下列哪一句一定也成立？',a:'如果不是 B，就不是 A',o:['如果不是 B，就不是 A','如果 B，就是 A','如果不是 A，就不是 B','A 和 B 沒有關係'],e:'這叫「逆否命題」，和原句一定同真。例：下雨就延期 → 沒延期就沒下雨。'},
   {l:4,q:'四個人賽跑：二弟不是第一；大王在二弟後面；小佑在大王後面；雞柳條不是最後。誰是第一名？',a:'雞柳條',o:['雞柳條','二弟','大王','小佑'],e:'二弟不是第一，大王和小佑又都在二弟後面，所以第一名只能是雞柳條（順序：雞柳條、二弟、大王、小佑）。',h:'先排二弟、大王、小佑三個人的先後。'},
   {l:4,q:'三個盒子分別裝紅球、藍球、紅藍混合，但三個標籤全部貼錯了。最少要拿出幾顆球來看，就能把標籤全部改對？',a:'1 顆',o:['1 顆','2 顆','3 顆','0 顆'],e:'從貼著「混合」的盒子拿 1 顆：它一定不是混合，所以拿到紅球就是紅球盒；剩下兩盒標籤也都錯，就能推出全部。',h:'標籤「一定」是錯的，這是很重要的線索。'},
- {l:4,q:'比賽打了 9 局，主隊每局都得 1 分，客隊只在第 5 局得 6 分。最後比數是？',a:'主隊 8 比 6 獲勝',o:['主隊 8 比 6 獲勝','主隊 9 比 6 獲勝','客隊獲勝','平手'],e:'主隊後攻。前 8 局主隊已得 8 分、客隊 6 分；第 9 局上半客隊沒得分，主隊已經領先，第 9 局下半不用打，所以是 8 比 6。',h:'主隊是後攻的那一隊，想想第 9 局下半還需要打嗎？'}
+ {l:4,q:'一場預定9局的比賽，主隊每個實際進攻的半局都得1分，客隊只在第5局得6分。正常進行到第9局時，最後比數是？',a:'主隊 8 比 6 獲勝',o:['主隊 8 比 6 獲勝','主隊 9 比 6 獲勝','客隊獲勝','平手'],e:'主隊後攻。前 8 局主隊已得 8 分、客隊 6 分；第 9 局上半客隊沒得分，主隊已經領先，第 9 局下半不用打，所以是 8 比 6。',h:'主隊是後攻的那一隊，想想第 9 局下半還需要打嗎？'}
 );
 // --- 注音語詞擴充 ---
-ZY_WORDS.push(['衣服','ㄧ ㄈㄨˊ','👕'],['眼鏡','ㄧㄢˇ ㄐㄧㄥˋ','👓'],['花生','ㄏㄨㄚ ㄕㄥ','🥜'],['蛋糕','ㄉㄢˋ ㄍㄠ','🎂'],['電視','ㄉㄧㄢˋ ㄕˋ','📺'],['草莓','ㄘㄠˇ ㄇㄟˊ','🍓'],['鋼琴','ㄍㄤ ㄑㄧㄣˊ','🎹'],['醫生','ㄧ ㄕㄥ','🧑‍⚕️'],['公車','ㄍㄨㄥ ㄔㄜ','🚌'],['獅子','ㄕ ㄗ˙','🦁'],['老鷹','ㄌㄠˇ ㄧㄥ','🦅'],['捕手','ㄅㄨˇ ㄕㄡˇ','🧤'],['投手','ㄊㄡˊ ㄕㄡˇ','⚾'],['全壘打','ㄑㄩㄢˊ ㄌㄟˇ ㄉㄚˇ','💥']);
+ZY_WORDS.push(['衣服','ㄧ ㄈㄨˊ','👕'],['眼鏡','ㄧㄢˇ ㄐㄧㄥˋ','👓'],['花生','ㄏㄨㄚ ㄕㄥ','🥜'],['蛋糕','ㄉㄢˋ ㄍㄠ','🎂'],['電視','ㄉㄧㄢˋ ㄕˋ','📺'],['草莓','ㄘㄠˇ ㄇㄟˊ','🍓'],['鋼琴','ㄍㄤ ㄑㄧㄣˊ','🎹'],['醫生','ㄧ ㄕㄥ','🧑‍⚕️'],['公車','ㄍㄨㄥ ㄔㄜ','🚌'],['獅子','ㄕ ˙ㄗ','🦁'],['老鷹','ㄌㄠˇ ㄧㄥ','🦅'],['捕手','ㄅㄨˇ ㄕㄡˇ','🧤'],['投手','ㄊㄡˊ ㄕㄡˇ','⚾'],['全壘打','ㄑㄩㄢˊ ㄌㄟˇ ㄉㄚˇ','💥']);
 
 CONFUSE.push(['nervous','proud','disappointed','determined','unusual','possible','accurate','necessary'],['compare','discuss','organize','describe','suggest','improve','calculate','recognize','protect','support'],['audience','referee','champion','volunteer'],['milk','water'],['nutrition','energy','balance'],['explain','communicate','identify'],['recycle','reduce'],['achievement','result','opportunity','challenge','progress'],['tournament','tradition','experience']);
 
@@ -1514,13 +1567,13 @@ const GIRL_RULES=[
  {l:1,q:'晚上睡覺前，應該先做什麼？',a:'刷牙',o:['刷牙','吃糖果','大聲唱歌','跳床'],e:'睡前刷牙可以保護牙齒。'},
  {l:2,q:'{A}有 5 顆糖，給了{B} 2 顆，{B}本來有 1 顆。現在誰的糖比較多？',a:'一樣多',o:['{A}','{B}','一樣多','無法判斷'],e:'{A}剩 5−2＝3 顆，{B}有 1＋2＝3 顆，兩人一樣多。',h:'兩個人都算一算。'},{l:1,q:'不小心撞到朋友，應該說什麼？',a:'對不起',o:['對不起','走開','哈哈','不關我的事'],e:'不小心撞到別人要說對不起。'},
  {l:2,q:'{A}比{B}高，{B}比{C}高。誰最矮？',a:'{C}',o:['{C}','{A}','{B}','無法判斷'],e:'{A} > {B} > {C}，所以{C}最矮。'},
- {l:2,q:'「如果下雨，野餐就改在室內。」今天野餐在草地上，可以知道什麼？',a:'今天沒有下雨',o:['今天沒有下雨','今天有下雨','明天會下雨','野餐取消了'],e:'下雨一定在室內；在草地上就表示沒有下雨。'},
+ {l:2,q:'「如果下雨，野餐就改在室內。」大家遵守這個規則，今天野餐在室外草地上，可以知道什麼？',a:'今天沒有下雨',o:['今天沒有下雨','今天有下雨','明天會下雨','野餐取消了'],e:'下雨一定在室內；在草地上就表示沒有下雨。'},
  {l:2,q:'{A}比{B}早起床，{C}比{A}早起床。誰最早起床？',a:'{C}',o:['{C}','{A}','{B}','無法判斷'],e:'{C} → {A} → {B}，{C}最早。'},
- {l:2,q:'盒子裡有 3 顆紅糖果和 1 顆藍糖果。閉著眼睛拿一顆，比較可能拿到哪一種？',a:'紅糖果',o:['紅糖果','藍糖果','一樣可能','一定拿不到'],e:'紅糖果比較多，所以比較可能拿到紅的。'},
+ {l:2,q:'盒子裡有 3 顆紅糖果和 1 顆藍糖果。將糖果充分混合，每顆大小形狀相同，不看顏色隨機拿一顆，比較可能拿到哪一種？',a:'紅糖果',o:['紅糖果','藍糖果','一樣可能','一定拿不到'],e:'紅糖果比較多，所以比較可能拿到紅的。'},
  {l:2,q:'這週的派對在星期六，今天是星期四，還有幾天？',a:'2 天',o:['2 天','1 天','3 天','6 天'],e:'星期四 → 星期五 → 星期六，再過 2 天。'},
  {l:3,q:'「每一位參加派對的朋友都會拿到氣球。」{A}拿到了氣球，她一定參加了派對嗎？',a:'不一定，別的地方也可能拿到氣球',o:['不一定，別的地方也可能拿到氣球','一定有參加','一定沒參加','她不喜歡氣球'],e:'「參加的都有氣球」不代表「有氣球的都參加」。'},
  {l:3,q:'{A}、{B}、{C}三人只有一人帶了禮物。{A}說：「不是我帶的。」{B}說：「是{C}帶的。」兩人都說真話，誰帶了禮物？',a:'{C}',o:['{C}','{A}','{B}','無法判斷'],e:'{B}說真話，所以是{C}；也符合{A}說的話。'},
- {l:3,q:'「只有寫完作業才能看卡通。」{A}在看卡通，可以知道什麼？',a:'{A}寫完作業了',o:['{A}寫完作業了','{A}沒寫作業','{A}不喜歡卡通','大家都在看卡通'],e:'沒寫完作業不能看卡通；{A}在看，就表示寫完了。'},
+ {l:3,q:'假設大家遵守「只有寫完作業才能看卡通」。{A}在看卡通，可以知道什麼？',a:'{A}寫完作業了',o:['{A}寫完作業了','{A}沒寫作業','{A}不喜歡卡通','大家都在看卡通'],e:'沒寫完作業不能看卡通；{A}在看，就表示寫完了。'},
  {l:3,q:'有 4 位朋友，每兩人都要互相送一張卡片（一人送一張給對方）。一共要送幾張？',a:'12 張',o:['12 張','6 張','8 張','4 張'],e:'每個人要送給另外 3 個人：4×3＝12 張。'},
  {l:4,q:'「如果 A，則 B」成立。下列哪一句一定也成立？',a:'如果不是 B，就不是 A',o:['如果不是 B，就不是 A','如果 B，就是 A','如果不是 A，就不是 B','A 和 B 沒有關係'],e:'這叫「逆否命題」，和原句一定同真。例：下雨就在室內 → 不在室內就是沒下雨。'},
  {l:4,q:'三個盒子分別裝草莓糖、葡萄糖、兩種混合，但三個標籤全部貼錯了。最少要拿出幾顆糖來看，就能把標籤全部改對？',a:'1 顆',o:['1 顆','2 顆','3 顆','0 顆'],e:'從貼著「混合」的盒子拿 1 顆：它一定不是混合，拿到草莓就是草莓盒；剩下兩盒標籤也都錯，就能推出全部。',h:'標籤「一定」是錯的，這是很重要的線索。'},
@@ -1530,34 +1583,34 @@ const GIRL_ODD=[
  {l:1,q:'哪一個不是花？',a:'蘋果',o:['玫瑰','向日葵','鬱金香','蘋果'],e:'蘋果是水果，其他是花。'},
  {l:1,q:'哪一個不是甜點？',a:'青菜',o:['蛋糕','冰淇淋','餅乾','青菜'],e:'青菜是蔬菜。'},
  {l:1,q:'哪一個不是動物？',a:'椅子',o:['小貓','小兔','小鳥','椅子'],e:'椅子是家具。'},
- {l:1,q:'哪一個不能穿在身上？',a:'湯匙',o:['裙子','襪子','外套','湯匙'],e:'湯匙是餐具。'},
+ {l:1,q:'哪一個通常是用餐的餐具？',a:'湯匙',o:['裙子','襪子','外套','湯匙'],e:'湯匙是餐具。'},
  {l:1,q:'哪一個不是顏色？',a:'星星',o:['粉紅色','紫色','黃色','星星'],e:'星星是形狀（或天上的星體），不是顏色。'},
- {l:1,q:'哪一個不會飛？',a:'小兔子',o:['蝴蝶','小鳥','蜜蜂','小兔子'],e:'小兔子用跳的，不會飛。'},
- {l:1,q:'哪一個不是在天空中看到的？',a:'魚',o:['太陽','月亮','雲','魚'],e:'魚住在水裡。'},
+ {l:1,q:'哪一個通常不會靠自己飛行？',a:'小兔子',o:['蝴蝶','麻雀','蜜蜂','小兔子'],e:'小兔子用跳的，不會飛。'},
+ {l:1,q:'哪一個通常生活在水中？',a:'魚',o:['太陽','月亮','雲','魚'],e:'魚住在水裡。'},
  {l:1,q:'哪一個不是頭上戴的？',a:'鞋子',o:['皇冠','帽子','髮夾','鞋子'],e:'鞋子穿在腳上。'},
- {l:2,q:'哪一個不是住在海裡的？',a:'松鼠',o:['海豚','章魚','螃蟹','松鼠'],e:'松鼠住在樹上。'},
+ {l:2,q:'哪一個主要生活在陸地樹林裡？',a:'松鼠',o:['海豚','章魚','海蟹','松鼠'],e:'松鼠住在樹上。'},
  {l:2,q:'哪一個不是樂器？',a:'剪刀',o:['鋼琴','小提琴','鈴鼓','剪刀'],e:'剪刀是文具。'},
- {l:2,q:'哪一個形狀和其他不一樣？',a:'愛心',o:['正方形','長方形','三角形','愛心'],e:'正方形、長方形、三角形都是由直線組成；愛心有彎彎的邊。'},
- {l:2,q:'哪一個不是夜晚會出現的？',a:'彩虹',o:['月亮','星星','螢火蟲','彩虹'],e:'彩虹需要陽光，通常在白天雨後出現。'},
- {l:3,q:'哪一個動物和其他不一樣？',a:'海豚',o:['金魚','鯊魚','鮭魚','海豚'],e:'海豚是哺乳類，用肺呼吸；其他是魚。'},
- {l:3,q:'哪一個不是童話故事裡常見的？',a:'電腦',o:['城堡','魔法棒','王冠','電腦'],e:'電腦是現代的東西。'}];
+ {l:2,q:'哪一個圖形的外框含有彎曲的線？',a:'愛心',o:['正方形','長方形','三角形','愛心'],e:'正方形、長方形、三角形都是由直線組成；愛心有彎彎的邊。'},
+ {l:2,q:'哪一個通常在白天、陽光照到空中水滴時可看見？',a:'彩虹',o:['月亮','星星','螢火蟲','彩虹'],e:'彩虹通常由陽光經水滴折射、反射形成；夜晚也可能有微弱的月虹，因此不能說彩虹一定不會在夜晚出現。'},
+ {l:3,q:'哪一個是哺乳類而不是魚類？',a:'海豚',o:['金魚','鯊魚','鮭魚','海豚'],e:'海豚是哺乳類，用肺呼吸；其他是魚。'},
+ {l:3,q:'哪一個是現代電子設備？',a:'電腦',o:['城堡','魔法棒','王冠','電腦'],e:'電腦是現代電子設備；不能只靠物品名稱就斷定它會不會出現在童話中。'}];
 const GIRL_SCIENCE={
  body:[{l:1,q:'跳舞跳很久之後，心跳會怎樣？',a:'變快',o:['變快','變慢','停止','不變'],e:'運動時身體需要更多氧氣，心臟跳得更快。'},{l:1,q:'跳繩前先做什麼比較不會受傷？',a:'暖身',o:['暖身','吃糖果','睡覺','穿拖鞋'],e:'暖身讓肌肉準備好。'},{l:2,q:'跳芭蕾舞時，是什麼拉動骨頭讓腳踮起來？',a:'肌肉',o:['肌肉','頭髮','指甲','衣服'],e:'肌肉收縮會拉動骨頭。'}],
- force:[{l:1,q:'吹泡泡時，泡泡為什麼會飄起來？',a:'泡泡很輕，被空氣帶著飄',o:['泡泡很輕，被空氣帶著飄','泡泡有翅膀','泡泡會自己飛','泡泡被磁鐵吸'],e:'泡泡很輕，空氣流動就能把它帶走。'},{l:1,q:'把積木推一下會動，不推會怎樣？',a:'停在原地不動',o:['停在原地不動','自己跑走','飛起來','變大'],e:'東西要受到推或拉才會開始移動。'},{l:1,q:'放開手上的氣球（裡面是普通空氣），氣球會？',a:'慢慢掉到地上',o:['慢慢掉到地上','飛到天上','停在空中不動','變成雲'],e:'普通空氣吹的氣球比空氣重一點，會慢慢落下；裝氦氣的才會飄上去。'},{l:1,q:'盪鞦韆盪到高處後，誰把鞦韆拉回來？',a:'地心引力',o:['地心引力','風','磁鐵','聲音'],e:'地心引力把鞦韆往下拉。'},{l:2,q:'溜冰鞋為什麼可以滑得很遠？',a:'輪子讓摩擦力變小',o:['輪子讓摩擦力變小','鞋子有魔法','地面在動','風一直推'],e:'輪子轉動時摩擦力小，所以滑得遠。'}],
- nature:[{l:1,q:'毛毛蟲長大後會變成什麼？',a:'蝴蝶',o:['蝴蝶','小鳥','青蛙','蜜蜂'],e:'毛毛蟲會結蛹，再變成蝴蝶。'},{l:1,q:'小鳥用什麼做家？',a:'鳥巢',o:['鳥巢','紙箱','鞋子','杯子'],e:'小鳥用樹枝和草築鳥巢。'},{l:2,q:'冬天時，有些熊會長時間睡覺，這叫什麼？',a:'冬眠',o:['冬眠','午睡','發呆','遷徙'],e:'冬眠可以度過食物很少的冬天。'},{l:2,q:'企鵝住在很冷的地方，牠們身上有什麼幫助保暖？',a:'厚厚的脂肪和緊密的羽毛',o:['厚厚的脂肪和緊密的羽毛','毛衣','電暖器','鱗片'],e:'脂肪和羽毛能保持體溫。'},{l:3,q:'候鳥每年秋天飛到溫暖的地方，這叫什麼？',a:'遷徙',o:['遷徙','冬眠','脫皮','換毛'],e:'候鳥會依季節遷徙，找食物和溫暖的地方。'}],
- lab:[{l:1,q:'想比較兩朵花哪朵比較香，要用什麼？',a:'鼻子聞一聞',o:['鼻子聞一聞','耳朵聽','尺量','秤重'],e:'用鼻子聞氣味。'},{l:2,q:'想知道哪種杯子保溫最好，倒進去的熱水要怎樣？',a:'一樣多、一樣熱',o:['一樣多、一樣熱','有的多有的少','有的熱有的冷','隨便倒'],e:'只改變杯子，其他條件都一樣才公平。'}]};
+ force:[{l:1,q:'吹泡泡時，泡泡為什麼會飄起來？',a:'泡泡很輕，被空氣帶著飄',o:['泡泡很輕，被空氣帶著飄','泡泡有翅膀','泡泡會自己飛','泡泡被磁鐵吸'],e:'泡泡很輕，空氣流動就能把它帶走。'},{l:1,q:'積木原本靜止在水平桌面，沒有推拉、桌面也不晃動時，積木會怎樣？',a:'停在原地不動',o:['停在原地不動','自己跑走','飛起來','變大'],e:'原本靜止的物體，在合外力為零時會保持靜止；原本已在移動的物體，則不需要持續受力才能維持等速直線運動。'},{l:1,q:'在沒有明顯氣流的室內，放開已綁緊、內裝普通空氣的氣球，通常會怎樣？',a:'慢慢掉到地上',o:['慢慢掉到地上','飛到天上','停在空中不動','變成雲'],e:'普通空氣加上氣球皮的總重量，大於它排開空氣的重量，通常會落下；若裝足夠的氦氣，浮力可能使它上升。'},{l:1,q:'盪鞦韆盪到高處後，誰把鞦韆拉回來？',a:'地心引力',o:['地心引力','風','磁鐵','聲音'],e:'地心引力把鞦韆往下拉。'},{l:2,q:'溜冰鞋為什麼可以滑得很遠？',a:'輪子讓摩擦力變小',o:['輪子讓摩擦力變小','鞋子有魔法','地面在動','風一直推'],e:'輪子轉動時摩擦力小，所以滑得遠。'}],
+ nature:[{l:1,q:'蝴蝶的毛毛蟲幼蟲，經過蛹的階段後會變成什麼？',a:'蝴蝶',o:['蝴蝶','小鳥','青蛙','蜜蜂'],e:'蝴蝶的幼蟲會化蛹，再羽化成蝴蝶；並非所有毛毛蟲都變蝴蝶，有些是蛾的幼蟲。'},{l:1,q:'許多常見的小鳥會用樹枝和草築成什麼，來產卵育雛？',a:'鳥巢',o:['鳥巢','紙箱','鞋子','杯子'],e:'許多小鳥會築巢來產卵育雛；不同鳥類的築巢方式與材料不完全相同。'},{l:2,q:'冬天時，有些熊會長時間睡覺，這叫什麼？',a:'冬眠',o:['冬眠','午睡','發呆','遷徙'],e:'冬眠可以度過食物很少的冬天。'},{l:2,q:'企鵝住在很冷的地方，牠們身上有什麼幫助保暖？',a:'厚厚的脂肪和緊密的羽毛',o:['厚厚的脂肪和緊密的羽毛','毛衣','電暖器','鱗片'],e:'脂肪和羽毛能保持體溫。'},{l:3,q:'有些候鳥會隨季節往返不同地區，這種移動叫什麼？',a:'遷徙',o:['遷徙','冬眠','脫皮','換毛'],e:'候鳥會隨季節遷徙，以尋找適合繁殖、覓食或度冬的環境；並非每種候鳥都只在秋天向溫暖處移動。'}],
+ lab:[{l:1,q:'大人確認花朵安全且自己不過敏後，想比較氣味，主要用哪個感官？',a:'用鼻子輕輕聞氣味',o:['用鼻子輕輕聞氣味','耳朵聽','尺量','秤重'],e:'鼻子能感覺氣味。先由大人確認花朵安全，不把花或不明物品貼近鼻子，也不品嚐。'},{l:2,q:'想知道哪種杯子保溫最好，倒進去的熱水要怎樣？',a:'一樣多、一樣熱',o:['一樣多、一樣熱','有的多有的少','有的熱有的冷','隨便倒'],e:'只改變杯子，其他條件都一樣才公平。'}]};
 const GIRL_VOCAB={1:[["crown","皇冠","👑"],["dress","洋裝","👗"],["cake","蛋糕","🎂"],["bunny","小兔子","🐰"],["kitten","小貓","🐱"],["puppy","小狗","🐶"],["star","星星","⭐"],["heart","愛心","❤️"],["pink","粉紅色","🩷"],["bear","熊","🐻"]],2:[["castle","城堡","🏰"],["princess","公主","👸"],["garden","花園","🌷"],["butterfly","蝴蝶","🦋"],["rainbow","彩虹","🌈"],["ribbon","緞帶","🎀"],["forest","森林","🌲"],["squirrel","松鼠","🐿️"],["dance","跳舞","💃"],["magic","魔法","✨"],["picnic","野餐","🧺"]],3:[["kingdom","王國","🏰"],["gentle","溫柔的","🤲"],["brave","勇敢的","🦁"],["sparkle","閃閃發光","✨"],["adventure","冒險","🗺️"],["treasure","寶藏","💎"],["habitat","棲息地","🌳"],["hibernate","冬眠","🐻"]],4:[["elegant","優雅的","🦢"],["generous","慷慨的","🎁"],["enchanted","被施了魔法的","🪄"],["endangered","瀕臨絕種的","🐼"],["migrate","遷徙","🦆"],["ceremony","典禮","🎊"],["celebrate","慶祝","🥳"],["imagination","想像力","💭"],["nocturnal","夜行性的","🦉"]]};
 const GIRL_READ={1:[['The bunny is white.','小兔子是什麼顏色？',['白色','黑色','紅色','綠色'],'白色','white 是白色。'],['She has a pink dress.','她有什麼？',['粉紅色洋裝','藍色帽子','紅色鞋子','黃色雨傘'],'粉紅色洋裝','pink dress 是粉紅色洋裝。'],['The kitten can jump.','小貓會做什麼？',['跳','游泳','唱歌','畫畫'],'跳','jump 是跳。'],['I like cake.','我喜歡什麼？',['蛋糕','魚','書','鞋子'],'蛋糕','cake 是蛋糕。']],
  2:[['The princess lives in a big castle.','公主住在哪裡？',['大城堡','小樹屋','學校','醫院'],'大城堡','castle 是城堡。'],['We have a picnic in the garden.','我們在哪裡野餐？',['花園','廚房','海邊','車上'],'花園','garden 是花園。'],['The butterfly is on the flower.','蝴蝶在哪裡？',['花上','樹下','水裡','桌上'],'花上','on the flower 在花上。'],['After it rains, we see a rainbow.','下雨過後看到什麼？',['彩虹','月亮','雪','星星'],'彩虹','rainbow 是彩虹。']],
  3:[['The rabbit and the turtle wanted to see who was faster. The rabbit took a nap, so the slow turtle won.','為什麼烏龜贏了？','因為兔子中途睡覺了',['因為兔子中途睡覺了','因為烏龜跑最快','因為兔子迷路','因為下雨'],'took a nap 睡午覺；so 表示結果。'],['Lulu wanted to buy a doll, but she did not have enough money, so she saved her pocket money for a month.','Lulu 為什麼存零用錢？','錢不夠買娃娃',['錢不夠買娃娃','想買書','要還錢','想買糖果'],'did not have enough money 錢不夠。'],['The brave princess helped the lost bunny find its home.','勇敢的公主做了什麼？',['幫迷路的小兔子找到家','把小兔子帶走','去游泳','睡午覺'],'幫迷路的小兔子找到家','lost 迷路的；find its home 找到家。'],['In winter, the bear sleeps in its cave because food is hard to find.','熊冬天為什麼睡在洞裡？',['因為很難找到食物','因為想看雪','因為洞裡有電視','因為牠生病了'],'因為很難找到食物','because 後面說明原因。'],['The squirrel hides nuts so it can eat them later.','松鼠為什麼藏堅果？',['之後可以吃','想送給熊','因為太重','想種花'],'之後可以吃','so it can eat them later 之後可以吃。']],
- 4:[['Elegant swans glided across the lake while the children watched quietly from the bridge.','孩子們在哪裡看天鵝？','橋上',['橋上','湖裡','樹上','屋頂'],'from the bridge 從橋上。'],['The kingdom held a grand ceremony to celebrate the princess’s birthday.','王國為什麼舉辦典禮？','慶祝公主的生日',['慶祝公主的生日','歡迎新國王','慶祝豐收','送別朋友'],'to celebrate... birthday 慶祝生日。'],['Because the forest was quiet at night, the nocturnal animals came out to look for food.','夜行性動物晚上出來做什麼？','找食物',['找食物','睡覺','上學','游泳'],'to look for food 找食物。'],['Her imagination was so wonderful that she wrote a story about a flying castle.','她寫了什麼故事？','會飛的城堡',['會飛的城堡','會說話的狗','海底王國','森林運動會'],'a flying castle 會飛的城堡。'],['The enchanted garden sparkled at night, and the nocturnal owls watched quietly from the trees.','誰在樹上安靜地看？',['夜行性的貓頭鷹','小兔子','公主','蝴蝶'],'夜行性的貓頭鷹','nocturnal owls 夜行性的貓頭鷹。'],['Every autumn, the ducks migrate to a warmer lake, and the children celebrate their return in spring.','鴨子秋天做什麼？',['遷徙到比較溫暖的湖','冬眠','留在原地','學游泳'],'遷徙到比較溫暖的湖','migrate 遷徙；warmer 比較溫暖。'],['The generous queen shared her treasure with everyone in the kingdom.','女王怎麼處理她的寶藏？',['和王國裡的每個人分享','藏起來','丟掉','賣掉'],'和王國裡的每個人分享','generous 慷慨的；shared 分享。']]};
+ 4:[['Elegant swans glided across the lake while the children watched quietly from the bridge.','孩子們在哪裡看天鵝？','橋上',['橋上','湖裡','樹上','屋頂'],'from the bridge 從橋上。'],['The kingdom held a grand ceremony to celebrate the princess’s birthday.','王國為什麼舉辦典禮？','慶祝公主的生日',['慶祝公主的生日','歡迎新國王','慶祝豐收','送別朋友'],'to celebrate... birthday 慶祝生日。'],['At night, the nocturnal animals came out of the quiet forest to look for food.','夜行性動物晚上出來做什麼？','找食物',['找食物','睡覺','上學','游泳'],'to look for food 找食物。'],['Her imagination was so wonderful that she wrote a story about a flying castle.','她寫了什麼故事？','會飛的城堡',['會飛的城堡','會說話的狗','海底王國','森林運動會'],'a flying castle 會飛的城堡。'],['The enchanted garden sparkled at night, and the nocturnal owls watched quietly from the trees.','誰在樹上安靜地看？',['夜行性的貓頭鷹','小兔子','公主','蝴蝶'],'夜行性的貓頭鷹','nocturnal owls 夜行性的貓頭鷹。'],['Every autumn, the ducks migrate to a warmer lake, and the children celebrate their return in spring.','鴨子秋天做什麼？',['遷徙到比較溫暖的湖','冬眠','留在原地','學游泳'],'遷徙到比較溫暖的湖','migrate 遷徙；warmer 比較溫暖。'],['The generous queen shared her treasure with everyone in the kingdom.','女王怎麼處理她的寶藏？',['和王國裡的每個人分享','藏起來','丟掉','賣掉'],'和王國裡的每個人分享','generous 慷慨的；shared 分享。']]};
 // 統一短句格式：[句子, 問題, 選項, 答案, 解析]
 for(const lv of [1,2,3,4])GIRL_READ[lv]=GIRL_READ[lv].map(x=>typeof x[2]==='string'&&Array.isArray(x[3])?[x[0],x[1],x[3],x[2],x[4]]:x);
-const GIRL_USE={1:[["The princess wears a ___.","crown","公主戴著皇冠。"],["I put on my pink ___.","dress","我穿上粉紅色洋裝。"],["The ___ hops in the grass.","bunny","小兔子在草地上跳。"],["We eat ___ at the birthday party.","cake","我們在生日派對吃蛋糕。"],["A little ___ says meow.","kitten","小貓會喵喵叫。"]],2:[["The princess lives in a ___.","castle","公主住在城堡。"],["We see a ___ after the rain.","rainbow","雨後我們看到彩虹。"],["I tie a ___ in my hair.","ribbon","我在頭髮綁上緞帶。"],["Let's have a ___ under the tree.","picnic","我們在樹下野餐吧。"],["The ___ has colorful wings.","butterfly","蝴蝶有彩色的翅膀。"]],3:[["The ___ girl was not afraid of the dark.","brave","勇敢的女孩不怕黑。"],["The pirates found a box of ___.","treasure","海盜找到一箱寶藏。"],["Bears ___ in winter.","hibernate","熊在冬天冬眠。"],["The forest is the ___ of many animals.","habitat","森林是很多動物的棲息地。"]],4:[["The swan looked ___ on the lake.","elegant","天鵝在湖上看起來很優雅。"],["Pandas are ___ animals, so we must protect them.","endangered","熊貓是瀕臨絕種的動物，所以我們要保護牠們。"],["Use your ___ to draw a magic castle.","imagination","用你的想像力畫一座魔法城堡。"],["Owls are ___ animals.","nocturnal","貓頭鷹是夜行性動物。"],["Many birds ___ to warm places in winter.","migrate","很多鳥冬天會遷徙到溫暖的地方。"],["We ___ her birthday with a big party.","celebrate","我們辦大派對慶祝她的生日。"],["The ___ queen gave gifts to everyone.","generous","慷慨的女王送禮物給每個人。"]]};
+const GIRL_USE={1:[["The princess wears a ___.","crown","公主戴著皇冠。"],["I put on my pink ___.","dress","我穿上粉紅色洋裝。"],["The ___ hops in the grass.","bunny","小兔子在草地上跳。"],["We eat ___ at the birthday party.","cake","我們在生日派對吃蛋糕。"],["A little ___ says meow.","kitten","小貓會喵喵叫。"]],2:[["The princess lives in a ___.","castle","公主住在城堡。"],["We see a ___ after the rain.","rainbow","雨後我們看到彩虹。"],["I tie a ___ in my hair.","ribbon","我在頭髮綁上緞帶。"],["Let's have a ___ under the tree.","picnic","我們在樹下野餐吧。"],["The ___ has colorful wings.","butterfly","蝴蝶有彩色的翅膀。"]],3:[["The ___ girl was not afraid of the dark.","brave","勇敢的女孩不怕黑。"],["The pirates found a box of ___.","treasure","海盜找到一箱寶藏。"],["Some bears ___ in winter.","hibernate","有些熊在冬天冬眠。"],["The forest is the ___ of many animals.","habitat","森林是很多動物的棲息地。"]],4:[["The swan looked ___ on the lake.","elegant","天鵝在湖上看起來很優雅。"],["Animals at serious risk of extinction are called ___.","endangered","面臨嚴重滅絕風險的動物被稱為瀕危動物。"],["Use your ___ to draw a magic castle.","imagination","用你的想像力畫一座魔法城堡。"],["Many owls are ___ animals.","nocturnal","許多貓頭鷹是夜行性動物。"],["Many birds ___ to warm places in winter.","migrate","很多鳥冬天會遷徙到溫暖的地方。"],["We ___ her birthday with a big party.","celebrate","我們辦大派對慶祝她的生日。"],["The ___ queen gave gifts to everyone.","generous","慷慨的女王送禮物給每個人。"]]};
 const GIRL_DEEP={1:[['The cat sleeps on the bed. The dog sleeps on the floor. The bird sleeps in a cage.','誰睡在地板上？','小狗',['小狗','小貓','小鳥','沒有人'],'The dog sleeps on the floor.','把每隻動物和地方配對。','en-context'],['Mia has three apples. She eats one. Then she gives one to Lulu.','Mia 最後還有幾顆蘋果？','一顆',['一顆','兩顆','三顆','沒有'],'3 顆吃掉 1 顆、送出 1 顆，剩 1 顆。','一步一步算。','en-inference'],['First, the princess wakes up. Next, she brushes her teeth. Then, she eats breakfast.','公主刷牙之後做什麼？','吃早餐',['吃早餐','起床','睡覺','唱歌'],'Then 表示接下來。','找出 next 和 then。','en-order'],['It is cold today. Lulu puts on her coat and a warm hat.','Lulu 為什麼穿外套？','因為今天很冷',['因為今天很冷','因為要游泳','因為很熱','因為要睡覺'],'cold 是冷。','找出天氣線索。','en-inference'],['Lulu has a pink ribbon. Mimi has a blue ribbon. Lulu gives her ribbon to Mimi.','現在誰有兩條緞帶？','Mimi',['Mimi','Lulu','兩人都沒有','老師'],'Mimi 本來有一條，Lulu 又送她一條。','數一數每個人的緞帶。','en-inference'],['The bunny is hungry. It eats a carrot. Now it is happy.','小兔子為什麼變開心？','因為吃了紅蘿蔔',['因為吃了紅蘿蔔','因為下雨了','因為睡覺了','因為找到球'],'hungry 餓了，吃完就開心。','找出前後的變化。','en-inference']],
  2:[['The puppy wanted to play, but its friend was sleeping. So the puppy waited quietly.','小狗為什麼安靜地等？','因為朋友在睡覺',['因為朋友在睡覺','因為牠生病了','因為下雨','因為肚子餓'],'but 後面說明朋友在睡覺。','注意 but 和 so。','en-inference'],['Lulu has five stickers. Mimi has two more than Lulu.','Mimi 有幾張貼紙？','七張',['七張','三張','五張','兩張'],'two more than 是「比……多兩個」：5＋2＝7。','把英文換成算式。','en-context'],['The garden party starts at three. The princess arrives at two to help set the table.','公主為什麼兩點就到？','幫忙擺桌子',['幫忙擺桌子','派對已經開始','她走錯路','要回家'],'to help set the table 是目的。','比較 three 和 two。','en-inference'],['The bunny planted carrot seeds in spring. In summer, it had many carrots to eat.','小兔子夏天為什麼有很多紅蘿蔔？','因為春天種了種子',['因為春天種了種子','朋友送的','從商店買的','下雨變出來的'],'先在 spring 種，summer 收成。','注意季節的先後。','en-order'],['The kitten is smaller than the puppy, and the puppy is smaller than the horse.','誰最大？','馬',['馬','小貓','小狗','一樣大'],'小貓 < 小狗 < 馬。','把三隻動物排一排。','en-context'],['Mimi forgot her umbrella, so Lulu shared hers on the way home.','Lulu 做了什麼？','和 Mimi 共用雨傘',['和 Mimi 共用雨傘','把雨傘丟掉','先跑回家','借 Mimi 外套'],'shared hers 分享她的雨傘。','找出 so 後面的結果。','en-inference'],['The princess wanted to go to the garden, but it was raining. She read a book in the castle instead.','公主最後做了什麼？','在城堡裡看書',['在城堡裡看書','去花園','去游泳','睡午覺'],'instead 表示改做別的事。','注意 but 和 instead。','en-inference'],['First, the squirrel finds nuts. Next, it carries them to its tree. Last, it hides them in a hole.','松鼠最後做什麼？','把堅果藏進洞裡',['把堅果藏進洞裡','找堅果','爬樹','吃掉堅果'],'Last 表示最後。','找出 last。','en-order']],
- 3:[['The fox wanted the grapes, but they were too high. After trying many times, it said the grapes were probably sour anyway.','狐狸為什麼說葡萄是酸的？','因為拿不到，所以找藉口',['因為拿不到，所以找藉口','因為牠吃過了','因為葡萄真的壞了','因為朋友告訴牠'],'牠拿不到，才說葡萄酸，這是在找藉口。','想想狐狸真正的心情。','en-inference'],['The ant worked hard all summer to store food, while the grasshopper sang and played. When winter came, only the ant had enough to eat.','這個故事想說什麼？','要為以後做準備',['要為以後做準備','唱歌最重要','冬天不用吃東西','螞蟻很小氣'],'螞蟻提前準備，冬天才有食物。','比較兩隻動物的做法和結果。','en-inference'],['On Monday the princess planted seeds. On Wednesday she watered them. On Saturday tiny green leaves appeared.','葉子在星期幾長出來？','星期六',['星期六','星期一','星期三','星期日'],'On Saturday tiny green leaves appeared.','建立時間順序。','en-order'],['The castle has four towers. Each tower has two windows, but one window is broken.','有幾扇窗戶是好的？','七扇',['七扇','八扇','六扇','四扇'],'4×2＝8 扇，壞了 1 扇，好的有 7 扇。','把英文變成算式。','en-context'],['The little bird was afraid to fly, but its mother stayed beside it and encouraged it every day. One morning, it finally flew over the lake.','小鳥最後為什麼能飛？','媽媽每天陪伴和鼓勵',['媽媽每天陪伴和鼓勵','牠吃了魔法藥','風把牠吹起來','牠一直都會飛'],'mother... encouraged it every day 是關鍵。','找出改變的原因。','en-inference'],['The kitten was stuck in a tree. The brave puppy barked loudly until the farmer came with a ladder.','小狗為什麼一直叫？','要叫農夫來救小貓',['要叫農夫來救小貓','牠肚子餓','牠想睡覺','牠在唱歌'],'小貓被困住，小狗叫到農夫拿梯子來。','把事情的原因和結果連起來。','en-inference']],
- 4:[['A survey asked 20 children about their favorite animal. Half chose rabbits, five chose cats, and the rest chose pandas.','有幾個孩子選熊貓？','5 個',['5 個','10 個','15 個','20 個'],'一半是 10 人選兔子，5 人選貓，20−10−5＝5 人選熊貓。','把 half 換成數字。','en-context'],['The gardener noticed that the roses near the window grew taller than the roses in the dark corner. She decided to move all the roses closer to the light.','園丁為什麼把玫瑰移到靠近光的地方？','她發現靠窗的玫瑰長得比較高',['她發現靠窗的玫瑰長得比較高','角落太吵','玫瑰喜歡黑暗','窗戶壞了'],'她比較兩處玫瑰，發現光線的影響。','找出她觀察到的差別。','en-inference'],['Although the princess was invited to a grand party, she chose to stay home and take care of her sick puppy. Her friends admired her kindness.','朋友為什麼佩服公主？','她選擇照顧生病的小狗',['她選擇照顧生病的小狗','她跳舞跳得最好','她穿最漂亮的禮服','她最早到舞會'],'although 雖然；she chose to stay home... 照顧小狗。','注意 although 的轉折。','en-inference'],['Endangered pandas live in bamboo forests. Because people cut down many forests, the pandas lost their habitat, so new forests are being planted to protect them.','為什麼要種新的森林？','保護失去棲息地的熊貓',['保護失去棲息地的熊貓','讓人類蓋房子','種更多竹子來賣','讓天氣變冷'],'lost their habitat 失去棲息地；to protect them 為了保護牠們。','把原因和結果連起來。','en-inference'],['The owl sleeps all day and hunts at night. The squirrel gathers nuts in the morning and sleeps at night.','哪一隻是夜行性動物？','貓頭鷹',['貓頭鷹','松鼠','兩隻都是','兩隻都不是'],'夜行性動物晚上活動，貓頭鷹晚上打獵。','比較兩隻動物活動的時間。','en-context'],['The enchanted castle only opened its gate to visitors who were kind. Rude visitors waited outside for hours, but the gentle princess walked right in.','城堡的門為誰打開？','善良的訪客',['善良的訪客','穿最漂亮衣服的人','最早到的人','最有錢的人'],'only... visitors who were kind 只為善良的人開門。','注意 only 後面的條件。','en-inference']]};
+ 3:[['The fox wanted the grapes, but they were too high. After trying many times, it said the grapes were probably sour anyway.','狐狸為什麼說葡萄是酸的？','因為拿不到，所以找藉口',['因為拿不到，所以找藉口','因為牠吃過了','因為葡萄真的壞了','因為朋友告訴牠'],'牠拿不到，才說葡萄酸，這是在找藉口。','想想狐狸真正的心情。','en-inference'],['The ant worked hard all summer to store food, while the grasshopper sang and played. When winter came, only the ant had enough to eat.','這個故事想說什麼？','要為以後做準備',['要為以後做準備','唱歌最重要','冬天不用吃東西','螞蟻很小氣'],'螞蟻提前準備，冬天才有食物。','比較兩隻動物的做法和結果。','en-inference'],['On Monday the princess planted seeds. On Wednesday she watered them. On Saturday tiny green leaves appeared.','葉子在星期幾長出來？','星期六',['星期六','星期一','星期三','星期日'],'On Saturday tiny green leaves appeared.','建立時間順序。','en-order'],['The castle has four towers. Each tower has two windows. One of the eight windows is broken.','有幾扇窗戶是好的？','七扇',['七扇','八扇','六扇','四扇'],'4×2＝8 扇，壞了 1 扇，好的有 7 扇。','把英文變成算式。','en-context'],['The little bird was afraid to fly, but its mother stayed beside it and encouraged it every day. One morning, it finally flew over the lake.','媽媽如何幫助原本害怕飛翔的小鳥？','媽媽每天陪伴和鼓勵',['媽媽每天陪伴和鼓勵','牠吃了魔法藥','風把牠吹起來','牠一直都會飛'],'母鳥每天陪伴與鼓勵小鳥；題目問媽媽做了什麼，不把鼓勵當成學會飛翔的唯一原因。','找出改變的原因。','en-inference'],['The kitten was stuck in a tree. The brave puppy barked loudly until the farmer came with a ladder.','小狗為什麼一直叫？','要叫農夫來救小貓',['要叫農夫來救小貓','牠肚子餓','牠想睡覺','牠在唱歌'],'小貓被困住，小狗叫到農夫拿梯子來。','把事情的原因和結果連起來。','en-inference']],
+ 4:[['A survey asked 20 children about their favorite animal. Half chose rabbits, five chose cats, and the rest chose pandas.','有幾個孩子選熊貓？','5 個',['5 個','10 個','15 個','20 個'],'一半是 10 人選兔子，5 人選貓，20−10−5＝5 人選熊貓。','把 half 換成數字。','en-context'],['The gardener noticed that the roses near the window grew taller than the roses in the dark corner. She decided to move all the roses closer to the light.','園丁為什麼把玫瑰移到靠近光的地方？','她發現靠窗的玫瑰長得比較高',['她發現靠窗的玫瑰長得比較高','角落太吵','玫瑰喜歡黑暗','窗戶壞了'],'她觀察到靠窗的玫瑰比較高，因而改變擺放位置；這個故事沒有控制其他條件，不能單憑高度差就證明只有光照造成差異。','找出她觀察到的差別。','en-inference'],['Although the princess was invited to a grand party, she chose to stay home and take care of her sick puppy. Her friends admired her kindness.','朋友為什麼佩服公主？','她選擇照顧生病的小狗',['她選擇照顧生病的小狗','她跳舞跳得最好','她穿最漂亮的禮服','她最早到舞會'],'although 雖然；she chose to stay home... 照顧小狗。','注意 although 的轉折。','en-inference'],['Some endangered animals live in forests. Because people cut down many forests, these animals lost their habitat, so forests are being restored to protect them.','為什麼要種新的森林？','保護失去棲息地的動物',['保護失去棲息地的動物','讓人類蓋房子','種更多竹子來賣','讓天氣變冷'],'lost their habitat 失去棲息地；to protect them 為了保護牠們。','把原因和結果連起來。','en-inference'],['The owl sleeps all day and hunts at night. The squirrel gathers nuts in the morning and sleeps at night.','哪一隻是夜行性動物？','貓頭鷹',['貓頭鷹','松鼠','兩隻都是','兩隻都不是'],'夜行性動物晚上活動，貓頭鷹晚上打獵。','比較兩隻動物活動的時間。','en-context'],['The enchanted castle only opened its gate to visitors who were kind. Rude visitors waited outside for hours, but the gentle princess walked right in.','城堡的門為誰打開？','善良的訪客',['善良的訪客','穿最漂亮衣服的人','最早到的人','最有錢的人'],'only... visitors who were kind 只為善良的人開門。','注意 only 後面的條件。','en-inference']]};
 
 // --- 應用題與計分題的用語轉換（公主／動物世界） ---
 const WORLD_PHRASES={
@@ -1569,7 +1622,7 @@ const BASEBALL_EN=/\b(baseball|bats?|gloves?|pitchers?|batters?|catchers?|inning
 const hasBaseball=t=>BASEBALL_RX.test(String(t||''));
 const WORLD_BALL={princess:'珍珠',animals:'橡實'};
 function worldText(t,w){let s=String(t??'');for(const [a,b] of WORLD_PHRASES[w])s=s.split(a).join(b);return s.replace(/(?<![地氣月星眼])球/g,WORLD_BALL[w])}
-function worldize(q,w){if(!q)return q;const o={...q};for(const k of ['prompt','main','second','explain','hint','answer'])if(typeof o[k]==='string')o[k]=worldText(o[k],w);if(Array.isArray(o.choices))o.choices=o.choices.map(c=>worldText(c,w));return o}
+function worldize(q,w){if(!q||w==='baseball')return q;const o={...q};for(const k of ['prompt','main','second','explain','hint','answer'])if(typeof o[k]==='string')o[k]=worldText(o[k],w);if(Array.isArray(o.choices))o.choices=o.choices.map(c=>worldText(c,w));return o}
 const questionText=q=>[q.prompt,q.main,q.second,q.explain,q.hint,q.answer,...(q.choices||[])].join('｜');
 
 // --- 套用世界：把共用的資料換成目前世界的版本 ---
@@ -1613,7 +1666,7 @@ function applyWorld(){snapshotBase();const w=currentWorld();if(w===appliedWorld)
  try{document.title=worldInfo().name+'｜國語 × 注音 × 英文 × 數學 × 邏輯 × 科學'}catch(_){}}
 // 出題：公主／動物世界會轉換用語，並排除任何仍帶棒球用語的題目
 const _genV31=generateQuestions;
-generateQuestions=function(sub,m,lv){applyWorld();const w=currentWorld();if(w==='baseball')return _genV31(sub,m,lv);
+generateQuestions=function(sub,m,lv){applyWorld();const w=currentWorld();if(w==='baseball'||['science','chinese','english','zhuyin'].includes(sub))return _genV31(sub,m,lv);
  if(m==='review')return _genV31(sub,m,lv).map(q=>worldize(q,w));
  const want=data.settings.roundSize||8,out=[],seen=new Set();for(let t=0;t<8&&out.length<want;t++){for(const q0 of _genV31(sub,m,lv)){const q=worldize(q0,w);if(seen.has(q.signature)||hasBaseball(questionText(q)))continue;seen.add(q.signature);out.push(q);if(out.length>=want)break}}
  return out};
@@ -1632,18 +1685,7 @@ function pickPlayer(id){try{sessionStorage.setItem(PICKED_KEY,'1')}catch(_){}swi
 profiles=loadProfiles();
 
 // ===== v35：容易混淆的注音不放在同一題（家長指定） =====
-const ZY_NO_TOGETHER=[['ㄗ','ㄔ'],['ㄣ','ㄥ'],['ㄛ','ㄡ']];
-function zyConflict(texts){const s=new Set([...texts.join('')]);return ZY_NO_TOGETHER.some(([a,b])=>s.has(a)&&s.has(b))}
-const zySymbolsOf=q=>[q.answer,...q.choices];
-// 符號選擇題：保留答案，換掉會和其他選項衝突的干擾項
-function fixSymbolChoices(q){if(!zyConflict(q.choices))return q;const keep=[q.answer];
- for(const c of [...q.choices.filter(c=>c!==q.answer),...shuffle(ZHUYIN.map(z=>z.sym))]){if(keep.length>=4)break;if(keep.includes(c))continue;if(!zyConflict([...keep,c]))keep.push(c)}
- return {...q,choices:shuffle(keep)}}
-const _zyQV34=zhuyinQuestion;
-zhuyinQuestion=function(lv,m,u){for(let i=0;i<60;i++){let q=_zyQV34(lv,m,u);if((m==='listen'||m==='picture')&&q.choices.every(c=>[...c].length===1))q=fixSymbolChoices(q);if(!zyConflict(zySymbolsOf(q)))return q}return _zyQV34(lv,'tone',u)};
-const _zyWordV34=zhuyinWordQuestion;
-zhuyinWordQuestion=function(lv,u){for(let i=0;i<80;i++){const q=_zyWordV34(lv,u);if(!zyConflict(zySymbolsOf(q)))return q}return zhuyinQuestion(lv,'tone',u)};
-
+// 易混淆符號仍需練習辨識；不可因同時含有不同韻母而跳過語詞或換成其他題型。
 function deepQuestion(level,used){const pool=DEEP_READ[level],index=pool.map((x,i)=>({x,i})).filter(v=>!used.has('deep-'+level+'-'+v.i));const {x,i}=one(index.length?index:pool.map((x,i)=>({x,i})));return {skill:x[6],prompt:'📖 先讀完故事，再根據線索回答',main:x[0],second:x[1],answer:x[2],choices:shuffle(x[3]),explain:x[4],hint:x[5],signature:'deep-'+level+'-'+i,concept:'deep-'+x[6],isEnglish:true,readingOnly:true,speech:x[0]};}
 function reasonQuestion(level,concept=null){const patterns=[];
  function add(id,make){patterns.push({id,make})}
@@ -1662,7 +1704,7 @@ function reasonQuestion(level,concept=null){const patterns=[];
   add('money',()=>{const x=rand(3,8)*10,y=rand(2,6)*5,cost=x+y,paid=Math.ceil(cost/100)*100+100;return [`運動水壺 ${x} 元、筆記本 ${y} 元。帶了 ${paid} 元，全部買下後剩多少？`,paid-cost,`先算 ${x}＋${y}＝${cost} 元，再算 ${paid}−${cost}＝${paid-cost} 元。`,'錢夠不夠？先算合計。','math-money']});
   add('table',()=>{const r1=rand(3,9),r2=rand(2,8),b1=rand(3,9),b2=rand(1,7);return [`兩局得分表：\n隊伍　第一局　第二局\n紅隊　${r1}　　　${r2}\n藍隊　${b1}　　　${b2}\n兩隊合計得了幾分？`,r1+r2+b1+b2,`紅隊 ${r1+r2}，藍隊 ${b1+b2}；合計 ${r1+r2+b1+b2}。`,'四個數字都要加，不要只看一列。','math-data']});
   add('time',()=>{const h=rand(8,16),start=one([0,15,30]),dur=one([15,30,45]),tm=h*60+start+dur;const hh=Math.floor(tm/60),mm=tm%60;return [`練習從 ${String(h).padStart(2,'0')}:${String(start).padStart(2,'0')} 開始，練習了 ${dur} 分鐘，幾點結束？`,`${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`,`把 ${dur} 分鐘加到開始時間，得到 ${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}。`,'注意分鐘滿60要進一小時。','math-money','time']});
-  add('average-groups',()=>{const per=rand(3,8),n=rand(3,6),extra=rand(1,4);return [`每個小組需要 ${per} 顆球，${n} 個小組共需幾顆？如果又增加 ${extra} 顆備用球，全部需要多少？`,per*n+extra,`${per}×${n}＝${per*n}；再加 ${extra}＝${per*n+extra}。`,'先算每組，再加備用。']});
+  add('average-groups',()=>{const per=rand(3,8),n=rand(3,6),extra=rand(1,4);return [`每個小組需要 ${per} 顆球，共有 ${n} 個小組，另外增加 ${extra} 顆備用球，全部需要多少？`,per*n+extra,`${per}×${n}＝${per*n}；再加 ${extra}＝${per*n+extra}。`,'先算每組，再加備用。']});
   add('reverse',()=>{const x=rand(15,40),take=rand(5,14);return [`一箱球原來有一些球。教練取出 ${take} 顆後還有 ${x} 顆，原來有多少顆？`,x+take,`原有＝剩下 ${x}＋拿出 ${take}＝${x+take}。`,'反向想：取出的要補回。']});
   add('compare',()=>{const r=rand(13,30),b=rand(11,28),bonus=rand(3,9);return [`紅隊兩天練習 ${r} 次，藍隊兩天 ${b} 次。藍隊又增加 ${bonus} 次，現在兩隊相差幾次？`,Math.abs(r-(b+bonus)),`藍隊更新為 ${b}+${bonus}＝${b+bonus}；差 ${Math.abs(r-(b+bonus))} 次。`,'先更新藍隊，再比較兩隊。']});
  }else{
@@ -1686,14 +1728,19 @@ function safeReviewQuestion(q){if(!q||typeof q!=='object'||typeof q.main!=='stri
  result.choices=q.choices.map(x=>String(x).slice(0,120));for(const k of ['isEnglish','isListening','readingOnly','reason','showAudio','noReadMain','noReadOptions','bigChoices','gridMain'])if(typeof q[k]==='boolean')result[k]=q[k];return result;
 }
 function sanitizeReviewQueue(raw){if(!Array.isArray(raw))return [];return raw.slice(-140).flatMap(e=>{if(!e||!SUBJECT_KEYS.includes(e.subject)||!MODES[e.subject].some(m=>m.id===e.mode)||e.mode==='review'||typeof e.id!=='string'||!Number.isFinite(+e.dueAt))return [];const q=safeReviewQuestion(e.q);if(!q)return [];return [{id:e.id.slice(0,75),subject:e.subject,mode:e.mode,level:[1,2,3,4].includes(+e.level)?+e.level:1,q,stage:Math.min(3,Math.max(0,Number(e.stage)||0)),dueAt:+e.dueAt,lastAttemptAt:Number(e.lastAttemptAt)||0,misses:Math.min(30,Math.max(1,Number(e.misses)||1))}]})}
-function dueReviews(sub=null){if(data.settings.reviewEnabled===false)return [];return data.reviewQueue.filter(e=>(!sub||e.subject===sub)&&e.dueAt<=Date.now()).sort((a,b)=>a.dueAt-b.dueAt)}
+function dueReviews(sub=null){if(data.settings.reviewEnabled===false)return [];return data.reviewQueue.filter(e=>(!sub||e.subject===sub)&&canPractice(e.subject,e.mode)&&(e.mode==='times'||e.level<=effectiveLevel(e.subject,e.level))&&e.dueAt<=Date.now()).sort((a,b)=>a.dueAt-b.dueAt)}
 function newReviewMiss(q,s){if(data.settings.reviewEnabled===false)return;const safe=safeReviewQuestion(q);if(!safe)return;const same=data.reviewQueue.find(x=>x.subject===s.subject&&x.mode===s.mode&&x.level===s.level&&x.q.signature===q.signature);if(same){same.misses=Math.min(30,same.misses+1);same.stage=0;same.dueAt=Date.now();same.q=safe;return}
  const id=String(Date.now())+'-'+String(Math.random()).slice(2,10);data.reviewQueue.push({id,subject:s.subject,mode:s.mode,level:s.level,q:safe,stage:0,dueAt:Date.now(),lastAttemptAt:0,misses:1});data.reviewQueue=data.reviewQueue.slice(-140);
 }
 function markReview(q,ok){const idx=data.reviewQueue.findIndex(x=>x.id===q.reviewId);if(idx<0)return;const item=data.reviewQueue[idx];if(ok){item.stage++;if(item.stage>=4){data.reviewQueue.splice(idx,1);return}const days=[0,1,3,7][item.stage];item.dueAt=Date.now()+days*86400000;item.lastAttemptAt=Date.now();}
  else{item.stage=0;item.dueAt=Date.now()+86400000;item.lastAttemptAt=Date.now();item.misses=Math.min(30,item.misses+1)}
 }
-function freshReviewQuestion(item){if(item.subject==='chinese'){const q=structuredClone(item.q);q.choices=shuffle(q.choices);q.reviewId=item.id;q.reviewLevel=item.level;return q}{const w=freshV26Review(item);if(w){w.reviewId=item.id;w.reviewLevel=item.level;return w}}{const v=freshV25Review(item);if(v){v.reviewId=item.id;v.reviewLevel=item.level;return v}}if(item.subject==='logic'||item.subject==='science'){const q=freshNewSubjectReview(item);q.reviewId=item.id;q.reviewLevel=item.level;return q}let q=structuredClone(item.q);if(item.subject==='math'){try{if(item.mode==='reason'&&item.q.concept)q=reasonQuestion(item.level,item.q.concept);else if(item.mode==='calc')q=calcQuestion(item.level);else if(['story','score'].includes(item.mode))q=storyQuestion(item.level,item.mode==='score')}catch(_){}}
+function freshReviewQuestion(item){
+ applyWorld();
+ if(item.subject==='math'&&item.mode==='story'&&grade()==='g1')return {...worldize(gradeStoryQuestion(),currentWorld()),reviewId:item.id,reviewLevel:1};
+ if(item.subject==='english'&&['letters','vocab','listen','sentence','use','deep'].includes(item.mode)){
+ const lv=effectiveLevel('english',item.level),q=item.mode==='deep'?deepQuestion(lv,new Set()):englishQuestion(lv,item.mode,new Set());return {...q,reviewId:item.id,reviewLevel:lv};}
+if(item.subject==='math'&&item.mode==='calc'&&grade()!=='g3'){const q=worldize(gradeCalculation(effectiveLevel('math',item.level)),currentWorld());return {...q,reviewId:item.id,reviewLevel:effectiveLevel('math',item.level)}}if(item.subject==='math'&&item.mode==='measure'&&grade()==='g2'){const q=worldize(measureQuestion(1,one([0,1,3,4,5,7])),currentWorld());return {...q,reviewId:item.id,reviewLevel:1}}if(item.subject==='chinese'){const pool=cnBank(CN.lessons),q=pool.find(q=>q.signature===item.q.signature)||pool.find(q=>q.cnLessonId===item.q.cnLessonId)||pool[0];return {...q,reviewId:item.id,reviewLevel:item.level}} {const w=freshV26Review(item);if(w){w.reviewId=item.id;w.reviewLevel=item.level;return w}}{const v=freshV25Review(item);if(v){v.reviewId=item.id;v.reviewLevel=item.level;return v}}if(item.subject==='logic'||item.subject==='science'){const q=freshNewSubjectReview(item);q.reviewId=item.id;q.reviewLevel=item.level;return q}let q=structuredClone(item.q);if(item.subject==='math'){try{if(item.mode==='reason'&&item.q.concept)q=reasonQuestion(item.level,item.q.concept);else if(item.mode==='calc')q=calcQuestion(item.level);else if(['story','score'].includes(item.mode))q=storyQuestion(item.level,item.mode==='score')}catch(_){}}
  if(item.subject==='english'&&item.mode==='deep'){const pool=DEEP_READ[item.level],alt=pool.map((x,i)=>i).filter(i=>('deep-'+item.level+'-'+i)!==item.q.signature&&xSkill(pool[i][6])===xSkill(item.q.skill));if(alt.length){const v=pool[one(alt)],ix=pool.indexOf(v);q={skill:v[6],prompt:'📖 先讀完故事，再根據線索回答',main:v[0],second:v[1],answer:v[2],choices:shuffle(v[3]),explain:v[4],hint:v[5],signature:'deep-'+item.level+'-'+ix,concept:'deep-'+v[6],isEnglish:true,readingOnly:true,speech:v[0]}}}
  q.reviewId=item.id;q.reviewLevel=item.level;return q;
 }
@@ -1705,7 +1752,7 @@ function generateQuestionsBase(sub,m,lv){if(m==='review')return dueReviews(sub).
  // 正常練習也帶入近期錯題（最多2題），並保留其他題目的廣度。
  if(data.settings.reviewEnabled&&m!=='letters'&&m!=='deep'&&m!=='reason'){const pending=dueReviews(sub).filter(e=>e.mode===m).slice(0,2);for(let i=0;i<pending.length;i++)list[5+i]=freshReviewQuestion(pending[i]);}
  return list}
-function start(m){handInk=[];handAnswerInk=[];handOcrResult='';handQuizOpen=false;handResult='';clearAdvance();if(!MODES[subject]?.some(x=>x.id===m))return;mode=m;let items=generateQuestions(subject,m,data.settings[subject]);if(!items.length){toast('目前沒有到期錯題，先練習新題目吧！');return;}session={subject,mode,level:data.settings[subject],items,idx:0,correct:0,attempts:[],missed:[],usedHint:false};feedback=null;page='quiz';window.scrollTo(0,0);render();focusLesson();autoReadSoon()}
+function start(m){handInk=[];handAnswerInk=[];handOcrResult='';handQuizOpen=false;handResult='';clearAdvance();if(!canPractice(subject,m))return;mode=m;let items=practiceQuestions(subject,m,data.settings[subject]);if(!items.length){toast('目前沒有到期錯題，先練習新題目吧！');return;}session={subject,mode,level:effectiveLevel(subject),items,idx:0,correct:0,attempts:[],missed:[],usedHint:false};feedback=null;page='quiz';window.scrollTo(0,0);render();focusLesson();autoReadSoon()}
 
 function quiz(){if(!session)return '';const q=session.items[session.idx],selected=feedback?.selected??null;const m=MODES[session.subject].find(x=>x.id===session.mode),tot=session.items.length;return `<div class="quiz-wrap"><div class="quiz-top"><button class="quit" data-action="quit">✕ 暫停練習</button><span class="quiz-progress">${m.name} · 第 ${session.idx+1} / ${tot} 題</span></div><div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${session.idx}" aria-label="練習進度"><div class="fill" style="width:${session.idx/tot*100}%"></div></div><section class="quiz-card" style="--qaccent:${SUBJECT_COLOR[session.subject]||'var(--navy)'}"><span class="topiccap">${m.icon} ${m.label}　｜　${q.courseLabel?h(q.courseLabel):session.subject==='chinese'?'二年級國語':q.skill==='math-times'?'九九乘法 1～9（不分難度）':'難度 '+(q.reviewLevel||session.level)} ${q.reviewId?'· 🔁 複習題':''}</span><div class="question-prompt">${h(q.prompt)}</div><div class="question-main ${q.isEnglish?'question-en':''} ${q.gridMain?'grid':isEmojiMain(q)?'emoji':!q.isEnglish&&q.main.length>34?'long':''}" style="white-space:pre-line" ${q.isEnglish?'lang="en"':''}>${h(q.main)}</div>${q.second?`<div style="font-weight:800;margin:2px 0 13px">❓ ${h(q.second)}</div>`:''}<div class="read-row"><button type="button" class="speaker zh" data-action="speak-q">🔊 唸題目給我聽</button>${q.zhSound?'<button type="button" class="speaker" data-action="speak-zh-sound">🎧 播放聲音</button>':''}</div>${q.speech?`<button type="button" class="speaker" data-action="speak">${isEnglishSentence(q.speech)?'🔊 聽自然英文句型 <small>0.93 倍・清楚不斷句</small>':'🔊 播放英文發音 <small>可以重複聽</small>'}</button>${isEnglishSentence(q.speech)?'<button type="button" class="speech-test" data-action="speak-slower" style="margin-bottom:12px;margin-left:8px">🐢 再慢一點（0.86 倍）</button>':''}<div class="speech-status" id="speech-status" role="status" aria-live="polite"></div>${q.isListening&&!q.choices.some(c=>c.replace(/\s/g,'').toLowerCase().includes(String(q.speech).replace(/\s/g,'').toLowerCase()))?`<button type="button" data-action="transcript" style="display:block;background:none;border:0;color:#718490;font-size:12px;padding:0 3px">聽不清楚？顯示英文提示</button><div id="transcript" class="hidden note" style="margin-top:7px" lang="en">${h(q.speech)}</div>`:''}`:''}${q.readingOnly?'<div class="tipline">📚 這是自主閱讀關卡：先自己讀、圈出線索；不必搶快，也不用一次全懂。</div>':''}${q.hint&&!feedback?`<div class="hint-box"><button type="button" class="hint-toggle" data-action="hint">💭 不知道怎麼開始？看思路提示</button>${session.usedHint?`<p class="hint-text">${h(q.hint)}</p>`:''}</div>`:''}<button type="button" class="hw-quiz-toggle" data-action="quiz-handwrite" aria-expanded="${handQuizOpen}">✍️ ${session.subject==='math'?'手寫計算草稿':session.subject==='english'?'手寫英文草稿':'手寫思考草稿'}　${handQuizOpen?'▲ 收起':'▼ 展開'}（可用手指／Apple Pencil）</button>${handQuizOpen?`<section class="hw-quiz-box">${handPadMarkup('',false,true)}${session.subject==='math'?handRecognizerControls('math'):session.subject==='english'?handRecognizerControls('english'):''}${session.subject==='math'?`<form class="hw-check" data-hw-form="quiz"><div class="hw-field"><label for="hw-check-input">算好後輸入答案驗算</label><input id="hw-check-input" inputmode="decimal" autocomplete="off" placeholder="例如：24" aria-label="輸入計算答案"></div><button class="btn btn-dark" type="submit">✅ 驗算</button></form><div class="hw-message" id="hw-feedback" role="status" aria-live="polite">${h(handResult)}</div>`:''}<p class="hw-note">試用免費本機筆跡辨識；辨識可能有誤，請確認自動填入的答案後，再按核對或驗算。原本的選擇題分數不受影響。</p></section>`:''}<div class="optiongrid ${q.bigChoices?'big':''}" role="group" aria-label="選擇答案">${q.choices.map((o,i)=>{const correct=feedback&&o===q.answer,wrong=feedback&&o===selected&&o!==q.answer;return `<button class="option ${correct?'correct':''} ${wrong?'incorrect':''}" data-action="answer" data-choice="${i}" ${feedback?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span>${h(o)}</span></button>`}).join('')}</div>${feedback?`<div role="status" aria-live="polite" class="feedback ${feedback.correct?'':'bad'}"><strong>${feedback.correct?themeCopy().right:'💡 沒關係，我們一起看看'}</strong><p>正確答案：<b>${h(q.answer)}</b><br>${h(q.explain)}</p>${session.mode==='use'?'<button class="speech-test" type="button" data-action="speak-answer">🔊 聽正確單字</button>':''}${q.zyAnswerSym?`<button class="speech-test" type="button" data-action="zy-play-answer">🔊 聽「${h(q.zyAnswerSym)}」</button>`:''}${q.reviewId?'<p class="auto-next-hint">🔁 複習題：即使答對，也會隔一段時間再複習，確認真的記得。</p>':''}${feedback.correct&&data.settings.autoNext&&!handQuizOpen&&!q.reason&&!q.readingOnly?'<p class="auto-next-hint">⏳ 至少停留 6 秒後繼續；可以按下方按鈕慢慢看。<button type="button" class="speech-test" data-action="stay-feedback">📖 我要慢慢看</button></p>':(q.reason||q.readingOnly)?'<p class="auto-next-hint">🧠 深度題不自動跳題，請想一想解題思路再繼續。</p>':!feedback.correct?'<p class="auto-next-hint">先看懂解析，再按下一題。</p>':''}</div><button class="btn btn-dark quiz-next" data-action="next">${session.idx===tot-1?'看這回合的練習回顧':'下一題 →'}</button>`:''}</section><p class="mobile-note" style="text-align:center;margin-top:14px">不用搶快。答錯是找出學習方向的重要線索。</p></div>`}
 function answer(choiceIndex){clearAdvance();if(!session||feedback)return;const q=session.items[session.idx],sel=q.choices[choiceIndex];if(sel===undefined)return;const ok=sel===q.answer;feedback={selected:sel,correct:ok};chime(ok);if(ok)session.correct++;else session.missed.push({main:(q.courseLabel?q.courseLabel+'\n':'')+(q.isListening?q.speech:q.main)+(q.second?'\n'+q.second:''),answer:q.answer,explain:q.explain});session.attempts.push({skill:q.skill,correct:ok,hintUsed:!!session.usedHint,review:!!q.reviewId,concept:q.concept||'',level:q.reviewLevel||session.level});if(q.reviewId)markReview(q,ok);else if(!ok)newReviewMiss(q,session);save();session.usedHint=false;render();if(ok&&data.settings.autoNext&&!handQuizOpen&&!q.reason&&!q.readingOnly){const currentSession=session,currentFeedback=feedback;advanceTimer=setTimeout(()=>{advanceTimer=null;if(page==='quiz'&&session===currentSession&&feedback===currentFeedback)next()},Math.max(6000,Math.min(20000,Array.from(q.explain||'').length*180)))}}
@@ -1726,17 +1773,17 @@ function parent(){if(!parentUnlocked)return parentGate();const ss=data.sessions.
 function skillMeter(k){const a=getSkillStat(k),state=a.n<5?'資料不足':a.pct>=85?'近期表現穩定':a.pct>=65?'繼續練習':'建議一起複習';return `<div class="meter"><div class="meter-label"><span>${SKILLS[k]}</span><small>${a.n?a.hit+'/'+a.n+' 題 · '+state:'尚未練習'}</small></div><div class="meter-bar"><div style="width:${a.pct}%"></div></div></div>`}
 
 // v18：一張免費的觸控畫布；不使用影像辨識或付費 API。
-function handWordPool(){return VOCAB[data.settings.english]||VOCAB[1]}
+function handWordPool(){return VOCAB[effectiveLevel('english')]||VOCAB[1]}
 function currentHandTarget(){const words=handWordPool();return handMode==='letter'?ALPHABET[handLetter].upper:words[handWord%words.length][0]}
 function handPadMarkup(target='',showGuide=false,quizMode=false){const size=target.length>3?'word':'letter';return `<div class="hw-pad ${showGuide?'guide':''} ${handExpanded?'is-expanded':''}"><div class="hw-guide-text ${!showGuide?'scratch':size}" aria-hidden="true">${showGuide?h(target):''}</div><canvas id="hw-canvas" width="780" height="360" aria-label="${quizMode?'手寫草稿畫板':'英文或數學手寫畫板'}，可用手指、觸控筆或滑鼠書寫" role="img"></canvas></div><div class="hw-actions"><button type="button" class="btn btn-outline" data-action="hand-undo">↩️ 撤銷一筆</button><button type="button" class="btn btn-outline" data-action="hand-clear">🧽 清空重寫</button><button type="button" class="btn hw-zoom" data-action="hand-zoom" aria-pressed="${handExpanded}">🔎 ${handExpanded?'還原':'放大'}書寫區</button></div>`}
 function handAnswerPadMarkup(){return `<div class="hw-canvas-head">🖊️ 最後答案手寫區</div><p class="hw-ocr-hint">先在上方草稿列式，再只把最後答案寫在下面。數字之間留一點空隙，較容易辨識。</p><div class="hw-pad hw-answer-pad ${handAnswerExpanded?'is-expanded':''}"><canvas id="hw-answer-canvas" aria-label="手寫最後數字答案；畫板上滑動不會捲動畫面"></canvas></div><div class="hw-actions"><button type="button" class="btn btn-outline" data-action="hand-answer-undo">↩️ 撤銷一筆</button><button type="button" class="btn btn-outline" data-action="hand-answer-clear">🧽 清空最後答案</button><button type="button" class="btn hw-zoom" data-action="hand-answer-zoom" aria-pressed="${handAnswerExpanded}">🔎 ${handAnswerExpanded?'還原':'放大'}答案區</button></div>`}
 function handRecognizerControls(kind){return `${kind==='math'?handAnswerPadMarkup():`<p class="hw-ocr-hint">✏️ 英文請用印刷體寫字母，字母之間留一點間隔。辨識結果只供參考，不會直接當成正確答案。</p>`}<div class="hw-ocr-actions"><button type="button" class="btn btn-dark" data-action="hand-recognize" ${handRecognitionBusy?'disabled':''}>🔎 ${handRecognitionBusy?'正在辨識…':'辨識手寫'+(kind==='math'?'答案':'英文')}</button></div><div class="hw-ocr-result" id="hw-ocr-result" role="status" aria-live="polite">${h(handOcrResult)}</div><div class="hw-score" id="hw-score" role="status" aria-live="polite" ${handScoreHtml?'':'hidden'}>${handScoreHtml}</div><div id="hw-ocr-candidates" class="hw-ocr-actions" aria-label="可能的英文單字"></div>`}
 function handwritingPage(){
- if(!handMath)handMath=calcQuestion(data.settings.math);
+ if(!handMath||handMath.practiceGrade!==grade()||handMath.practiceLevel!==effectiveLevel('math'))handMath=Object.assign(handCalculation(),{practiceGrade:grade(),practiceLevel:effectiveLevel('math')});
  const english=handTab==='english',pool=handWordPool(),word=pool[handWord%pool.length],target=currentHandTarget();
  return `<div class="hw-layout"><button class="back" data-action="nav-home">← 回到學習首頁</button><div class="pageheading"><div class="eyebrow">HANDWRITING × BASEBALL</div><h1>✍️ 手寫練習場</h1><p>手機用手指、平板用觸控筆、電腦用滑鼠。寫完可以核對拼字或數學答案，不需要額外費用。</p></div><div class="hw-tabs" role="group" aria-label="選擇手寫練習科目"><button type="button" data-action="hand-tab-english" class="${english?'selected':''}" aria-pressed="${english}">🔤 英文手寫</button><button type="button" data-action="hand-tab-math" class="${!english?'selected':''}" aria-pressed="${!english}">🧮 數學計算</button></div>
  <section class="hw-main">${english?`<div class="hw-modes" role="group" aria-label="英文手寫類型"><button type="button" data-action="hand-mode-letter" class="${handMode==='letter'?'selected':''}" aria-pressed="${handMode==='letter'}">🔡 A～Z 字母</button><button type="button" data-action="hand-mode-word" class="${handMode==='word'?'selected':''}" aria-pressed="${handMode==='word'}">📚 英文單字</button></div><div class="hw-practice-target"><div class="target" lang="en">${h(target)}${handMode==='letter'?` <span style="color:#7691a0">${ALPHABET[handLetter].lower}</span>`:''}</div><small>${handMode==='letter'?`第 ${handLetter+1}／26 個字母・${ALPHABET[handLetter].word}（${ALPHABET[handLetter].meaning}）`:`第 ${handWord%pool.length+1}／${pool.length} 個單字 · ${h(word[1])}`}</small></div><div class="rowactions"><button type="button" class="btn btn-outline" data-action="hand-listen">🔊 聽發音</button><button type="button" class="btn btn-outline" data-action="hand-prev">← 上一個</button><button type="button" class="btn btn-dark" data-action="hand-next">下一個 →</button></div>${handPadMarkup(handMode==='letter'?target+' '+ALPHABET[handLetter].lower:target,true)}${handRecognizerControls('english')}<form class="hw-check" data-hw-form="english"><div class="hw-field"><label for="hw-check-input">🖊️ 用鍵盤拼一次，再核對</label><input id="hw-check-input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="35" aria-label="輸入單字核對拼字" placeholder="例如：${h(target)}"></div><button class="btn btn-dark" type="submit">✅ 核對拼字</button></form>`:
- `<div class="hw-practice-target"><div style="font-size:13px;color:#627779;font-weight:800">數學計算 · 第 ${data.settings.math} 級</div><div style="font-size:clamp(20px,4vw,28px);font-weight:900;margin-top:7px;white-space:pre-wrap">${h(handMath.main)}</div></div><div class="rowactions"><button class="btn btn-outline" type="button" data-action="hand-math-next">🔄 換一題</button><button class="btn btn-outline" type="button" data-action="hand-math-explain">💡 ${handSolution?'隱藏解析':'看解題解析'}</button></div>${handPadMarkup('',false)}${handRecognizerControls('math')}<form class="hw-check" data-hw-form="math"><div class="hw-field"><label for="hw-check-input">🧮 寫完算式，再輸入答案驗算</label><input id="hw-check-input" type="text" inputmode="decimal" autocomplete="off" maxlength="20" aria-label="輸入數學答案" placeholder="輸入數字，例如：24"></div><button class="btn btn-dark" type="submit">✅ 驗證計算</button></form>${handSolution?`<div class="hw-message">📖 ${h(handMath.explain)}</div>`:''}`}
+ `<div class="hw-practice-target"><div style="font-size:13px;color:#627779;font-weight:800">數學計算 · ${GRADES[grade()]}適用題目</div><div style="font-size:clamp(20px,4vw,28px);font-weight:900;margin-top:7px;white-space:pre-wrap">${h(handMath.main)}</div></div><div class="rowactions"><button class="btn btn-outline" type="button" data-action="hand-math-next">🔄 換一題</button><button class="btn btn-outline" type="button" data-action="hand-math-explain">💡 ${handSolution?'隱藏解析':'看解題解析'}</button></div>${handPadMarkup('',false)}${handRecognizerControls('math')}<form class="hw-check" data-hw-form="math"><div class="hw-field"><label for="hw-check-input">🧮 寫完算式，再輸入答案驗算</label><input id="hw-check-input" type="text" inputmode="decimal" autocomplete="off" maxlength="20" aria-label="輸入數學答案" placeholder="輸入數字，例如：24"></div><button class="btn btn-dark" type="submit">✅ 驗證計算</button></form>${handSolution?`<div class="hw-message">📖 ${h(handMath.explain)}</div>`:''}`}
  <div class="hw-message" id="hw-feedback" role="status" aria-live="polite">${h(handResult)}</div><p class="hw-note">⚠️ 評分分成「答案是否正確」與「筆跡形狀相似度參考」。形狀分數是本機筆畫和印刷字樣的簡易比較，並非老師評分，不適合判斷孩子真正的字體美觀或書寫能力。辨識錯誤時可自行修正；資料不會上傳，也不會更改原本的測驗紀錄。</p></section></div>`;
 }
 function handReset(){handInk.length=0;handAnswerInk.length=0;handInkRevision++;handOcrCandidates=[];handOcrResult='';handScoreHtml='';handResult='';handSolution=false;handActivePointer=null}
@@ -2075,7 +2122,7 @@ app.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b
  case'hand-mode-word':handMode='word';handReset();render();break;
  case'hand-prev':if(handMode==='letter')handLetter=(handLetter+25)%26;else handWord=(handWord+handWordPool().length-1)%handWordPool().length;handReset();render();break;
  case'hand-next':if(handMode==='letter')handLetter=(handLetter+1)%26;else handWord=(handWord+1)%handWordPool().length;handReset();render();break;
- case'hand-ocr-select':{const w=b.dataset.word;if(!w||!handOcrCandidates.includes(w))break;const input=document.getElementById('hw-check-input');if(input)input.value=w;handOcrResult='✍️ 已選擇字庫候選：'+w+'。請核對你的筆跡後，再按下方核對。';const status=document.getElementById('hw-ocr-result');if(status)status.textContent=handOcrResult;break;}case'hand-math-next':handMath=calcQuestion(data.settings.math);handReset();render();break;case'hand-recognize':handRecognize();break;case'hand-answer-undo':if(handAnswerInk.length)handAnswerInk.pop();clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}break;case'hand-answer-clear':handAnswerInk.length=0;clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}returnToWritingPad('hw-answer-canvas');break;
+ case'hand-ocr-select':{const w=b.dataset.word;if(!w||!handOcrCandidates.includes(w))break;const input=document.getElementById('hw-check-input');if(input)input.value=w;handOcrResult='✍️ 已選擇字庫候選：'+w+'。請核對你的筆跡後，再按下方核對。';const status=document.getElementById('hw-ocr-result');if(status)status.textContent=handOcrResult;break;}case'hand-math-next':handMath=Object.assign(handCalculation(),{practiceGrade:grade(),practiceLevel:effectiveLevel('math')});handReset();render();break;case'hand-recognize':handRecognize();break;case'hand-answer-undo':if(handAnswerInk.length)handAnswerInk.pop();clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}break;case'hand-answer-clear':handAnswerInk.length=0;clearHandRecognition();{const c=document.getElementById('hw-answer-canvas');if(c)paintHandCanvas(c)}returnToWritingPad('hw-answer-canvas');break;
  case'hand-math-explain':handSolution=!handSolution;render();break;case'hand-zoom':resizeHandPad(false);break;case'hand-answer-zoom':resizeHandPad(true);break;
  case'hand-listen':playEnglish(currentHandTarget());break;
  case'hand-clear':handInk.length=0;clearHandRecognition();handActivePointer=null;{const c=document.getElementById('hw-canvas');if(c)paintHandCanvas(c)}returnToWritingPad('hw-canvas');break;

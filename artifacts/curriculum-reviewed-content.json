@@ -1,0 +1,4186 @@
+{
+  "date": "2026-10-20",
+  "scope": "Manual semantic review of all fixed science, logic, English and Chinese curriculum data and alphabet cards. Dynamic generators, final grade alignment and browser/deployment verification remain pending.",
+  "entries": [
+    {
+      "id": "science/body/0",
+      "sha256": "98e8e64ce38b8cce52e900153dadcf5c84bc48ba787ac2424e0d2684a159dabc"
+    },
+    {
+      "id": "science/body/1",
+      "sha256": "4af5a7d70feb70aba207691a93e9c8ad881187784fff9d103a66cd0fd478c9a2"
+    },
+    {
+      "id": "science/body/2",
+      "sha256": "f755b98cb003f5a3f761199df0ec4231402751614ece2591bf70ee98584f5776"
+    },
+    {
+      "id": "science/body/3",
+      "sha256": "f3ad49059232b347f35423905f3cbaf8ffbdee1ca2c71902097fa6cbc7ed62e8"
+    },
+    {
+      "id": "science/body/4",
+      "sha256": "5a0e1271ec9297360e32d224e76f0acfbf265ca899964f2a219f17b2fe4043fd"
+    },
+    {
+      "id": "science/body/5",
+      "sha256": "02e1325a48aea5956ce9ea53d90af023f8eeb458f2db2b050c0b594f5cf27a7a"
+    },
+    {
+      "id": "science/body/6",
+      "sha256": "ba5a3dfde9c84a21779678eb4ed31e2158d09f02f251d32c667bd7441218af3a"
+    },
+    {
+      "id": "science/body/7",
+      "sha256": "231ac955e779107a477906a3705c5b4c62543c25055f1dadecd823d6cce85bf2"
+    },
+    {
+      "id": "science/body/8",
+      "sha256": "3e2876653c2f2a45a0697b66f3ad3bc8b97ba33e27f6800a6a462452177e5fd9"
+    },
+    {
+      "id": "science/body/9",
+      "sha256": "bcf5d494c8a84e49dd7601a36163341880a138d35ecec89b6b95f701c0ec160c"
+    },
+    {
+      "id": "science/body/10",
+      "sha256": "1176c42ca09b86c00d28703ccfa93b6f233be2e061a19565d0fc8c26f02e16ba"
+    },
+    {
+      "id": "science/body/11",
+      "sha256": "7c4c98ae3182e2efa5a205c5217c57e586cf252e1868be0f78d1ef34be59c845"
+    },
+    {
+      "id": "science/body/12",
+      "sha256": "fc589581c170c78a9bced2da719ffcc8102c10271820666b88320124ffd2559c"
+    },
+    {
+      "id": "science/body/13",
+      "sha256": "f9f37d44fa02cdd27da5cffd591aeae23b429441bad9d9798258ceb385e52775"
+    },
+    {
+      "id": "science/body/14",
+      "sha256": "9f605422e227c9c9dc0ef94a50a199264ea0f97ab0a840a0e42b928c42a4c585"
+    },
+    {
+      "id": "science/body/15",
+      "sha256": "05f841325302cd13bfe9d85f3fa68216b2fd33f453ea00b65a6ad294015cdc31"
+    },
+    {
+      "id": "science/body/16",
+      "sha256": "0a632c80514deaf196eb222d2d39ad5c34ab29f48d1c5d288951197a89884a58"
+    },
+    {
+      "id": "science/body/17",
+      "sha256": "1bfff9fb78df58378c2295bea9d6d302ff555d0bec3022373f5a1771d137862a"
+    },
+    {
+      "id": "science/body/18",
+      "sha256": "661e88c22a026b16e9b8a628c3c5232db1dc182eea46af49326c28c8b72a2768"
+    },
+    {
+      "id": "science/body/19",
+      "sha256": "2e31fbff10625505f1dffdb65f742e7b3982f2430e13bd28f1bf94a8bde17a20"
+    },
+    {
+      "id": "science/body/20",
+      "sha256": "74b474fd4ce2fe74077050d26728369053c64741ea8d24fc3d9d5dcb3e8d5a7b"
+    },
+    {
+      "id": "science/body/21",
+      "sha256": "a868c1b3bda587d3e421da4e5d58cc9cc1440912a6e1951276df5825169c0e70"
+    },
+    {
+      "id": "science/body/22",
+      "sha256": "3e098c436bd3e5f2105ac7b89a83daa13f818ca1d35e6f2f948f6f259d6a04be"
+    },
+    {
+      "id": "science/body/23",
+      "sha256": "63e67d1dbbfa01c26547a606f0173a162918c373f70739e66cebda1fe6080e94"
+    },
+    {
+      "id": "science/body/24",
+      "sha256": "5da07d5dc5f5392d4bac63f07a695df4541cf3a23a699395943ddddedacfd98b"
+    },
+    {
+      "id": "science/body/25",
+      "sha256": "ba04bda475ede6536b7c2fac07d9de81db6a67cbf2a23d4ead878cd64819fad2"
+    },
+    {
+      "id": "science/body/26",
+      "sha256": "dc1966cd84630702af70708da300b96bead6697a20d6de315f788a09d92b8fdb"
+    },
+    {
+      "id": "science/body/27",
+      "sha256": "27cff6c721e4860aba977b5c58f66ff9346ca342f8573f17022596ace53bf902"
+    },
+    {
+      "id": "science/body/28",
+      "sha256": "f7015eb090e02e74d938fe12c977dea03bcac1f557434ef5e559306f41350555"
+    },
+    {
+      "id": "science/body/29",
+      "sha256": "c354483ecf66e2d082a1cdbd56d085d0dafbf9d3d8e9ba463606c47b0d0313ff"
+    },
+    {
+      "id": "science/body/30",
+      "sha256": "ff30913181c79b749624155aca555f2d6ce31df7bd316e3ab0919f687b3b24b8"
+    },
+    {
+      "id": "science/body/31",
+      "sha256": "fb4a90239fd8f403194e4ea8f55087abc96e5b352f23d35cb033e09d928639ca"
+    },
+    {
+      "id": "science/body/32",
+      "sha256": "6885236d61eeaf9d542af96ded560ef85d3b7c463f98371020d85463b72735f3"
+    },
+    {
+      "id": "science/body/33",
+      "sha256": "200098b266c6f386efcacff64c608341a2afc5adcdcc9faaa27d981d63d759bf"
+    },
+    {
+      "id": "science/body/34",
+      "sha256": "a14a89a3aca02fb536aa66e72b2ef06312c02e03f8b8114eff076d796cf1b62a"
+    },
+    {
+      "id": "science/body/35",
+      "sha256": "01e06a6c75f056bd59f825db673d77f96e913ebf068a0a93e9a72a3ddc87e5c3"
+    },
+    {
+      "id": "science/body/36",
+      "sha256": "448c02bde77da66a98bdcba62162746b812a84ce41d72de10c35042a4b730211"
+    },
+    {
+      "id": "science/body/37",
+      "sha256": "c2f2a4bb80e9075bf4d78641c588e24213103cb1d1f294434c188f6ed9cd12e0"
+    },
+    {
+      "id": "science/body/38",
+      "sha256": "cc0ff61b16f1ff6888d33b2718d3d15104f9dd8f5643140009dacec2dc099c80"
+    },
+    {
+      "id": "science/body/39",
+      "sha256": "c7d649e0a68c0ddec6fed46a0bb59eb3c371f6a0511acd980bc116759d9940d8"
+    },
+    {
+      "id": "science/body/40",
+      "sha256": "069f6a6a43701be70dbad8561a53f335b406e7c444e19d1173b7db194ef61cb3"
+    },
+    {
+      "id": "science/body/41",
+      "sha256": "6ae7ea9587d8b35fcfe7e1675d4bf07f65fe85cdd86dc6b27310d340a7016c12"
+    },
+    {
+      "id": "science/body/42",
+      "sha256": "216c93879b761e671549692658356fb5f73004b1f8b90f87324d82bd0c30f862"
+    },
+    {
+      "id": "science/body/43",
+      "sha256": "6ef3bef021c3a625384bd0de66d404cdd0a82c4e415af0f32226d612376b6e70"
+    },
+    {
+      "id": "science/body/44",
+      "sha256": "5955b537de007a2ba7629bb8b1f66e73c907d1ac14ec26b298b7fb21c5d4e7e3"
+    },
+    {
+      "id": "science/body/45",
+      "sha256": "51644efac5ccb1ed2e65478062f4ea418a44f734a0392a6f0e0cc22919b70244"
+    },
+    {
+      "id": "science/body/46",
+      "sha256": "919b11cf6c4b508825160ad6310008d4c72bae713f6380c9903cc197ef934ea3"
+    },
+    {
+      "id": "science/body/47",
+      "sha256": "c2a4dd869792c51d521d1982c4aa15471ca6224ff919e5f0e31c6459909815af"
+    },
+    {
+      "id": "science/body/48",
+      "sha256": "9569173b176777989a874d00347e99e4e099141c5265e4705e153c4053946244"
+    },
+    {
+      "id": "science/force/0",
+      "sha256": "e8fb19fdddcee1736f4509032149438638adc94ba947a2eabc9d49f9b74c5180"
+    },
+    {
+      "id": "science/force/1",
+      "sha256": "a9a8a94be5a11a9b20738b6b5d3f93ed2569142bff8b679db9d146723b6afedc"
+    },
+    {
+      "id": "science/force/2",
+      "sha256": "bf80f0b61c2118f0298d27cd51ad653bcf015e56c9fa55244c8cd4bc9bdf250b"
+    },
+    {
+      "id": "science/force/3",
+      "sha256": "3911cca6db4ac21c7d2610219b5863d4ba7c983f40930d45b92a2e99f33ea40c"
+    },
+    {
+      "id": "science/force/4",
+      "sha256": "4a50a6e6b2ff031286b1302c16d04e6266f2341db92b938207c891b9e24a83b7"
+    },
+    {
+      "id": "science/force/5",
+      "sha256": "2ddbbb3f98612a9d952f136e0e9f16aa07d6c307ca01623f53daee0acc7b3f1f"
+    },
+    {
+      "id": "science/force/6",
+      "sha256": "91e2e6be570c24cfeb6243d2aefbc2b95b98d45183d04aef5b8f8a46032e6c67"
+    },
+    {
+      "id": "science/force/7",
+      "sha256": "dffe8ad90813d09a7009e91a0365e8d2d2d5c6b10ea9646cad732a54daaa3b53"
+    },
+    {
+      "id": "science/force/8",
+      "sha256": "69ef902d14b8cbc7614b0efb31d126a4b88a124cbc279b127f41f0fb7e9f4142"
+    },
+    {
+      "id": "science/force/9",
+      "sha256": "0f66a2a73f1a134034c2efd392dd15e76320f7d344be2be370ef746e0ca48c06"
+    },
+    {
+      "id": "science/force/10",
+      "sha256": "b4f2576ceb3b90172a66350b7670cbe5dca774757b72975307cf8318e616a4c1"
+    },
+    {
+      "id": "science/force/11",
+      "sha256": "7d04ac8a1e294e1d4f1291669767887a046d10f6538e4594d0b920d18f2c9bb7"
+    },
+    {
+      "id": "science/force/12",
+      "sha256": "05abc85e35f616b62a249255ad60f4a26481799cc9759ebb7822dafaa6ff17f5"
+    },
+    {
+      "id": "science/force/13",
+      "sha256": "713b0ac36f7e3cf356238247a563eea9e9930867d28089242b9bed65940eb32b"
+    },
+    {
+      "id": "science/force/14",
+      "sha256": "500b96a4181789f351792f397bb4455ab11c41abc569df15187d8d7ffdc6ee3e"
+    },
+    {
+      "id": "science/force/15",
+      "sha256": "17a0032912deee30a097cf8258b340a3bc1b498ac62cb5bf278c34d61ce1e780"
+    },
+    {
+      "id": "science/force/16",
+      "sha256": "959f3579f696b6b649826886ef69ab1f66c6a88c28fa1500bf4febaecbde233e"
+    },
+    {
+      "id": "science/force/17",
+      "sha256": "1b93c88c4b64be1197d9b1a7484c3fef04aafc7d60caad54b5728d83efa6c0dd"
+    },
+    {
+      "id": "science/force/18",
+      "sha256": "904d2944a9020df4d7be54efb07daa5785eff51807af715d5d2ee9cbfa37d992"
+    },
+    {
+      "id": "science/force/19",
+      "sha256": "ed41479482319b3137ae6f096023df26136a1ebd381d53d1e523c32419f3b858"
+    },
+    {
+      "id": "science/force/20",
+      "sha256": "2d2301ed7bc189994364743cbc3efb993e6f5b09fe81cdf4049fec533e9d74ac"
+    },
+    {
+      "id": "science/force/21",
+      "sha256": "eae3f09fcd53fcc1a2e9f18e005345ea69355cfbe31c73e6b124027f02b64a61"
+    },
+    {
+      "id": "science/force/22",
+      "sha256": "1a54f2cc9cb2297fb39391f7c201fce841296f68bcc07ec5a8ca864735361f1b"
+    },
+    {
+      "id": "science/force/23",
+      "sha256": "e2e76c6a267ee36fd37f116e402186f0a51f4cac3f6e3df06d812bb06a09fa6b"
+    },
+    {
+      "id": "science/force/24",
+      "sha256": "78e8053bc12821e6010be44d1ce4127ad4d5d1dbd636de1a65b8c5ba074fe302"
+    },
+    {
+      "id": "science/force/25",
+      "sha256": "d96aacbed2fd9d72acc6418f9e5636edd91e034b9187ea658813f01978389efa"
+    },
+    {
+      "id": "science/force/26",
+      "sha256": "42df5f3c6ff8ed82bedb95267087830df8feba9b59bc7ac80d1186460f8d253d"
+    },
+    {
+      "id": "science/force/27",
+      "sha256": "54932a191753c0ea19ffa5e8c59b4d3d47a47781dfa2e771fbd5ed5d331e96f4"
+    },
+    {
+      "id": "science/force/28",
+      "sha256": "ae2a478b4ce7569c8a74b64e3b178824244bdb4c80586de00a2009d5b548f018"
+    },
+    {
+      "id": "science/force/29",
+      "sha256": "19857c534aad8a5f36e668d1d26cbba12c8ce9346685a09529a5a35cd29e9d9e"
+    },
+    {
+      "id": "science/force/30",
+      "sha256": "8593340f455a14af2ddbb225f97b371a342863f3559e5897a981bb77d28cbbed"
+    },
+    {
+      "id": "science/force/31",
+      "sha256": "f9c2ebf009e18d33d2f763521cb104501b0684c6a323b0274b6a08af22d7a0a8"
+    },
+    {
+      "id": "science/force/32",
+      "sha256": "8a4bca317d2ddf2b9530f5d414a71cee6a672085d062258977e9f4e7843ccc02"
+    },
+    {
+      "id": "science/force/33",
+      "sha256": "7a2616049adda3528f93489780c87c420e72ed8c92a1e5a601d465d4af113cf2"
+    },
+    {
+      "id": "science/force/34",
+      "sha256": "485c6b5a695fcbb83f31060728dc0a821a916338e492b5919fef44d27fdcd3bc"
+    },
+    {
+      "id": "science/force/35",
+      "sha256": "a72894d7e425390edb708a1efe9b34cb5aced3df4bb2e8e961c8d4592a08e68d"
+    },
+    {
+      "id": "science/force/36",
+      "sha256": "fd3062e8577a24977a13160e09ad0aa40ec97e5b7cf7e88799dd792022673019"
+    },
+    {
+      "id": "science/force/37",
+      "sha256": "b9d631b2c9a817a25515a15e278d28c8593ff9522854de388b42feee7c4d3470"
+    },
+    {
+      "id": "science/force/38",
+      "sha256": "cd700e52a032dfc47d38e7b7f953bf368848ae14b4b1a30f9beecce2aa605458"
+    },
+    {
+      "id": "science/force/39",
+      "sha256": "f6b197afb3d4291cb10a12a436661c9a9c0b39baeb2cfd8d3f014bd485699d17"
+    },
+    {
+      "id": "science/force/40",
+      "sha256": "bce09403a4c6b9e1a54fcad1f5120521273e5a2b3b827d369eecb24a745bb0e7"
+    },
+    {
+      "id": "science/force/41",
+      "sha256": "ee35cecfd4b688671aca3e212aa3bf086e21208fef690b5d65ab31acaa52d85d"
+    },
+    {
+      "id": "science/force/42",
+      "sha256": "3788c4600da59744ce0ae8fd4d6f3b60b3ef42ba9cdd8e4f423a07cfe0979f27"
+    },
+    {
+      "id": "science/force/43",
+      "sha256": "10b509a6f281d8c7987aac89615f8b7bc05afe2e964f0928c6bfaf071464f3d7"
+    },
+    {
+      "id": "science/force/44",
+      "sha256": "f2ef7b4020e2e945a9a1471735807d11eaf793f48696ada4293b0d84a37ac7e3"
+    },
+    {
+      "id": "science/force/45",
+      "sha256": "a3bb5d51a0802cf12306dac9bba5963c78789209c0b9ec9d6f7a42cdbb2e57c1"
+    },
+    {
+      "id": "science/force/46",
+      "sha256": "a3d8c9d797489a522a0038f1b6650233e1baf29599ad091d82ffe1b1e5a58e67"
+    },
+    {
+      "id": "science/force/47",
+      "sha256": "25eee93d562ee482d2da57a76d9add7d612b1fd9bab0f0ebf87d98c3837142fd"
+    },
+    {
+      "id": "science/force/48",
+      "sha256": "d9102fcf7e4ca35fbe54b2a3aba1a648fc635fd365f1001df7e0ea680e0be549"
+    },
+    {
+      "id": "science/nature/0",
+      "sha256": "8eb2ecbeb11f656e22d3ec49b64b249e11517b1548674855736a02134f02c8fb"
+    },
+    {
+      "id": "science/nature/1",
+      "sha256": "843cb19be40ac012cdc85575efa0c5448fa9e7de3d304e3243f7d6b10fb9c954"
+    },
+    {
+      "id": "science/nature/2",
+      "sha256": "c378111f52eb58bb7b2445c505b655a2c4ac5140814aa71de7b27dca35c93e46"
+    },
+    {
+      "id": "science/nature/3",
+      "sha256": "be649130b78ecf591dd892ebffdaed0fa442ca41ce38968d498d11b92dc9b752"
+    },
+    {
+      "id": "science/nature/4",
+      "sha256": "93a444271aef4307cd00c6cb393117c05d0c0c8bc211c0b303c5ff481e392588"
+    },
+    {
+      "id": "science/nature/5",
+      "sha256": "d34fb55eee976eada16cc95fb02a9d85791a7a759cdc05c1641db0d2be281acb"
+    },
+    {
+      "id": "science/nature/6",
+      "sha256": "b9c3192d2fcc005681104bb6fb31e5c4b354407a95ceb60276b7be9c7c8fd2d2"
+    },
+    {
+      "id": "science/nature/7",
+      "sha256": "004e7eba828099143d8983d1e1c044b2183f8dd94c94cb469fbe89cce2ae62e9"
+    },
+    {
+      "id": "science/nature/8",
+      "sha256": "4a0ac63e0365b0533b522eb83896216186833ac866f49a9e951f7f0aa3a05893"
+    },
+    {
+      "id": "science/nature/9",
+      "sha256": "5f23b4d017600a1ce4aa39a0b7a466bbbb370cc508908cba760d08679c1caed4"
+    },
+    {
+      "id": "science/nature/10",
+      "sha256": "f173aec28fdbc834a039d366a0b875c83ecca8ddec7e5d94ad08f47b378d2f40"
+    },
+    {
+      "id": "science/nature/11",
+      "sha256": "bc0ffdf69c4f7767162e8fc8d2b55eebf079ff296ca46ece289c010677c9df53"
+    },
+    {
+      "id": "science/nature/12",
+      "sha256": "b09c200f934b6bfc1c1aa809ef56929308544ba98b1698fde8cf18c0fe18b8a1"
+    },
+    {
+      "id": "science/nature/13",
+      "sha256": "d9f755b09372a13dfe74e961d8f07b73e5bb5d90690953a0a513d61b44cd9989"
+    },
+    {
+      "id": "science/nature/14",
+      "sha256": "68c48ca209ace53e2216fea395f5b823d73ad1cc9923f7ff7a9937488ef8a973"
+    },
+    {
+      "id": "science/nature/15",
+      "sha256": "f7fea5b84df9c653cee1ff6c79021ddb8421ea093b10b115618d9d285370e1ac"
+    },
+    {
+      "id": "science/nature/16",
+      "sha256": "7935255d45206e6e6c15066d1164b86e8e1ca693883195df128955f497f9f8bb"
+    },
+    {
+      "id": "science/nature/17",
+      "sha256": "2698693a34bf31d5eae0d31f8f1e194e81816976d83384b3e0388da612e9d2a6"
+    },
+    {
+      "id": "science/nature/18",
+      "sha256": "2d00ba76e7504679a339d2e170e35f6bf8ce043868c13ac4e77059dfa3248038"
+    },
+    {
+      "id": "science/nature/19",
+      "sha256": "18044306b0ef9f9d6ca3bb7317aa1363ae0e321dd8525b2611fca3174413a3d0"
+    },
+    {
+      "id": "science/nature/20",
+      "sha256": "49b2705c74b44bd543655041c79c1dad9a5ba76089d69b3d1facee45d28af136"
+    },
+    {
+      "id": "science/nature/21",
+      "sha256": "89d3aa8a37706af1fa3c298b8ffb0110942f3043ec3586afc0bd83bc415f175f"
+    },
+    {
+      "id": "science/nature/22",
+      "sha256": "be73c518ec1d7114f87236852f91c7e1a3cf99151d8b563fc7140b6258b9ca24"
+    },
+    {
+      "id": "science/nature/23",
+      "sha256": "2a1c490738d3ae15fe1cf280234f44a0f25925d01c9cde1b6c9fc1c5605f9b1c"
+    },
+    {
+      "id": "science/nature/24",
+      "sha256": "f975f7ddc69dfba760b2ea5b6998d94ab35b6ca65e85696f1e646acc78204ed1"
+    },
+    {
+      "id": "science/nature/25",
+      "sha256": "9bd001731256410d2fb30e3eda32a1e7624bbc5378eb7a32fa8730dfb64d6b20"
+    },
+    {
+      "id": "science/nature/26",
+      "sha256": "840ce0d36d34d09297ec15156218b27ad261ce408d41cebffee90845ff88b884"
+    },
+    {
+      "id": "science/nature/27",
+      "sha256": "70bfb05b8e3a809e9e65a270571e90eb22ee4a3df162c7feb56a6c4dc8aae348"
+    },
+    {
+      "id": "science/nature/28",
+      "sha256": "76026071470d0a8359e64ac1b24f4dafa749b78f359e1ecb4bde16459e1a6f47"
+    },
+    {
+      "id": "science/nature/29",
+      "sha256": "900f4e446e2a951bb9714b85c9037f4c2772021e226c0ac46a3514e023d43134"
+    },
+    {
+      "id": "science/nature/30",
+      "sha256": "0b29ffa083c7bff211d9eded20ed53328a6dd8ca173fc9f6f0e1039845547f0b"
+    },
+    {
+      "id": "science/nature/31",
+      "sha256": "61647a47fda1ba705682bf2d3da56717b5f096a0fff323ea62682cdf643df640"
+    },
+    {
+      "id": "science/nature/32",
+      "sha256": "d4d6e29dcfda9d1b3bdeb69cb6c3ba6c983892101be1a4d4487b7d1c82a60809"
+    },
+    {
+      "id": "science/nature/33",
+      "sha256": "660c41af7cc618e14b2c613ab4ba44f42fe6cf58a795436dcf75db7afcb8a76b"
+    },
+    {
+      "id": "science/nature/34",
+      "sha256": "63ec5497b160945c312aa131182ff8039731d30ef070c005445cf1829a62def8"
+    },
+    {
+      "id": "science/nature/35",
+      "sha256": "d9e455a01133895a9b32c5b01767cccd677647c5efad44f94c2016fca659d261"
+    },
+    {
+      "id": "science/nature/36",
+      "sha256": "ae4d20a76263dd530a264190c4f6c93df4e17c1b1fb107580f371d1478cc80b6"
+    },
+    {
+      "id": "science/nature/37",
+      "sha256": "2172bfda58aea03de9d2f72256fd69b6adbb0162be33fe41dec21f5cab89ba12"
+    },
+    {
+      "id": "science/nature/38",
+      "sha256": "698794ad826f2851847fb425980c2d4cfee516771e21d7c2d83162e1ace879b1"
+    },
+    {
+      "id": "science/nature/39",
+      "sha256": "14251c580eb345f5dd66655b9dd861d009a2679cea40837ead5d5ef59d8e0ab1"
+    },
+    {
+      "id": "science/nature/40",
+      "sha256": "4ef836c8d8e2d0d6bf6f447b3fb48ac398ce3f666c91a0c53fe2afc72435319e"
+    },
+    {
+      "id": "science/nature/41",
+      "sha256": "86126bc71cfb16237d71b07273be79626c6d41978760a1bc17d6c678fe8b13f0"
+    },
+    {
+      "id": "science/nature/42",
+      "sha256": "ba5f4ee8eed1e0ee2170f37e130e2649ee34cb22bf7be3360d0f3e31ae09d1b5"
+    },
+    {
+      "id": "science/nature/43",
+      "sha256": "e22fec95411b41abed133176ad46292a9ac08d716f1399bd2fcefdeb8360516c"
+    },
+    {
+      "id": "science/nature/44",
+      "sha256": "a1a5f3b2959acc6795348d6374dbd6deafdcd36ac05369d84f3c23ee1e93173e"
+    },
+    {
+      "id": "science/nature/45",
+      "sha256": "0824d4fcbb705c622f57426d5f428e14e5c8c190e2130da3c8ac950fd4804222"
+    },
+    {
+      "id": "science/nature/46",
+      "sha256": "607fd5161fe2454ef33ad752e395c56f57815002c9d09cdfc7910bed807dd238"
+    },
+    {
+      "id": "science/nature/47",
+      "sha256": "9300dc1be14fdd488f9702635d3323e18701f7470c2957c04449172dfaecdffc"
+    },
+    {
+      "id": "science/nature/48",
+      "sha256": "e383cdcd85002a8b39fc1cb6bb8631a9adc4aa8c5ae1ab0f7e935b18d9c78350"
+    },
+    {
+      "id": "science/lab/0",
+      "sha256": "163ee0bab76deb956f959d7e526d4d938d0e8c0fd120d7b1cf965dc3a21ac344"
+    },
+    {
+      "id": "science/lab/1",
+      "sha256": "e570a05f8971a15748e531fab0ffd18d21b234bde887f7c52419a5a75d724a2c"
+    },
+    {
+      "id": "science/lab/2",
+      "sha256": "cbab732ebfc9d94e1e1652073f4bc15e002014409053aaae7b7c01d3708ff87d"
+    },
+    {
+      "id": "science/lab/3",
+      "sha256": "223cbe7a126ae3c8d077587aff3a28195227095af6bc694323c031f43e46daf1"
+    },
+    {
+      "id": "science/lab/4",
+      "sha256": "ae3bee44539391c3ffa0c312f199e5b136406caa02457f7793fa83208416d504"
+    },
+    {
+      "id": "science/lab/5",
+      "sha256": "b55e660956ffaf5d245831f68540ecf2aeb0cf6a79baa5a3553a3d8b2fdea697"
+    },
+    {
+      "id": "science/lab/6",
+      "sha256": "c9b6dbc7a69ef77a724e817a819ee227d6c227132f37129199d523a9e206b52d"
+    },
+    {
+      "id": "science/lab/7",
+      "sha256": "7dbd9635472fbdb70372c87a9190926e28c34119b8b2d944071ca7682daf433c"
+    },
+    {
+      "id": "science/lab/8",
+      "sha256": "feaf1603c02cfe6e7052ac4cd5ee71d2a15665376a9aac26e61f574587e090a5"
+    },
+    {
+      "id": "science/lab/9",
+      "sha256": "5d3f46a7ac7a4d11c46275de886d222aa78513e0a4dad11d42e43e87fbb97225"
+    },
+    {
+      "id": "science/lab/10",
+      "sha256": "a851cae6fac59f102b96b25c855260dcbbcffed60f7f37309208d746de875dcc"
+    },
+    {
+      "id": "science/lab/11",
+      "sha256": "535e4a9235e192caff80152af8942eec18bb2153ac69038a18cf22a9733676b9"
+    },
+    {
+      "id": "science/lab/12",
+      "sha256": "261d5e4de80aabb649fb89b7a79d44d886f55a1c07cb946d73ba8515d536a4af"
+    },
+    {
+      "id": "science/lab/13",
+      "sha256": "f5304ec0e06fb413cf9a25042069df43322be61bffcf12b9b4954474708f87d1"
+    },
+    {
+      "id": "science/lab/14",
+      "sha256": "0498dceb870880715322f343bc048b53370660bbecedaf736a6bc9e62d84c025"
+    },
+    {
+      "id": "science/lab/15",
+      "sha256": "89c11a700d83e7127abd9c9f30383d0ee776cec60b319f7815559ac4120b73cd"
+    },
+    {
+      "id": "science/lab/16",
+      "sha256": "cd51c4f6f4172df2184498e166798404111ea711922e2ce74e423665c89b10d5"
+    },
+    {
+      "id": "science/lab/17",
+      "sha256": "e196fa5177a2adc86982fedf60282e082762f34c0bf436d2d6f28820bff4fdb9"
+    },
+    {
+      "id": "science/lab/18",
+      "sha256": "852f88a04d8e7aa15b0d4ff26bac48d726f3622e5d4b3f733b158aae18227318"
+    },
+    {
+      "id": "science/lab/19",
+      "sha256": "fa45626e25b97c68d924d5ecfce0346e59f8e0a3c3340cb52e5af497a7c5c9c3"
+    },
+    {
+      "id": "science/lab/20",
+      "sha256": "daaf67c2f75847fbf12275b165cfcdb8a4152017bf8adc88e68b77d6d24511b1"
+    },
+    {
+      "id": "science/lab/21",
+      "sha256": "3ca6ff32b36007fd9bd6c72838148e1ab4be98be759ea6a79077122a5e8da0c5"
+    },
+    {
+      "id": "science/lab/22",
+      "sha256": "f81b66df23a024eb29dfdd74ae7cd00851da384f288b7e16e65d83155503ca4f"
+    },
+    {
+      "id": "science/lab/23",
+      "sha256": "be75efd9a6b218fee75933200040856d25cf8bc789b67b9f397ec964f32a29c0"
+    },
+    {
+      "id": "science/lab/24",
+      "sha256": "cd6d0e6963f37ba88cd92a880aa6bda5decae557ae8904b5b87554d7d4707f11"
+    },
+    {
+      "id": "science/lab/25",
+      "sha256": "cd34e71a917500cfa38f79eb5876f37c2078605ac4534fe314c8fe5278379100"
+    },
+    {
+      "id": "science/lab/26",
+      "sha256": "a57d98c5f27f82f5523806096abf64de630897a2896cc2f2ea5611ce5d60821c"
+    },
+    {
+      "id": "science/lab/27",
+      "sha256": "bba1685a53169b6fcc30ad65681d708a9303edaa84a05c6efe7673372f8743f5"
+    },
+    {
+      "id": "science/lab/28",
+      "sha256": "666721b00264cfc621a5db44c3189883fdc758ec8e877be6df66219663bce5a1"
+    },
+    {
+      "id": "science/lab/29",
+      "sha256": "3d4411fb97c7136e39921eee8ade64d7b4e8bbaeffafa659e60793cf89111d43"
+    },
+    {
+      "id": "science/lab/30",
+      "sha256": "12a10fd3443cdf4e4efc83633eb06627ed091034e49629b1b2d1a03f9a476bfc"
+    },
+    {
+      "id": "science/lab/31",
+      "sha256": "ef3fc38dc92445c35045e690236c896913837ce58d66a029e06fb51a5ea248d0"
+    },
+    {
+      "id": "science/lab/32",
+      "sha256": "c0b99ecf6c263536470b92c807542c626e9b7650304e7ca9739e729b85191eb4"
+    },
+    {
+      "id": "science/lab/33",
+      "sha256": "6e4b30b07145e716f1cd9135fbf1c08d0758f5ea6f9872b77220fd7a600a10c3"
+    },
+    {
+      "id": "science/lab/34",
+      "sha256": "5d0e94b7c380f734c27b5154171d906ea6f51dbe4a3af02b8d259fa9b9f18a1c"
+    },
+    {
+      "id": "science/lab/35",
+      "sha256": "a57c71108b7e7863d58c1c4685b790b9985be62fe8d25d7323397c1b1cd2ddd8"
+    },
+    {
+      "id": "science/lab/36",
+      "sha256": "b4db002e460e957f0c9d7ab5d3b10557b539f752bf02d249f2287e4894da5b1c"
+    },
+    {
+      "id": "science/lab/37",
+      "sha256": "6d1f8a1574928da71f3cbf6f2ea6dbba0c35dcf1cb0ab7a3fb814b7512798587"
+    },
+    {
+      "id": "science/lab/38",
+      "sha256": "ccbf00c0699db6ae1fb548dc30d31b034ebab7218db4555561b15bb9a352e87a"
+    },
+    {
+      "id": "science/lab/39",
+      "sha256": "05be26f6510e08c2844523b25e475bb0ddd45716a6bd35912d6b8a076b0525f4"
+    },
+    {
+      "id": "science/lab/40",
+      "sha256": "5ec4352e5f78a58a2693d997bfde97d4cb841e59126b3fcf7b7034d18db5d926"
+    },
+    {
+      "id": "science/lab/41",
+      "sha256": "87f339863d9326896b2f80c5cdf4668606880d7a58ba7f9b99e7e53054baf8e5"
+    },
+    {
+      "id": "science/lab/42",
+      "sha256": "bee19c31b3b7b697f85c895ce675457d4d6fa1543fe611ece5460f03bd9003d6"
+    },
+    {
+      "id": "science/space/0",
+      "sha256": "b96bbb4851cb51c8e008b4774d3a86bd863217578265158d8307196e9b00e9cf"
+    },
+    {
+      "id": "science/space/1",
+      "sha256": "dc24af96c8bf4fa3549b0e735824c39ab40c3862d6a5309fb58d6e8a5bd5154a"
+    },
+    {
+      "id": "science/space/2",
+      "sha256": "cef3d8270100acf895683918ac72ae5d8219f318f1382a092a11c77e9c8f7c8c"
+    },
+    {
+      "id": "science/space/3",
+      "sha256": "e4a363e80c5b222d34f1fff341b1693c9a8f18ebbf77c8b0789a571599fddb85"
+    },
+    {
+      "id": "science/space/4",
+      "sha256": "c87988e74e701cfc26654e304fae38aedf5a5915f51c8b3ff30f8a067c36669b"
+    },
+    {
+      "id": "science/space/5",
+      "sha256": "0f4f23d59e10910b81a3adc77a13ae803b3bbe5ae050c1671f18e1d0866bd80e"
+    },
+    {
+      "id": "science/space/6",
+      "sha256": "644fba99d76e81daab09c8d8f71d36902761d785bb6ed0d4df08f015400fa1db"
+    },
+    {
+      "id": "science/space/7",
+      "sha256": "1d31168b32c43c827cb11bc6b53d145181281f6f1e1d4bedc8ffacdff25efa85"
+    },
+    {
+      "id": "science/space/8",
+      "sha256": "3dcc3326cb31b43515c6510b5f643bf3927e7731123e39565155a4d9654ff5f3"
+    },
+    {
+      "id": "science/space/9",
+      "sha256": "8b920971c612b92d5ed9c95579765140f50616721cd1a45d3dcf49785af21d39"
+    },
+    {
+      "id": "science/space/10",
+      "sha256": "30cb796898bc87336e18fe1fd405853bef5fdfcd9377d228c10ce95864102b2e"
+    },
+    {
+      "id": "science/space/11",
+      "sha256": "078820c145592b0de9ffbfe105dc757e128a5b80265fd93e6f1360d669cdce58"
+    },
+    {
+      "id": "science/space/12",
+      "sha256": "f9ea1c7f3acc11c8c9012c9f9b775531c789ca08178ebc5c1c830568aab44991"
+    },
+    {
+      "id": "science/space/13",
+      "sha256": "d2e8059b26eaeb3b626e9d9b32365c9b1e64179bf4fc8973e0a51bd2a268273d"
+    },
+    {
+      "id": "science/space/14",
+      "sha256": "be95ea1b0570a78aa324c327bbfe51554417680b12301238871db58ce2b7fa8e"
+    },
+    {
+      "id": "science/space/15",
+      "sha256": "bae0bcec8853a9b0053c8b76a4ca784810000a4f5e8daf9e2fd6c5c440b5ccae"
+    },
+    {
+      "id": "science/space/16",
+      "sha256": "b1c27e5cf54dd6d90143645017c4a32db48d1e92e8cdfe74d060bb1d2c280ba7"
+    },
+    {
+      "id": "science/space/17",
+      "sha256": "9f58de3e5e0605046605c1635db514ed419330ffccd2fd6925c834718ef94234"
+    },
+    {
+      "id": "science/space/18",
+      "sha256": "1b0b995f9199310ec32e42240e2a00f34dafe606cc91d0ba29069288641c9ba1"
+    },
+    {
+      "id": "science/space/19",
+      "sha256": "f067070544b919249577e9d71c9975dc6314ffee380c701997886cd6e9c0bd78"
+    },
+    {
+      "id": "science/space/20",
+      "sha256": "6378691a30c6259babf342fc90f986ce92c7600df322be5c266d2daca2be8973"
+    },
+    {
+      "id": "science/space/21",
+      "sha256": "f403154d8737d8c42bdfc210a18bbd047ff74d82499e5a5e1639edfebf1e9a14"
+    },
+    {
+      "id": "science/space/22",
+      "sha256": "a869148a34f8af62d32d08499a566cf50581916e6be8026359fc43c47b05a82b"
+    },
+    {
+      "id": "science/space/23",
+      "sha256": "bcd4cb78890873a0c8bf22e2393697d4a87c1c252ba337a16c89b2ba53b52050"
+    },
+    {
+      "id": "science/extra/body/0",
+      "sha256": "2b62af6ad4e88fce5ad066aa5690c198a6c0ff36d9b32469178eb78d12637e83"
+    },
+    {
+      "id": "science/extra/body/1",
+      "sha256": "1b7eb1dea8a28eff9dfd757401c8ab25998dce36997c3a9951a40899c87c3850"
+    },
+    {
+      "id": "science/extra/body/2",
+      "sha256": "d54dece5da1cfd1228116c26dfb43ad221d392b885e82a5e03481094c6e3974e"
+    },
+    {
+      "id": "science/extra/force/0",
+      "sha256": "7e10d95d55e1c89a15651fa50ee3678585d3bff6750c32f0d04067cfaa0e83ea"
+    },
+    {
+      "id": "science/extra/force/1",
+      "sha256": "d829e602acc3b7afdbc6ccfd194e07f1f7f6c28980f461470e42249e7340f8cc"
+    },
+    {
+      "id": "science/extra/force/2",
+      "sha256": "55d1bdd01351d87033cd5764dfd7c7671eee30bb8a14e8460ccf02d8333f43e8"
+    },
+    {
+      "id": "science/extra/force/3",
+      "sha256": "02a20fac467eba727adcd4461e460958e03bb68d3ae77574f41f4ab4122e56b0"
+    },
+    {
+      "id": "science/extra/force/4",
+      "sha256": "45619c844c9863b64c460bc0e63dda35e0c52e78fa5c21a6dde05e483c7ddebc"
+    },
+    {
+      "id": "science/extra/nature/0",
+      "sha256": "13778eebe7495e747211a5ec71cb925c741dec5084708118ac10bb4f946e1099"
+    },
+    {
+      "id": "science/extra/nature/1",
+      "sha256": "d0d29ef38279a36974aa9ac1ed07ab5df71304affdda7f1eab4390edb7877097"
+    },
+    {
+      "id": "science/extra/nature/2",
+      "sha256": "f3605a19e4594b0485767c2f0dde05812b12f2395904679329b49024787efa77"
+    },
+    {
+      "id": "science/extra/nature/3",
+      "sha256": "e05c71faa3e1467b9d4b8e5e44c7350b1f5e728c34b475cd847ae39821f3fbf6"
+    },
+    {
+      "id": "science/extra/nature/4",
+      "sha256": "f4c9b2bb0d27a6bee33a586106067312e08ebee971d37bb96b11e5022bf87852"
+    },
+    {
+      "id": "science/extra/lab/0",
+      "sha256": "22db91aef72d929c8ae01c8198cfddc7f6559b296219875250167bed89e350df"
+    },
+    {
+      "id": "science/extra/lab/1",
+      "sha256": "f52f94ab6fa4117a088d9771d478c64d280a253daf7a12a69d606af15dae201d"
+    },
+    {
+      "id": "logic/odd/0",
+      "sha256": "3df4375433c5b395a8f1f3e170e6202f032305249aaef539a2a2a8d34162267e"
+    },
+    {
+      "id": "logic/odd/1",
+      "sha256": "40a7e002399631e5a46e003f51074ec71b972e93d3622121e0adfcfed5d93ab9"
+    },
+    {
+      "id": "logic/odd/2",
+      "sha256": "94f636544980b9022f7ecca55ffdba4c54b07325e5cc58d7ba967922e6a5a62f"
+    },
+    {
+      "id": "logic/odd/3",
+      "sha256": "68958674943a401c0b416a525603c7eda334f2109bf9ae06822479684fb1326b"
+    },
+    {
+      "id": "logic/odd/4",
+      "sha256": "d4ab079af4351ef6b29a343771d1fbcd3314d0656b37aa7f315223876af8a3b7"
+    },
+    {
+      "id": "logic/odd/5",
+      "sha256": "c8a1d5c0a62f0ec8eafeb4fcf910c8912e19066e9e5d4c1b6fe0a7dc07a769af"
+    },
+    {
+      "id": "logic/odd/6",
+      "sha256": "b5fb4c2117299ce2a3c6ff9d90538d396bbf3ac0f5a6be6979ee6cfd1f9dd34e"
+    },
+    {
+      "id": "logic/odd/7",
+      "sha256": "ef501c9e86047c914d4db3cf8175f9551905d31981b86b71b334dd66370a5453"
+    },
+    {
+      "id": "logic/odd/8",
+      "sha256": "9b0a4c11f3f92ac5b99279f33434adc0ddbf2ccae64d3f804e30d288aec0ae59"
+    },
+    {
+      "id": "logic/odd/9",
+      "sha256": "bae50014cf8ef9785e191975751c183581494c6673b3da025303124131756960"
+    },
+    {
+      "id": "logic/odd/10",
+      "sha256": "958bf66db579b0dad981f3b709eab06a30506fa30d0ea54bf23528aca1729ae1"
+    },
+    {
+      "id": "logic/odd/11",
+      "sha256": "f151bf309287b64b29353adc56a983e150b5d4e5b9d6174bd124175108274441"
+    },
+    {
+      "id": "logic/odd/12",
+      "sha256": "679c95c154f07fe539bba6019a23f330905e8b6de8e27ba038b36d5fb6aec5d5"
+    },
+    {
+      "id": "logic/odd/13",
+      "sha256": "254a91d36fb4614fa2209015ef71c82d95777d914c4f926e98410ed27a65c212"
+    },
+    {
+      "id": "logic/odd/14",
+      "sha256": "f8949c2aa2330e754383072c4ce5f9593236b1610e70b22659d493f40ef9cb0e"
+    },
+    {
+      "id": "logic/odd/15",
+      "sha256": "b9dd1dbbf728c6c9cae9c8c9d469c192b91841887ab1d1f9225ace8735027198"
+    },
+    {
+      "id": "logic/odd/16",
+      "sha256": "74ac588d58fd1f2d6838661e4d70996320cb425f3529e87f5837d645f941048a"
+    },
+    {
+      "id": "logic/odd/17",
+      "sha256": "3a95488aa920ae28994dc1220f51c8950c424f54ead8b8f9cb00e2339c8465f9"
+    },
+    {
+      "id": "logic/odd/18",
+      "sha256": "dd32f2b4770f22ed05b212841af74f671843e64544613b8ae3e48aa00ca11c1d"
+    },
+    {
+      "id": "logic/odd/19",
+      "sha256": "93b4cc0b99db454fd27eef46c7971ebf143994d1407eb71254af840beaff3ef6"
+    },
+    {
+      "id": "logic/odd/20",
+      "sha256": "09bbc6b2aa94a4189ff8e532b63126bfa0aeb667c0cb6dc8dc6efb544ab1f7ae"
+    },
+    {
+      "id": "logic/odd/21",
+      "sha256": "af08f0ae12bfbc288b71128df1506036bf8681ee5e781b1fc9e36e62e24dcf8a"
+    },
+    {
+      "id": "logic/odd/22",
+      "sha256": "2fdef5d275f5a5af0b3caec825beb67dc46cd04f54b56001cad3090524224d3c"
+    },
+    {
+      "id": "logic/odd/23",
+      "sha256": "62517226e99aac25ff5ded0adfc8577c65101de083b7386922726de2b6bfda88"
+    },
+    {
+      "id": "logic/odd/24",
+      "sha256": "0ff55b2f4bd013285fc958303b2d6acc1597213f5103e4dfe64907619d253e81"
+    },
+    {
+      "id": "logic/odd/25",
+      "sha256": "9fedd683550540dd4bec5d20bfb5be0854f5536296540ff48941b3ff523d0268"
+    },
+    {
+      "id": "logic/odd/26",
+      "sha256": "3f560791e0454d2322f531b0f51cae9480fa16815bcc99ea494c438866f86015"
+    },
+    {
+      "id": "logic/odd/27",
+      "sha256": "6db2eac05f9fac36fca818d46d665b268c95e2e61b935e791ec06642d871e6d2"
+    },
+    {
+      "id": "logic/odd/28",
+      "sha256": "87dd94de19f5091a80c7b8e6f6fc22e3919af074b45f3cfb9f65a624ab9a5214"
+    },
+    {
+      "id": "logic/odd/29",
+      "sha256": "d2ff2eb74f68bef25d84fb7e0daa033f3f3d77c556014689bf827a2da2dba843"
+    },
+    {
+      "id": "logic/odd/30",
+      "sha256": "7c87a493080e8f969f532ae3985c8996ce2d38e9f64eed8c87aa4d762f4098d7"
+    },
+    {
+      "id": "logic/odd/31",
+      "sha256": "5f6b033794f8e595c683a619609c3cc47c54afbd29a2284ac15f24967f2c7fd6"
+    },
+    {
+      "id": "logic/odd/32",
+      "sha256": "7e39b57e46c68d77feb7578f168c88d0be8eb6ad27bb0222c471cc18dbf2e638"
+    },
+    {
+      "id": "logic/odd/33",
+      "sha256": "268d6306837652d68302037bf58a6255048e8d7761feb1647492511d98505be0"
+    },
+    {
+      "id": "logic/odd/34",
+      "sha256": "9e09961db5328d3b30c011cbb151cbd933742a1e6df59454e2e2af14cbb7a5ef"
+    },
+    {
+      "id": "logic/odd/35",
+      "sha256": "1b076e833c44fb6b8b5f6cd06323331183e25112be26c096d013a34cff58af86"
+    },
+    {
+      "id": "logic/odd/36",
+      "sha256": "57dd6dfc7162db8e1b6a17c10df5e36042b722647d41af3ea4875b6566b666fc"
+    },
+    {
+      "id": "logic/odd/37",
+      "sha256": "fa503d754eeab69e5610242d056f2b74fbf0cbfd5825c876552e8b2fafee04f3"
+    },
+    {
+      "id": "logic/odd/38",
+      "sha256": "65aaad3bacd201ff13744b8d3f6285f59102a69196bdf27905baf3d9269d9617"
+    },
+    {
+      "id": "logic/odd/39",
+      "sha256": "8ad829d18494ce7d1648bac6b3219169ab2834de74cd727ad0e9444d57532ee7"
+    },
+    {
+      "id": "logic/odd/40",
+      "sha256": "fd9ce875dc4b887454ad5d3b90256ebb5f87fd7a0a96d087bd8f54aca1b9cef0"
+    },
+    {
+      "id": "logic/odd/41",
+      "sha256": "6a3d5894c379a3a1d2d40adce7ca38be1b74072a61689c1ae146682142771366"
+    },
+    {
+      "id": "logic/rules/0",
+      "sha256": "54d971427926635ed30c176a96ccbc4933c13c26d24c25cec3dd019c90dc9537"
+    },
+    {
+      "id": "logic/rules/1",
+      "sha256": "6277dc3cc0214c8f491c75e14502c417f6af57d319b9404785532497e9f3e5b0"
+    },
+    {
+      "id": "logic/rules/2",
+      "sha256": "ffe1e669a835a71ed60133cb4735c2a9d76d8b37928873ad438b2c602a4e6831"
+    },
+    {
+      "id": "logic/rules/3",
+      "sha256": "f616871214f4ad73a13233e00d3ac60c8199d2c8c8906aefb4d9389dabe15cc1"
+    },
+    {
+      "id": "logic/rules/4",
+      "sha256": "c66888f1323c77ed9f474ea8d65be117d840071eda58cde9ddc09714a6f6adc5"
+    },
+    {
+      "id": "logic/rules/5",
+      "sha256": "ee3f8196bc081cedf3a32d5a34f07d51aedc7153bbca233eab8b1b2d41951e75"
+    },
+    {
+      "id": "logic/rules/6",
+      "sha256": "3f2c8dfb358e791931e461b4cb312402dca7a3210cea8ae7d8cad7f24eca95c0"
+    },
+    {
+      "id": "logic/rules/7",
+      "sha256": "4dcb81309790614855fa46609d986467c535a44c5d37d0ebd90ed99af0022e31"
+    },
+    {
+      "id": "logic/rules/8",
+      "sha256": "c3b9c24de95d8f419e09b125ba585345d2578cc291984ee5075a53370eb68323"
+    },
+    {
+      "id": "logic/rules/9",
+      "sha256": "005fcf893cee7bc0f7fc75e95d4da79345fed8d7ca0aec97655889adcf40eca2"
+    },
+    {
+      "id": "logic/rules/10",
+      "sha256": "bee620a83251c3197bb83e724dba4e8a10fc11ecd6a863bb3598e607784a3eda"
+    },
+    {
+      "id": "logic/rules/11",
+      "sha256": "2ea9191e5f33ce443c804c548d2b8face0465c76f568908ecd69a3ef80239fa9"
+    },
+    {
+      "id": "logic/rules/12",
+      "sha256": "3b2de6cf7ec42c79527aaf48115c2017dd4ef4be72fb1eb89888ecf93700560e"
+    },
+    {
+      "id": "logic/rules/13",
+      "sha256": "1006b21ea38f3d5acd6d22ac1a0d2715eade036cd1389b4b9b85700328ffdcf2"
+    },
+    {
+      "id": "logic/rules/14",
+      "sha256": "70ab4dd6f93a49aaf0aca33594d0b14babbb91fdc68955240a7f9e2578349282"
+    },
+    {
+      "id": "logic/rules/15",
+      "sha256": "3c1b9bd379f89df7d5859cf9ace6809f5c18d7244796f4f27cdb8e223852f50a"
+    },
+    {
+      "id": "logic/rules/16",
+      "sha256": "a3fb6656520429f04441dfc0fe45a2942941f73f02e145c3b9e8e96d07d726f6"
+    },
+    {
+      "id": "logic/rules/17",
+      "sha256": "e6c25faea641ce2ddee58cfe4e42673481045f5ba53aba9da33b8ee4ed43ba73"
+    },
+    {
+      "id": "logic/rules/18",
+      "sha256": "4f9089e99cee1b486b3bee4f05a6f1e9f69c6c55c2b6004df583e184fd3f6d8d"
+    },
+    {
+      "id": "logic/rules/19",
+      "sha256": "249721beea16776ed1303cee89a58142f3820b749f6319fefb8cb48aa6ef8106"
+    },
+    {
+      "id": "logic/rules/20",
+      "sha256": "6b9542a62105059a590b657b30bb4284d60b1133c8c7dd16ae94686eb5ef250a"
+    },
+    {
+      "id": "logic/rules/21",
+      "sha256": "da651f3485c570a9a6c30d5e270ae4758ded42db3bcdd65486bdb6e1bb6496d9"
+    },
+    {
+      "id": "logic/rules/22",
+      "sha256": "a70d4570032d897e784f1000d81e89af2285e21d5ba08d4076ebdad3e7c28ce6"
+    },
+    {
+      "id": "logic/rules/23",
+      "sha256": "80b8c4b0dad78cbbd0af87a73ee63b8746d8aeb1dedafc6148e187b94147352e"
+    },
+    {
+      "id": "logic/rules/24",
+      "sha256": "8c882d2c2181466e44f1e7c5af7e0be8babc9b5d606f4630c2f02dfbaecf25b5"
+    },
+    {
+      "id": "logic/rules/25",
+      "sha256": "e48c9ed6e1e7db23407cc1d525369a689c6f7b8256fdc3fcec9ab0af69403d45"
+    },
+    {
+      "id": "logic/rules/26",
+      "sha256": "90edf34777788143d33fc54bebb9368630954ae67e42b0f5e3ad934a8fdc2dc9"
+    },
+    {
+      "id": "logic/rules/27",
+      "sha256": "ff7fc5ff37766e0ca305778dde0def013fc8cf021784f61aaec59ce938fd8d26"
+    },
+    {
+      "id": "logic/rules/28",
+      "sha256": "d31c26da5e3838de4213278708e7002390f3a1e0cb8ad2cf008f6e5d39d3c94e"
+    },
+    {
+      "id": "logic/rules/29",
+      "sha256": "fe5fbe332e17e3c37d1dc8fdbac1682922bd2be1ebf3b1e86797bae5b205ac4f"
+    },
+    {
+      "id": "logic/rules/30",
+      "sha256": "359355bc7bbad875ef71c57595aa938a7b7d94a7b9cf2848436b36fb8ad39c22"
+    },
+    {
+      "id": "logic/rules/31",
+      "sha256": "9affc98eb930fb21479f3930a54f65be7f9d993abf1fa2f30ee1a9e9baff1dd4"
+    },
+    {
+      "id": "logic/rules/32",
+      "sha256": "de1ad7a769d1cf53b935eb6742c052852e81914abd4f779a6293b4ea34d23e34"
+    },
+    {
+      "id": "logic/rules/33",
+      "sha256": "99063146b7fdbd3eb31ae774d3bba9c54e6ef6e4e90c4a811d94690c0331db45"
+    },
+    {
+      "id": "logic/rules/34",
+      "sha256": "b0aaab2e69f8937beb2b55836e9999d4bef26505f7f5b8e631b35739786f50e5"
+    },
+    {
+      "id": "logic/rules/35",
+      "sha256": "a28da572a007144b825ec992345576b672c3d4191d46eb4bbc6069821e435417"
+    },
+    {
+      "id": "logic/rules/36",
+      "sha256": "50372f2cedf75b0ca84b39f5de8f41c85701043ab31371620149f9e2be3c0727"
+    },
+    {
+      "id": "logic/extraOdd/0",
+      "sha256": "2b3f106df61e28b4a030196b2fe61cc49b0b2deb24099d2bdbd701fcf9222c16"
+    },
+    {
+      "id": "logic/extraOdd/1",
+      "sha256": "f3b431cc72dccf2892e641a6eb48dbc8c723995e515188291d08a4c03df99297"
+    },
+    {
+      "id": "logic/extraOdd/2",
+      "sha256": "7b5fe8b9295c749d214cf73c8f96f8e78cd6ae5ee4d133dff754e6b3bc8a5335"
+    },
+    {
+      "id": "logic/extraOdd/3",
+      "sha256": "6a2b6e5f473a3440a3e0f606662a5c0e6c7e047c5345db697fcc27abed9469de"
+    },
+    {
+      "id": "logic/extraOdd/4",
+      "sha256": "125e4b046176258b7ddcd95fa5fd744dffafc19d7cebcb8ed32dc586e8b077c8"
+    },
+    {
+      "id": "logic/extraOdd/5",
+      "sha256": "0bbf0cbc895d5b2eca6f78d7d84736f2c34424f99418471513aaeacaf3a62688"
+    },
+    {
+      "id": "logic/extraOdd/6",
+      "sha256": "c2bdf470f55b9fafd5afa0b81d51570a1d95e56d9c37db230adf24dd986d6adc"
+    },
+    {
+      "id": "logic/extraOdd/7",
+      "sha256": "7817c7cd259fbf6819809942fbc4066b64370174590bd91b43ab29476887814a"
+    },
+    {
+      "id": "logic/extraOdd/8",
+      "sha256": "539349116d785e1e305b04247f18e2ca2c7327e65ac698693f1144b9b316ee1b"
+    },
+    {
+      "id": "logic/extraOdd/9",
+      "sha256": "9d9216fbdc42e76d3c2a3db90d4a4b855f75b300ee888bb717603b4ded2dd7f3"
+    },
+    {
+      "id": "logic/extraOdd/10",
+      "sha256": "f9fbea7d9f9b9639c88d22a949f351e7b0f3f7b1e066a251aa5aed52491a6567"
+    },
+    {
+      "id": "logic/extraOdd/11",
+      "sha256": "e6b76fd22a8a42af42511f469964da06ff2c95f91fc7fd6f213310293b967804"
+    },
+    {
+      "id": "logic/extraOdd/12",
+      "sha256": "a161921161e891334942d5cab07408a7255b354aa6d3452ed428d34025c6c103"
+    },
+    {
+      "id": "logic/extraOdd/13",
+      "sha256": "175100c6405af3c594161f432199d58514e32dda1743c2236da02960664b0af7"
+    },
+    {
+      "id": "logic/extraRules/0",
+      "sha256": "a1b2f04d08fdb617fd8daff544c7b15220ff43b36f906c33e6099bed7658bd38"
+    },
+    {
+      "id": "logic/extraRules/1",
+      "sha256": "e262b9d8ce020101e2ceff4966419c9279fc7f75e7914c62bf83e259c8dcc9ec"
+    },
+    {
+      "id": "logic/extraRules/2",
+      "sha256": "4c3fcd4b9dc1cb3ae164533516f371766da9caa948b20f7c1f9596c46e5c551f"
+    },
+    {
+      "id": "logic/extraRules/3",
+      "sha256": "e00cc61733b9bd135ba6ac72eb3136bba2a7d132bc7db0cf78bf80463171cdf0"
+    },
+    {
+      "id": "logic/extraRules/4",
+      "sha256": "2c1d2752af81f203dbf9a62bd84e3cd9657f0e48fc768cec1682f6950e8ca2cd"
+    },
+    {
+      "id": "logic/extraRules/5",
+      "sha256": "53f5bd01e6b622e256d07a549b3184cff907565d3fcf2c7b84f04c2bfe440360"
+    },
+    {
+      "id": "logic/extraRules/6",
+      "sha256": "dea2916e5e1d616e4f357f9a50393675c6090bdfd1c6330f9a28e7b0790d7919"
+    },
+    {
+      "id": "logic/extraRules/7",
+      "sha256": "e69d751f55a83c422f359710bd206f33bdff2ccb45e902e0d5f7f32bed76839e"
+    },
+    {
+      "id": "logic/extraRules/8",
+      "sha256": "69301a1d8f1c774ab2d47781e8e9b5db5d33c839b1d7b183a1534e17969d6b97"
+    },
+    {
+      "id": "logic/extraRules/9",
+      "sha256": "69ff5d3321c85ec7066072fe72f55e885651b3762ed6b58acc607396f39d8ead"
+    },
+    {
+      "id": "logic/extraRules/10",
+      "sha256": "ebd50f5b3596ba8b5221ef7275689f3d1528e032d630310bc341cb19251a9ea3"
+    },
+    {
+      "id": "logic/extraRules/11",
+      "sha256": "20fad8d4985c86a11d028f7b68b7798f6a0926e7333fe9480c1d0e7f5203e942"
+    },
+    {
+      "id": "logic/extraRules/12",
+      "sha256": "8f92fda9708c9de05fdbe853638399c8e3c06b2aee561241ef45a5c0bc262508"
+    },
+    {
+      "id": "logic/extraRules/13",
+      "sha256": "00cffcee9ca523601078bd3a3ca244878e0eeea44bf7e6060555407817071e05"
+    },
+    {
+      "id": "logic/extraRules/14",
+      "sha256": "92b457d169df7093018a23768e58e2ed9a45c75288dc66be7b7b61694a0c5778"
+    },
+    {
+      "id": "logic/extraRules/15",
+      "sha256": "e9899d1b76d23d149b280e47185b631af5c5f7c8497af7e2fe9d39ef875be588"
+    },
+    {
+      "id": "logic/extraRules/16",
+      "sha256": "0d00c304d0a42114ddb9a0b9ee72eae2eb6fd563c79120fdbfb9c352dbe87641"
+    },
+    {
+      "id": "logic/extraRules/17",
+      "sha256": "e11c1a600d8ed737f1cec35698e4daba079cd08f0711ac6426c86046afe4a977"
+    },
+    {
+      "id": "logic/extraRules/18",
+      "sha256": "b2f8435be4fbdc52498d781ca5cbdab393b8361bc5fb2907de930ceaab95d946"
+    },
+    {
+      "id": "logic/extraRules/19",
+      "sha256": "c9d00d82ef464d8624283fa4ec4988b32f1964f1f068f9803313c8aa1eca90de"
+    },
+    {
+      "id": "logic/extraRules/20",
+      "sha256": "5917d80c8dfd08fe304bbe99d5de66af9af644944a3ac281f2bbbd2da9ec9a5f"
+    },
+    {
+      "id": "logic/extraRules/21",
+      "sha256": "e4d8802529c17035fe7b2df210776e5200e48de03123671ee15e439c3a3d8934"
+    },
+    {
+      "id": "logic/extraRules/22",
+      "sha256": "f8edd1f45a814acec6f39a080af50fb4c9b0cc62fdd4ac0caf20f3cf8f697cb9"
+    },
+    {
+      "id": "course/body-basics",
+      "sha256": "21616f34eb2a492b684be723ed219a118e31720b4fff622cceaca7a9998628e4"
+    },
+    {
+      "id": "course/force-basics",
+      "sha256": "b989801ce60803a4a593577fe08315c6565125bd23651d61817fd4420c35c68c"
+    },
+    {
+      "id": "course/nature-basics",
+      "sha256": "907fa0a163d0481b8d1316a403ec001f35de1c02123e3ec4bde52c9f5d26c9b4"
+    },
+    {
+      "id": "course/lab-basics",
+      "sha256": "21fbbd0c83fe86abad162893436fc546d675d518f03e6951c97f69e9f3ac8d78"
+    },
+    {
+      "id": "course/space-sun",
+      "sha256": "3851679b2f429ddd8db405d2f7cb0ebd888a572edc269da31156f4e422fb3f96"
+    },
+    {
+      "id": "course/space-planets",
+      "sha256": "5e4891409801e612483eeed2a2418cd0ab5bb715a40313d0e864a2a56486ac5b"
+    },
+    {
+      "id": "course/space-inner",
+      "sha256": "a1dfe55dfbb668073c31e95e9e40b6a95fa713e70847a43c247037364224ac89"
+    },
+    {
+      "id": "course/space-outer",
+      "sha256": "f4e6c567fce9549c648d11eb98515acfffff5be697ce4ff1ce1c18891e5f58cf"
+    },
+    {
+      "id": "course/space-earth",
+      "sha256": "f2e00ed14cea10cd4ee369e49af282e63e5cde6f2c32ae886c05664da3df5d3d"
+    },
+    {
+      "id": "course/space-moon",
+      "sha256": "3b04c05492904cf706f649dd2f8aa8835fd72041ad367060dd285d9b1c686c43"
+    },
+    {
+      "id": "course/space-types",
+      "sha256": "32df3d6d2480a58f875d58a96585cddb632073b09b87b8b8bd3651878462c92e"
+    },
+    {
+      "id": "course/space-observe",
+      "sha256": "b90e2261304fd7c067f159da4fcd6da7a372b40f7d5eb42afb8ba880b3def32c"
+    },
+    {
+      "id": "planet/1",
+      "sha256": "30a0ca33dbd8faa1fe648306e2c2e01d366fb9c587ffcd53be197125bfd4f54c"
+    },
+    {
+      "id": "planet/2",
+      "sha256": "464a506d4d0261b6a26be735afb10128be90c0fea45a675dc4f649fb09a3444d"
+    },
+    {
+      "id": "planet/3",
+      "sha256": "1d48187dd57a0bc11b38e5f6f2faa30315628d663e82db69cf87d3856b42adb5"
+    },
+    {
+      "id": "planet/4",
+      "sha256": "542d0e0ebce7c872a3ddc70c9d9326dea257a756b70e5ba688328bb7b1f96858"
+    },
+    {
+      "id": "planet/5",
+      "sha256": "7be31ab1283750d91f8a41da48f036b0ac2fc4599904e2eb0e883aa73ea8b2e0"
+    },
+    {
+      "id": "planet/6",
+      "sha256": "75c2db636442d8d1275f9563d72b80ac78cffd34507994e9d4f28eb2201363a3"
+    },
+    {
+      "id": "planet/7",
+      "sha256": "4f1b1dc76cc83fdade0395ee474574e651d995c789801d64b23bb25f39622473"
+    },
+    {
+      "id": "planet/8",
+      "sha256": "ca15653bf5568266a39fe0cb17ed13cf516f845d5184403ca5c0971b91441951"
+    },
+    {
+      "id": "english/vocab/1/0",
+      "sha256": "41d2f7d5fb4adc716655fa03eb999c76b3f263f308a7e54927e98a780a5f69f7"
+    },
+    {
+      "id": "english/vocab/1/1",
+      "sha256": "60f8ca735be47b8acfea119dbb0cf2fc7af69c37b7d49c31dc8ef3be04e2b895"
+    },
+    {
+      "id": "english/vocab/1/2",
+      "sha256": "601e1b235c7642d3f6d0435ffd7ef447a1392b1ecb1bb48c3de480805867bc59"
+    },
+    {
+      "id": "english/vocab/1/3",
+      "sha256": "24241eee0bda97f7091abc8815e934174ae7b9cac46c24551c94788a2c58dc4f"
+    },
+    {
+      "id": "english/vocab/1/4",
+      "sha256": "4a06c7f313fde00bf895ed65122793347a4531f32be065febe2b4bbc4738c240"
+    },
+    {
+      "id": "english/vocab/1/5",
+      "sha256": "16174e25ac44eeda0973894ba717e2eb54ca4735adaa496acba3c3e24cca7e40"
+    },
+    {
+      "id": "english/vocab/1/6",
+      "sha256": "931b289354867ff1a2376235e49dba4437117c4e46d804c0aeaea1ed055bf5ac"
+    },
+    {
+      "id": "english/vocab/1/7",
+      "sha256": "1832c6b09f7e7248fb8044eb7d36332e2df13cf3b57d329479bfeafd83a0ede6"
+    },
+    {
+      "id": "english/vocab/1/8",
+      "sha256": "4fed0906b7794886b3fdf0432dc1c1ad3c3a2b20b67f6ca480e6d2c0878a91d6"
+    },
+    {
+      "id": "english/vocab/1/9",
+      "sha256": "7679f378ae05c7319205b9245fd1df6e9195129244c7ed3e3e46b039bd351e0f"
+    },
+    {
+      "id": "english/vocab/1/10",
+      "sha256": "11875021bf838da0aa56be4f9676635bb342ea50e1072733f177d44e1d70a879"
+    },
+    {
+      "id": "english/vocab/1/11",
+      "sha256": "d019bbf519be0e0227f96e477db523094562c5f06ad341ede879e14f351e20c2"
+    },
+    {
+      "id": "english/vocab/1/12",
+      "sha256": "611cf528d3c2713d931c0a977c61e64365ed8b01fb38c8356337960f7c9c066f"
+    },
+    {
+      "id": "english/vocab/1/13",
+      "sha256": "80087a03e38d1197a458bb8676d597a265f5e2d1c7a89f9f8e6468e633e74762"
+    },
+    {
+      "id": "english/vocab/1/14",
+      "sha256": "317cdde5b06066c2ec37bf8fd2b524943fed569fb4e595e57c118859da02ebbb"
+    },
+    {
+      "id": "english/vocab/1/15",
+      "sha256": "c2e71eca83c60c307b500b954ac0a802944944cf6d786fc51426fbbf423cf94c"
+    },
+    {
+      "id": "english/vocab/1/16",
+      "sha256": "e01cb6e54e2e29f4d426f9d32db1503a189b543870daa3523b5ff6dd11bd87e8"
+    },
+    {
+      "id": "english/vocab/1/17",
+      "sha256": "34af6860222994c34610ef4ca6862c62d8f44063d4749ff445fe06bf12fbfa18"
+    },
+    {
+      "id": "english/vocab/1/18",
+      "sha256": "d7d7dbdd6e0dbcc69a099bf89ff0782bb222842c5123762a73e4fcc35ddcc3f9"
+    },
+    {
+      "id": "english/vocab/1/19",
+      "sha256": "c836d9e29e462a42b08fd14c7d74d1c6de3c3a188fb6925ecaaedb1ca6de69eb"
+    },
+    {
+      "id": "english/vocab/1/20",
+      "sha256": "a112ca78dbead4c0af6111ed1f4f62746115e0c63925cbf9c645527581f96555"
+    },
+    {
+      "id": "english/vocab/1/21",
+      "sha256": "2a483168dba8501b65a2a62654a41614beef39f812e55b3953d700a206a17a7c"
+    },
+    {
+      "id": "english/vocab/1/22",
+      "sha256": "38f25ba35e8fe36bfbcc4fb8ec7d3c3f13fe9e976b80601edbb9636fefdc06f3"
+    },
+    {
+      "id": "english/vocab/1/23",
+      "sha256": "6ff903311eb3ff0ab4446ec26baf670ab7908273430ee79640f15a2d0fc3e84c"
+    },
+    {
+      "id": "english/vocab/1/24",
+      "sha256": "8c8eee00538226a2276ba12f3222ece9046b35d444b6c559adbd6a0bc7185ba9"
+    },
+    {
+      "id": "english/vocab/1/25",
+      "sha256": "a00980741a5e5660166e92e7121d55e3d7c703eece3a9c0b6b63f2cc0b97ddec"
+    },
+    {
+      "id": "english/vocab/1/26",
+      "sha256": "ccd44249721d8d5159a2213815f1e8b5a3366398265e954730ceb8faf8921ea1"
+    },
+    {
+      "id": "english/vocab/1/27",
+      "sha256": "99c311c4fe9ad0780aae598dfd2238874ec9a62f06a50f7148a6f81b2b1c5469"
+    },
+    {
+      "id": "english/vocab/1/28",
+      "sha256": "4ecdac5f37a4c4917caaa1afa84020a391da8b8b5df0e473d56d58ff276ad4bf"
+    },
+    {
+      "id": "english/vocab/1/29",
+      "sha256": "cb29b4bcf257e74383341295665ac3852267250a7a9fe3fd09ce519b3c66d17f"
+    },
+    {
+      "id": "english/vocab/1/30",
+      "sha256": "4b8b83a42b0c4cdb4268c7dc1c458953dff81f1e9c1808795f68102c8a2ca537"
+    },
+    {
+      "id": "english/vocab/1/31",
+      "sha256": "7512d031f3e43cd0ae0c168501862a37839850fbcb9d6ce46684b7bfd2172c27"
+    },
+    {
+      "id": "english/vocab/1/32",
+      "sha256": "e8f1d031412d9181b48a9c3f245f7dfe53d165dbc0872183b5ff5f24554eb43f"
+    },
+    {
+      "id": "english/vocab/1/33",
+      "sha256": "5316497bff30df8a1a150d3df0bfb2bb0885f2ce84a8b8a6bc904e75ec674393"
+    },
+    {
+      "id": "english/vocab/1/34",
+      "sha256": "440555cba9bc62a0dec283b1c90b4487d3daccabafcdfabc091a0053c3371416"
+    },
+    {
+      "id": "english/vocab/1/35",
+      "sha256": "7fd08b3c0d6362d8fb6693a49eaa30531836acb244f7492589457370bfee8df4"
+    },
+    {
+      "id": "english/vocab/1/36",
+      "sha256": "a3322a1349e83e48d9d01d9c1c79329644ef02e79d3247443938a3b2cb4697c4"
+    },
+    {
+      "id": "english/vocab/1/37",
+      "sha256": "349ca998f7461e3f196ec7314661311ebb1a52a55bc57aa77deb6157827f3150"
+    },
+    {
+      "id": "english/vocab/1/38",
+      "sha256": "8215b07af11a5f5835db34a45b00c915c84dc489658b79bc69e482c2ca1906d5"
+    },
+    {
+      "id": "english/vocab/1/39",
+      "sha256": "acd0c1ae87b73358c63f1068ed51b434b271e050ddc64d0fe507ffca8f52a594"
+    },
+    {
+      "id": "english/vocab/1/40",
+      "sha256": "2c75882ba528077ed28852b02e9787185a8051d35ca5ef8387da1ca21b6ae7e3"
+    },
+    {
+      "id": "english/vocab/1/41",
+      "sha256": "8e0a866d8ba07bfc62dd5ad6883a5653244d201613bf25c835ee1e743bd8deac"
+    },
+    {
+      "id": "english/vocab/1/42",
+      "sha256": "73c259be8c2b9ded2fda8d1ea1eb531d5584beb935001f2720d944f3baefc51c"
+    },
+    {
+      "id": "english/vocab/1/43",
+      "sha256": "8bd7f9695569d5cdb31fa719f60b5bcf3b8950c9c50d67d43e43103f19a6900e"
+    },
+    {
+      "id": "english/vocab/1/44",
+      "sha256": "85a4343b939eed3349825ff53d55739b0452500ce954adf25db31c7c99f8f66f"
+    },
+    {
+      "id": "english/vocab/1/45",
+      "sha256": "cd32ef96f0b31dc814fcd7366fee108f0bfb001cbb2c38b8ba5c4697d1be1a3b"
+    },
+    {
+      "id": "english/vocab/1/46",
+      "sha256": "b81c99349cd998d68f15bf1b1638d1eb4a4380e7636eeff4278a86d6ccc57bdc"
+    },
+    {
+      "id": "english/vocab/1/47",
+      "sha256": "b55119e54d8340618a06356881b9f324690accca6ef1937349a04bd04f9a0367"
+    },
+    {
+      "id": "english/vocab/1/48",
+      "sha256": "a912d0359d66e44943675c55791c80664745b7a2df5cc6a0871ba98c63468a4f"
+    },
+    {
+      "id": "english/vocab/1/49",
+      "sha256": "68a737a8ca61ef105b8dfdb815bae740fc7a2fb2a533ba43410998888b37f85c"
+    },
+    {
+      "id": "english/vocab/1/50",
+      "sha256": "4e7dd1809c299d104c66a9ed0a4d203e98dfb719a2bc6de55a76776734d13fa7"
+    },
+    {
+      "id": "english/vocab/1/51",
+      "sha256": "c31fcf73f9f87b9fe8b799001e15bb1d6e83205bbd163fb2e1051262729e4739"
+    },
+    {
+      "id": "english/vocab/1/52",
+      "sha256": "26f0c1f333270aaa87cc12a8c8ab208b0581544f6dbbb43bd10761b5d6ddfdf4"
+    },
+    {
+      "id": "english/vocab/1/53",
+      "sha256": "411badb0b726d826600a8022eae22dea308022a30b80eef817ed9b024574e7cd"
+    },
+    {
+      "id": "english/vocab/1/54",
+      "sha256": "813dce02c0ad3d19360c9c6a71b6a8647aa0f074d73ea2e67ccceba408ac9dc3"
+    },
+    {
+      "id": "english/vocab/1/55",
+      "sha256": "c1ef7eb4935b491ec854ed262a3e3b4e83e27dbe46d013c52b0009f2b01e33a4"
+    },
+    {
+      "id": "english/vocab/1/56",
+      "sha256": "f3079685c0ce9986b72b74c905d3c86ffe39934ffad2e9c2070ad7af629076ca"
+    },
+    {
+      "id": "english/vocab/1/57",
+      "sha256": "df0db8e0ddade0d0ff28459760284bc535ac4ef605e1dd7d3affde2a6820038c"
+    },
+    {
+      "id": "english/vocab/1/58",
+      "sha256": "3b2d9d1e071e7989d5dae78c580348728d9c3c25a64eedf0ee561b932acc11af"
+    },
+    {
+      "id": "english/vocab/1/59",
+      "sha256": "5a69484a1f39f616d6a8da404d149004feea19eed2236755e04a6dd5bd55b8e1"
+    },
+    {
+      "id": "english/vocab/1/60",
+      "sha256": "68cf7281723f744388518abe801033650d1ab85598fe10d58b656c687750583c"
+    },
+    {
+      "id": "english/vocab/1/61",
+      "sha256": "ac9191c8f7a0c1c9d22abb39a60c08eb5bfc195f53e0522f4a35f0b682dcdd2d"
+    },
+    {
+      "id": "english/vocab/1/62",
+      "sha256": "98f66c5c25e304dbea5615babae5a0e4e32296be0f75d61f8319f17b4ce80912"
+    },
+    {
+      "id": "english/vocab/1/63",
+      "sha256": "f15037bffac75806e91cbe42c2eac6d594fc50afffd7b88c8457dde4cba6aa64"
+    },
+    {
+      "id": "english/vocab/1/64",
+      "sha256": "565e2f7c1cd2c39804df1e58e86804e5c378dd329cbe65cbd8ef049471d1aa9d"
+    },
+    {
+      "id": "english/vocab/1/65",
+      "sha256": "dbf246dfb4f74c0da546b6c03a85650522b4e27903400bdb30b53227b0c3387d"
+    },
+    {
+      "id": "english/vocab/1/66",
+      "sha256": "71d1c08d610cf73ca40c4937efc1ad2daed88cca152c4b5845539450c240c6da"
+    },
+    {
+      "id": "english/vocab/1/67",
+      "sha256": "afd20c11777a27051e6172241d5b14aba5f7e1e9acaeded803c10114c774b700"
+    },
+    {
+      "id": "english/vocab/1/68",
+      "sha256": "1281c0464c02c83414b0994e1bc387a5b0cd3d863037a76460bea3608fde6b9a"
+    },
+    {
+      "id": "english/vocab/1/69",
+      "sha256": "ccfd081c262d33b8949bae3c9e812f38d0598c251ca7f365129fa1b4a22f0f5d"
+    },
+    {
+      "id": "english/vocab/1/70",
+      "sha256": "2414d8619ea018c4b365eb37451b52fc515e786037b73807b5f7671977b5cbef"
+    },
+    {
+      "id": "english/vocab/1/71",
+      "sha256": "14a884ad94db3e1a9c895db016351b6c611a05630978a23223bba3c6c5cbcfe1"
+    },
+    {
+      "id": "english/vocab/1/72",
+      "sha256": "97d79d22bd49344b1d21d6dae0689a20499b515c11aa9e631970803a5b825f23"
+    },
+    {
+      "id": "english/vocab/2/0",
+      "sha256": "ffc86fa041c7b4bf87e83b34f9c53d5fd6bed9d226aaf3a26eab9e8952ec1094"
+    },
+    {
+      "id": "english/vocab/2/1",
+      "sha256": "0f976e609151b6e853f3eed05ecf80146327254c36f2617484be274e8d9061b4"
+    },
+    {
+      "id": "english/vocab/2/2",
+      "sha256": "287d6f0c51cdd1d72d9c623ecccb3840134857a32f0b581078ef26b4ff0f1ec9"
+    },
+    {
+      "id": "english/vocab/2/3",
+      "sha256": "6e1c5b453f389462587684507cbb6c3db6550e2a69538834f1dc8e7797189804"
+    },
+    {
+      "id": "english/vocab/2/4",
+      "sha256": "7632c6833ef0b3117a020ab8804026f1f6f76b8d89d71bff228814605cc4f8e5"
+    },
+    {
+      "id": "english/vocab/2/5",
+      "sha256": "b507e3fe9d16976244765d8ecae42b2376995a0e27149ec56bf9c30a52695e72"
+    },
+    {
+      "id": "english/vocab/2/6",
+      "sha256": "61cc58615be6cb06a3b6cf28b61827f43cc26fe666b1ece61b6598ca51088709"
+    },
+    {
+      "id": "english/vocab/2/7",
+      "sha256": "679d173c6b2bab7b01d2004b62bc79efae1b17e08f168ace2cc2af6a873e4fa9"
+    },
+    {
+      "id": "english/vocab/2/8",
+      "sha256": "496a26da683368c56da442860910e50c7f555087017d1e2ce771ebdccb6ff3df"
+    },
+    {
+      "id": "english/vocab/2/9",
+      "sha256": "6a27e1388716b63615a2903310a0a5f47c47eba91ad7689fc15f3b14d9934752"
+    },
+    {
+      "id": "english/vocab/2/10",
+      "sha256": "4e0140d2ea7a96df8cce7c23e88a2d7057e0871cd381b504464b879118196f59"
+    },
+    {
+      "id": "english/vocab/2/11",
+      "sha256": "74643b885f6e4909eeef27bb85d08f52f7e732e2734a5503b02a02f5b1a3ee98"
+    },
+    {
+      "id": "english/vocab/2/12",
+      "sha256": "28e137d79b2806b155297b5da14f3599532351e82234d9d4bcd55ac14970edfd"
+    },
+    {
+      "id": "english/vocab/2/13",
+      "sha256": "88c4753157dd7eb6d087dfdfc234045c219790f39c2c4ecc472b65b724e58038"
+    },
+    {
+      "id": "english/vocab/2/14",
+      "sha256": "befc9cbf244f7cc917cab90c3206a7ba7d367e1e54f4eeee6ffdecb1b3d08e72"
+    },
+    {
+      "id": "english/vocab/2/15",
+      "sha256": "2a2f02652c7bdba040a4f7c99d1fa81aadda659f56076f75e1cbb7ab76ca838c"
+    },
+    {
+      "id": "english/vocab/2/16",
+      "sha256": "2f03fd79fa5647f241fbf925ac33254660f6d0757f161b0ff828aa2115dfc5b2"
+    },
+    {
+      "id": "english/vocab/2/17",
+      "sha256": "d64050e49f688957611a868ce9e17a84b3bcadcc1c418c100e90f1bf64d90d52"
+    },
+    {
+      "id": "english/vocab/2/18",
+      "sha256": "a77010b61e3604f1b49105345ab5c273808332d06c2246b81cb3bc5560765baa"
+    },
+    {
+      "id": "english/vocab/2/19",
+      "sha256": "7c8945987a5f4a6bc3c963fe799780a94e9fd8b1ab73a4a91faead9030602c5c"
+    },
+    {
+      "id": "english/vocab/2/20",
+      "sha256": "d10b1768b01ea618f7a51b192e1b1a9b217655aab9a5bef3f4adaf9abb712c92"
+    },
+    {
+      "id": "english/vocab/2/21",
+      "sha256": "a157daefdcaf66cbd23bf2505b5a878119452f9775dd5d1241ac17c34716d46c"
+    },
+    {
+      "id": "english/vocab/2/22",
+      "sha256": "aea2e51a88adb9ae451246903254115219dbf38607519ee99b6cba777b5457aa"
+    },
+    {
+      "id": "english/vocab/2/23",
+      "sha256": "069b572425ca44bcb4c3ba3bceb51f93023be19b541b057d87aa7dadc22dfa35"
+    },
+    {
+      "id": "english/vocab/2/24",
+      "sha256": "e9be520e48716ebca3f2371b258c5f4ac061c1337aa05b70f7e222773f4acbbc"
+    },
+    {
+      "id": "english/vocab/2/25",
+      "sha256": "0d0e1f80a319e42528e0100b741646a4daa8fd03556b01e675140db6d38b18ed"
+    },
+    {
+      "id": "english/vocab/2/26",
+      "sha256": "c69d4644318740bcde20a610fa247d31513838981268289dea1ea8c6013f698a"
+    },
+    {
+      "id": "english/vocab/2/27",
+      "sha256": "05c3ce35a2651b6b39e631c2f95cb11531732589d5783d40383fc4163ceb527a"
+    },
+    {
+      "id": "english/vocab/2/28",
+      "sha256": "3f6bf8294ea72d31e74a984c0cacaf4a604ad4fa63eb3b065d3ec6a2bc75ef49"
+    },
+    {
+      "id": "english/vocab/2/29",
+      "sha256": "df4389a82b2e1287e047df637a237353d0dc5e2863064e5307632a653dfd371c"
+    },
+    {
+      "id": "english/vocab/2/30",
+      "sha256": "2bfc9e643ac456ef11679b2a929e2024460c27d75146cbb307d1b2ef0b4fe5fb"
+    },
+    {
+      "id": "english/vocab/2/31",
+      "sha256": "5025b8fa90ab719c19fc04b177667f343f87fc45e06f1de55cb0e5bc003d6646"
+    },
+    {
+      "id": "english/vocab/2/32",
+      "sha256": "fcccad87dc2082b084edd1ea2f3bfa016d2a0d5b7f9fd7a10c7b051a6de06d1a"
+    },
+    {
+      "id": "english/vocab/2/33",
+      "sha256": "93eb59c09a2302448cad0899b22fc398ecbb10fb0b07b35866023d9b98f948d6"
+    },
+    {
+      "id": "english/vocab/2/34",
+      "sha256": "3189c07ec83b1ae1379089cbefa2487d9ad6eec1deb2a374bddca25026879530"
+    },
+    {
+      "id": "english/vocab/2/35",
+      "sha256": "92e02a41c881c34ebf1115a054310c18878e6437f7039f211dba0e6b99bca9df"
+    },
+    {
+      "id": "english/vocab/2/36",
+      "sha256": "8aae77e6bd1e41faafc629a77278dd27000497ac7224e68e45d86c17a307ac61"
+    },
+    {
+      "id": "english/vocab/2/37",
+      "sha256": "5b4a53a723264842f78bc21d861db712e7991208734723453a267754d5b48570"
+    },
+    {
+      "id": "english/vocab/2/38",
+      "sha256": "395c39edb7df62c1198006a1a834c881f10e3591c4f51ce80f3429f6b1c08382"
+    },
+    {
+      "id": "english/vocab/2/39",
+      "sha256": "41fe38d42d43f43bd8fd74351ebcef954c3a6e671c96a0aa871f293ea9102a11"
+    },
+    {
+      "id": "english/vocab/2/40",
+      "sha256": "5775542432dd4f367e52444d577a3d7bd2e89a0a59fc15cb10907a17e033570e"
+    },
+    {
+      "id": "english/vocab/2/41",
+      "sha256": "8529fd69507886ba14a8f8a6174f9ed7b661ca6bc4d86c34ed56016d9974412c"
+    },
+    {
+      "id": "english/vocab/2/42",
+      "sha256": "a136bd793bf072f4e32ccd6a9d31b08483978e9b45fe317f0e52458f49d3d090"
+    },
+    {
+      "id": "english/vocab/2/43",
+      "sha256": "07fcff9b6a06aba93857dc87dc25d050978ea99becc51d3258b465c12e371c1f"
+    },
+    {
+      "id": "english/vocab/2/44",
+      "sha256": "5d60fd260c8498f68c897d2c5f1f56de5f105ec3b5256924bd5cf23d26e42f5d"
+    },
+    {
+      "id": "english/vocab/2/45",
+      "sha256": "6573944c981d2fed72946f34a709d257488e82e45095af2b324dd6bf4d354e03"
+    },
+    {
+      "id": "english/vocab/2/46",
+      "sha256": "54a877774bafe1fc734d416afe181930e3ff69321cdc1410bd1e5b46ce3f0f19"
+    },
+    {
+      "id": "english/vocab/2/47",
+      "sha256": "34bb954ed48fbcf9a6536010351e0ff49d38bdc80c73076494a69e5c41ae78fd"
+    },
+    {
+      "id": "english/vocab/2/48",
+      "sha256": "c34d511633db059457c7ecfddda73991374554d4520776f9a0484af316246b6a"
+    },
+    {
+      "id": "english/vocab/2/49",
+      "sha256": "81b147249c0678cafd7ed85db213550ab9d79cf4577836770ae14b3b31fa24b4"
+    },
+    {
+      "id": "english/vocab/2/50",
+      "sha256": "ad39b5c3aab42ceeedc125cbccdd0c79b01528211dfcc8cd82c7bd031e5d15fa"
+    },
+    {
+      "id": "english/vocab/2/51",
+      "sha256": "9a8a7a7a005452c2e876eaa9848ebff9edb50ffd73b424518d3e2f131777c08e"
+    },
+    {
+      "id": "english/vocab/2/52",
+      "sha256": "6059c345496324df21756e486597474aa4ef1b090f4ec0c8a8e5ec57bab8c336"
+    },
+    {
+      "id": "english/vocab/2/53",
+      "sha256": "77d1b533bf87d0874686d8e716f0c3338cf6b6757d40ab6a409ee5aa3accf78a"
+    },
+    {
+      "id": "english/vocab/2/54",
+      "sha256": "4f7d6e3c537d7d876bdff44ef793dc4466512d25c02cfdae8f81ad2fd85247d9"
+    },
+    {
+      "id": "english/vocab/2/55",
+      "sha256": "9c0a141080c43b353f73d081ad6a025a9d5d0657df7513fb60e36fb637562248"
+    },
+    {
+      "id": "english/vocab/2/56",
+      "sha256": "05d920bef8c7812bc418e6d5a441f93e53d89b3ca9bb789f9893d866b300e72a"
+    },
+    {
+      "id": "english/vocab/2/57",
+      "sha256": "94139907c69f8fcfff5c1483aea79a57365b31fe0b5c98a45c27c57916536bf0"
+    },
+    {
+      "id": "english/vocab/2/58",
+      "sha256": "da4dc6ab11f594d068578082caa41613d5176b68e3313807da5a719932264397"
+    },
+    {
+      "id": "english/vocab/2/59",
+      "sha256": "4ccd47ad18662c9d5addb7833250fd3be1c84b684e514ec95ba7ea5a09552423"
+    },
+    {
+      "id": "english/vocab/2/60",
+      "sha256": "fa7d858351788cc9eac30af988ef1655934548edc150c9806ed87a73a1d0a00e"
+    },
+    {
+      "id": "english/vocab/2/61",
+      "sha256": "055a0a2466e73ace03276c033ac4d636c15cba3173f938225d38e4424cd62bbe"
+    },
+    {
+      "id": "english/vocab/2/62",
+      "sha256": "7f2201436c340e1a877deeaac57736e5ab1ec0e79de47a831b73c75cfeae20e0"
+    },
+    {
+      "id": "english/vocab/2/63",
+      "sha256": "e6be26d247690d06d47412f4cc8b9a3f1837e9d75887834cd588c6aea5587d45"
+    },
+    {
+      "id": "english/vocab/2/64",
+      "sha256": "7c75e84ee1c64d86c7522fc4c230d5b0499447f57fd54dc6b35484f648e684ef"
+    },
+    {
+      "id": "english/vocab/2/65",
+      "sha256": "e5ddcf4b26e0e9862e3132b189fdd6b5f9e4ed9c3994fcda514360a8df198377"
+    },
+    {
+      "id": "english/vocab/2/66",
+      "sha256": "1652b938143a9a31599b00603e6bfacc4b0882b0f3df5a6da3e3a96112c2491a"
+    },
+    {
+      "id": "english/vocab/2/67",
+      "sha256": "2d7952ff6eaeb02151ce37c423640b190576b04bb679c753ceaf5068d39127f7"
+    },
+    {
+      "id": "english/vocab/2/68",
+      "sha256": "47032e3d4fed2ca7c0dad7dcf0d214808459af8ccf8891df2b582fe712ad4f1f"
+    },
+    {
+      "id": "english/vocab/2/69",
+      "sha256": "8ee8716c46091c7dc039eb63835752fcc6d5889c90f9a51443db1e0389fda8a5"
+    },
+    {
+      "id": "english/vocab/2/70",
+      "sha256": "6aa4559b6995f7cf37c56ad9e14c69b2afc5cf341162d248b700a1813b2824d6"
+    },
+    {
+      "id": "english/vocab/2/71",
+      "sha256": "6224b7f68a911e1ece70a0cf57463f8c835c243b2af68c3b90844705c112f24a"
+    },
+    {
+      "id": "english/vocab/3/0",
+      "sha256": "b35c4ec64a111ee983c879b4a24dc85611e1a9383b37f5cd299b94f4525d3c03"
+    },
+    {
+      "id": "english/vocab/3/1",
+      "sha256": "9e22391e39078fe9f199ddc8ebdf25761841ac43f5eb5ae433ccf7700a2d50b9"
+    },
+    {
+      "id": "english/vocab/3/2",
+      "sha256": "bfa269cab6b3c28c7f2f6880f7d788eefb52ec0c351aeaebc3686c06cdb73148"
+    },
+    {
+      "id": "english/vocab/3/3",
+      "sha256": "aa9e49a7429c746255ce2d3d459682a104cd2410f92b26985df1ee5d7b2e2082"
+    },
+    {
+      "id": "english/vocab/3/4",
+      "sha256": "1d25b6a3a7e557e74120788abf3d51762c435b01a4a0ddc88244ddf430656f44"
+    },
+    {
+      "id": "english/vocab/3/5",
+      "sha256": "6220e6d4dcc217b65628590dac635efd751f5b593e55abdf905619aacde01284"
+    },
+    {
+      "id": "english/vocab/3/6",
+      "sha256": "784dc212ad257012496c04b4bf32514945077af13c4db6053133823f6478222a"
+    },
+    {
+      "id": "english/vocab/3/7",
+      "sha256": "48442b49301c882807c03b272e7624ff520b2a643eda5338fb14fa945fabb4df"
+    },
+    {
+      "id": "english/vocab/3/8",
+      "sha256": "ece1b157e014ecc9bc848f431c18fc2c5240236d84a1987433473c6113dfcb5d"
+    },
+    {
+      "id": "english/vocab/3/9",
+      "sha256": "b40d6bbde427224728fd88c03f20df850d31c944bdd64b26f8364b9cc1d8a29d"
+    },
+    {
+      "id": "english/vocab/3/10",
+      "sha256": "6c56ca1ed9cdafccdcc2a6410c924ae282c6fd23ab17c82834507e90ebce5b2a"
+    },
+    {
+      "id": "english/vocab/3/11",
+      "sha256": "0ddc759bb36cbe85d7f84580fd17cbc9e52db1e5813e487223d8576500c5dc95"
+    },
+    {
+      "id": "english/vocab/3/12",
+      "sha256": "12c83ab201c8c908c624ce71e200b67001e2bae679d1d25c7a6ace46a596762c"
+    },
+    {
+      "id": "english/vocab/3/13",
+      "sha256": "f6b7c4f3423ebe88854dbe22a738efb318a499f07aaf64d3aeb1fa9761756760"
+    },
+    {
+      "id": "english/vocab/3/14",
+      "sha256": "f5478d94f902d1493bac83880e2a8b9d9747c486bbcfeb23485f543053e963ee"
+    },
+    {
+      "id": "english/vocab/3/15",
+      "sha256": "a350a43f73198678438352689632c476d51f1aab3d5c3322d7b70be6c002ff96"
+    },
+    {
+      "id": "english/vocab/3/16",
+      "sha256": "7c884e03ef6c6a8621dc69c8134499c8133f51420b253c9667b8c0f240032dd9"
+    },
+    {
+      "id": "english/vocab/3/17",
+      "sha256": "32b8775691aa943e50bd9936481f8200c76912b30dafc046006ce0870ea8b71f"
+    },
+    {
+      "id": "english/vocab/3/18",
+      "sha256": "29077d6125d1e493e31d057ea4cf743d01680e8dbe6f94100d66d89a13ccbee7"
+    },
+    {
+      "id": "english/vocab/3/19",
+      "sha256": "a541e9042402ab5c97fab7f743b63e12e282888e8660e05943c56f7e4d732dd6"
+    },
+    {
+      "id": "english/vocab/3/20",
+      "sha256": "f5203b89788722e97045b4533cd1dc0d385fe4eea2ea8e65acfb8e10240eb5fb"
+    },
+    {
+      "id": "english/vocab/3/21",
+      "sha256": "6b175fde8478aaf54a29454fc79c3e1c3c4ba592e1145ed3f0dda05193ebc661"
+    },
+    {
+      "id": "english/vocab/3/22",
+      "sha256": "038d239560f6798fc8d669f09464b8f2ac8406bf5c950f1fd58cf5b7b4303aca"
+    },
+    {
+      "id": "english/vocab/3/23",
+      "sha256": "c861ec7551460394e9741d8b4e528e27896f825d38c4102cfe5b6c22b6c09f8b"
+    },
+    {
+      "id": "english/vocab/3/24",
+      "sha256": "710c22c84e09dd4c2f7a7712fc67045a9075662fde464554689f3b85732e3b0c"
+    },
+    {
+      "id": "english/vocab/3/25",
+      "sha256": "34dabe738c167aa617b08c4548ce275e0d8c2addea80bfc0528464c4636337dd"
+    },
+    {
+      "id": "english/vocab/3/26",
+      "sha256": "4bf067b5342b2da626f86f788678c3c6a2f45ddccaf2e1dd5fcab4f15aa7fb6d"
+    },
+    {
+      "id": "english/vocab/3/27",
+      "sha256": "05cefbebc6b825563cbf92a84964ee7a92dd077cc8383bf863013a6435a37565"
+    },
+    {
+      "id": "english/vocab/3/28",
+      "sha256": "cdf310d7ae9d91e99621fd6059bee23fa4bddca1d8041d30e4d85feb548350da"
+    },
+    {
+      "id": "english/vocab/3/29",
+      "sha256": "35e813b2843b2af419ccf6fa13920597b422763912a141e0c9c3d7667baf4e02"
+    },
+    {
+      "id": "english/vocab/3/30",
+      "sha256": "77288a452cc953cf18f51daab065ec1ff062919e60840e3df9c2ccabc9295bc0"
+    },
+    {
+      "id": "english/vocab/3/31",
+      "sha256": "4acf527dfbccc1d25c4c3bf7129d38a68a136e9e9793bd72793239b1a4fb1300"
+    },
+    {
+      "id": "english/vocab/3/32",
+      "sha256": "9608fee655edfd46c55b4769333a804256851cb2f5d87a6f58b9a3cafe106977"
+    },
+    {
+      "id": "english/vocab/3/33",
+      "sha256": "03d144582119e6ca7ff6061f756c6c4c195808bfedda1c2ab3127fa317daaa65"
+    },
+    {
+      "id": "english/vocab/3/34",
+      "sha256": "eb9222160bde2729a251592076cdf1a29c0506fab5109e3a78273ee3198c5c99"
+    },
+    {
+      "id": "english/vocab/3/35",
+      "sha256": "4c1f99248406b5799c42bcc117c38275a4866f0d262707a69468ea0e829ca6b6"
+    },
+    {
+      "id": "english/vocab/3/36",
+      "sha256": "61f57e20aa4dc5cccf6f5f8dc1d460e600bb8d3c865943641ff6f7b46697c102"
+    },
+    {
+      "id": "english/vocab/3/37",
+      "sha256": "24be27dcc1831472e5167c14675715a3d4ed56dd14af281a7ea8f4bbcbbdb912"
+    },
+    {
+      "id": "english/vocab/3/38",
+      "sha256": "19f5ac774e78f4d74289273ca1bfe23c753220a1bcfb295058377f5fc08ed491"
+    },
+    {
+      "id": "english/vocab/3/39",
+      "sha256": "bff863c14985a3824730999f3a1d662a6ae6def29d856bad234c14e07f37a42b"
+    },
+    {
+      "id": "english/vocab/3/40",
+      "sha256": "fac7062919033ede7ce968bf5e1b1e3c27f6b710324eb80e7a95f9c7de644bb5"
+    },
+    {
+      "id": "english/vocab/3/41",
+      "sha256": "49ff6c9b22e8bc75bf8933bcdb9f601820de994c16e541b42fecbc126852ef0e"
+    },
+    {
+      "id": "english/vocab/3/42",
+      "sha256": "c12261c044abc2b6376b8dda581dc9ef21c8f1577f660510d081c33445883174"
+    },
+    {
+      "id": "english/vocab/3/43",
+      "sha256": "a834cc52dd39abdfe78bc21d1263011f824043111df29a167a6ac6db9cc0455e"
+    },
+    {
+      "id": "english/vocab/3/44",
+      "sha256": "4ebc38db826d3d4994764812f35214744d201720ed385aaf071025078020fcb1"
+    },
+    {
+      "id": "english/vocab/3/45",
+      "sha256": "47e28dc53ce8e70c196b1755c2a44493bc9c34283c0b926d913b30174e394182"
+    },
+    {
+      "id": "english/vocab/3/46",
+      "sha256": "c4e8f194c93919a10e6b8b91a6e391cb57d992e236a0dfd1c74b75bc2d0ee3ad"
+    },
+    {
+      "id": "english/vocab/3/47",
+      "sha256": "2566fba6965101623880599e3e570443c88ad059b46d30a9171210c58ab8f49c"
+    },
+    {
+      "id": "english/vocab/3/48",
+      "sha256": "9cf90afe476d3cc262482aeff72ac15642da0b1918f49ff9ef9391ec44ca20dc"
+    },
+    {
+      "id": "english/vocab/3/49",
+      "sha256": "7ee300a973433249436887bac9b49e242b4afba9566d7f14585ad151684106f1"
+    },
+    {
+      "id": "english/vocab/3/50",
+      "sha256": "45d356204ceda6f96a7b596c105303f4c7ea943de594ec8606c22f5ebe5e8a18"
+    },
+    {
+      "id": "english/vocab/3/51",
+      "sha256": "2abd53d2152180d4de7bcd55fabf14ca6d7e6d9506545b5a35208cd62cd4dcfa"
+    },
+    {
+      "id": "english/vocab/3/52",
+      "sha256": "c9f3e31e6ecc936b405beaab5136391c8fdfa8411ce60beb0a602d604f5ab84c"
+    },
+    {
+      "id": "english/vocab/3/53",
+      "sha256": "1a3f07e82eb810b956dffba18a5e350d804fb079fbf7c0b67bc5911d2a484d7b"
+    },
+    {
+      "id": "english/vocab/3/54",
+      "sha256": "7155c0688c495a0f875caefc273c758855adf75077b81e9901491dce180c64cb"
+    },
+    {
+      "id": "english/vocab/3/55",
+      "sha256": "67209f0a9de0a9621154c2b50b1938caebfb27dfb34ebcec3c22abb8ae304a2f"
+    },
+    {
+      "id": "english/vocab/3/56",
+      "sha256": "526f8ac9dda5797f8f86c23ce83fdb6430331e54670e9f28620de47f1956d202"
+    },
+    {
+      "id": "english/vocab/3/57",
+      "sha256": "3ef57c352e83226962ac235a172892c5b32b504f5804a7f733c77d36e351afb3"
+    },
+    {
+      "id": "english/vocab/3/58",
+      "sha256": "8e71b1d197752ebead031eed54da978d6ae4f32d544144e8bdb5f7b0d11d9dce"
+    },
+    {
+      "id": "english/vocab/3/59",
+      "sha256": "dd40b95597b5e41c221c1c9164c1ed32e4f76f82a1519d1f70253e8a0ce948e9"
+    },
+    {
+      "id": "english/vocab/3/60",
+      "sha256": "b7a136a51eeaef7dbbdc4623442dfe06e5a60d81ee22bfbd883179c28ee09c08"
+    },
+    {
+      "id": "english/vocab/3/61",
+      "sha256": "0bb9beb9ec9c0049998186a1450d1e59998d636572e623e71495826209e3e93f"
+    },
+    {
+      "id": "english/vocab/3/62",
+      "sha256": "fab35177174a513d0c2e83d1aa33db2e58ed7fcef85d8b5f67efe53d56238347"
+    },
+    {
+      "id": "english/vocab/3/63",
+      "sha256": "d2e6acca97cf28be5596518d749fea1f32349888eb291ace4d67f13c319b7f55"
+    },
+    {
+      "id": "english/vocab/3/64",
+      "sha256": "ff0693cf561b996b572c8742304491aede3ac3b39b2642ca250bf141aa7f4efa"
+    },
+    {
+      "id": "english/vocab/3/65",
+      "sha256": "986966558bcb326f5bf96df3a3c9d943447e5875e1d54dc8274ad378d6e14016"
+    },
+    {
+      "id": "english/vocab/3/66",
+      "sha256": "e289f409675d10c65e6005c4eeae59fe0d18dda73204e488568f5e565c6e11c5"
+    },
+    {
+      "id": "english/vocab/3/67",
+      "sha256": "320bcb30685add37d2bd7f92ae2e79aacccbfa57d3443ee5d185dcff9ea9b38e"
+    },
+    {
+      "id": "english/vocab/3/68",
+      "sha256": "435e5acecd40f5e0f956ff18f1ef581f78925d6cb399e8ca1bcd220216d263a1"
+    },
+    {
+      "id": "english/vocab/3/69",
+      "sha256": "2f6cc5e83934dace28bb0d9212a6793061fe2e113989a33561e6b89ddf1bc6bc"
+    },
+    {
+      "id": "english/vocab/3/70",
+      "sha256": "333559c6b42f7f1e28625276f98a2ccb8e6ff4d6bef418653e64a923b02204d5"
+    },
+    {
+      "id": "english/vocab/4/0",
+      "sha256": "0d1bd9af625916e44dd0325eeeeecff55532370aab872436eb11cf0117661d7c"
+    },
+    {
+      "id": "english/vocab/4/1",
+      "sha256": "1a4ce0f6186b89a57232e56f5d9391ee272eb0cccc61e941095c064d89ee9d8c"
+    },
+    {
+      "id": "english/vocab/4/2",
+      "sha256": "85d7650e829226370cd55e2275331cf2a5d498210a16ccad35d764bfdd1a8420"
+    },
+    {
+      "id": "english/vocab/4/3",
+      "sha256": "6eb3120c75b62ad8bfa3c0af1b4faf4c1a7d280062bd93774f2eb3e330f36430"
+    },
+    {
+      "id": "english/vocab/4/4",
+      "sha256": "dde5014575f620d9783852b3bde1c4d14ea822a78d1c259490a6654977dd4a58"
+    },
+    {
+      "id": "english/vocab/4/5",
+      "sha256": "13f2d5ddc8e98be54d088c8ee3845894973db7e87a1f486fbcdcc3afc4fe537e"
+    },
+    {
+      "id": "english/vocab/4/6",
+      "sha256": "13b544823d7373025af39767be92bea9d1018945de165a4bbead929147df2613"
+    },
+    {
+      "id": "english/vocab/4/7",
+      "sha256": "eab48f93b591122359c0862edaa2e0adfb557f2074d93b9a5f907472ca37de50"
+    },
+    {
+      "id": "english/vocab/4/8",
+      "sha256": "6dd7ef818786120c3e0cc9c9571916fc5db6e24d3c6c44f7bf8c687a0f47858e"
+    },
+    {
+      "id": "english/vocab/4/9",
+      "sha256": "9fe134755a1cbcd32e70644b5e888aeb816db23757e8e0ef90c076953420f8ff"
+    },
+    {
+      "id": "english/vocab/4/10",
+      "sha256": "386e93204fe6c366668a82f9c3a4364a2aaeb68e7ab76f2476b86b2f3b346eaf"
+    },
+    {
+      "id": "english/vocab/4/11",
+      "sha256": "fe8af5f2fd4f8a125090680f1cfb90fcefae63c31bc840f18cc1e0c033225023"
+    },
+    {
+      "id": "english/vocab/4/12",
+      "sha256": "6e1c5b453f389462587684507cbb6c3db6550e2a69538834f1dc8e7797189804"
+    },
+    {
+      "id": "english/vocab/4/13",
+      "sha256": "2eb10ae73e86966509ed605365a26d6e13d1ec7435ce6b080cf54d07c600dc45"
+    },
+    {
+      "id": "english/vocab/4/14",
+      "sha256": "600c8ff1073473894883ec509cd2f9ff50c4df0ed30dec5b1f74dea85533125b"
+    },
+    {
+      "id": "english/vocab/4/15",
+      "sha256": "fc5133f124b51b17560b563d3953e16e7420aa0f8f14b7c041358e0e7c2cd263"
+    },
+    {
+      "id": "english/vocab/4/16",
+      "sha256": "6220e6d4dcc217b65628590dac635efd751f5b593e55abdf905619aacde01284"
+    },
+    {
+      "id": "english/vocab/4/17",
+      "sha256": "befda0034f17b71bd79f0790c81286723fadd59b4269ef7aaa506a822c2be57d"
+    },
+    {
+      "id": "english/vocab/4/18",
+      "sha256": "07178368e3d7c210e0ad91a6ecbe98457bce29edd3378bb5d91cc60d833f1eff"
+    },
+    {
+      "id": "english/vocab/4/19",
+      "sha256": "25dc9b6ef3288aab59a2371005b9beed65fdd79485cdea499555f0bc5b55249d"
+    },
+    {
+      "id": "english/vocab/4/20",
+      "sha256": "87001cf11ffb5549ef2502bb609ce5367981295f3699f6f4ce515321f271e394"
+    },
+    {
+      "id": "english/vocab/4/21",
+      "sha256": "3810f45161f649ba2f023cfbb5e34a534a5b88d52d10d1fff6c4518c759e8b37"
+    },
+    {
+      "id": "english/vocab/4/22",
+      "sha256": "e408395f79bd3caa857dc02866ae1a5a150349615709c8477b8222d260099dee"
+    },
+    {
+      "id": "english/vocab/4/23",
+      "sha256": "dd70441a6b8e7f3ac6540b8ce7699e148e3e47f344e5bdb13ba5d79c1f41ef44"
+    },
+    {
+      "id": "english/vocab/4/24",
+      "sha256": "8c28cca55af4a462b418d12ab67784853f233c23557d69348f2c9324094f5f60"
+    },
+    {
+      "id": "english/vocab/4/25",
+      "sha256": "3c8470373f1f44afa488c5f18d25d0a95b26fd5618589022141c832620c1a104"
+    },
+    {
+      "id": "english/vocab/4/26",
+      "sha256": "d8f1f2bc8b0bebd81d290589256c219375e99873713bb7e0892e3a31adfd1f22"
+    },
+    {
+      "id": "english/vocab/4/27",
+      "sha256": "15464fbb65b494542e1a6b309cf29ab5a1bea3c2a3445a92d227f13c922a4973"
+    },
+    {
+      "id": "english/vocab/4/28",
+      "sha256": "de0159ec3c39842b3c77281fa2c015be7db5831fa340d1ef8c7d66c0983af02f"
+    },
+    {
+      "id": "english/vocab/4/29",
+      "sha256": "2802177348f75ef03f0aecc59efbdca26100a50c0a4a0980280f793520f96527"
+    },
+    {
+      "id": "english/vocab/4/30",
+      "sha256": "1fb10cae5cc04c4639d85aa5c32bced4ff574dc8f765e60b0d96f71fafc32cbd"
+    },
+    {
+      "id": "english/vocab/4/31",
+      "sha256": "18ce4970ff6d413568535e5bb8c4d78c040e38692628e8f51e25bebe8f72213f"
+    },
+    {
+      "id": "english/vocab/4/32",
+      "sha256": "6d73bbf7508638dec8a5156f7c61ba714bda9dd08d51304d3c2e6b76ff3173d8"
+    },
+    {
+      "id": "english/vocab/4/33",
+      "sha256": "e79f0c17bd7a38157734fa09e1b88ef58533282724a61b97ba8eb06e987ff0ba"
+    },
+    {
+      "id": "english/vocab/4/34",
+      "sha256": "4468cf63228bbaf0b3fff1c73c1019c1baedf9285deb0b70923a551b8e102ed3"
+    },
+    {
+      "id": "english/vocab/4/35",
+      "sha256": "3279b0dcfeb85cea69c4cdb7090c89b5200271989eb4a5bfa1e9dbec40c61d03"
+    },
+    {
+      "id": "english/vocab/4/36",
+      "sha256": "097eefa03d65b5fd6aa3adf630d85f0d6071f7f8bd197cc7bccb7f0e2d2199fd"
+    },
+    {
+      "id": "english/vocab/4/37",
+      "sha256": "ca70cbd583bc4172a0d9b576012ac7125528ccb7b4733da10cf43394d1a27528"
+    },
+    {
+      "id": "english/vocab/4/38",
+      "sha256": "c0de7ea54140e2e64fd6d45c5d805e75738ac5da26e4ab27e929f52d19313591"
+    },
+    {
+      "id": "english/vocab/4/39",
+      "sha256": "ebf507abeea575f574802243f1c8ce245897dbf4cb11919d48a5a395a04a81ef"
+    },
+    {
+      "id": "english/read/1/0",
+      "sha256": "4de61e7b7ef70666997bf7f495e4c781ef39f2c40829428134c0c1522a626568"
+    },
+    {
+      "id": "english/read/1/1",
+      "sha256": "8731a46f8ea5f7b0e7c6c5f2ca242fd8edc6eb5953484131616e0c94f0061a93"
+    },
+    {
+      "id": "english/read/1/2",
+      "sha256": "f4c36e7d88f419f09754b578da4ee76b492e1c14725aee36b465db9ceefcb9d0"
+    },
+    {
+      "id": "english/read/1/3",
+      "sha256": "606d5d5e77de3fe2614625dd727cca00a574281ee15b64f77dab2d573c528073"
+    },
+    {
+      "id": "english/read/1/4",
+      "sha256": "1118418d1f01eca39344adce58b5fcc9deb5057704bcfe782635dfa69ff04877"
+    },
+    {
+      "id": "english/read/1/5",
+      "sha256": "b851b97af3a0f7e6051dd117c20c23c45411865d505571257f0bf1c09989ab97"
+    },
+    {
+      "id": "english/read/1/6",
+      "sha256": "ad99fc5e89139511dcf74580d6befb14cd83f964e21b9be6f071b65e163acfe0"
+    },
+    {
+      "id": "english/read/1/7",
+      "sha256": "fad4264a490473d0f6c400064af32ed82dfda1ee246077f9163a48e0d1c774e2"
+    },
+    {
+      "id": "english/read/1/8",
+      "sha256": "5ef4713f738b8059ef96c4ed9e24d74ceb6cb463d79e2b59e8d108ef17c1b7d4"
+    },
+    {
+      "id": "english/read/1/9",
+      "sha256": "d66bfc047a67bd4dc9ffd9c57b96e38b2d1304307fac7369d0c475a863ed3af2"
+    },
+    {
+      "id": "english/read/1/10",
+      "sha256": "1063b610f7dcdd1845bc1fe2f138ad504f245998563d7f0143039da44a8ee23d"
+    },
+    {
+      "id": "english/read/1/11",
+      "sha256": "b947f9c958a696911876b97bf730d2333dda5cd9b93b75e3eccfbe6df14be767"
+    },
+    {
+      "id": "english/read/1/12",
+      "sha256": "5c31653fb8178229053d45702d4a7cb8b172250a6da0e7f051603fec489ccef2"
+    },
+    {
+      "id": "english/read/1/13",
+      "sha256": "fda9ed02258d378e61e35d4cab01a28afacff0a02f0835ca592650ac28309370"
+    },
+    {
+      "id": "english/read/1/14",
+      "sha256": "09506296d8b526d5b42ee494e3904d94950dc5b41b69d1ee9cacb8319263ebb9"
+    },
+    {
+      "id": "english/read/1/15",
+      "sha256": "8f0e333374a350095b2c36de8aaf8a0770dd3f48e1937ee4fd31313acbb17e28"
+    },
+    {
+      "id": "english/read/2/0",
+      "sha256": "78cf5cf74728b85793c5fb44b103d461ce9e0154175ce415fb1f4953e91de2f0"
+    },
+    {
+      "id": "english/read/2/1",
+      "sha256": "57a3e1f97756f5f2549fb737ba34e60e1c6cc9a763003a01afc261ffd8e3f4d1"
+    },
+    {
+      "id": "english/read/2/2",
+      "sha256": "f346031ddba33626e9d081cb2dd233e0ddc50bd564f55c945a1d03175680991f"
+    },
+    {
+      "id": "english/read/2/3",
+      "sha256": "8583e85c4433fd52b9ebcbbe70ff8bb6ad46ca46dc2510fdd6026350042d0a77"
+    },
+    {
+      "id": "english/read/2/4",
+      "sha256": "290311a0318e4ca1c73552cdb68dcecb4836b3314538bf6095dc24977696bffa"
+    },
+    {
+      "id": "english/read/2/5",
+      "sha256": "063b0b497dbb4adda8863a6a3db3305cbd566377b0692d07094057bcf831b612"
+    },
+    {
+      "id": "english/read/2/6",
+      "sha256": "2c61cc85a39adfe3f157555bbf28e633284f56e13c13e629541ba338da30c99a"
+    },
+    {
+      "id": "english/read/2/7",
+      "sha256": "c2e10359f87884cb2a6a0de29ed92807b7e5920bab4a18026e076380bda0afef"
+    },
+    {
+      "id": "english/read/2/8",
+      "sha256": "d1d9024b274ef7beb367af2934535254b73a76f3a85e0c7bae7ce0f29e0dd13e"
+    },
+    {
+      "id": "english/read/2/9",
+      "sha256": "81cdfcc7adba30359b7c293abd82f5d29a11b07310d5101b18733b7be8b0995e"
+    },
+    {
+      "id": "english/read/2/10",
+      "sha256": "2430f47e752ca68cec57bcc937cde0e39a20bb767ac2ac43cdf5a361aad24b91"
+    },
+    {
+      "id": "english/read/2/11",
+      "sha256": "ad4201b8e9737c500a7ba4e32bd085b9d6bbb1d1624ab1acfa7b3c366d72211c"
+    },
+    {
+      "id": "english/read/2/12",
+      "sha256": "06a3b8a7550fc568259793bfaa7125383da2b1639399e85ccdfbe1f60a243acc"
+    },
+    {
+      "id": "english/read/2/13",
+      "sha256": "b79d8bdda1a6fe272d8719eee70f594ea86085d06503e0dc062363fef0b34235"
+    },
+    {
+      "id": "english/read/2/14",
+      "sha256": "fb7cf989f0188ddd10a1710038bda7e2e5439d29e1f4e1f0e57c0e2c1566f505"
+    },
+    {
+      "id": "english/read/2/15",
+      "sha256": "6958244946c6949ac506003ff205b4b7ee0d488c5dfec878b42b94fb8c8762aa"
+    },
+    {
+      "id": "english/read/3/0",
+      "sha256": "ef4e5b94fb66c4b4c2b8e8b00414b2818a065fe074ed8f2b28ed70796dadcb09"
+    },
+    {
+      "id": "english/read/3/1",
+      "sha256": "be946270eafbaa7461a6b707ca664e366152d6b9cc1930cec92f302dbb77124b"
+    },
+    {
+      "id": "english/read/3/2",
+      "sha256": "b33b38c4360606f951135236fde4aa4f27371f9ef522d75062586ffdc095484a"
+    },
+    {
+      "id": "english/read/3/3",
+      "sha256": "ecd92df49159c05b71c77ac9d7feccc25dd69fa9776dd827841a2da0c85e7f35"
+    },
+    {
+      "id": "english/read/3/4",
+      "sha256": "106d79a46d45ba9c758c68a5c056f73890da260ea3b86e8deb3e654c5e852246"
+    },
+    {
+      "id": "english/read/3/5",
+      "sha256": "f603ce703506b9c9e39c63d6a6c957cb36d50008356afe8554a493850a2376e2"
+    },
+    {
+      "id": "english/read/3/6",
+      "sha256": "2e802692b53577947bb7c7a88862dbd43f0269de034136d79a3cabafc1f58fdc"
+    },
+    {
+      "id": "english/read/3/7",
+      "sha256": "89123191ebc8f41b6388c82b158bac5a7efa7a75e959f54c23d4b77410635a36"
+    },
+    {
+      "id": "english/read/3/8",
+      "sha256": "d3cd33f05c8af06858f123f411d406ba29ac7ab86d8f347ed32378af08588ba9"
+    },
+    {
+      "id": "english/read/3/9",
+      "sha256": "d6e4490c48aaeb9edc4fdc6c21c87fc2f40dd48ede40ae293d7dff8d746ef837"
+    },
+    {
+      "id": "english/read/3/10",
+      "sha256": "da1c40e6f767e16a98cc4c001df64822f364404e60d2e1e8a85be2fab3bd7ca0"
+    },
+    {
+      "id": "english/read/3/11",
+      "sha256": "634a26e4eda77ef0b803833a8835a27ecff37264e15e53c7e9016a9b98224085"
+    },
+    {
+      "id": "english/read/3/12",
+      "sha256": "46b442b171161fce05b7b3ac7933b8228485f1c9f8a86cdb4e29c5f1762ad8d9"
+    },
+    {
+      "id": "english/read/3/13",
+      "sha256": "cafb258f0030ac9b79ecce78f7f6975037ad3fdce52a62c962f96df00dff17c1"
+    },
+    {
+      "id": "english/read/3/14",
+      "sha256": "94968a8b6af9a2cc6b6ea496710f9edec8a622344049c71b27b8c791232b8e7a"
+    },
+    {
+      "id": "english/read/3/15",
+      "sha256": "97dd6d96ea13e8a659b5a96dbf0412cdaad8dc9eabfff34b30a24356fe191025"
+    },
+    {
+      "id": "english/read/4/0",
+      "sha256": "77bbcd02c461859155b84eb0d4492c954811718e87db7d8f98fceb9b279a7860"
+    },
+    {
+      "id": "english/read/4/1",
+      "sha256": "871a425702b7f557917c0f89a3127628775a1b21cbcbfa52850eea3030e9f9ea"
+    },
+    {
+      "id": "english/read/4/2",
+      "sha256": "2d79bc534fbe46d59de8179bdceea902c82e062806fe7d5f72c169f688dd208a"
+    },
+    {
+      "id": "english/read/4/3",
+      "sha256": "c5b6747ad7fb6de9dee7d7494470eb957fcec81e2c410a42e0087c03e606a583"
+    },
+    {
+      "id": "english/read/4/4",
+      "sha256": "086ad9ee706d1ad2f6ef310a23e77055a2603a130a92cae855c1e2f156967554"
+    },
+    {
+      "id": "english/read/4/5",
+      "sha256": "1069dc2137eceb5a6fbad8c6b40f907119385f3b21bcb35452cf5054c5662df5"
+    },
+    {
+      "id": "english/read/4/6",
+      "sha256": "4fb3c73f2169353310ae46daaf162c8b7833474d7e96aecbd891d49ea8a88ae6"
+    },
+    {
+      "id": "english/read/4/7",
+      "sha256": "2c64b69ced7e1d6f7d36de4006e99d62bde2f72dbe95d8330542944eb3860a67"
+    },
+    {
+      "id": "english/read/4/8",
+      "sha256": "c5675138078b7da8005933dd00e4053dacf918a41d98cf8b6165d52bbada0e81"
+    },
+    {
+      "id": "english/read/4/9",
+      "sha256": "50d0ddb98fec98c8e6180c14a5d0d85178c509bb8f7b6ad1bb136fa66fc0f5e7"
+    },
+    {
+      "id": "english/use/1/0",
+      "sha256": "f88531d76bb1b6f6a102682ba64f521697e022139af870fbeadb688e4c50eb2e"
+    },
+    {
+      "id": "english/use/1/1",
+      "sha256": "8ee84c65cd53223ab09f02ebef35a734f86ca01e71c0d8c117100a7376a93f4e"
+    },
+    {
+      "id": "english/use/1/2",
+      "sha256": "cbc212110fbc397c150b862ca6b2d3571d7cbb8ca11ae2accbb2cb19461c87a2"
+    },
+    {
+      "id": "english/use/1/3",
+      "sha256": "5c171d1998c9b39c5328e9d9125badf1f807478078663f8a6c19d92c0775a5de"
+    },
+    {
+      "id": "english/use/1/4",
+      "sha256": "443016d29e3578df48cdd0e21255d7658f93e90607d04c457f089cddce494318"
+    },
+    {
+      "id": "english/use/1/5",
+      "sha256": "992af8bb5f1d6e0c143f6a678f0a8678091a0a4bd75429a3c460f18cc9f6692f"
+    },
+    {
+      "id": "english/use/1/6",
+      "sha256": "989c388d00c61f48688152fbd75885dc27bda2692210c74eadcf79c8b582c101"
+    },
+    {
+      "id": "english/use/1/7",
+      "sha256": "bd261a2ca8c60ecf9622e1944b7c2ec5a5e107e8ce658a34d4322234d929717f"
+    },
+    {
+      "id": "english/use/1/8",
+      "sha256": "9982c35cf5a376b4fcd011a336f4249a45d66015408010da593daf2cdf1c5961"
+    },
+    {
+      "id": "english/use/1/9",
+      "sha256": "9257205363d97b621affe53cf37494e370031e4f993cc2095a772fdd09a5cfcb"
+    },
+    {
+      "id": "english/use/1/10",
+      "sha256": "c0027f05c284c408ee719c2c13614657bfb7d6bb3d55b31dc6ce580c60fd35f0"
+    },
+    {
+      "id": "english/use/1/11",
+      "sha256": "397294b5f92da4bf999973c59d1d73bdc425c2aee0235a74ed1e2c2648e43197"
+    },
+    {
+      "id": "english/use/1/12",
+      "sha256": "ec04d4d14f582677aa9ff439ef55aa6095faa0ef8d244bea27cfea56eed3dc6f"
+    },
+    {
+      "id": "english/use/1/13",
+      "sha256": "73960fe442833e3871091a7b82424b2c5ecb6b2d603aa38aed664309708a8a7d"
+    },
+    {
+      "id": "english/use/1/14",
+      "sha256": "8f6e5ab250281cd837d6de32e395a55f0789b505b32311ed8342cd976b999ed5"
+    },
+    {
+      "id": "english/use/1/15",
+      "sha256": "5dd88aebadad6f1aff4917c68dab027be9bca50635763c27f6465561266c086d"
+    },
+    {
+      "id": "english/use/1/16",
+      "sha256": "f7f0f00977aca3208b68c850f23d2fbb95d6804d24bb3b195b539e813de034c0"
+    },
+    {
+      "id": "english/use/1/17",
+      "sha256": "844bd564c3a92357deb6080b3479131aeb3d6e2d6bec88ba8012d6dede88a328"
+    },
+    {
+      "id": "english/use/1/18",
+      "sha256": "16e11d496dbd3cb6a3277b6d455b91c7a9a81d78da5513fd9772fc1b3bdc26b8"
+    },
+    {
+      "id": "english/use/1/19",
+      "sha256": "9b0be1f8bf7db54c1221eaf54aa34286f27612bfbcc1531524a7a60b4c4570e7"
+    },
+    {
+      "id": "english/use/1/20",
+      "sha256": "a190382514f4f42b6d08846c8ccbd53dae88f70758b611193530b1f4835759df"
+    },
+    {
+      "id": "english/use/1/21",
+      "sha256": "b55f9d0cac25f87943e288c0c2224abc722e76466af4d86eb48ba1330276839f"
+    },
+    {
+      "id": "english/use/1/22",
+      "sha256": "fa3c3eec818704e21744f2cb8c6e7f9108d1fc67c10a8adcb4343ef90374e57b"
+    },
+    {
+      "id": "english/use/1/23",
+      "sha256": "ab92589c421466febef83d168b4a6bf6dbbc811db069313cf197275f56cccf91"
+    },
+    {
+      "id": "english/use/2/0",
+      "sha256": "a58fdde695c664b12f5ec2c06789502b6c47602f61bde4aa1e9f2bd0d9539476"
+    },
+    {
+      "id": "english/use/2/1",
+      "sha256": "06a9e26faaf884d6a0156eaa17a79fde2867ffaba4e3da74c4382c513af4faea"
+    },
+    {
+      "id": "english/use/2/2",
+      "sha256": "80bc29b1742cb84aef1da909b18f45997681b1f9a04f6923875982369e760018"
+    },
+    {
+      "id": "english/use/2/3",
+      "sha256": "b798f9c709008a647845cdedaa3bbb957e8c86301092fc2b450d5e50726bc110"
+    },
+    {
+      "id": "english/use/2/4",
+      "sha256": "ef0aa244e4121d5586b621e4a838298e182bcb683921c1c660f731ff2568ed0c"
+    },
+    {
+      "id": "english/use/2/5",
+      "sha256": "85c1cd04023678c08924fd2875102e64514020cc4ed0d35d952efbddb8d33b3b"
+    },
+    {
+      "id": "english/use/2/6",
+      "sha256": "14fd89d69f1a8ca2e496c5d2c70ccb0e2f67f8d614e5acaee4778acf2dfb1331"
+    },
+    {
+      "id": "english/use/2/7",
+      "sha256": "e77940cd245b5703653db9ef6ab1d90a2e9f383630e1ede6cf716cb3d04a1414"
+    },
+    {
+      "id": "english/use/2/8",
+      "sha256": "721da97f89950a6e1bd6579f4e2a6c60c8d9d525ad0accd37590b55ba1960d03"
+    },
+    {
+      "id": "english/use/2/9",
+      "sha256": "f51cc45c3230cf8f5bfb2573429ea483fcdb5f09f4d11ce359cb48417eec5db9"
+    },
+    {
+      "id": "english/use/2/10",
+      "sha256": "f1e0608ee900173560bc4ff0b14e0eccb7a90e66bc94b213dc44c8fe398a2975"
+    },
+    {
+      "id": "english/use/2/11",
+      "sha256": "a7bbe4a68d74f5408986b2dc003a6eb32f84f94f7f69a907adbe2d491775cf5e"
+    },
+    {
+      "id": "english/use/2/12",
+      "sha256": "04efa25ab50a577d7cf9d94f2ccbbc127753d62785a94ae79191dc2baa812ab4"
+    },
+    {
+      "id": "english/use/2/13",
+      "sha256": "feee9f7f7ad7ce0df2b47778ee1299cedb7f20e29650f022a4ceaf3098e90f35"
+    },
+    {
+      "id": "english/use/2/14",
+      "sha256": "e387eb2d666fda8bb571e8e4eb28d412132105e6579586ab29c15b407ccb9d05"
+    },
+    {
+      "id": "english/use/2/15",
+      "sha256": "338d5bd87464990b7a54f7cbf482e5f7fda7f4f80c85fce6093f4b9e7883c9af"
+    },
+    {
+      "id": "english/use/2/16",
+      "sha256": "847d27dcb13d6d9524273ac33929dfc9070add7f5d305a633b5c8797534edbaf"
+    },
+    {
+      "id": "english/use/2/17",
+      "sha256": "034eb043dbb464125f123b5b96de88b2056f9a3da4add0639e9b206998de3c26"
+    },
+    {
+      "id": "english/use/2/18",
+      "sha256": "11220934a514d88ed94b5e56a2c3b547e88c0c94e818710bc89a1b94ff650428"
+    },
+    {
+      "id": "english/use/2/19",
+      "sha256": "2ab04cb837321dcc42aeb9357d7afeb69535e63982287bc832ed67bc82cf89b1"
+    },
+    {
+      "id": "english/use/2/20",
+      "sha256": "525a9c5a3e5ae11ff00ae43dca26b1b1a54c3a58449ef9e0d8014fceb905249a"
+    },
+    {
+      "id": "english/use/2/21",
+      "sha256": "a17f35e3f40919df7ed91495fb2cc62350c70e9ae965f3173024a778076c68e1"
+    },
+    {
+      "id": "english/use/2/22",
+      "sha256": "e650da9f049e73faaaea5ea08b53773d96a257519437fe13a9106a615d33f909"
+    },
+    {
+      "id": "english/use/2/23",
+      "sha256": "d9ec3b4de5fb0f63f4d02569141243a01e6106ccb32fe171de1f2216d419833f"
+    },
+    {
+      "id": "english/use/2/24",
+      "sha256": "a38296e44c3ab30be97c597f9837e97fb7621e050e20c30d00f8752a4015de45"
+    },
+    {
+      "id": "english/use/3/0",
+      "sha256": "3a336ce88ba9d40fa860e735f56f7a828e8d606f40e3f2148f1a05ecf0bbe7b2"
+    },
+    {
+      "id": "english/use/3/1",
+      "sha256": "42e3a76bf09f71682fd5dae3144021812d7e1ee7cf57274dabad5f9813ad9a52"
+    },
+    {
+      "id": "english/use/3/2",
+      "sha256": "38f9ef2eddb0d6cf1742ed705640d8ba2a09ab968b0fa0c83938ff34f3e6a895"
+    },
+    {
+      "id": "english/use/3/3",
+      "sha256": "331fa5f1efa0b3b19372439247ca58f359fd388b9052cfd6aa44024bb5eb3165"
+    },
+    {
+      "id": "english/use/3/4",
+      "sha256": "a8ae47f5dfeba8b0096d2088c0b14342afe0c83e0c947b22a147670343427cb2"
+    },
+    {
+      "id": "english/use/3/5",
+      "sha256": "36d8a4592a68fe4c5635492194078d18b87583b5c86fb8e1b83c04bf6cc0a2e6"
+    },
+    {
+      "id": "english/use/3/6",
+      "sha256": "17b5ac038fed97acd9ce908cb1606d7e02ed55e66218ef2821e0faaae4d746bc"
+    },
+    {
+      "id": "english/use/3/7",
+      "sha256": "5dcd1d62b5d386fcd47aa006bc319e592f5473556acb091ec53812ef7448ae48"
+    },
+    {
+      "id": "english/use/3/8",
+      "sha256": "cbf4cb92fb14fa28e5881756f87322e10da8fc371dea3aae634cbb57f5de96d6"
+    },
+    {
+      "id": "english/use/3/9",
+      "sha256": "f60b8e9eb37b27489af25e8db8e8670a4c5d13141d869907d61c3c237d3d8ce4"
+    },
+    {
+      "id": "english/use/3/10",
+      "sha256": "b421b5aba7c44318d29a5376c645af7847293314849af9519ec4b91d3d11e599"
+    },
+    {
+      "id": "english/use/3/11",
+      "sha256": "b4f52c3584877fa6c4af4f3998ea9a283946f1539775f2760d7ac941a411547c"
+    },
+    {
+      "id": "english/use/3/12",
+      "sha256": "e2436750d8f1af8aa6c76d44b4c660ecacdc61c04b68ca2b924680da564f3a60"
+    },
+    {
+      "id": "english/use/3/13",
+      "sha256": "4a1868d73a36650521efae78ad1b7eaaed3ca9609baf29a4587e9094eb637f51"
+    },
+    {
+      "id": "english/use/3/14",
+      "sha256": "fda834a49d32a429a1688dcb05792b7b69d1e310a70d03adb98e74bfb87a9e42"
+    },
+    {
+      "id": "english/use/3/15",
+      "sha256": "8189890c24e1b8f171ca115c910e98015a135763bc10a582a82dc50e44db9f55"
+    },
+    {
+      "id": "english/use/3/16",
+      "sha256": "005d78a2a9de4752476c2035793d6f2839d6a9405c1081f4e810fdc2f633ace6"
+    },
+    {
+      "id": "english/use/3/17",
+      "sha256": "6a6f8893088e25ab4c604579f87aca278d21f880e21837ea60ac8b2157d12dd8"
+    },
+    {
+      "id": "english/use/3/18",
+      "sha256": "10f3b2f604f58ed76eda03726e6b800ec01847ccedb3acf58efdbbf633922623"
+    },
+    {
+      "id": "english/use/3/19",
+      "sha256": "e921252d55b40db6f4f6b4b9be72faf0c2f009fb896e23ebf931776a1eaf8a50"
+    },
+    {
+      "id": "english/use/3/20",
+      "sha256": "c2319faeb7a3b0835bd2c58fbd82a05260e0e1219b935765eb3758ff41efb138"
+    },
+    {
+      "id": "english/use/3/21",
+      "sha256": "cb99d18fb2ab2a2af9496aaacc3491038511d21f7c00def14c0cb09c9b813f51"
+    },
+    {
+      "id": "english/use/3/22",
+      "sha256": "4f1b5cf5d30b0abfa1f2ea79a9546b6dfb90239ec761b2ca40078ded69ccd08d"
+    },
+    {
+      "id": "english/use/3/23",
+      "sha256": "17b6c7e740a22bf73bca31e0a16c315fc0f1f9e0ee21d0954bc7372f663bda44"
+    },
+    {
+      "id": "english/use/3/24",
+      "sha256": "22e29cc9ca50a8c85cf2a0bae241946d05136617bd0f94d930062b804da666c5"
+    },
+    {
+      "id": "english/use/4/0",
+      "sha256": "8f7bd0d7b61c04db6ef9202a480bff2e49a03eec54d914a3b6097a47be1ac04a"
+    },
+    {
+      "id": "english/use/4/1",
+      "sha256": "c29de661c06e2c2295d1b372dcb8c3395e8f61d6712449438a7f76e25bd17f72"
+    },
+    {
+      "id": "english/use/4/2",
+      "sha256": "5d0a877e7e199ef78f01ce116f92c09be41742362d17d57c610315ccf795d91e"
+    },
+    {
+      "id": "english/use/4/3",
+      "sha256": "8c7438760887d412929d255a1643c38628f17bb731891bea53bc476acba9912a"
+    },
+    {
+      "id": "english/use/4/4",
+      "sha256": "dd8418409603131af4c67fd393e90f070d81dbe103f312e66d29a769eeeedba9"
+    },
+    {
+      "id": "english/use/4/5",
+      "sha256": "ba1d351f27925e5c0e57fbaeca3bdd764d0248a9b56ffe3c32a7bffb2a6a4f48"
+    },
+    {
+      "id": "english/use/4/6",
+      "sha256": "00134de1a199cb8a4a7ef759475789f419c3d7176314c6b9f9e2cb4769d195c6"
+    },
+    {
+      "id": "english/use/4/7",
+      "sha256": "c2b40dc9f1dcce8813fca72b32e4d1be44cc18e576201a3a4cd1c9f5bea18d52"
+    },
+    {
+      "id": "english/use/4/8",
+      "sha256": "44defd1c57f086ff22e77d6674097e857f836505f7f346745423454740dc15d6"
+    },
+    {
+      "id": "english/use/4/9",
+      "sha256": "a762e3b7e414ad71c9693a6ff0b0847409264ae9c82c60bbf34bfbb538f71c15"
+    },
+    {
+      "id": "english/use/4/10",
+      "sha256": "6b115220f88f8151854ebeadf56c5503e5e930d84d5bbae5065c5cda233c1157"
+    },
+    {
+      "id": "english/use/4/11",
+      "sha256": "6db3937d53a9c499742fd7f9ae0f127293687aa39f941edd2869e10e6c4ea940"
+    },
+    {
+      "id": "english/deep/1/0",
+      "sha256": "1740664eae8d962a7a0872a9eb7849ec7a2a9326072ba1b93c28e3beccdfd121"
+    },
+    {
+      "id": "english/deep/1/1",
+      "sha256": "2dcf8f26188ff5cee8ca9b1accc4a24f488379041aa1c8899edaad3a5e45164e"
+    },
+    {
+      "id": "english/deep/1/2",
+      "sha256": "14e05926465be139e88201ab309e45367a1e754eda42a553d402c2c4e38473be"
+    },
+    {
+      "id": "english/deep/1/3",
+      "sha256": "22006888961cd6e98893248a76b2812e2128c281011b09e8865d90346ca37c92"
+    },
+    {
+      "id": "english/deep/1/4",
+      "sha256": "4e5635315021cefd8f4f8f3121c629dfc81fb55e1ea61c28013b9447c7bfe9ea"
+    },
+    {
+      "id": "english/deep/1/5",
+      "sha256": "0cf14ec8270225009ddfdaa81394b9dcadff90f598ed2ddba41cdc2646fd8854"
+    },
+    {
+      "id": "english/deep/1/6",
+      "sha256": "83d627050f1935474ea22d4cac357e288ba4ca6fb0a6bc11b83ee47f5d2865ee"
+    },
+    {
+      "id": "english/deep/1/7",
+      "sha256": "63ab695f457ce8a2dd3c715c090469137c8f9585fbe997389678a09fd145c132"
+    },
+    {
+      "id": "english/deep/1/8",
+      "sha256": "6c3b0ac47f52d0cf4e61203206b1b1f034eb3dc47d107c0345a540dcfa8f58d9"
+    },
+    {
+      "id": "english/deep/1/9",
+      "sha256": "15ae66a029b9447064a9cc385ad88f2b8d57fb392147177c748d3119b9f90784"
+    },
+    {
+      "id": "english/deep/1/10",
+      "sha256": "de05d3be05b54cb0d562b65009a53ae2e7c263fd7b04c52e4ef7168ed2984ca5"
+    },
+    {
+      "id": "english/deep/1/11",
+      "sha256": "17b0c24723b29dded2f9331d5997068442d74b3fda7a487d5d9f75b831841cd2"
+    },
+    {
+      "id": "english/deep/1/12",
+      "sha256": "84be01ac696bedace38b63ebf2b67d36f3456d7947d756b03cbe71a44ab82c19"
+    },
+    {
+      "id": "english/deep/2/0",
+      "sha256": "51ed0bcc933dd3fcf11c848f8f7da7dd1b54af75330cd890d26018706a9d0b77"
+    },
+    {
+      "id": "english/deep/2/1",
+      "sha256": "a3cb96f63cb134ad337130240aa161eab9295768373e233f710be5f59228ee5f"
+    },
+    {
+      "id": "english/deep/2/2",
+      "sha256": "daf1e9f9e2d604f980a54356bfbe9f9edb04473b4b6ff47bfbfd3bbe84a46313"
+    },
+    {
+      "id": "english/deep/2/3",
+      "sha256": "e6ca99447d78db59c1f43d617b81f1b55250f78b3f2caaca6b2f50390c4c7377"
+    },
+    {
+      "id": "english/deep/2/4",
+      "sha256": "40bb5c8ca91943eda9395022291a1b6eeb30a158d4b6272ffab939eabd086328"
+    },
+    {
+      "id": "english/deep/2/5",
+      "sha256": "03d279af6f5a69e0ffb119e4fe642c20fadfe3001b0d0d5e9dbd744e6c7c2c86"
+    },
+    {
+      "id": "english/deep/2/6",
+      "sha256": "298089323f72ee9d6431aabf5d2aae6cde2ab745694b74d668b0a60560542858"
+    },
+    {
+      "id": "english/deep/2/7",
+      "sha256": "585d17e1d728941b6bab0024e3f12750fd52e4d951b29588107890230110cac8"
+    },
+    {
+      "id": "english/deep/2/8",
+      "sha256": "b95ca1bda75c709c26642fa28f8dd44c6a8da308ceb386c3404b3524aedd5646"
+    },
+    {
+      "id": "english/deep/2/9",
+      "sha256": "08f781863fcf12c1b5aa366de335a519ee9327e39b69e803762fbadb3cfdc78d"
+    },
+    {
+      "id": "english/deep/2/10",
+      "sha256": "2c41926ca00cab4d2ff60546a291feadb62265ae81c6329a74bb3ad60dafb09d"
+    },
+    {
+      "id": "english/deep/2/11",
+      "sha256": "fecb21155b1d3b3de08276a05ed1aa4a53f74de7724e1bb6cd743eae763539b2"
+    },
+    {
+      "id": "english/deep/2/12",
+      "sha256": "b088769f8bf3f58fb0f38a730008e9f7dd202d32c1eb70596f61456f63319347"
+    },
+    {
+      "id": "english/deep/3/0",
+      "sha256": "981fb520b297a174d717e5c761b42bac8521db279f9261965efec1922a2a1b38"
+    },
+    {
+      "id": "english/deep/3/1",
+      "sha256": "4af5ee00f4d0d16e2ee743c47c4abd1f1dd1158eef74e15c8812f6895245db1a"
+    },
+    {
+      "id": "english/deep/3/2",
+      "sha256": "ff0d5a490d97f6c268515fc1a7fc0614273b0ed51e166854dde618f7ab3f5c29"
+    },
+    {
+      "id": "english/deep/3/3",
+      "sha256": "69438828de01186ffe23eb0a49dd572f23179eb9728bbb50eba0c54b602a5395"
+    },
+    {
+      "id": "english/deep/3/4",
+      "sha256": "13894754413ae02ef25b1647e82d35c9374998792b530c25cf7bfcac4c504f64"
+    },
+    {
+      "id": "english/deep/3/5",
+      "sha256": "4130b4bdbe3541c21b4318e8e703e3ac37b635a17a8fa970038019e101147f3c"
+    },
+    {
+      "id": "english/deep/3/6",
+      "sha256": "e0e3a26942b98d1fb76cbe3f1dbfdac218a6a99239ed189e17891cc6d5916b85"
+    },
+    {
+      "id": "english/deep/3/7",
+      "sha256": "3e8709f09c551142521f170b377176b24ccd2d132c4e26936eb700b39ef7385a"
+    },
+    {
+      "id": "english/deep/3/8",
+      "sha256": "14690c330050f7c69dcd346ce3eaf7da65522c93787f622b120849061bd7f8ed"
+    },
+    {
+      "id": "english/deep/3/9",
+      "sha256": "675e95a9ca5d1d106bbf3f7adc2445a19181afcb4aeee3a587ee3fd0cfd07641"
+    },
+    {
+      "id": "english/deep/3/10",
+      "sha256": "9ab2328b45f29454d98ec2026de275853af1a983c97092c7670d7d3f0205afd3"
+    },
+    {
+      "id": "english/deep/3/11",
+      "sha256": "c5f4d5dba37347613318ef5a0a98ae9c717e52883b7b52cfe39bb9c8692baf09"
+    },
+    {
+      "id": "english/deep/4/0",
+      "sha256": "ff9314fe7cc3b2e3227326caf11a425e478228254488c9a71b5f44fb086af28e"
+    },
+    {
+      "id": "english/deep/4/1",
+      "sha256": "3c581d4eda1c7b15db04b7f874566ea51ce9f2d935f6c6e3558d8ba95a03c5da"
+    },
+    {
+      "id": "english/deep/4/2",
+      "sha256": "38b9bce0ee17c75e2b810a3d4ab661f3b37510946dde0e8b230beec680202ff1"
+    },
+    {
+      "id": "english/deep/4/3",
+      "sha256": "0bbefcce0bbe20bfe6dd7fd6d83f10c7a11a7e8d727005d74c20e0512551b330"
+    },
+    {
+      "id": "english/deep/4/4",
+      "sha256": "b88b76c5527a41c88d4ec3eb4ded00d4a0448307eb29523cf3ba5ffa16b28ff5"
+    },
+    {
+      "id": "english/deep/4/5",
+      "sha256": "6d01d8d5b40f0b63bed6bf89ef8baa268c2861cd5370f4f97170b21d8098dc04"
+    },
+    {
+      "id": "english/extraVocab/1/0",
+      "sha256": "7776ac78d05cb879707bfc8085119bd2b2b48502f5ce7003b03c6233233b186a"
+    },
+    {
+      "id": "english/extraVocab/1/1",
+      "sha256": "f81a53332ceff77e45a92aa47bae16a9c52bad4da761ba02f3d58e9786b78748"
+    },
+    {
+      "id": "english/extraVocab/1/2",
+      "sha256": "df06452ce705e63cb0ca2949052083705ed26d0247f0d09cf3305e5ae36ff627"
+    },
+    {
+      "id": "english/extraVocab/1/3",
+      "sha256": "bac2369e4d5e6287cbff0b8ae7be196ee15578a447545f434a785370bef01239"
+    },
+    {
+      "id": "english/extraVocab/1/4",
+      "sha256": "cbab3ec7d5d48206cb793d9edcd2e99ab788ac09c98e78968a330b48f936b065"
+    },
+    {
+      "id": "english/extraVocab/1/5",
+      "sha256": "49f950f884cac56df750e0f6df84d131e4e911b931c69a0e64336b4101b8dd4d"
+    },
+    {
+      "id": "english/extraVocab/1/6",
+      "sha256": "0eb547dfda2ca45460f8ccc1b4ed4c582e1e990e9be510bbf933ad4bf25e4766"
+    },
+    {
+      "id": "english/extraVocab/1/7",
+      "sha256": "c9c61ebf37bf43a3673f521c5f3e162b73c8e2cd68b53c31e25ba4834bc226d7"
+    },
+    {
+      "id": "english/extraVocab/1/8",
+      "sha256": "248045b457e6e15e47048a2d270ccf9d8dabcd42ec5d302adb56303b89cfd2d0"
+    },
+    {
+      "id": "english/extraVocab/1/9",
+      "sha256": "b73926944a06380dcc718af07851fe394b0c6611bb34ef2509d3105ed142c4a8"
+    },
+    {
+      "id": "english/extraVocab/2/0",
+      "sha256": "a10912d4a5363d120ed49b8684121abb96305baf7db6987c3da38fe906d0aeee"
+    },
+    {
+      "id": "english/extraVocab/2/1",
+      "sha256": "6911db4caa15486d928338b659c75d9227dc34e8002760a97c780648e362a0ba"
+    },
+    {
+      "id": "english/extraVocab/2/2",
+      "sha256": "bf038a9708b9a3377c970f346cb265d750e2099ac66e74cde928fb2955d4ae92"
+    },
+    {
+      "id": "english/extraVocab/2/3",
+      "sha256": "f758dbd325189c5b6ac6a532f110c6165aa990b9f467abb67039821790576489"
+    },
+    {
+      "id": "english/extraVocab/2/4",
+      "sha256": "7938ea7f8000c18bd0905047c96e279bf36f6a4bac05c803a45a8669a00cd166"
+    },
+    {
+      "id": "english/extraVocab/2/5",
+      "sha256": "cf5e5c561ff5b7ead0dbe0f6c29a820ad5270c35aa3bb5834cd84debe970293b"
+    },
+    {
+      "id": "english/extraVocab/2/6",
+      "sha256": "46781452f63f7daa0d901b27ad037c5c8bad0cba8113d3d121d2b50308c373d1"
+    },
+    {
+      "id": "english/extraVocab/2/7",
+      "sha256": "bfa331594f8ed0d79170521f27a3a065711303aa1d097eba8d52da0b43368a02"
+    },
+    {
+      "id": "english/extraVocab/2/8",
+      "sha256": "5a0982a4f82f544642b31710f3748d2cc17677f0c3faa957912fc8adb4234e7c"
+    },
+    {
+      "id": "english/extraVocab/2/9",
+      "sha256": "322fed131228ba365fc476474c19276c5fb84a45a5b1f194592f46896bc15b09"
+    },
+    {
+      "id": "english/extraVocab/2/10",
+      "sha256": "762ffa22d95f5932ae2b5404ff8d9de035b2443180a799215dac6924b68612df"
+    },
+    {
+      "id": "english/extraVocab/3/0",
+      "sha256": "eaf67f17a35be080d8969812ed4323ebca1b0b36a866219bfe3266e69e19e3a4"
+    },
+    {
+      "id": "english/extraVocab/3/1",
+      "sha256": "969a8183b6206ee3f0a9980b99c4dbf78f7d038fad11e1dc8229a2ba8cbc1de8"
+    },
+    {
+      "id": "english/extraVocab/3/2",
+      "sha256": "0cfeea995f9b6766dced7d83e9d6a026567143020b8ae36b5fcc32704a707330"
+    },
+    {
+      "id": "english/extraVocab/3/3",
+      "sha256": "155f459fe40d928c83ad31dc917366b618ad080c342f696158877299c4dfa3c9"
+    },
+    {
+      "id": "english/extraVocab/3/4",
+      "sha256": "04a37b634175f7e8dfed54ba3abc4eb9c1e575ce2ce85dda96649be58f55cf37"
+    },
+    {
+      "id": "english/extraVocab/3/5",
+      "sha256": "c7631e037b20cd3e46aecfb2e9099c238c8f3c1dbeb2b679d7d7215340b271ec"
+    },
+    {
+      "id": "english/extraVocab/3/6",
+      "sha256": "258f953996de44cbaffbda242b6d1bd829ddc22ca8a1d8d25e3f4ce4ae04efa2"
+    },
+    {
+      "id": "english/extraVocab/3/7",
+      "sha256": "99853505290e78798bf754d8f38d0cb35948edade25613ab63962b4598e4fe3f"
+    },
+    {
+      "id": "english/extraVocab/4/0",
+      "sha256": "2e842319affc4a52b0d45d4a5e754765ebe77e667e227fcc314e667fab73903c"
+    },
+    {
+      "id": "english/extraVocab/4/1",
+      "sha256": "e8f9b0c103558ac8c7b6512a3d46d3dda62fd29869c11f478e5699ce38cd4aaf"
+    },
+    {
+      "id": "english/extraVocab/4/2",
+      "sha256": "83d6925cf5ebde80b92d25b9bbcce10e80fbecf03b7116e09bd7a99021138374"
+    },
+    {
+      "id": "english/extraVocab/4/3",
+      "sha256": "fa06df45b978beb6bad9d0aca0bd9c2fc3c27187a17a1911e24ed0e79f18ef8f"
+    },
+    {
+      "id": "english/extraVocab/4/4",
+      "sha256": "428f9f8fd6900367ec81e524af1c788ee76a9d2688dda2910acfa78e5c94f5aa"
+    },
+    {
+      "id": "english/extraVocab/4/5",
+      "sha256": "3752b389777cac0f5b292788e4d58983415a1c932413748052f4ee8236c47d9e"
+    },
+    {
+      "id": "english/extraVocab/4/6",
+      "sha256": "a8aece0b857030fafa76b1280e7af9d76a4f88449c2d7d1ee1eb95d43bed946b"
+    },
+    {
+      "id": "english/extraVocab/4/7",
+      "sha256": "50f2dd3ff5960c1c35d848d38b1eb62c076875e5528dcf4d4a7538abeadec6f8"
+    },
+    {
+      "id": "english/extraVocab/4/8",
+      "sha256": "17226c513091e07750657c55ecfff0ca4957adde16fc745be2fce56d5d7289f1"
+    },
+    {
+      "id": "english/extraRead/1/0",
+      "sha256": "9d1e0d20ec0074694c1e126f096e31bec27c63ff8372727be40d7caa654c8ae1"
+    },
+    {
+      "id": "english/extraRead/1/1",
+      "sha256": "ecbccb96e466ad6870992fce5aa3f93414b5913e4bb9fb28e1595be5cf35bcbb"
+    },
+    {
+      "id": "english/extraRead/1/2",
+      "sha256": "31730a72213076d629243e556ed0741cfb86e5de5e5f00385d3431e63956c8d5"
+    },
+    {
+      "id": "english/extraRead/1/3",
+      "sha256": "5c6f7870ee6c6c81efc10c5467adb33ebb7a25352ef18120f8f35905a8c48f43"
+    },
+    {
+      "id": "english/extraRead/2/0",
+      "sha256": "e4ab97457ef270b9e6533b6a36a62fa2b554b3df7095abf4630df8fac4cd8525"
+    },
+    {
+      "id": "english/extraRead/2/1",
+      "sha256": "5e3546a552bd54af8a193643c590be21817b45a0c155e867235254e91ecb81c4"
+    },
+    {
+      "id": "english/extraRead/2/2",
+      "sha256": "dc2e261956a2978bc162317b1f3a68545c0ccb770773846ccb9598210bd134ec"
+    },
+    {
+      "id": "english/extraRead/2/3",
+      "sha256": "03255da573c61b8f13dfe3331b8771931b6f490889ea72783cab856267e394d7"
+    },
+    {
+      "id": "english/extraRead/3/0",
+      "sha256": "2fc0b519c16ca453957491310d3980c1b83138a381355e7e323e61e9cd2bfee2"
+    },
+    {
+      "id": "english/extraRead/3/1",
+      "sha256": "cc0817cb0eb9d8e47dbbf534c38ee90b11d3cdafd6450f5437864d4cccc6c7fe"
+    },
+    {
+      "id": "english/extraRead/3/2",
+      "sha256": "98fcf607cc251dcdfb5405d6c0746a6b7d37fb3fd41b40fce2e4a40e7b4918db"
+    },
+    {
+      "id": "english/extraRead/3/3",
+      "sha256": "5dea05717c808194038092566c4d522b2050dcfac5307ca8b5bf13080e759467"
+    },
+    {
+      "id": "english/extraRead/3/4",
+      "sha256": "0aba8320b1d87f5537ac3fba461b0b62a79cd57dde18c26d86a942c0a1261794"
+    },
+    {
+      "id": "english/extraRead/4/0",
+      "sha256": "e4c3c027a91c3902950f83a9d7e1e89be6e3f6c1a1615f0170594e9a155c4e4f"
+    },
+    {
+      "id": "english/extraRead/4/1",
+      "sha256": "ea1cdddbb9f1c43650d944baf7d87a889bb73ba276bd02aa2d370d3b67fec994"
+    },
+    {
+      "id": "english/extraRead/4/2",
+      "sha256": "026b39d7043d7e98fa12ab12153ada91c3b8dca063207ef8f39ccb41f5433ee3"
+    },
+    {
+      "id": "english/extraRead/4/3",
+      "sha256": "3f61fcd22f7c61ea74353ebcbecdb0bde0836b04e77f2eee4d8e1b86e28e0485"
+    },
+    {
+      "id": "english/extraRead/4/4",
+      "sha256": "0d14e7eb6bd0645b7c3999b44a4d9cbc5c5c22e99804dae02ae65560964f6099"
+    },
+    {
+      "id": "english/extraRead/4/5",
+      "sha256": "59655d0b5a66986f9e64f973e0d09f88b088691398a62abe971b2bea655a5db1"
+    },
+    {
+      "id": "english/extraRead/4/6",
+      "sha256": "348ec32eab7063e7ae7da1e90920fe910c707651b0df5ca82aedb2008ab6bfe3"
+    },
+    {
+      "id": "english/extraUse/1/0",
+      "sha256": "bb9ef60777a8b0678915a86e0dc0f52c281b754985c583f0f0314bc1a217c42e"
+    },
+    {
+      "id": "english/extraUse/1/1",
+      "sha256": "511f02ee23e136c5f99accb9d5ff1a6fc07fb41a43d3357d1ad586096e7b8dac"
+    },
+    {
+      "id": "english/extraUse/1/2",
+      "sha256": "0581d574240f810d07234b32dd8f44df059948ec8800cd372523cc9a0d19e8bc"
+    },
+    {
+      "id": "english/extraUse/1/3",
+      "sha256": "df59c3b6899af550c9c2f6799c65d6cb75564dad3671d06cfad6b9419938391b"
+    },
+    {
+      "id": "english/extraUse/1/4",
+      "sha256": "d900072d77b396f8a2e117f3f1043dcc41bc430e9a296fd9c668ee125cf640af"
+    },
+    {
+      "id": "english/extraUse/2/0",
+      "sha256": "a37edc96537a106d886ff29a5f2a47cbea32e0f9a6599292907377877a309ea9"
+    },
+    {
+      "id": "english/extraUse/2/1",
+      "sha256": "214d68e9169c16dc68ad23796fd3bc33919205f6fc33e1ad07740a5fbb89918b"
+    },
+    {
+      "id": "english/extraUse/2/2",
+      "sha256": "4c0626c7a2816e4dd33d3698ae8c09829f41187a04c0487158076601df6282a3"
+    },
+    {
+      "id": "english/extraUse/2/3",
+      "sha256": "ec2e667b40062e53129ec47c97572d98f7a4f943ef720ee470c3f4d489f1e826"
+    },
+    {
+      "id": "english/extraUse/2/4",
+      "sha256": "736d300b57805f666fd01d95c9a8f68de3217ac4e4e11c568d5791abc77b6b1c"
+    },
+    {
+      "id": "english/extraUse/3/0",
+      "sha256": "a4b0059dfb61e9253c3ebda20971baf3936c5c9a06d99a8765de3762758c0231"
+    },
+    {
+      "id": "english/extraUse/3/1",
+      "sha256": "6a6178f05d7f2c39005b2dda3fb4320399442013426b7499af2c9ca08542b8e2"
+    },
+    {
+      "id": "english/extraUse/3/2",
+      "sha256": "05c13294c4447c37b690fd30e292abf4010251bfe76562f674a2cf5e32e43376"
+    },
+    {
+      "id": "english/extraUse/3/3",
+      "sha256": "1aab0fbfc244074bf55df09cab9b7e41fbb42d6118a9f88941f859d59d86f185"
+    },
+    {
+      "id": "english/extraUse/4/0",
+      "sha256": "3f2bf1b53a1d693da3d56f0edbbd3010cf1646f72ea98f5aeacadb3deb85d94e"
+    },
+    {
+      "id": "english/extraUse/4/1",
+      "sha256": "1a6828705700c6a12b8e60583e62455a48277115f0b70122238da8da273851e6"
+    },
+    {
+      "id": "english/extraUse/4/2",
+      "sha256": "c831f8e5f52336daafc6c015c6750d7887b5d807af857ba0c2a92e0ec0c9fe5e"
+    },
+    {
+      "id": "english/extraUse/4/3",
+      "sha256": "baf16f6124f2eddebe8ba248b54ecd9cd4108e220d9d1a2a5e61ce9bf6728154"
+    },
+    {
+      "id": "english/extraUse/4/4",
+      "sha256": "8318c833b7ebb2476f2446397cb2893abf903fc2869b4790f052a18d5dcd6695"
+    },
+    {
+      "id": "english/extraUse/4/5",
+      "sha256": "e62241ec90f9195d3d02a70e16e637ab26020299dbaf79b8d73abbfd9f8a3dd8"
+    },
+    {
+      "id": "english/extraUse/4/6",
+      "sha256": "ddd10fe1ceb5319313be803cbf25070e5b7f61ed65280595a674368e1d941672"
+    },
+    {
+      "id": "english/extraDeep/1/0",
+      "sha256": "ea86b83711136bf5d38b4cd24ef8aeb3618db8fbecaba1480cead49ad5f74d4c"
+    },
+    {
+      "id": "english/extraDeep/1/1",
+      "sha256": "967716ef76016b4f67d553bd728c62e6750f785c90c363ab8b5c4788beacf6bc"
+    },
+    {
+      "id": "english/extraDeep/1/2",
+      "sha256": "543f0076fa72939b25e2c5ccfa0bab07959cdf9e9c35174700703b0e191ea110"
+    },
+    {
+      "id": "english/extraDeep/1/3",
+      "sha256": "d8a86918d5643550194c1fb23fe4ea3670840d3d279bbd701209f1f6ea89a786"
+    },
+    {
+      "id": "english/extraDeep/1/4",
+      "sha256": "80ca0fa65515672f344be9c08d51d767057162c5e5a8d9af0691e0c1d884fb3c"
+    },
+    {
+      "id": "english/extraDeep/1/5",
+      "sha256": "bd2805e3a3c969e44710e8c795ad294031ea9cd4315e5e0d6bb6f0303d9bbc54"
+    },
+    {
+      "id": "english/extraDeep/2/0",
+      "sha256": "afff18f6c6cd9ba1934ace024966d099c070334b36ec57953d53c31d97cc6380"
+    },
+    {
+      "id": "english/extraDeep/2/1",
+      "sha256": "e5c9a5380d83be68439506170ea9281405b3c801afa622fd962950469c9a5cca"
+    },
+    {
+      "id": "english/extraDeep/2/2",
+      "sha256": "ee0c0a43b30e1bbe5685ec04d73213811cbaeff5c95ac423bdc77411501dc91d"
+    },
+    {
+      "id": "english/extraDeep/2/3",
+      "sha256": "3bc1c18cc415b8adbd5fbf5b7fb50fb7ca77534e6ef4dbeffe53782e31cb26d2"
+    },
+    {
+      "id": "english/extraDeep/2/4",
+      "sha256": "00a3047c75d08c644e5c7729d31b86a63a6e8e8830fc5cc8f5c55942900ad1c0"
+    },
+    {
+      "id": "english/extraDeep/2/5",
+      "sha256": "d282e649e071cc409fdb64bc0aed17f3a5cfed953f361f5df5706af697928426"
+    },
+    {
+      "id": "english/extraDeep/2/6",
+      "sha256": "b9849e7d309163d676c7b12795de3c3ddfd171f346f2ab8398b95854266b06c2"
+    },
+    {
+      "id": "english/extraDeep/2/7",
+      "sha256": "bf0c124b96d5bb6686919322c573aff84760231740eeb10b53ff40701481c503"
+    },
+    {
+      "id": "english/extraDeep/3/0",
+      "sha256": "e20309f3cb0e3a4f87636ca72baeaadc6d09656af00738232d65167c1b5e9d5d"
+    },
+    {
+      "id": "english/extraDeep/3/1",
+      "sha256": "ff22c1e5b315a61d415ba08ffc2aae64b14e861bff78f8196136ee7c806d5398"
+    },
+    {
+      "id": "english/extraDeep/3/2",
+      "sha256": "2e4a0387d7ab3886609a998361ae5be4ba69400fe520420df468c886ae32be1e"
+    },
+    {
+      "id": "english/extraDeep/3/3",
+      "sha256": "9ef839e7d50082c259716bf1b9a65a0b823aac1b2762d1834c59addfdcab1441"
+    },
+    {
+      "id": "english/extraDeep/3/4",
+      "sha256": "58654453cbf08cc681597df4ea13f6b471cd015e47b23a39c2821f292eeacd69"
+    },
+    {
+      "id": "english/extraDeep/3/5",
+      "sha256": "44302514489ffc00ea316941ad329a677da11b1b9d0225695ce78074b28e2f56"
+    },
+    {
+      "id": "english/extraDeep/4/0",
+      "sha256": "11f43f32f8cecc4b5f3af4ba5b8005f485aa315faf1582a9e6c63a854898c487"
+    },
+    {
+      "id": "english/extraDeep/4/1",
+      "sha256": "02e865725e0513c4d4ad89f1f39903ad7e6039f488f91da0ec14fb4751056841"
+    },
+    {
+      "id": "english/extraDeep/4/2",
+      "sha256": "17c5606944b7eb5a64069a44c95bf40a66d0fc290f4e91406e9fa7b10dd18d78"
+    },
+    {
+      "id": "english/extraDeep/4/3",
+      "sha256": "1e904346f642e58a16510b411c8d4117f539937910a7756d659c715fec3f468c"
+    },
+    {
+      "id": "english/extraDeep/4/4",
+      "sha256": "f9b3e1794b24f0791253e6640dd798844ff9b08f6467e874f07d9b3a081d07ad"
+    },
+    {
+      "id": "english/extraDeep/4/5",
+      "sha256": "5cebd733e97f1b4763e94ad46b2af07ebba712e6ad940e15fdae00f5f5dc7109"
+    },
+    {
+      "id": "alphabet/A",
+      "sha256": "b66de091e7eaf789b71099da749254a223864be9057d8ad7ea75eef2a732e2b9"
+    },
+    {
+      "id": "alphabet/B",
+      "sha256": "222aa4854c2e88e8ff3c4c2a29f4b73ad45db105e109818cc3ab332f2a8c6fa4"
+    },
+    {
+      "id": "alphabet/C",
+      "sha256": "00f40659a76c7773f6199c0a8c87ff906e74085befda0d4a2a15895dd3ce4e84"
+    },
+    {
+      "id": "alphabet/D",
+      "sha256": "a4be1f52630db80adb07a62a5e7297dc6eaf667341ad50d057cd59a3a85dc1ff"
+    },
+    {
+      "id": "alphabet/E",
+      "sha256": "2471ca7ca3826701e033913ed12a5614cd46f30894cb51a2ef256a634f8ba7a0"
+    },
+    {
+      "id": "alphabet/F",
+      "sha256": "817de68b67725169d297ad7408328a450b29508a584a66b72f7bc8a3f9393bf3"
+    },
+    {
+      "id": "alphabet/G",
+      "sha256": "431093258dc67b8a781b0866dc8272b54297f42806945917f263afbc38f428cc"
+    },
+    {
+      "id": "alphabet/H",
+      "sha256": "92e916deee3f53df6f4308ff76099afd841a3029fd6d23e912b7d3015488ac2d"
+    },
+    {
+      "id": "alphabet/I",
+      "sha256": "7a5ee38634e790d08072b74176e148aa9182d0d2655e7e83b88de8b2d24394c4"
+    },
+    {
+      "id": "alphabet/J",
+      "sha256": "4452c4b16cc324b739e74aceee9097f5388c81b4c942ff3318f748da3a2138a7"
+    },
+    {
+      "id": "alphabet/K",
+      "sha256": "d47405db9a702fa32b55fe3eb2a6a36fa805b3c0408a0516ab43f956812ada55"
+    },
+    {
+      "id": "alphabet/L",
+      "sha256": "e59531fea1ba578f9230f85ffe0716e9ff043edfdd2e727ac501b2bbf1aed1d8"
+    },
+    {
+      "id": "alphabet/M",
+      "sha256": "8b4a754445367fc24b12a44a505cafac01cdaa874dea87cf62039afb38666dd6"
+    },
+    {
+      "id": "alphabet/N",
+      "sha256": "a446020f2dde0c24f52fe84a87ddc2fd257ef2ce063492b628c4e9a8e33c9269"
+    },
+    {
+      "id": "alphabet/O",
+      "sha256": "d13a3ae85e4fdf8a6f0a9bc20a33c7ea69ec270984118363eb90a45f22aec086"
+    },
+    {
+      "id": "alphabet/P",
+      "sha256": "92ca56cb796821f8b8c65c77b392982cf43d146138fe9f3c619654e1511e1a57"
+    },
+    {
+      "id": "alphabet/Q",
+      "sha256": "f0b8561dc3f99989f5a9100dd535cc993a9af7aa3d47b95701a60039a4071283"
+    },
+    {
+      "id": "alphabet/R",
+      "sha256": "b2ffec79af6091b0c5ad193fdd4ec221ec8c405bb4fc1b16b275be4b3a6d5c82"
+    },
+    {
+      "id": "alphabet/S",
+      "sha256": "174cc53b226336c7079cd13081ff3d9c21c2866554d9d9744fcecd5a2682e1cf"
+    },
+    {
+      "id": "alphabet/T",
+      "sha256": "a2b655c5a7dd92885326ac0c8c0a216d1e945c04607b9650598ebfb30a0ac2cb"
+    },
+    {
+      "id": "alphabet/U",
+      "sha256": "c5a2271d20542b7f42eb88d5564d68aa49762b5b14a3c15a865966c73d964c78"
+    },
+    {
+      "id": "alphabet/V",
+      "sha256": "207af7ee9903ca5e3ab041555dbb33ae4b11da892e0d3fa604bb4169368051b7"
+    },
+    {
+      "id": "alphabet/W",
+      "sha256": "e86408919cd14d94a3bbdfeac549eac73d7a7e8eb166f1d9651f428904f6308b"
+    },
+    {
+      "id": "alphabet/X",
+      "sha256": "10842a5b1ae4c9c8a188387c2b96970d446f83901298bd130dfa33884c5bafaa"
+    },
+    {
+      "id": "alphabet/Y",
+      "sha256": "32dc665c3d6a3dbb4ba386960b1966d7470a90d7e3d24fad6a9613cbcd322759"
+    },
+    {
+      "id": "alphabet/Z",
+      "sha256": "c27dc19b9e37a7810ecb6b4cb53f420eda767ce361647e189c9ef26bb57ebe5d"
+    },
+    {
+      "id": "alphabet/other-B",
+      "sha256": "b2639fa49127d13cb2a821f61ed28083d65639ac9d8dc8b5f3b3212f352c37d8"
+    },
+    {
+      "id": "chinese/word/0",
+      "sha256": "af8f0dfe5cf11f2524a945f7b23ff2573b44b88b736380e4601c6d5fd60cde50"
+    },
+    {
+      "id": "chinese/word/1",
+      "sha256": "2b3cc177531679f9aa9f5b9ef506304054852137b625b0b2e3f70dbfb652f2e5"
+    },
+    {
+      "id": "chinese/word/2",
+      "sha256": "54a0aee5876f4fd79716d77367a3522ce28789e5919afab9d900a6338d81cb61"
+    },
+    {
+      "id": "chinese/word/3",
+      "sha256": "a789e20f17b79e574b116f85881f9103c95df22e57603c65565fce8889ac49c6"
+    },
+    {
+      "id": "chinese/word/4",
+      "sha256": "b1ff1f722f0eec1a3e7312319a24fd001d074bc89f9021a6805407ef2549a514"
+    },
+    {
+      "id": "chinese/word/5",
+      "sha256": "ff643e4e9ba2ed11d01bfc069027982d55e07029d0f36c020f0d6c0db4ccc4fa"
+    },
+    {
+      "id": "chinese/word/6",
+      "sha256": "63638c1c7011e5f23201b62a8ee353ebe461e88abcd1aee0479e2a43944fe8cf"
+    },
+    {
+      "id": "chinese/word/7",
+      "sha256": "5547683e7111fbd85817c62817beb6ceb346bc18e736c5a86dae504da26e61e4"
+    },
+    {
+      "id": "chinese/word/8",
+      "sha256": "89d6a6cfd9afeb5e52b458918c67162ae357ff2acefa3d79eab2c817a209b5ea"
+    },
+    {
+      "id": "chinese/word/9",
+      "sha256": "afe99a538ae81d2187ab661a5000c66e1f3f54d40965efa2683448e4d10047b6"
+    },
+    {
+      "id": "chinese/word/10",
+      "sha256": "5d7500c29d6e3ca8e6f2550c572ba99aedfa84ee404a1a1f35dd57790be23589"
+    },
+    {
+      "id": "chinese/word/11",
+      "sha256": "def626d5d3ac2f335ecc0c985c58bbd56a52f011716a7af6d2d027ae82146a60"
+    },
+    {
+      "id": "chinese/word/12",
+      "sha256": "a4c80018869c6718b99e26c958b7dac810f0c29f3b8aa86bfccc0f4bdc8f5d8a"
+    },
+    {
+      "id": "chinese/word/13",
+      "sha256": "cec8c8770052653f65e98da0644af222af0486063eb82b2e5585b3f106d76513"
+    },
+    {
+      "id": "chinese/word/14",
+      "sha256": "c269ab4d83d4974059e5c4524be6eb2fc6106e920e4373e04bba43ea80d98f55"
+    },
+    {
+      "id": "chinese/word/15",
+      "sha256": "9772ac216e9ab75bf1ea793f3d61f882371c9089c9602bca43db7ef0cf7ece6a"
+    },
+    {
+      "id": "chinese/word/16",
+      "sha256": "34cfe513fce1b81fa706081b2e1c40eeba82e37f1ddddb09944d59d82bc6a862"
+    },
+    {
+      "id": "chinese/word/17",
+      "sha256": "d162b0d43d6b17bf6f391efa9440ceeab03789913e09c0b653d6cff2f3726828"
+    },
+    {
+      "id": "chinese/word/18",
+      "sha256": "05e4433f8ac033c395f9a1a812d452a8d811dcc9d4c48b5db2eb087d6b343f29"
+    },
+    {
+      "id": "chinese/word/19",
+      "sha256": "cadfc6833d1bd09cbd51422b5ddf873edbca8ac2244cdf5940ead2f933a389f6"
+    },
+    {
+      "id": "chinese/word/20",
+      "sha256": "830f449d531ab1289ce654cce665d8b2af6cbc0f31c3f566d304517bbcc6f296"
+    },
+    {
+      "id": "chinese/word/21",
+      "sha256": "11433bba1ccf9d3610eda59453302180648274e186e719a57486961405bd5ed5"
+    },
+    {
+      "id": "chinese/word/22",
+      "sha256": "61cc48966b22494be6cb7e0ac1c91fb0965fec908f776cc2c2d5d5feb984baae"
+    },
+    {
+      "id": "chinese/word/23",
+      "sha256": "eddd2777ab52ee6c685019b66759e6312fdc2927529e1f5ccc6d144c2f4331c2"
+    },
+    {
+      "id": "chinese/word/24",
+      "sha256": "75d5489a09c74811f53bc1579cb2190a9a0a6d568774eca6d2b80a1e0628d954"
+    },
+    {
+      "id": "chinese/word/25",
+      "sha256": "8cf58e94afca5fd1fbbaddabf11c2d378cc36bbfb22f53fc95a1b1559e5a8d2c"
+    },
+    {
+      "id": "chinese/word/26",
+      "sha256": "f92e472c6c545f4ed8f76e19be998259eb9fd3675e6420dba74c88b4d630f4a5"
+    },
+    {
+      "id": "chinese/word/27",
+      "sha256": "fc1dd9f5b5f77b4db39ebfe1f809258f27d48ac4275310a3eb65beea29d213fb"
+    },
+    {
+      "id": "chinese/word/28",
+      "sha256": "f1df49be2f13e24e8c0dce8dda913a4f62c666a05537440882a1abb7c999e852"
+    },
+    {
+      "id": "chinese/word/29",
+      "sha256": "9e5bc93cc674d7611b71c371b3ed90055328e310cd1447449b5275016ddddc7e"
+    },
+    {
+      "id": "chinese/word/30",
+      "sha256": "36b7f8df7500d02a26c0b149c6b256f51dab533b3d5fe95b310aca3abfdb6147"
+    },
+    {
+      "id": "chinese/word/31",
+      "sha256": "35dfbb062b54bcb53ceb1d7e58892e26640bbf77e1b8bcceab02d53ae095b533"
+    },
+    {
+      "id": "chinese/word/32",
+      "sha256": "598c903ba44a2aef010f61ec6a53d71382998817ac626636a73bb56078b95383"
+    },
+    {
+      "id": "chinese/word/33",
+      "sha256": "c131a38bd2e2778e849ca195d785d37c0d29c04d0a98b0b769b61cddc60f1b87"
+    },
+    {
+      "id": "chinese/word/34",
+      "sha256": "80de875e1f22fbe66af506f3c9b3ad74409154e7a119ad2b9be0922e83a17af6"
+    },
+    {
+      "id": "chinese/word/35",
+      "sha256": "5260ae07fc37dbabdb73941798548121fd99243c3c3070067d1772e6d8379edd"
+    },
+    {
+      "id": "chinese/word/36",
+      "sha256": "726382d0d4db4d4a82fdd6fb6aa3cd470882ba23bc8017b58bd30f1339b8de80"
+    },
+    {
+      "id": "chinese/word/37",
+      "sha256": "2890515abeb1b6288a54797b823850cb3efa0112de0b67ca6d6cddb747ad7c7c"
+    },
+    {
+      "id": "chinese/word/38",
+      "sha256": "e5fb80025e3c0968c208e45ea614077c4366acdd4a951d753518131f78e77b26"
+    },
+    {
+      "id": "chinese/word/39",
+      "sha256": "6a4557f4e8f6f18c9abca7fc767aab0cb62f26ebfe353f785dc1fd618f814f60"
+    },
+    {
+      "id": "chinese/word/40",
+      "sha256": "1665b077560af58156a477741c794897561a99e73a762a38a5351ccf954876f3"
+    },
+    {
+      "id": "chinese/word/41",
+      "sha256": "5028f400524865dc51d8e7adf370118de369b578d371e8172d673dcf83afc60e"
+    },
+    {
+      "id": "chinese/word/42",
+      "sha256": "30b3c63935d7d63ac4c51088b81cd9a919f48559baad8b08f271e6a4e937d57d"
+    },
+    {
+      "id": "chinese/word/43",
+      "sha256": "b92087281e3955f3b0a7ee81217784a67c74d7232f6e090106e18fa79acdf60d"
+    },
+    {
+      "id": "chinese/word/44",
+      "sha256": "689ab5ebb445d859946e11544aa8619ef62aa90b90d01089bda7dbe627a406c7"
+    },
+    {
+      "id": "chinese/word/45",
+      "sha256": "b98e4d68f8df35eefd2daf614238e70ddf02ac3cd7428e4b6eee995bbd6ec475"
+    },
+    {
+      "id": "chinese/word/46",
+      "sha256": "72f8e1c1622e8efa23104cc983f4933e39e0cf540a8c00dcaf9943b667dbf352"
+    },
+    {
+      "id": "chinese/word/47",
+      "sha256": "7e66deed0e37cae1b85f9f7b8547f971a906530d8f95e1374e143e22bc2c2fba"
+    },
+    {
+      "id": "chinese/word/48",
+      "sha256": "b2768fccce4a0fd8faf46c7775933d211a203f2cc49208804364bb5e8ca367d2"
+    },
+    {
+      "id": "chinese/word/49",
+      "sha256": "a31d5666674f903a7a0b13381a55f7422a67666fb17d793314a2098a90832965"
+    },
+    {
+      "id": "chinese/word/50",
+      "sha256": "0cc463a596a8f0e7597a156f5df9fb80ecfa6b5f299e5b4e264d7c9f23d28796"
+    },
+    {
+      "id": "chinese/word/51",
+      "sha256": "d629953061390875c711eb9853ef6135531d26e902c8df690f6b687b47281f1a"
+    },
+    {
+      "id": "chinese/word/52",
+      "sha256": "44aee66aedb30f50519c3a4ab9547db6851b8850c6948f5d34d53fce66dfcfe4"
+    },
+    {
+      "id": "chinese/word/53",
+      "sha256": "36edb4fe9c663347f36088ab3b092b3ae3823874af7ab5fdab178e2fe1d4b9aa"
+    },
+    {
+      "id": "chinese/word/54",
+      "sha256": "091052e0246cf98eb497e0fc6a9a8e039f8e9831d0f2eed137fff453a754e36c"
+    },
+    {
+      "id": "chinese/word/55",
+      "sha256": "80a687ea8882f66d576b2de08e711f38c392cf9fd0da7f42ed05fbb96bcac863"
+    },
+    {
+      "id": "chinese/word/56",
+      "sha256": "54d0447f63696161520f3431ddda39b12835dd61e1aa3af914bf5664e9a80bee"
+    },
+    {
+      "id": "chinese/word/57",
+      "sha256": "1a2f3e7e9137787a752840e611692c8494ae7bcad15da96944b65b3c4160efde"
+    },
+    {
+      "id": "chinese/word/58",
+      "sha256": "418720bd02c9dbf7ea81af68dcd7aa6b086581779a9ee92c2477c9a2d60cae1a"
+    },
+    {
+      "id": "chinese/word/59",
+      "sha256": "9387cdbadba929502c9c1e95fa45c14db4de79766e5d7b6e6e23ffd220324b13"
+    },
+    {
+      "id": "chinese/word/60",
+      "sha256": "637e3aa82381fedbb2f6cc7635509c90ac2397424deb5346b2f7701fed6ab1d8"
+    },
+    {
+      "id": "chinese/word/61",
+      "sha256": "cc366114bcd2a9dac02e1fc828aab6e55ff96eb076a3b43c69b34774a378b9a2"
+    },
+    {
+      "id": "chinese/word/62",
+      "sha256": "1c18a526660717191b5a8bb240f0c420aec6863b148f8b645be0f6306bbf18ce"
+    },
+    {
+      "id": "chinese/word/63",
+      "sha256": "6c2512f5f75cce81e849ade2b9d3b3888f353de3c8523f7bbaba8f27bca8698e"
+    },
+    {
+      "id": "chinese/word/64",
+      "sha256": "c99ea7729fe9d0b9b29e8dc14a56f9d6f6f2bd222c37d7d18874dd024844a672"
+    },
+    {
+      "id": "chinese/word/65",
+      "sha256": "73a496d2c6c3a1b0b55f62ab1ff7cb2b846818a45e58bfe783d4ca5d7a783deb"
+    },
+    {
+      "id": "chinese/word/66",
+      "sha256": "d1d2eeee8571634f1a7fc9de1da320e81fd0b89f9633ccb890ba37cfc7d3b917"
+    },
+    {
+      "id": "chinese/word/67",
+      "sha256": "cd340f752d258615f5acf95de385f77f022d7502a2b314ca7bbc1f325b3a86eb"
+    },
+    {
+      "id": "chinese/lesson/upper-01",
+      "sha256": "388e4d5b0f69974d8a8cf4041f540c4a4614af67f78a8ec85e5fcc438af07f82"
+    },
+    {
+      "id": "chinese/lesson/upper-02",
+      "sha256": "b1ae14fb11c7a319a540f6bed03298cbc03eaafa34bc15448cb98f1614d04567"
+    },
+    {
+      "id": "chinese/lesson/upper-03",
+      "sha256": "aef75675627e6e31bffd783db49293478ef844ab1a79d1b07975f3947ece32eb"
+    },
+    {
+      "id": "chinese/lesson/upper-04",
+      "sha256": "83925005d97adff6054fbb036a711ad0675df073885162e2995c15b43b3e6287"
+    },
+    {
+      "id": "chinese/lesson/upper-05",
+      "sha256": "f293bf8da414722dd4a7e7feecb7fca7a3e59ff24df0576f7ed011b3e82c1027"
+    },
+    {
+      "id": "chinese/lesson/upper-06",
+      "sha256": "9b6d0687a2246616d1d550ab18e4c1655779baa44445c95d2e8fc1222c8a81ec"
+    },
+    {
+      "id": "chinese/lesson/upper-07",
+      "sha256": "03bd73d3bd34338a72a6dbfcd1ef09f14140569634edb47e3c50031252014d45"
+    },
+    {
+      "id": "chinese/lesson/upper-08",
+      "sha256": "cc4a51e24e6a3126142abec79d88bfbfc697ab382c03220b5f50ad04357abfe5"
+    },
+    {
+      "id": "chinese/lesson/upper-09",
+      "sha256": "b3d42788db7b409f288ec5da8fe02dbb59157e7fde5b8e8c19d4dc4170c7b24c"
+    },
+    {
+      "id": "chinese/lesson/upper-10",
+      "sha256": "392792b01858a07c19799ff694222a8af6f61bb863b0a4dce0eca49404c38daa"
+    },
+    {
+      "id": "chinese/lesson/upper-11",
+      "sha256": "237ebe694873783d73ac5461692de7fca593ef201a1e163120201d3b10f93b31"
+    },
+    {
+      "id": "chinese/lesson/upper-12",
+      "sha256": "c6534a5137a16d104e372b043fc6edae2da86ee6f1a02db30ad8ad00c11e6d91"
+    },
+    {
+      "id": "chinese/lesson/lower-01",
+      "sha256": "06269ec74151d2ffc73573d009331f2ae3c5216487f6a8148be9172d2f55efa4"
+    },
+    {
+      "id": "chinese/lesson/lower-02",
+      "sha256": "abf81b1924b4567458faa5d8b665f3b94038306bcf7df7277a5cb510fc450132"
+    },
+    {
+      "id": "chinese/lesson/lower-03",
+      "sha256": "7c553a0bca6652ea810bcb04d7deba9191adf2c57280126c7bd5d6d8dc930374"
+    },
+    {
+      "id": "chinese/lesson/lower-04",
+      "sha256": "a8605eefbbd958ff2c0cf384fa8cd35bfeadfa9a43500b5940b0aca02b60e03c"
+    },
+    {
+      "id": "chinese/lesson/lower-05",
+      "sha256": "4baf8d7e19a99ca040f3876a9b48c4176a1d660864567a2a8ac86e78274a4307"
+    },
+    {
+      "id": "chinese/lesson/lower-06",
+      "sha256": "15a20758aaf46c396fde9756c849c1434a1cebf0dcfbc791891b9ee299c04be6"
+    },
+    {
+      "id": "chinese/lesson/lower-07",
+      "sha256": "a466e532d7b412fbd4c358fcd8c7098b17311e11f73acace5a3af8b7ef0ff676"
+    },
+    {
+      "id": "chinese/lesson/lower-08",
+      "sha256": "128520a058cf4301163a7fa272e674995ea682c01166cf8d13b6da431b8d1508"
+    },
+    {
+      "id": "chinese/lesson/lower-09",
+      "sha256": "f9f69a8755e5c9b1f550e9b6e71cbc14e8fabe5a38e54721601fbfbab8cb5eb0"
+    },
+    {
+      "id": "chinese/lesson/lower-10",
+      "sha256": "d7bc38c72a8ad143cd1942a3b12c5beff610a16f6f46eb7627c28e37460f12ac"
+    },
+    {
+      "id": "chinese/lesson/lower-11",
+      "sha256": "8e0047e356adc82869b496f39b201cb243a9621fb9104d543a5bff9a5446969b"
+    },
+    {
+      "id": "chinese/lesson/lower-12",
+      "sha256": "be26262c6a38b33c5686dfda3a3cb9b4897da7305285afadb12ee2f89beb0783"
+    },
+    {
+      "id": "chinese/textbook-list/upper-01",
+      "sha256": "ad858d8fe55e63e4084671b2c069756c8730c3b7b7eb9fa41f2f056fbc135597"
+    },
+    {
+      "id": "chinese/textbook-list/upper-02",
+      "sha256": "b332de36f11094aed4061733cc61954e6d9a32cdbe2b25ad774d7e5981ee5b55"
+    },
+    {
+      "id": "chinese/textbook-list/upper-03",
+      "sha256": "4dbd7ffd19b4540898023c1ae9493d03ed84cf4118a2fac3ab9bf94028795f98"
+    },
+    {
+      "id": "chinese/textbook-list/upper-04",
+      "sha256": "dcfb16d7c862c6897b6c80fc8507b38b8f1df8e11b7dc87844d66c503249bd8c"
+    },
+    {
+      "id": "chinese/textbook-list/upper-05",
+      "sha256": "38a3413848bbadbbef00dbbae7ddcbd9a15e24fc130798ddd70282c079b80209"
+    },
+    {
+      "id": "chinese/textbook-list/upper-06",
+      "sha256": "70179704fe41abd04970d26acc86b7375c2f27b4b64189aaaa801765ca802b86"
+    },
+    {
+      "id": "chinese/textbook-list/upper-07",
+      "sha256": "9c3ea5cb7458707decc17d8892ec7dcb0dc2409c91d0d528cdd6becd01e8fe8e"
+    },
+    {
+      "id": "chinese/textbook-list/upper-08",
+      "sha256": "19d43738d73502eeeddb463f4e4b6a421e829514e2100cac5b9dbffcc734c63b"
+    },
+    {
+      "id": "chinese/textbook-list/upper-09",
+      "sha256": "3b199aae849d56bf3cd53792e73bec58b6b77b2fcccfdb8fe63c582b7387abcc"
+    },
+    {
+      "id": "chinese/textbook-list/upper-10",
+      "sha256": "b483a9bc81147ba7387be1e3c8d99b22431dc62001c246e48d8f462d4d3a5bef"
+    },
+    {
+      "id": "chinese/textbook-list/upper-11",
+      "sha256": "232b6667b069cfd0b0f09c5997559882e4aa90ecfef92faab9fab29db41ddc09"
+    },
+    {
+      "id": "chinese/textbook-list/upper-12",
+      "sha256": "43cdaddfaf620fd9497dc1aba323aea07a0224ad67051e695b9b4fb3bca7498a"
+    }
+  ]
+}

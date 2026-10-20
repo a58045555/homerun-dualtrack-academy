@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-10-20T08:06:38.669Z",
+  "result": "Every character, recognition entry and word matches the live Ministry of Education source, in order and classification.",
+  "entries": [
+    {
+      "id": "upper-01",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150101",
+      "title": "新學年新希望",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 13
+      },
+      "sha256": "663d289bf54e6cdf21ec29a9c5da5296f148155e2d046c5018bf6d30b52f848b"
+    },
+    {
+      "id": "upper-02",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150102",
+      "title": "一起做早餐",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 11
+      },
+      "sha256": "20ba3794375a88317ff0212972a0329d5e097baae7c4f5c5b8f0359d8e1f10af"
+    },
+    {
+      "id": "upper-03",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150103",
+      "title": "走過小巷",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 8
+      },
+      "sha256": "d17b7d48909b61d4b6e1d808bd170ecae38abf0872b1a8795a874cd64eeab3ef"
+    },
+    {
+      "id": "upper-04",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150104",
+      "title": "運動會",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 11
+      },
+      "sha256": "292d02932978cd238a10cfc0704d21c3ac11136ebeda7975efa34db1b0b783ab"
+    },
+    {
+      "id": "upper-05",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150105",
+      "title": "坐竹籃船",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 13
+      },
+      "sha256": "3c324c1a77af2aaba5f2827e70c7cf5883fd522cee9a81b1043e006dd1b1bc4c"
+    },
+    {
+      "id": "upper-06",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150106",
+      "title": "小鎮的柿餅節",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 9
+      },
+      "sha256": "524b314eb522728163c8806f3268a0c1c2917c60c23efd743f15a2770e2f00ba"
+    },
+    {
+      "id": "upper-07",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150107",
+      "title": "國王的新衣裳",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 11
+      },
+      "sha256": "b2e855c80356286c51b270ebed9c25dd9a86467a79d48833a5bfc60394001b68"
+    },
+    {
+      "id": "upper-08",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150108",
+      "title": "「聰明」的小熊",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 12
+      },
+      "sha256": "987c3805e2b21a74aa96f9d40c7895b9b4f403c9b863772e57d76cec68f40362"
+    },
+    {
+      "id": "upper-09",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150109",
+      "title": "大象有多重?",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 12
+      },
+      "sha256": "5bed6bb2bd808274e7dbbf0b2a739583a5f1e4dbda3f6a92ec98e677fe04a9c7"
+    },
+    {
+      "id": "upper-10",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150110",
+      "title": "新年快樂",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 13
+      },
+      "sha256": "6dd174dd10a2b6b3f4d2551b919e0b3eb7973f2979f92e7c7c369da11154bf05"
+    },
+    {
+      "id": "upper-11",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150111",
+      "title": "遠方來的黑皮",
+      "counts": {
+        "characters": 18,
+        "recognition": 2,
+        "words": 11
+      },
+      "sha256": "a99151941c9c66423203bf0adc5c2dfdf79c419422ee9d02d8c49fd4f169814c"
+    },
+    {
+      "id": "upper-12",
+      "url": "https://pedia.cloud.edu.tw/Bookmark/TCollection?TextNameId=0103021150112",
+      "title": "我愛冬天",
+      "counts": {
+        "characters": 18,
+        "recognition": 1,
+        "words": 14
+      },
+      "sha256": "8ddcee494059d92049d2792bf6fb28e1805ba00334f574a322d800152ea7d1c5"
+    }
+  ]
+}
