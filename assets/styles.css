@@ -282,3 +282,25 @@ body[data-theme=login]{background:linear-gradient(160deg,#eef4ff 0%,#fff3f8 50%,
  .question-main{overflow-wrap:anywhere}.quiz-top{gap:10px}.quiz-progress{font-size:13px}.rowactions .btn{flex:1 1 160px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+.cn-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cn-tabs .btn{flex:1;min-width:150px}
+.cn-edition{padding:16px 18px;border-radius:16px;line-height:1.7;margin-bottom:16px}
+.cn-edition p{margin:6px 0 0;font-size:14px}
+.cn-edition.verified{background:#e8f4ec;color:#245c41}
+.cn-edition.pending{background:#fff3d6;color:#715000}
+.cn-picker label{display:block;font-size:18px;font-weight:850;margin-bottom:10px}
+.cn-picker select{display:block;width:100%;min-height:48px;padding:10px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:#fff;color:var(--ink)}
+.cn-preview{margin:16px 0}.cn-preview h2{margin-top:0}
+.cn-word-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:15px 0}
+.cn-word-list button{padding:12px 8px;background:#f2f7f4;border:1px solid #dce7e0;border-radius:12px;min-height:76px;color:var(--ink)}
+.cn-word-list strong,.cn-word-list small{display:block}.cn-word-list strong{font-size:22px}.cn-word-list small{font-size:13px;margin-top:5px}
+.cn-preview summary{padding:12px 0;cursor:pointer;font-weight:800;min-height:44px}
+.cn-story{font-size:20px;line-height:2;letter-spacing:.5px}
+.cn-lessons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cn-lessons button{display:flex;flex-direction:column;text-align:left;gap:7px;min-height:122px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:17px}
+.cn-lessons button[aria-pressed=true]{border:2px solid var(--green);background:#f0f7ee}
+.cn-lessons strong{font-size:18px}.cn-lessons small,.cn-lessons span{font-size:12px;color:var(--muted)}
+.cn-source{margin-top:22px;line-height:1.8}.cn-source a{text-decoration:underline}
+@media(max-width:600px){.cn-word-list{grid-template-columns:repeat(2,minmax(0,1fr))}.cn-lessons{grid-template-columns:repeat(2,minmax(0,1fr))}.cn-lessons button{padding:14px;min-height:126px}.cn-tabs .btn{font-size:15px;padding:12px 10px}.cn-story{font-size:19px}}
