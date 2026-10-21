@@ -1,0 +1,19 @@
+小小探索學院 Claude 交接包測試結果
+時間：2026-10-21T23:26:57.211Z
+Node：v24.19.0
+PASS node check-curriculum.cjs (3814ms)
+PASS node check-reviewed-content.cjs (103ms)
+PASS node check-english.cjs (187ms)
+PASS node check-chinese-audit.cjs (366ms)
+PASS node check-zhuyin.cjs (104ms)
+PASS node check-generators.cjs (742ms)
+PASS node check-resume.cjs (4914ms)
+PASS node check-tablet.cjs (104ms)
+PASS node check-science.cjs (1802ms)
+PASS node check-chinese.cjs (1817ms)
+PASS node check-times.cjs (1871ms)
+PASS node check-dictation.cjs (1486ms)
+PASS node check-access.cjs (1971ms)
+
+13項全部通過。完整stdout/stderr與初次失敗證據在project/handoff。
+實體平板型號、系統、瀏覽器仍未知；這些測試不能當成實體Safari驗證。

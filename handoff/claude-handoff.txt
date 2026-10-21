@@ -1,0 +1,264 @@
+【開始使用】
+# 小小探索學院・Claude 交接包
+
+這個資料包包含可執行網站、音檔、測試、教材來源、需求、發布證據與待辦，沒有帳密或孩子的瀏覽器紀錄。
+
+## 用 Claude 網頁／手機聊天
+1. 先上傳「Claude交接說明.txt」，再貼「給Claude的交接指令.txt」。
+2. 完整ZIP供下載、備份及Claude Code解壓使用；一般聊天不應假設能直接讀取ZIP。
+3. Claude如需看程式，可從GitHub取得相關檔案，或由你解壓後上傳「文字原始碼」中的對應TXT。先給相關檔案，避免一次塞入整個大型題庫。
+
+## 用 Claude Code
+1. 解壓縮後，在 project 目錄開啟 Claude Code。
+2. 它可從 CLAUDE.md 讀取專案說明。把同一段交接指令貼給它。
+3. 先跑 node handoff/VERIFY_PACKAGE.cjs 與 node run-checks.cjs --quick。預覽用 node preview.cjs。
+
+## 目前最重要的狀態
+- 原網站：https://homerun-dualtrack-academy.vercel.app/
+- GitHub：https://github.com/a58045555/homerun-dualtrack-academy
+- 原先卡住的平板相容性修正現在已上線；正式站 HTML 與 app.js 已和包內版本逐位元比對一致。
+- 仍未確認使用者的平板型號、系統、瀏覽器與錯誤畫面，所以不能保證已解決該實體平板的全部問題。
+- 國語二下仍為原創先修，不是已核對完成的115康軒正式下學期教材。
+
+ZIP 不含 .git，這是完整工作檔快照。若要提交 PR，請另從 GitHub 建立新的 checkout／分支；不要把舊工作區的 Git HEAD 當作目前 main，也不要重置使用者未提交的檔案。
+
+Claude官方文件列出的文件格式包含TXT，未把ZIP列為一般文件格式。本包因此同時提供可直接上傳的TXT與供本機開發使用的完整ZIP。參考：https://support.claude.com/en/articles/8241126-upload-files-to-claude
+
+
+【可貼上的任務指令】
+請接手「小小探索學院」，與 Codex 合作維護這個給孩子使用的免費學習網站。
+
+請先閱讀我附上的「Claude交接說明.txt」。如果你使用Claude Code且已取得解壓縮的project，請讀CLAUDE.md、handoff/PROJECT_HANDOFF.md、handoff/STATUS.json與TABLET_COMPATIBILITY.md，再驗證交接包雜湊並跑快速測試。一般聊天若無法讀取ZIP，請明說需要哪個原始碼檔，不要假裝已讀或已跑測試，也不要直接重寫網站。
+
+目前 GitHub main 是 92acf65ce0fce477a4183f30c14e549a4c811488；正式站已載入 2026-10-22-tablet-compat，平板相容性修正已上線。請先釐清使用者實際平板的型號、系統、瀏覽器與打不開的畫面，實測確認問題，不能把調整畫面尺寸或 Node 模擬當成真實 Safari 測試。
+
+保留原網址、各孩子的紀錄、續作與手寫草稿。九九乘法維持完整1～9且獨立練習；家長忘記密碼維持本機數學驗證；維持免費，不加贊助、付款、帳號或不必要的付費服務。國語二下未核對的教材不要宣稱是康軒正式內容。
+
+需要修改時採小範圍、可驗證的變更，逐項說明改了什麼、測試方式、實測裝置和仍未確認的限制。與 Codex 分工時，同一時間不要改同一個檔案，交回改檔清單與 commit。具體優先事項與其他待辦請依交接文件處理。
+
+
+【給Claude的專案須知】
+# 小小探索學院：接手須知
+
+先讀 handoff/PROJECT_HANDOFF.md、handoff/STATUS.json。這是一個既有網站的維護任務，使用者重視手機／平板能直接操作，不要重新做一個不同網址的網站。
+
+## 啟動與驗證
+- 純 HTML/CSS/JavaScript，沒有 package.json、不需 npm install，無後端或資料庫。
+- 在此目錄執行 node preview.cjs，開啟 http://127.0.0.1:8765/。
+- node handoff/VERIFY_PACKAGE.cjs：確認交接快照完整性；修改檔案後雜湊不符是預期結果。
+- node run-checks.cjs --quick：年級／核心回歸、續作、已知平板語法相容性。
+- node run-checks.cjs：完整離線測試。
+- 預覽已啟動後執行 node run-checks.cjs --http：靜態資源檢查。
+- verify-chinese-source.cjs 會連網並更新教材證據，只有需要重新核對來源時才執行。
+- 所有命令從此 project 目錄執行。交接測試使用 Node 24.19.0；測試不讀取真實瀏覽器的孩子資料。
+
+## 不可在未經使用者要求下改掉的行為
+- 名稱：小小探索學院。四種風格：棒球、太空探險、公主城堡、可愛動物；舊配色已移除。
+- 九九乘法完整1～9、81組，全混合且獨立於數學難度，不因低年級而刪掉。
+- 無帳號、免費；不加贊助、付款、訂閱、Apple上架工作或雲端登入。
+- 忘記家長密碼使用本機加法驗證；這是防誤入機制，不是雲端身分驗證。
+- 多位孩子資料分開；不要清除或更名既有儲存鍵，也不要為除錯要求先清除網站資料。
+- 保留啟動說明、家長區、紙上作答的播音聽寫、科學先學再練、太空課程與中斷續作。
+- 國語二下目前是原創先修；不得標成已核對的115康軒課文、生字或圈詞。
+
+## 程式結構提醒
+assets/app.js 是大型 IIFE，許多函式在檔案後半段被重新指定。修改前找最後生效版本，尤其 generateQuestions、storyQuestion、calcQuestion、lineupQuestion、render、navigate、start、switchPlayer 和 visibleModes。
+applyWorld 會改共享題庫；單純換風格不應改動國語、注音、英文、科學的語意或正解。年級入口集中在 practiceQuestions／effectiveLevel／canPractice。
+app 底部有續作與 render/navigate 包裝；不要只改前面的同名函式而漏掉包裝。
+
+## 資料與教材
+保留既有 localStorage 鍵與 IndexedDB 錄音；資料損壞時保留原文，存檔失敗時顯示提示。
+續作、答題和錯題排程一起保存，整回合完成只記一次。恢復後不自動播音、跳題或重複排程。
+修改題庫時人工審查正解、解析與干擾選項；artifacts/curriculum-reviewed-content.json 的雜湊是內容稽核紀錄，不能只重算雜湊來掩蓋未審核的變更。
+
+## 合作與發布
+遵循 handoff/COORDINATION.md。ZIP沒有Git歷史，來源碼快照與遠端已部署程式一致；新增的交接文件與 run-checks.cjs 尚未提交遠端。
+需要推送時使用新的 Git checkout／分支，先核對遠端 main，再比較變更。發布後必須確認正式網址的 academy-release 與實際檔案，而非只看到提交成功就宣稱已上線。
+Vercel既有連線曾回403：可維持GitHub自動部署，但手動存取是否可用須重新驗證，不要在程式中放憑證或擅自變更團隊／權限。
+
+
+【完整專案交接】
+# 小小探索學院・專案交接
+
+## 一、現在的狀態（2026-10-22，台灣）
+
+| 項目 | 已確認內容 |
+| --- | --- |
+| 正式站 | https://homerun-dualtrack-academy.vercel.app/ |
+| Repository | https://github.com/a58045555/homerun-dualtrack-academy |
+| 最新業務程式提交 | 92acf65ce0fce477a4183f30c14e549a4c811488 |
+| 正式版標記 | 2026-10-22-tablet-compat |
+| Vercel | GitHub提交狀態已回success，正式HTML與app.js和交接來源逐位元相同；詳見STATUS.json |
+| 尚未確認 | 使用者實際平板的型號、系統版本、瀏覽器和錯誤畫面；不等於實機已驗證成功 |
+| 本機Git | 原工作區HEAD仍為0f65acc，git status回報非工作樹。不可據此reset或覆蓋工作檔；ZIP排除了.git |
+
+前一則對話中曾因自動部署未出現、Vercel連線403而回報尚未上線。準備本交接時重新確認，自動部署已完成，正式站已是修正版。請使用本節和STATUS.json，不要沿用「尚未發布」的舊結論。
+
+Vercel專案為 homerun-dualtrack-academy，原管理團隊slug為 srxbykfmr8-1971。既有連線讀取該團隊曾被拒絕；沒有把token、cookies、登入資訊或授權寫進ZIP。這個403不代表公開網站不可連線。
+
+## 二、使用者的既定需求
+
+- 給孩子學習，手機和平板要可直接用。回覆以繁體中文、簡單可執行為主。
+- 改名「小小探索學院」，包含瀏覽器標題與頁面品牌。保留四風格，不恢復舊棒球配色選項。
+- 年級：幼兒園大班、一年級、二年級、三年級以上。目前三年級以上仍為共用能力題庫，不是完整逐年級課綱。
+- 國語以康軒115學年度二年級為對照，提供生字圈詞及播音後在紙上聽寫；不能把二下原創先修說成正式康軒內容。
+- 九九乘法1～9一次完整納入，獨立且不分難度。保留81組、全混合練習和錯題。
+- 首次使用說明、首頁家長區、孩子管理。忘記家長密碼只需數學驗證，不需要Email、手機或雲端帳號。
+- 科學要能先學習再答題，包含太空與星體。現有12課，其中8課太空，每課3題；另有8行星互動卡。
+- 先免費，不做贊助、付費、訂閱或Apple上架。
+- 優先完成的「中斷續作」及「低年級說明」已上線，恢復原題、答題回饋與筆跡，不跨裝置同步。
+
+## 三、先前完成的修正
+
+1. 固定題庫逐項語意審核與來源核對：國語、注音、英文、科學、邏輯；詳細歷程在CURRICULUM_AUDIT.md。
+2. 低年級出題入口與複習、手寫一致套用限制；大班以數數／10內圖像題，一年級一般計算與生活題20內加減，二年級一般計算不直接出除法算式。九九乘法是明示的延伸例外。
+3. 數學和邏輯動態題的獨立驗算與唯一解檢查。修正猜數候選漏99、零用錢先花超支、含兩個問題的單選題、數線方向和真假推理前提。
+4. 防止風格替換把「球」改成別物，造成注音、科學或閱讀語意與答案不一致。英文選字加入中文語意，避免多個合理答案。
+5. 舊錯題改從現行題庫重建；多音字聽寫用詞語提示及第幾個字，避免孤立單字誤讀。
+6. 續作與手寫草稿每位孩子分開存；完成後清除續作，避免重複計分。低年級每回合5／8／10題設定已修正。
+7. 平板已知啟動問題：app.js的兩個lookbehind正規表示式常值會使Safari16.4以前在解析時失敗。已改成不需lookbehind的判斷；同時移除Array.at與String.replaceAll依賴。
+
+測試通過不等於所有隨機組合或所有實體平板零錯誤。1045筆稽核記錄是資料物件數，不是1045道不重複題目；動態測試次數也不能當題庫數。
+
+## 四、內容邊界
+
+- 國語：24組課程、312題原創練習；上學期12課對照來源，下學期12組原創先修。
+- 教育雲二上清單：216生字、23認讀字、138語詞。曾即時核對12課的字詞順序與分類；證據保存在artifacts/chinese-source-verification.json。
+- 原創短文、釋義、例句與題目不是課文全文或出版社原題；無康軒插圖／錄音授權聲明。
+- 科學：12課、36課後題、8行星卡。固定科學題229筆包含其他風格新增題，不要將課程題重複計算成額外題量。
+- 中文語音主要依裝置；實機聽寫仍應試聽，尤其多音字。家長錄音存在IndexedDB，JSON備份不含錄音和家長密碼。
+- 來源、音檔授權與限制：CHINESE_SOURCES.md、SCIENCE_SOURCES.md、audio/ATTRIBUTION.txt、audio/zhuyin/README.md。
+
+## 五、檔案與資料流
+
+| 檔案 | 用途 |
+| --- | --- |
+| index.html | 啟動fallback、structuredClone降級、載入順序、academy-release與快取版本 |
+| assets/app.js | IIFE內全部UI、題庫、演算法、年級規則、儲存、音效、手寫及底部續作包裝 |
+| assets/styles.css | 手機／平板／桌面樣式、手寫畫板 |
+| assets/chinese-content.js | 國語原創課程／題目 |
+| assets/chinese-vocabulary.js | 已核對教材字詞清單 |
+| assets/science-courses.js | 陪讀課程與星體卡 |
+| curriculum-runtime.cjs | 載入與check.cjs相同的隔離VM，不完整執行舊測試 |
+| artifacts/*.json | 內容審核雜湊與教育雲來源證據 |
+
+啟動：index載入三份內容資料→app IIFE→讀取profiles與本機history→套用風格→render。
+練習：選孩子／科目→practiceQuestions→年級與難度規則→出題→answer→save與practiceDraft→finish只記一回合。
+本網站沒有API或資料庫，外部能力主要是靜態音檔和裝置內建語音；不要為了除錯突然引入後端。
+
+儲存鍵沿用舊名：homerun_profiles_v1；第一個孩子baseball_dualtrack_v1，其他孩子baseball_dualtrack_v1__加id；homerun_parent_pin_v1；__previous為上一份歷史快照。品牌改名不能直接改掉鍵值。
+續作格式：DRAFT_FORMAT=1，DRAFT_CURRICULUM=20261020-audit。只有教材語意／正解更新等不相容變動才評估升版，不要因改CSS或語法相容就令草稿失效。
+
+## 六、Claude接手的優先順序
+
+### 立即
+1. 驗證ZIP的雜湊與快速測試，先讀目前狀態，不回退已完成的功能。
+2. 向使用者取得實際平板與錯誤狀況，確認是否為Safari啟動錯誤、網址／網路問題或按鈕無反應；最好在實體裝置重現。
+3. 以原正式網址驗證版本，確認平板修正版有沒有真正改善。若仍失敗，先找第一個失敗邊界，再小範圍修正。
+
+### 之後仍有價值、但尚未完成
+- 三年級以上分成各年級，規劃對應教材後再實作；不能把目前共用題庫直接宣稱逐年級匹配。
+- 二下康軒115正式清單：等待可核實資料，逐課核對；不能自行假造課名、生字或圈詞。
+- 既有備份功能增加合適的定期提醒，而非再造一套備份或未要求的雲端帳號。
+- 程式大型IIFE的整理可後續小步做，先保留行為、資料相容性和測試，避免一次重寫。
+
+## 七、驗證與發布原則
+
+TEST_RESULTS.json是本交接重新執行的結果，與較早文件的歷史測試紀錄分開看。check-tablet.cjs是舊API缺失與語法風險的模擬，不是真實Safari引擎或實體iPad測試。
+
+發布使用原GitHub/Vercel專案；沒有必要換網址。若換網域或瀏覽器，localStorage紀錄不會自動跟過去。
+確認遠端main與改檔內容→適當回歸測試→檢查目標團隊／專案→發布→等部署成功→實際抓正式站版號和檔案→實測操作，才回報上線。
+
+
+【即時發布證據】
+{
+  "preparedDateTaipei": "2026-10-22",
+  "repository": "https://github.com/a58045555/homerun-dualtrack-academy",
+  "branch": "main",
+  "sourceCommit": "92acf65ce0fce477a4183f30c14e549a4c811488",
+  "productionUrl": "https://homerun-dualtrack-academy.vercel.app/",
+  "release": "2026-10-22-tablet-compat",
+  "deployment": {
+    "status": "success",
+    "url": "https://vercel.com/srxbykfmr8-1971/homerun-dualtrack-academy/92kpyTSTVb6rKrxsbbENGxRPuCW4"
+  },
+  "liveVerification": {
+    "checkedAt": "2026-10-21T16:11:39.742Z",
+    "files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 3235,
+        "sha256": "d7df1034fbe43afb67fdac2448bd8db13d60d495f72a7d48561806b787bdabe7",
+        "matchesLocal": true
+      },
+      {
+        "path": "assets/app.js",
+        "status": 200,
+        "bytes": 478270,
+        "sha256": "b9de21b7b3568de6ea639fff836fae7377f5d27c4ded0ec002fbc30f2f72c081",
+        "matchesLocal": true
+      }
+    ]
+  },
+  "tabletUserDevice": {
+    "model": null,
+    "osVersion": null,
+    "browser": null,
+    "symptom": null,
+    "realDeviceVerified": false
+  },
+  "manualVercelConnection": {
+    "lastObserved": "403 scope access denied",
+    "scope": "srxbykfmr8-1971",
+    "accessRepaired": false
+  },
+  "gitSnapshot": {
+    "gitMetadataIncluded": false,
+    "originalLocalHead": "0f65acc",
+    "originalGitStatus": "fatal: this operation must be run in a work tree",
+    "newHandoffFilesCommitted": false
+  },
+  "excluded": [
+    ".git",
+    ".env*",
+    ".vercel",
+    "browser profiles/cookies",
+    "children localStorage/IndexedDB",
+    "historical screenshots",
+    "credentials"
+  ]
+}
+
+
+【平板相容性】
+# 平板啟動相容性修正（2026-10-22）
+
+已確認的程式問題：app.js含兩個正規表示式lookbehind常值。Safari在16.4才加入支援；舊版即使沒有執行到該功能，也可能在解析整份腳本時失敗，使首頁無法啟動。來源：https://webkit.org/blog/13966/webkit-features-in-safari-16-4/
+
+修正：移除lookbehind，改以字元位置判斷；將Array.at及String.replaceAll換成較早已有的陣列／字串操作。更新入口版本與腳本快取參數，保留原裝置紀錄和可相容的續作。
+
+check-tablet.cjs檢查無lookbehind常值，並在缺少Array.at、String.replaceAll及原生structuredClone的VM中檢查啟動、四風格、作答與續作；225組主題字詞邊界比對通過。check-resume.cjs的468個續作組合與check-curriculum.cjs亦通過。
+
+限制：不是實體iPad／Safari測試；尚未收到使用者平板型號、作業系統、瀏覽器或錯誤畫面，不能認定這是該平板唯一問題。若是無法連線而非啟動錯誤，還需檢查平板的網址、網路和瀏覽器回報。
+
+
+【合作分工】
+# Codex × Claude 合作方式
+
+1. 先由使用者決定本輪負責者與任務。另一方可閱讀、審查、驗證，不同時改同一份app.js。
+2. 每次先讀STATUS.json並確認最新遠端提交；檔案可能已被另一方更新。保留既有改動，不做git reset --hard或整目錄覆蓋。
+3. 建議一個任務一個分支，透過diff／commit交接，不直接傳一份來歷不明的新app.js覆蓋原版。
+4. 交回格式：問題與重現條件、修改檔案、行為前後差異、測試命令與結果、實機型號／瀏覽器、仍未確認之處、commit或patch。
+5. 題庫修改先核對語意與正解，再更新稽核記錄；不能以測試通過或重算雜湊代替內容審核。
+6. 確認發布負責者。不要兩方同時部署、改網域或換Vercel團隊；不把孩子紀錄、憑證或家長錄音放進GitHub。
+7. 如果只有Claude網頁聊天，請回傳明確patch或修改後檔案清單，並附驗證步驟，交由能執行測試的一方確認。
+
+目前建議第一項任務：Claude釐清實體平板問題，Codex或另一方審查差異並協助回歸驗證。這只是建議分工，沒有自動替使用者啟動另一個AI或傳送訊息。
+
+
+## 交接時新發現的測試設定問題
+完整重跑時，原check-dictation.cjs先require check.cjs，會執行整套測試並遺留page=quiz和未完成的英文session。之後直接呼叫startDictation，會讓render的續作包裝保存舊session，使「整份data不變」斷言失敗；真實UI入口會先navigate到dictation。
+本包將該測試改為讀取curriculum-runtime.cjs的新VM並navigate('dictation')，保留原本所有聽寫斷言。runtime只新增navigate測試匯出，網站app.js完全未變。這兩個測試檔的隔離修正只在交接包，尚未提交GitHub。原始檔在handoff/original-tests，初次失敗完整輸出在TEST_RESULTS_INITIAL.json。若改用GitHub新clone，請先比較並套用這兩個測試檔差異。
+
+交接包最終驗證：13項離線測試全部通過。初次失敗記錄與測試隔離修正皆保留；修正patch在project/handoff/patches/test-isolation.patch，完整結果在project/handoff/TEST_RESULTS.json。網站業務程式未因打包而改動。
