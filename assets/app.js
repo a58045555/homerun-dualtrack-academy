@@ -195,7 +195,7 @@ function freshNewSubjectReview(item){
  if(item.subject==='logic')return logicQuestion(effectiveLevel('logic',item.level),item.mode,new Set());
  const match=String(item.q.signature||'').match(/^sci-([a-z]+)-(\d+)$/),row=match&&SCIENCE_BANK[match[1]]?.[Number(match[2])];
  if(row&&row.l<=effectiveLevel('science',item.level))return bankQuestionFrom(row,'sci-'+match[1],SCI_PROMPT[match[1]],item.q.signature,true);
- const course=SCI_COURSES.courses.find(c=>c.id===item.q.sciCourseId),ix=Number(String(item.q.signature||'').split('-').at(-1)),r=course?.questions[ix];
+ const course=SCI_COURSES.courses.find(c=>c.id===item.q.sciCourseId),ix=Number(String(item.q.signature||'').split('-').slice(-1)[0]),r=course?.questions[ix];
  if(r)return {skill:'sci-'+course.area,prompt:course.title+'｜課後練習',main:r[0],answer:r[1],choices:shuffle(r.slice(1,5)),explain:r[5],signature:'course-'+course.id+'-'+ix,concept:'course-'+course.id,courseLabel:course.title,sciCourseId:course.id,reason:true};
  return scienceQuestion(effectiveLevel('science',item.level),item.mode==='lesson'?'mix':item.mode,new Set());
 }
@@ -1617,11 +1617,11 @@ const WORLD_PHRASES={
  princess:[['⚾ 生活與棒球的數學','🎀 城堡裡的數學'],['🏟️ 看懂比賽數字','🏆 看懂計分板'],['棒球手套','魔法棒'],['球帽','蝴蝶結'],['球隊巴士','城堡馬車'],['球員卡','公主貼紙'],['棒球卡','公主貼紙'],['練習球','珍珠'],['一顆棒球','一顆珍珠'],['棒球','珍珠'],['球盒','珠寶盒'],['球袋','珠寶袋'],['球箱','珠寶箱'],['一箱球','一箱珍珠'],['紅球','紅寶石'],['藍球','藍寶石'],['袋球','袋珍珠'],['盒球','盒珍珠'],['顆球','顆珍珠'],['觀眾席','舞會座位'],['球場模型','城堡模型'],['棒球館地板','舞廳地板'],['棒球館','舞廳'],['練習區','花園'],['球場','城堡'],['球隊','公主們'],['球員','公主'],['教練','女王'],['紅隊','紅玫瑰隊'],['藍隊','藍星星隊'],['綠隊','綠精靈隊'],['甲組','玫瑰組'],['乙組','百合組'],['打者','公主'],['兩局得分表','兩回合得分表'],['局','回合'],['⚾','⭐']],
  animals:[['⚾ 生活與棒球的數學','🐾 森林裡的數學'],['🏟️ 看懂比賽數字','🏆 看懂計分板'],['棒球手套','小背包'],['球帽','小帽子'],['球隊巴士','森林巴士'],['球員卡','動物貼紙'],['棒球卡','動物貼紙'],['練習球','橡實'],['一顆棒球','一顆橡實'],['棒球','橡實'],['球盒','橡實盒'],['球袋','小籃子'],['球箱','木箱'],['一箱球','一箱橡實'],['紅球','紅蘋果'],['藍球','藍莓'],['袋球','袋橡實'],['盒球','盒橡實'],['顆球','顆橡實'],['觀眾席','森林看台'],['球場模型','樹屋模型'],['棒球館地板','樹屋地板'],['棒球館','大樹屋'],['練習區','草地'],['球場','森林'],['球隊','動物小隊'],['球員','小動物'],['教練','貓頭鷹老師'],['紅隊','兔子隊'],['藍隊','熊熊隊'],['綠隊','松鼠隊'],['甲組','兔子組'],['乙組','熊熊組'],['打者','小動物'],['三個人裡','三隻小動物裡'],['兩局得分表','兩回合得分表'],['局','回合'],['⚾','🐾']]};
 // 這些用語在公主／動物世界不應該出現
-const BASEBALL_RX=/棒球|壘|打擊|打者|投手|捕手|球員|球隊|教練|球場|球棒|手套|安打|全壘打|三振|保送|打序|棒次|跑者|球迷|游擊|外野|內野|觀眾席|比分|局|打數|左打|雄鷹|⚾|🧤|🏟️|🏏|(?<![地氣月星眼])球/;
+const BASEBALL_RX=/棒球|壘|打擊|打者|投手|捕手|球員|球隊|教練|球場|球棒|手套|安打|全壘打|三振|保送|打序|棒次|跑者|球迷|游擊|外野|內野|觀眾席|比分|局|打數|左打|雄鷹|⚾|🧤|🏟️|🏏|(?:^|[^地氣月星眼])球/;
 const BASEBALL_EN=/\b(baseball|bats?|gloves?|pitchers?|batters?|catchers?|innings?|coach(es)?|teams?|teammates?|helmets?|field|stadium|players?|games?|scored?|hits?|home run|bases?|fans?|referee|tournament|champion|league|captain|uniforms?|strikes?|pitch\w*|practices?|teamwork|sports?|defense|offense|applause|audience|throws?|catch|run(s|ning)?|race|ball)\b/i;
 const hasBaseball=t=>BASEBALL_RX.test(String(t||''));
 const WORLD_BALL={princess:'珍珠',animals:'橡實'};
-function worldText(t,w){let s=String(t??'');for(const [a,b] of WORLD_PHRASES[w])s=s.split(a).join(b);return s.replace(/(?<![地氣月星眼])球/g,WORLD_BALL[w])}
+function worldText(t,w){let s=String(t??'');for(const [a,b] of WORLD_PHRASES[w])s=s.split(a).join(b);return s.replace(/球/g,(ball,index,text)=>index>0&&'地氣月星眼'.includes(text[index-1])?ball:WORLD_BALL[w])}
 function worldize(q,w){if(!q||w==='baseball')return q;const o={...q};for(const k of ['prompt','main','second','explain','hint','answer'])if(typeof o[k]==='string')o[k]=worldText(o[k],w);if(Array.isArray(o.choices))o.choices=o.choices.map(c=>worldText(c,w));return o}
 const questionText=q=>[q.prompt,q.main,q.second,q.explain,q.hint,q.answer,...(q.choices||[])].join('｜');
 
@@ -2141,7 +2141,7 @@ window.addEventListener('hashchange',()=>{if(location.hash==='#home')navigate('h
 // Space styling shares the existing general learning curriculum.
 WORLD_INFO.space={name:'小小探索學院',sub:'LEARN × EXPLORE',icon:'🚀',footer:'🚀 和孩子一起探索知識的宇宙',step:'STEP 01 · 探索第一站',go:'出發'};
 WORLD_SCORE.space={unit:'顆能量',big:'枚徽章',bigIcon:'🏅',slot:'⚡',empty:'☆',line:c=>'今天答對 <b>'+c+'</b> 題＝收集 <b>'+c+'</b> 顆能量',next:n=>'再答對 '+n+' 題，就能獲得一枚探索徽章！',rule:'每答對 1 題獲得 1 顆能量，集滿 4 顆換 1 枚探索徽章。',today:'今日探索徽章',round:c=>'🚀 這回合收集了 '+c+' 顆能量'};
-const spaceWords=t=>String(t).replaceAll('貓頭鷹老師','領航員').replaceAll('兔子隊','火箭隊').replaceAll('熊熊隊','星際隊').replaceAll('松鼠隊','月球隊').replaceAll('森林','太空基地').replaceAll('樹屋','基地').replaceAll('橡實','能量晶石').replaceAll('小動物','探險隊員').replaceAll('動物小隊','探索小隊').replaceAll('動物','探索').replaceAll('🐾','🚀');
+const spaceWords=t=>String(t).split('貓頭鷹老師').join('領航員').split('兔子隊').join('火箭隊').split('熊熊隊').join('星際隊').split('松鼠隊').join('月球隊').split('森林').join('太空基地').split('樹屋').join('基地').split('橡實').join('能量晶石').split('小動物').join('探險隊員').split('動物小隊').join('探索小隊').split('動物').join('探索').split('🐾').join('🚀');
 WORLD_NAMES.space=['小宇','阿哲','小星','小安','阿凱','小晴','小光','小傑','小樂'];
 WORLD_PATTERN.space=['🚀','🪐','⭐','🌙','🛰️','☄️'];
 WORLD_COUNT.space={'🚀':'火箭','🪐':'行星','⭐':'星星','🌙':'月亮','🛰️':'衛星','🤖':'機器人','🔭':'望遠鏡','⚡':'能量'};
@@ -2176,7 +2176,7 @@ function pendingPractice(){
   if(!Array.isArray(x.items)||x.items.length<1||x.items.length>10||!Number.isInteger(x.idx)||x.idx<0||x.idx>=x.items.length)return null;
   const items=x.items.map(q=>{const safe=safeReviewQuestion(q);if(!safe)return null;if(typeof q.reviewId==='string')safe.reviewId=q.reviewId.slice(0,75);if([1,2,3,4].includes(q.reviewLevel))safe.reviewLevel=q.reviewLevel;return safe});if(items.some(q=>!q))return null;
   if(!Array.isArray(x.attempts)||x.attempts.length!==x.idx+(d.feedback?1:0)||!x.attempts.every(t=>t&&typeof t.correct==='boolean'))return null;
-  let fb=null;if(d.feedback){const q=items[x.idx],selected=d.feedback.selected;if(!q.choices.includes(selected))return null;fb={selected,correct:selected===q.answer};if(x.attempts.at(-1).correct!==fb.correct)return null;}
+  let fb=null;if(d.feedback){const q=items[x.idx],selected=d.feedback.selected;if(!q.choices.includes(selected))return null;fb={selected,correct:selected===q.answer};if(x.attempts[x.attempts.length-1].correct!==fb.correct)return null;}
   const attempts=x.attempts.map((t,i)=>({skill:items[i].skill,correct:t.correct,hintUsed:!!t.hintUsed,review:!!items[i].reviewId,concept:items[i].concept||'',level:items[i].reviewLevel||x.level}));
   const missed=attempts.flatMap((t,i)=>{const q=items[i];return t.correct?[]:[{main:(q.courseLabel?q.courseLabel+'\n':'')+(q.isListening?q.speech:q.main)+(q.second?'\n'+q.second:''),answer:q.answer,explain:q.explain}]});
   return {session:{subject:x.subject,mode:x.mode,level:x.level,items,idx:x.idx,attempts,missed,correct:attempts.filter(t=>t.correct).length,usedHint:!!x.usedHint},feedback:fb,ink:compactInk(d.ink),answerInk:compactInk(d.answerInk),open:!!d.open};
