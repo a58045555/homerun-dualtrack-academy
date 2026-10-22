@@ -324,3 +324,5 @@ body[data-theme=space] .option.correct{background:#e8f6ff;border-color:#2c8aca}
 
 /* 注音「看圖找注音」：大圖在上、語詞在下 */
 .question-main.picture{text-align:center;font-size:clamp(28px,6vw,40px);line-height:1.3;letter-spacing:4px}.question-main.picture::first-line{font-size:clamp(110px,26vw,170px);line-height:1.25;letter-spacing:0}
+/* 聽音找符號：答完後用大圖呈現例詞 */
+.feedback .answer-picture{text-align:center;white-space:pre-line;font-size:clamp(20px,4.5vw,28px);font-weight:900;line-height:1.3;margin:4px 0 8px}.feedback .answer-picture::first-line{font-size:clamp(90px,22vw,140px);line-height:1.2}
