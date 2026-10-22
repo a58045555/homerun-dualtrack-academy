@@ -1,4 +1,6 @@
-const {app,assert,sandbox}=require('./check.cjs');
+const assert=require('node:assert/strict');
+const {app,sandbox}=require('./curriculum-runtime.cjs');
+app.navigate('dictation'); // Match the real UI entry; do not inherit a previous check.cjs quiz.
 const all=Object.values(app.CN_VOCAB.lessons);
 assert.equal(all.length,12);assert.equal(all.reduce((n,v)=>n+v.characters.length,0),216);assert.equal(all.reduce((n,v)=>n+v.recognition.length,0),23);assert.equal(all.reduce((n,v)=>n+v.words.length,0),138);
 for(const [id,v] of Object.entries(app.CN_VOCAB.lessons)){
