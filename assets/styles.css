@@ -351,3 +351,6 @@ body[data-theme=space] .option.correct{background:#e8f6ff;border-color:#2c8aca}
 .kid-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}.kc{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;border-radius:12px;background:#f3f5f3;font-size:24px;line-height:1;opacity:.45}.kc small{font-size:10px;color:var(--muted);line-height:1.2;white-space:nowrap;overflow:hidden;max-width:100%}.kc.on{opacity:1;background:#fff6d6;border:1px solid #f2dc9b}.kc.next{opacity:.8;border:1px dashed #d9b96a;background:#fffaf0}
 @media(max-width:620px){.kid-strip{grid-template-columns:1fr}}
 body.kid .mascot-face{font-size:50px}body.kid .mascot-say{font-size:16px}body.kid .mobile-note{display:none}
+/* 首頁卡片：圖示放大、字少一點；作答中收起導覽列 */
+.t2-icon{font-size:36px;width:60px;height:60px;flex-basis:60px;border-radius:18px}.tile2 strong{font-size:20px}.tile2 small{font-size:13px;color:var(--muted)}
+.topbar.quiz-mode .nav,.topbar.quiz-mode .player-chip{display:none}.topbar.quiz-mode{margin-bottom:12px}
