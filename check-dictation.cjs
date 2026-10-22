@@ -17,6 +17,6 @@ app.playDictation();assert.equal(spoken.length,4);assert.equal(spoken[1],spoken[
 app.showDictAnswers();assert(app.dictationPage().includes('聽寫答案卷'));for(const q of e.items)assert(app.dictationPage().includes('<strong>'+q.answer+'</strong>'));
 assert.equal(JSON.stringify(app.getData()),JSON.stringify(previous),'paper exam must not invent scored digital results');
 for(const kind of ['char','word','mix'])for(const count of [0,10,20]){app.setDict(kind,count);const pool=app.dictItems();assert(app.startDictation());assert.equal(app.getDict().items.length,count?Math.min(count,pool.length):pool.length)}
-for(let lv=1;lv<=4;lv++){app.setTimes(2);const found=new Set();for(let i=0;i<80;i++)app.generateQuestions('math','times',lv).forEach(q=>found.add(q.signature));assert.equal(found.size,81,'all 1-9 facts regardless of level/row')}
+for(let lv=1;lv<=4;lv++){app.setTimes(2);const found=new Set();for(let i=0;i<200;i++)app.generateQuestions('math','times',lv).forEach(q=>found.add(q.signature));assert.equal(found.size,81,'all 1-9 facts regardless of level/row')}
 assert(!app.timesPage().includes('times-row'));assert.equal((app.timesPage().match(/class="times-card"/g)||[]).length,81);
 console.log('PASS: 216 characters, 23 recognition entries, 138 words; per-lesson pools; hidden-answer audio exams; answer sheets; all 81 facts at every math level.');
