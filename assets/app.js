@@ -741,8 +741,8 @@ function home(){const p=activeProfile(),ps=progressStats(),badges=earnedBadgeIds
  return `<section class="player-banner">${themeCopy().deco?`<span class="pb-deco" aria-hidden="true">${themeCopy().deco}</span>`:''}<div class="pb-top"><span class="pb-avatar" aria-hidden="true">${p.avatar}</span><div class="pb-name"><div class="pb-eyebrow">${themeCopy().eyebrow}</div><h1>${h(p.name)}</h1><span class="pb-grade">${GRADES[p.grade]}</span></div><span class="pb-btns"><button class="pb-switch" data-action="nav-players" aria-label="換畫面風格">🎨</button><button class="pb-switch" data-action="nav-login">換人 ⇄</button></span></div>
  <div class="pb-stats"><div><b>${ps.todayRuns}</b><small>${currentWorld()==='baseball'?'今日得分':WORLD_SCORE[currentWorld()].today}</small></div><div><b>${ps.todayCorrect}</b><small>今日答對</small></div><div><b>${streak}</b><small>連續天數</small></div><div><b>${badges}</b><small>${themeCopy().badgeWord}</small></div></div>
  <button class="pb-go" data-action="${sug.review?'review-sub':'choose-sub'}" data-subject="${sug.sb}"><span>${sug.review?themeCopy().review:themeCopy().go}</span><strong>${sm.icon} ${sm.name}${sug.review?` · ${dueReviews(sug.sb).length} 題`:''}</strong></button>${rs.total>1&&!sug.review?'':''}</section>
- ${kidStrip()}<div class="section-title"><div><h2>${themeCopy().pick}</h2><p>${themeCopy().pickSub||`每回合 ${data.settings.roundSize||8} 題，每題都能按 🔊 聽題目。`}</p></div></div>
- <div class="tiles2">${subjectsForGrade().map(tile).join('')}<button class="tile2" data-action="times-open"><span class="t2-icon" aria-hidden="true">✖️</span><span class="t2-body"><strong>九九乘法</strong><small>1～9 全部混合</small></span><span class="t2-go" aria-hidden="true">→</span></button></div>
+ ${islandMap()}${kidStrip()}<div class="list-wrap${islandListOpen?'':' collapsed'}"><div class="section-title"><div><h2>${themeCopy().pick}</h2><p>${themeCopy().pickSub||`每回合 ${data.settings.roundSize||8} 題，每題都能按 🔊 聽題目。`}</p></div></div>
+ <div class="tiles2">${subjectsForGrade().map(tile).join('')}<button class="tile2" data-action="times-open"><span class="t2-icon" aria-hidden="true">✖️</span><span class="t2-body"><strong>九九乘法</strong><small>1～9 全部混合</small></span><span class="t2-go" aria-hidden="true">→</span></button></div></div>
  ${progressCard()}
  <div class="mini-row"><section class="card mini-tasks"><h3>🎯 今日小任務</h3>${subjectsForGrade().slice(0,2).map(sb=>`<div class="mt-row ${todayDone(sb)?'done':''}"><span>${todayDone(sb)?'✅':'⚪'}</span>一回合${SUBJECT_META[sb].name}</div>`).join('')}<div class="mt-row"><span>💬</span>告訴大人今天學到什麼</div><p class="note" style="margin:8px 0 0">累了可以休息，這不是強制目標。</p></section><button class="card mini-hw" data-action="nav-handwrite"><span aria-hidden="true">✍️</span><strong>手寫練習場</strong><small>描寫字母、單字，列式計算</small></button></div>`}
 
@@ -2258,6 +2258,45 @@ function starResult(s){const earned=s.starsEarned||0,st=starStats(),W=themeCopy(
  '<p class="note">總共 '+st.total+' 顆星 · 已收集 '+st.unlocked+'／'+st.cards.length+' 張卡片</p></section>'}
 function kidStrip(){const st=starStats(),done=roundsToday(),goal=3;return '<section class="kid-strip"><div class="kid-task"><div><strong>'+(done>=goal?'🎉 今天的任務完成了！':'今天的任務：完成 '+goal+' 回合')+'</strong><small>'+(done>=goal?'還想玩也可以繼續，星星會一直累積。':'做完一回合就有一顆星。')+'</small></div><div class="kid-slots" role="img" aria-label="今天完成 '+done+' 回合">'+[0,1,2].map(i=>'<span class="'+(i<done?'on':'')+'">'+(i<done?'⭐':'☆')+'</span>').join('')+'</div></div>'+
  '<div class="kid-chest"><div class="kid-chest-top"><strong>🎁 我的卡片 '+st.unlocked+'／'+st.cards.length+'</strong><small>⭐ '+st.total+' 顆星'+(st.allDone?'':' · 再 '+st.toNext+' 顆開下一張')+'</small></div><div class="kid-cards">'+st.cards.map((c,i)=>i<st.unlocked?'<span class="kc on" title="'+h(c.name)+'">'+c.icon+'<small>'+h(c.name)+'</small></span>':'<span class="kc'+(i===st.unlocked?' next':'')+'">❓<small>'+(i===st.unlocked?'再 '+st.toNext+' ⭐':'　')+'</small></span>').join('')+'</div></div></section>'}
+
+// --- 學習島：首頁地圖。每科一座島、島上小房子是練習模式；吉祥物會走到被點的島。純 SVG＋emoji，不新增儲存資料 ---
+const ISLAND_WORD={field:{unit:'島',title:'我的學習島',sub:'點一座島，或直接點島上的小房子'},space:{unit:'星',title:'我的學習星系',sub:'點一顆星球，或直接點星球上的基地'},princess:{unit:'城堡',title:'我的城堡王國',sub:'點一座城堡，或直接點城堡裡的小屋'},animals:{unit:'森林',title:'我的大森林',sub:'點一片森林，或直接點森林裡的小屋'}};
+const ISLAND_POS=[[92,84,66,40],[270,66,70,42],[332,176,60,38],[192,170,64,40],[78,250,66,40],[262,268,72,44]];
+let islandHere=null,islandListOpen=false;
+function mixHex(hex,pct){const n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255,m=x=>Math.round(x+(255-x)*pct);return '#'+[m(r),m(g),m(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function islandTime(){const h=new Date().getHours();return h<6?'night':h<10?'morning':h<16?'day':h<19?'evening':'night'}
+function islandBuildings(sb){const list=[];if(sb==='chinese'){list.push({icon:'📖',name:'課次練習',action:'island-sub'},{icon:'🎧',name:'播音聽寫',action:'island-sub'});return list}
+ if(sb==='science')list.push({icon:'📚',name:'先學習',action:'sci-open'});
+ for(const m of visibleModes(sb)){if(m.id==='review'||m.id==='lesson')continue;if(list.length>=5)break;list.push({icon:m.icon,name:m.name,action:'island-mode',mode:m.id})}
+ if(sb==='math'&&list.length<5&&!list.some(x=>x.mode==='times'))list.push({icon:'✖️',name:'九九乘法',action:'island-mode',mode:'times'});
+ return list.slice(0,5)}
+function islandMap(){const p=activeProfile(),theme=ISLAND_WORD[p.theme]?p.theme:'field',W=ISLAND_WORD[theme],subs=subjectsForGrade(),today=localDay(Date.now()),t=islandTime();
+ const last=[...data.sessions].reverse().find(x=>subs.includes(x.subject));if(!islandHere||!subs.includes(islandHere))islandHere=last?last.subject:subs[0];
+ const st=starStats(),cards=st.cards.slice(0,st.unlocked),mascot=MASCOT[p.theme]||MASCOT.field,todayDone=sb=>data.sessions.some(x=>x.subject===sb&&localDay(x.date)===today);
+ const pos=subs.map((sb,i)=>({sb,...Object.fromEntries(['cx','cy','rx','ry'].map((k,j)=>[k,ISLAND_POS[i%ISLAND_POS.length][j]]))}));
+ const here=pos.find(x=>x.sb===islandHere)||pos[0];
+ const path=pos.map((x,i)=>(i?'L':'M')+x.cx+' '+x.cy).join(' ');
+ const stars=t==='night'?[...Array(26)].map((_,i)=>'<circle class="sky-star" cx="'+((i*73)%400)+'" cy="'+((i*37)%120)+'" r="'+(i%3?1:1.6)+'"/>').join(''):'';
+ const islands=pos.map((x,i)=>{const meta=SUBJECT_META[x.sb],color=SUBJECT_COLOR[x.sb]||'#4c7be8',done=todayDone(x.sb),due=dueReviews(x.sb).length,b=islandBuildings(x.sb),deco=cards.filter((c,ci)=>ci%pos.length===i).slice(0,3);
+  return '<g class="isl'+(done?' done':'')+(x.sb===islandHere?' here':'')+'" transform="translate('+x.cx+' '+x.cy+')" data-action="island-sub" data-subject="'+x.sb+'" role="button" tabindex="0" aria-label="'+h(meta.name+W.unit)+'">'+
+   '<title>'+h(meta.name+W.unit)+'</title><ellipse class="isl-shadow" cy="7" rx="'+(x.rx+7)+'" ry="'+(x.ry+5)+'"/><ellipse class="isl-sand" rx="'+x.rx+'" ry="'+x.ry+'"/><ellipse class="isl-land" cy="-5" rx="'+(x.rx-11)+'" ry="'+(x.ry-11)+'" fill="'+mixHex(color,0.62)+'" stroke="'+mixHex(color,0.3)+'"/>'+
+   deco.map((c,ci)=>'<text class="isl-deco" x="'+((ci-1)*26)+'" y="'+(-x.ry+6)+'" text-anchor="middle">'+c.icon+'</text>').join('')+
+   '<text class="isl-icon" y="-4" text-anchor="middle">'+meta.icon+'</text>'+
+   b.map((bd,bi)=>'<g class="isl-bld" data-action="'+bd.action+'" data-subject="'+x.sb+'"'+(bd.mode?' data-mode="'+bd.mode+'"':'')+(bd.action==='sci-open'?' data-area="all"':'')+' role="button" tabindex="0" aria-label="'+h(bd.name)+'"><title>'+h(bd.name)+'</title><circle cx="'+((bi-(b.length-1)/2)*23)+'" cy="16" r="10"/><text x="'+((bi-(b.length-1)/2)*23)+'" y="20.5" text-anchor="middle">'+bd.icon+'</text></g>').join('')+
+   (done?'<text class="isl-spark" x="'+(x.rx-14)+'" y="'+(-x.ry+2)+'">✨</text>':'')+(due?'<text class="isl-due" x="'+(-x.rx+10)+'" y="'+(-x.ry+4)+'">🔁</text>':'')+
+   '<text class="isl-name" y="'+(x.ry+15)+'" text-anchor="middle">'+h(meta.name+W.unit)+'</text></g>'}).join('');
+ const skyIcon=t==='night'?'🌙':t==='evening'?'🌇':t==='morning'?'🌤️':'☀️';
+ return '<section class="island-wrap"><div class="island-head"><div><strong>'+W.title+'</strong><small>'+W.sub+'</small></div><button type="button" class="island-list-btn" data-action="island-list" aria-expanded="'+islandListOpen+'">'+(islandListOpen?'🗺️ 收起列表':'📋 用列表看')+'</button></div>'+
+  '<svg class="island-map t-'+t+'" viewBox="0 0 400 330" role="group" aria-label="'+W.title+'"><rect class="sea" width="400" height="330" rx="26"/>'+stars+'<rect class="sky-tint" width="400" height="330" rx="26"/><text class="sky-icon" x="372" y="30" text-anchor="middle">'+skyIcon+'</text>'+
+  '<text class="sea-boat" y="310">'+(theme==='space'?'🛸':theme==='princess'?'🦢':theme==='animals'?'🦋':'⛵')+'</text>'+
+  '<path class="isl-route" d="'+path+'"/>'+islands+
+  '<g class="isl-mascot" style="transform:translate('+here.cx+'px,'+(here.cy-here.ry-6)+'px)"><text text-anchor="middle" y="0">'+mascot+'</text></g></svg></section>'}
+app.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const act=b.dataset.action;
+ if(act==='island-list'){islandListOpen=!islandListOpen;render();return}
+ if(act==='island-sub'){const sb=b.dataset.subject;if(!SUBJECT_KEYS.includes(sb))return;islandHere=sb;const m=app.querySelector('.isl-mascot'),reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(m&&!reduce){const tr=b.getAttribute('transform').match(/translate\(([-\d.]+) ([-\d.]+)\)/),ry=Number(b.querySelector('.isl-sand')?.getAttribute('ry')||40);if(tr)m.style.transform='translate('+tr[1]+'px,'+(Number(tr[2])-ry-6)+'px)';setTimeout(()=>{if(page==='home'){subject=sb;navigate('select')}},650)}else{subject=sb;navigate('select')}return}
+ if(act==='island-mode'){const sb=b.dataset.subject,m=b.dataset.mode;if(!SUBJECT_KEYS.includes(sb))return;islandHere=sb;subject=sb;if(m==='times'){navigate('times');return}if(!canPractice(sb,m)){navigate('select');return}start(m)}});
+app.addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const b=e.target.closest('[data-action="island-sub"],[data-action="island-mode"]');if(!b)return;e.preventDefault();b.dispatchEvent(new MouseEvent('click',{bubbles:true}))});
 
 try{if(!sessionStorage.getItem(PICKED_KEY))page='login'}catch(_){page='login'}
 render();

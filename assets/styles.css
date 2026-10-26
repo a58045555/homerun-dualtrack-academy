@@ -354,3 +354,27 @@ body.kid .mascot-face{font-size:50px}body.kid .mascot-say{font-size:16px}body.ki
 /* 首頁卡片：圖示放大、字少一點；作答中收起導覽列 */
 .t2-icon{font-size:36px;width:60px;height:60px;flex-basis:60px;border-radius:18px}.tile2 strong{font-size:20px}.tile2 small{font-size:13px;color:var(--muted)}
 .topbar.quiz-mode .nav,.topbar.quiz-mode .player-chip{display:none}.topbar.quiz-mode{margin-bottom:12px}
+/* --- 學習島地圖 --- */
+.island-wrap{margin:14px 0 4px;--sea2:#5fb6ea;--sand:#f6e7b4;--shadow-sea:#4ea2d8;--route:#ffffffb0;--name:#163a52}
+body[data-theme=space] .island-wrap{--sea2:#0e1738;--sand:#50609a;--shadow-sea:#2b3a74;--route:#9db4ff80;--name:#eaf0ff}
+body[data-theme=princess] .island-wrap{--sea2:#f7a9cf;--sand:#fff1c9;--shadow-sea:#ec8cbb;--route:#ffffffc0;--name:#6b2a52}
+body[data-theme=animals] .island-wrap{--sea2:#7fcb95;--sand:#f0e2b6;--shadow-sea:#5fb37c;--route:#ffffffb0;--name:#254a2a}
+.island-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.island-head strong{font-size:18px;display:block}.island-head small{color:var(--muted);font-size:12px}
+.island-list-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:20px;padding:7px 12px;font-weight:800;font-size:13px;white-space:nowrap}
+.island-map{display:block;width:100%;height:auto;max-width:100%;border-radius:26px;box-shadow:var(--shadow);font-family:inherit}
+.island-map .sea{fill:var(--sea2)}
+.island-map .sky-tint{fill:#0b1437;opacity:0;pointer-events:none;transition:opacity .4s}.island-map.t-night .sky-tint{opacity:.28}.island-map.t-evening .sky-tint{fill:#ff8a3d;opacity:.18}.island-map.t-morning .sky-tint{fill:#fff3b0;opacity:.14}
+.island-map .sky-star{fill:#fff;opacity:.8;animation:sky-twinkle 2.4s ease-in-out infinite}.island-map .sky-star:nth-child(odd){animation-delay:1.1s}
+.island-map .sky-icon{font-size:22px;pointer-events:none}
+.island-map .sea-boat{font-size:18px;animation:sea-drift 22s linear infinite;pointer-events:none}
+.island-map .isl-route{fill:none;stroke:var(--route);stroke-width:3;stroke-dasharray:7 7;pointer-events:none}
+.island-map .isl{cursor:pointer}.island-map .isl:focus-visible{outline:none}.island-map .isl:focus-visible .isl-sand{stroke:#e59728;stroke-width:4}
+.island-map .isl-shadow{fill:var(--shadow-sea);opacity:.55}.island-map .isl-sand{fill:var(--sand);stroke:#ffffff80;stroke-width:2}.island-map .isl-land{stroke-width:2}
+.island-map .isl-icon{font-size:30px;pointer-events:none}.island-map .isl-name{font-size:13px;font-weight:900;fill:var(--name);paint-order:stroke;stroke:#ffffffb0;stroke-width:3;pointer-events:none}
+body[data-theme=space] .island-map .isl-name{stroke:#0e1738b0}
+.island-map .isl-bld{cursor:pointer}.island-map .isl-bld circle{fill:#fff;stroke:#00000018;stroke-width:1}.island-map .isl-bld text{font-size:12px;pointer-events:none}.island-map .isl-bld:hover circle,.island-map .isl-bld:focus-visible circle{fill:#fff6c8;stroke:#e59728;stroke-width:2}
+.island-map .isl-deco{font-size:15px;pointer-events:none;animation:deco-bob 3s ease-in-out infinite}.island-map .isl-spark{font-size:14px;pointer-events:none;animation:sky-twinkle 1.6s ease-in-out infinite}.island-map .isl-due{font-size:12px;pointer-events:none}
+.island-map .isl:not(.done) .isl-land{opacity:.92}.island-map .isl.done .isl-sand{stroke:#ffd966;stroke-width:3}
+.island-map .isl-mascot{transition:transform .65s ease-in-out;pointer-events:none}.island-map .isl-mascot text{font-size:26px;animation:mascot-idle 2.6s ease-in-out infinite}
+@keyframes sky-twinkle{0%,100%{opacity:.35}50%{opacity:1}}@keyframes sea-drift{0%{transform:translateX(-30px)}100%{transform:translateX(430px)}}@keyframes deco-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.list-wrap.collapsed{display:none}
